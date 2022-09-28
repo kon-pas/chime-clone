@@ -22,7 +22,7 @@
       "@components/*": ["common/components/*"],
       "@hooks/*": ["common/hooks/*"],
       "@jsons/*": ["common/jsons/*"],
-      "@styles/*": ["common/jsons/*"],
+      "@styles/*": ["common/styles/*"],
       "@utils/*": ["common/utils/*"]
     }
   },
