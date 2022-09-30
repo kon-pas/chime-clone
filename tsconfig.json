@@ -19,6 +19,7 @@
       "@types": ["common/ts/index.types.ts"],
       "@interfaces": ["common/ts/index.interfaces.ts"],
       "@enums": ["common/ts/index.enums.ts"],
+      "@constants": ["common/constants/index.ts"],
       "@components/*": ["common/components/*"],
       "@hooks/*": ["common/hooks/*"],
       "@jsons/*": ["common/jsons/*"],
