@@ -21,10 +21,12 @@
       "@enums": ["common/ts/index.enums.ts"],
       "@constants": ["common/constants/index.ts"],
       "@components/*": ["common/components/*"],
+      "@elements/*": ["common/components/elements/*"],
       "@hooks/*": ["common/hooks/*"],
       "@jsons/*": ["common/jsons/*"],
       "@styles/*": ["common/styles/*"],
-      "@utils/*": ["common/utils/*"]
+      "@utils/*": ["common/utils/*"],
+      "@static/*": ["public/static/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
