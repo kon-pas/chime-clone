@@ -1,4 +1,4 @@
-
+import * as S from './MainLayout.styled';
 
 import Header from "@components/composition/Header";
 import Footer from "@components/composition/Footer";
@@ -9,15 +9,19 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
-    <>
-      <Header />
+    <S.PageContainer>
+      <S.HeaderContainer>
+        <Header />
+      </S.HeaderContainer>
 
       <main>
         {children}
       </main>
 
-      <Footer />
-    </>
+      <S.FooterContainer>
+        <Footer />
+      </S.FooterContainer>
+    </S.PageContainer>
   );
 }
 
