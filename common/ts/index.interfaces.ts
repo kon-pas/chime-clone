@@ -1,5 +1,8 @@
 export interface NavigationItem {
   readonly label: string;
   readonly path?: string;
-  readonly isFinished: boolean;
+  readonly subitems: {
+    readonly label: string;
+    readonly path?: string;
+  }[];
 }
