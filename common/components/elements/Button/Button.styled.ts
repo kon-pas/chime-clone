@@ -5,5 +5,7 @@ import { COLORS } from "@constants";
 export const Button = styled.button`
   border-color: ${COLORS.BLACK}
   border-width: 1px;
-  border-radius: 50%;
+  border-radius: 22px;
+  text-align: center;
+  white-space: nowrap;
 `;
