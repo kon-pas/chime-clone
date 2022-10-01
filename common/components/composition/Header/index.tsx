@@ -2,6 +2,8 @@ import * as S from './Header.styled';
 
 import Image from 'next/image';
 
+import NAVIGATION_ITEMS from '@constants';
+
 import IconSVG from '@components/elements/IconSVG';
 
 const Header: React.FC = () => {
@@ -38,11 +40,43 @@ const Header: React.FC = () => {
             <Image
               src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
               alt="Chime Clone Home Page Brand Logo"
-              width="100px"
-              height="50px"
+              width="60px"
+              height="30px"
             />
           </h1>
+
+          <IconSVG>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </IconSVG>
         </header>
+
+        <nav>
+          <menu>
+            {NAVIGATION_ITEMS.map((item, idx) =>
+              <li key={idx}>
+                <a>{item.label}</a>
+                <menu>
+                  {item.subitems.map((subitem, idx) =>
+                    <li key={idx}>
+                      <a>
+                        {subitem.label}
+                      </a>
+                    </li>
+                  )}
+                </menu>
+              </li>
+            )}
+          </menu>
+        </nav>
+
+        <S.AccountActions>
+          <div>Log In</div>
+          <div>Sign Up</div>
+        </S.AccountActions>
       </S.NavigationMenuContainer>
     </>
   );
