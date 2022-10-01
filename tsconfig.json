@@ -21,7 +21,6 @@
       "@enums": ["common/ts/index.enums.ts"],
       "@constants": ["common/constants/index.ts"],
       "@components/*": ["common/components/*"],
-      "@elements/*": ["common/components/elements/*"],
       "@hooks/*": ["common/hooks/*"],
       "@jsons/*": ["common/jsons/*"],
       "@styles/*": ["common/styles/*"],
