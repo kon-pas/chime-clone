@@ -6,6 +6,7 @@ interface IconSVGProps {
   title?: string;
   desc?: string;
   filled?: boolean;
+  onClick?: () => void;
 }
 
 const IconSVG: React.FC<IconSVGProps> = ({
@@ -13,10 +14,12 @@ const IconSVG: React.FC<IconSVGProps> = ({
   strokeWidth,
   title,
   desc,
-  filled = false
+  filled = false,
+  onClick
 }) => {
   return (
     <S.SVG
+      onClick={() => onClick && onClick()}
       xmlns="http://www.w3.org/2000/svg"
       fill={filled ? "currentColor" : "none"}
       viewBox="0 0 24 24"
