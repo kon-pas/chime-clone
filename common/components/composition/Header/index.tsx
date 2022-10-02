@@ -23,7 +23,31 @@ const Header: React.FC = () => {
           />
         </h1>
 
+        <S.MenuContainerDesktop>
+          <menu>
+            {NAVIGATION_ITEMS.map((item, idx) =>
+              <li key={idx}>
+                <span>
+                  {item.label}
+                </span>
+
+                <S.SubmenuContainerDesktop>
+                  <menu>
+                    {item.subitems.map((item, idx) =>
+                      <li key={idx}>
+                        {item.label}
+                      </li>
+                    )}
+                  </menu>
+                </S.SubmenuContainerDesktop>
+              </li>
+            )}
+          </menu>
+        </S.MenuContainerDesktop>
+
         <nav>
+          {/* Log In */}
+
           <S.Button>
             Sign Up
           </S.Button>
@@ -38,14 +62,14 @@ const Header: React.FC = () => {
         </nav>
       </S.Header>
 
-      <S.NavigationMenuContainer isVisible={isOpened} >
+      <S.MenuContainer isVisible={isOpened} >
         <header>
           <h1>
             <Image
               src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
               alt="Chime Clone Home Page Brand Logo"
-              width="60px"
-              height="30px"
+              width="100px"
+              height="60px"
             />
           </h1>
 
@@ -81,7 +105,7 @@ const Header: React.FC = () => {
           <div>Log In</div>
           <div>Sign Up</div>
         </S.AccountActions>
-      </S.NavigationMenuContainer>
+      </S.MenuContainer>
     </>
   );
 }
