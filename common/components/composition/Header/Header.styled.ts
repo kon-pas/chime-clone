@@ -42,22 +42,30 @@ export const Button = styled(DefaultButton)`
   font-weight: 600;
 `;
 
-export const NavigationMenuContainer = styled.div`
+interface NavigationMenuContainerProps {
+  isVisible: boolean;
+}
+
+export const NavigationMenuContainer = styled.div<NavigationMenuContainerProps>`
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
   min-height: 100vh;
   background-color: ${COLORS.WHITE};
   opacity: 0.98;
+  width: 100%;
+  user-select: none;
+  left: ${props => props.isVisible ? '0' : '100%'};
+  transition-property: left;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 
   header {
     width: 100%;
-    height: 55px;
+    height: 60px;
     border-bottom: solid;
     border-bottom-width: 2px;
     border-bottom-color: ${COLORS.LIME_MAIN};
-    padding: 0 22px;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -79,11 +87,11 @@ export const NavigationMenuContainer = styled.div`
   }
 
   nav {
-    margin: 0 20px;
-    padding-top: 57px;
-    padding-bottom: 70px; 
+    padding: 62px 20px 70px 20px;
     position: relative;
     min-height: 100vh;
+    height: 500px;
+    overflow: auto;
 
     > menu {
       list-style-type: none;
