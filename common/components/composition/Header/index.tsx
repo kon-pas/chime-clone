@@ -1,5 +1,7 @@
 import * as S from './Header.styled';
 
+import { useState } from 'react';
+
 import Image from 'next/image';
 
 import NAVIGATION_ITEMS from '@constants';
@@ -7,6 +9,8 @@ import NAVIGATION_ITEMS from '@constants';
 import IconSVG from '@components/elements/IconSVG';
 
 const Header: React.FC = () => {
+  const [isOpened, setIsOpened] = useState<boolean>(false);
+
   return (
     <>
       <S.Header>
@@ -24,7 +28,7 @@ const Header: React.FC = () => {
             Sign Up
           </S.Button>
 
-          <IconSVG>
+          <IconSVG onClick={() => setIsOpened(isOpened => !isOpened)}>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -34,7 +38,7 @@ const Header: React.FC = () => {
         </nav>
       </S.Header>
 
-      <S.NavigationMenuContainer>
+      <S.NavigationMenuContainer isVisible={isOpened} >
         <header>
           <h1>
             <Image
@@ -45,7 +49,7 @@ const Header: React.FC = () => {
             />
           </h1>
 
-          <IconSVG>
+          <IconSVG onClick={() => setIsOpened(isOpened => !isOpened)}>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
