@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { COLORS } from '@constants';
 
-export const Header = styled.header`
+const Header = styled.header`
   width: 100%;
   background-color: white;
   height: 60px;
@@ -31,6 +31,8 @@ export const Header = styled.header`
     }
   }
 `;
+
+export { Header as Header };
 
 export { default as Button } from './Button.styled';
 
