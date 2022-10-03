@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
-const DisclaimerSection = styled.div``;
+import { COLORS } from '@constants';
+
+const DisclaimerSection = styled.div`
+  > p {
+    color: ${COLORS.FONT_GRAY_LIGHT};
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+  }
+`;
 
 export default DisclaimerSection;
