@@ -5,7 +5,17 @@ import NAVIGATION_ITEMS from '@constants';
 const Footer: React.FC = () => {
   return (
     <S.Footer>
-      footer
+      <S.MenuSection>
+        menu section
+      </S.MenuSection>
+
+      <S.SocialSection>
+        social section
+      </S.SocialSection>
+      
+      <S.DisclaimerSection>
+        disclaimer section
+      </S.DisclaimerSection>
     </S.Footer>
   );
 }
