@@ -8,6 +8,8 @@ export const FONT_GRAY_DARK: HexColor = '#333333';
 
 export const GRAY_LIGHT: HexColor = '#FAFAFA';
 
+export const GRAY_MEDIUM: HexColor = '#D5D5D5';
+
 export const LIME_LIGHT: HexColor = '#F0FBF5';
 
 export const LIME_MEDIUM: HexColor = '#2DE28D';
