@@ -6,22 +6,24 @@ const Footer: React.FC = () => {
   return (
     <S.Footer>
       <S.MenuSection>
-        <menu>
-          {NAVIGATION_ITEMS.map((item, idx) =>
-            <li key={idx}>
-              <span>{item.label}</span>
+        {NAVIGATION_ITEMS.map((item, idx) =>
+          <li key={idx}>
+            <span>{item.label}</span>
 
-              {item.subitems.map((item, idx) =>
-                <li key={idx}>{item.label}</li>
-              )}
-            </li>
-          )}
-        </menu>
+            {item.subitems.map((item, idx) =>
+              <li key={idx}>{item.label}</li>
+            )}
+          </li>
+        )}
       </S.MenuSection>
+
+      <hr />
 
       <S.SocialSection>
         social section
       </S.SocialSection>
+
+      <hr />
       
       <S.DisclaimerSection>
         <p>Banking services provided by The Bancorp Bank or Stride Bank, N.A., Members FDIC. The Chime Visa® Debit Card is issued by The Bancorp Bank or Stride Bank pursuant to a license from Visa U.S.A. Inc. and may be used everywhere Visa debit cards are accepted. The Chime Visa® Credit Builder Card is issued by Stride Bank pursuant to a license from Visa U.S.A. Inc. and may be used everywhere Visa credit cards are accepted. Please see back of your Card for its issuing bank.</p>
