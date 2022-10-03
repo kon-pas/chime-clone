@@ -6,11 +6,11 @@ import type { AppProps } from 'next/app';
 
 import MainLayout from '@components/composition/MainLayout';
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <MainLayout>
       <GlobalStyle />
+
       <Component {...pageProps} />
     </MainLayout>
   );

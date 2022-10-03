@@ -12,7 +12,6 @@ const Home: NextPage = () => {
         <meta name="description" content="Chime clone home page" />
       </Head>
 
-
     </div>
   )
 }
