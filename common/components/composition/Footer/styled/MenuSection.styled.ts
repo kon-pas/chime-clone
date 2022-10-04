@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 
-import { COLORS } from '@constants';
+import { COLORS, MEDIA } from '@constants';
 
 const MenuSection = styled.menu`
   display: grid;
   gap: 2rem;
+  width: fit-content;
+
+  ${MEDIA.LG} {
+    display: flex;
+  }
 
   > li {
-    display: grid;
-    grid-gap: 0.9rem;
 
     > span {
       white-space: nowrap;
@@ -17,8 +20,11 @@ const MenuSection = styled.menu`
     }
     
     > menu {
+      display: grid;
+      grid-gap: 0.9rem;
+      margin-top: 0.9rem;
+
       > li {
-  
         white-space: nowrap;
         font-weight: 300;
         font-size: 0.85rem;
