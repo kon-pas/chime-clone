@@ -7,6 +7,10 @@ const DisclaimerSection = styled.div`
     color: ${COLORS.FONT_GRAY_LIGHT};
     font-size: 0.7rem;
     line-height: 1.1rem;
+
+    > sup {
+      font-size: 0.5rem;
+    }
   }
 `;
 
