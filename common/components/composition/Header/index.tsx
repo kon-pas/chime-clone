@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import Image from 'next/image';
 
-import NAVIGATION_ITEMS from '@constants';
+import { NAVIGATION_ITEMS } from '@constants';
 
 import IconSVG from '@components/elements/IconSVG';
 
