@@ -5,3 +5,5 @@ export { default as MenuSection } from './MenuSection.styled';
 export { default as SocialSection } from './SocialSection.styled';
 
 export { default as DisclaimerSection } from './DisclaimerSection.styled';
+
+export { default as HorizontalLine } from './HorizontalLine.styled';
