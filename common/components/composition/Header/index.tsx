@@ -1,4 +1,4 @@
-import * as S from './Header.styled';
+import * as S from './styled';
 
 import { useState } from 'react';
 
