@@ -15,20 +15,22 @@ const MenuSection = styled.menu`
       font-size: 1rem;
       font-weight: 700;
     }
-
-    > li {
-
-      white-space: nowrap;
-      font-weight: 300;
-      font-size: 0.85rem;
-      user-select: none;
-      cursor: pointer;
-
-      transition-property: color;
-      transition-duration: 0.2s;
-
-      &:hover {
-        color: ${COLORS.LIME_DARK};
+    
+    > menu {
+      > li {
+  
+        white-space: nowrap;
+        font-weight: 300;
+        font-size: 0.85rem;
+        user-select: none;
+        cursor: pointer;
+  
+        transition-property: color;
+        transition-duration: 0.2s;
+  
+        &:hover {
+          color: ${COLORS.LIME_DARK};
+        }
       }
     }
   }
