@@ -11,7 +11,7 @@ const appear = keyframes`
   }
 `;
 
-const MenuContainerDesktop = styled.nav`
+const MenuDesktop = styled.nav`
   margin-right: auto;
   margin-left: 2rem;
 
@@ -52,4 +52,4 @@ const MenuContainerDesktop = styled.nav`
   }
 `;
 
-export default MenuContainerDesktop;
+export default MenuDesktop;

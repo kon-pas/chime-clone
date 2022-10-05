@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 import { COLORS } from '@constants';
 
-interface MenuContainerProps {
+interface MenuProps {
   isVisible: boolean;
 }
 
-const MenuContainer = styled.div<MenuContainerProps>`
+const Menu = styled.div<MenuProps>`
   position: absolute;
   top: 0;
   min-height: 100vh;
@@ -97,4 +97,4 @@ const MenuContainer = styled.div<MenuContainerProps>`
   }
 `;
 
-export default MenuContainer;
+export default Menu;

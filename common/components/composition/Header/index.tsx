@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           />
         </h1>
 
-        <S.MenuContainerDesktop>
+        <S.MenuDesktop>
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) =>
               <li key={idx}>
@@ -43,7 +43,7 @@ const Header: React.FC = () => {
               </li>
             )}
           </menu>
-        </S.MenuContainerDesktop>
+        </S.MenuDesktop>
 
         <nav>
           {/* Log In */}
@@ -62,7 +62,7 @@ const Header: React.FC = () => {
         </nav>
       </S.Header>
 
-      <S.MenuContainer isVisible={isOpened} >
+      <S.Menu isVisible={isOpened} >
         <header>
           <h1>
             <Image
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
           <div>Log In</div>
           <div>Sign Up</div>
         </S.AccountActions>
-      </S.MenuContainer>
+      </S.Menu>
     </>
   );
 }
