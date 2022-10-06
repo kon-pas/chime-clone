@@ -3,20 +3,24 @@ import styled from 'styled-components';
 import { COLORS, MEDIA } from '@constants';
 
 const Span = styled.span`
-  color: ${COLORS.FONT_GRAY_MEDIUM};
-  transition-property: color;
-  transition-duration: 0.2s;
-  font-size: 0.85rem;
-  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  font-weight: 700;
+  position: relative;
+  user-select: none;
   align-self: center;
   display: none;
+  
+  &:hover {
+    transition-property: color;
+    transition-duration: 0.2s;
+    color: ${COLORS.LIME_DARK};
+  }
 
   ${MEDIA.MD} {
     display: inline-block;
-  }
-
-  &:hover {
-    color: ${COLORS.LIME_DARK};
+    font-size: 1rem;
   }
 `;
 
