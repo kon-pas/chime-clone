@@ -24,6 +24,10 @@ const MenuDesktop = styled.nav`
     display: flex;
     gap: 0.75rem;
 
+    ${MEDIA.MD} {
+      gap: 1.2rem;
+    }
+
     > li {
       display: inline-block;
       white-space: nowrap;

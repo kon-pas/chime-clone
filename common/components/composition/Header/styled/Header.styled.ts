@@ -13,7 +13,8 @@ const Header = styled.header`
   justify-content: space-between;
 
   ${MEDIA.MD} {
-
+    padding: 0 7rem;
+    height: 70px;
   }
 
   > h1 {

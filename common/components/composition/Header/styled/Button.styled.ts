@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS } from '@constants';
+import { COLORS, MEDIA } from '@constants';
 
 import { Button as DefaultButton } from '@components/elements/Button/Button.styled';
 
@@ -11,6 +11,11 @@ const Button = styled(DefaultButton)`
   margin-left: 0.5rem;
   font-size: 0.95rem;
   font-weight: 600;
+
+  ${MEDIA.MD} {
+    padding: 0.8rem 1.4rem;
+  }
+
 `;
 
 export default Button;
