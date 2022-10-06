@@ -34,9 +34,9 @@ const Header: React.FC = () => {
                 <S.SubmenuContainerDesktop>
                   <menu>
                     {item.subitems.map((item, idx) =>
-                      <li key={idx}>
+                      <S.Span key={idx}>
                         {item.label}
-                      </li>
+                      </S.Span>
                     )}
                   </menu>
                 </S.SubmenuContainerDesktop>
@@ -47,6 +47,10 @@ const Header: React.FC = () => {
 
         <nav>
           {/* Log In */}
+
+          <S.Span>
+            Log In
+          </S.Span>
 
           <S.Button>
             Sign Up

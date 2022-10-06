@@ -9,3 +9,5 @@ export { default as AccountActions } from './AccountActions.styled';
 export { default as MenuDesktop } from './MenuDesktop.styled';
 
 export { default as SubmenuContainerDesktop } from './SubmenuContainerDesktop.styled';
+
+export { default as Span } from './Span.styled';
