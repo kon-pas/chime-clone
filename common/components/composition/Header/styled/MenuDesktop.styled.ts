@@ -24,8 +24,8 @@ const MenuDesktop = styled.nav`
     display: flex;
     gap: 0.75rem;
 
-    ${MEDIA.MD} {
-      gap: 1.2rem;
+    ${MEDIA.LG} {
+      gap: 1.6rem;
     }
 
     > li {
@@ -55,7 +55,6 @@ const MenuDesktop = styled.nav`
         animation-name: ${appear};
         animation-duration: 0.1s;
         animation-timing-function: linear;
-
       }
     }
   }

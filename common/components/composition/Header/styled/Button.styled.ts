@@ -16,6 +16,11 @@ const Button = styled(DefaultButton)`
     padding: 0.8rem 1.4rem;
   }
 
+  ${MEDIA.LG} {
+    padding: 0.8rem 3rem;
+    margin-left: 1.8rem;
+  }
+
 `;
 
 export default Button;

@@ -1,20 +1,25 @@
 import styled from 'styled-components';
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA, BREAKPOINTS } from '@constants';
 
 const Header = styled.header`
   width: 100%;
-  background-color: white;
   height: 60px;
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   justify-content: space-between;
+  justify-self: center;
 
   ${MEDIA.MD} {
-    padding: 0 7rem;
     height: 70px;
+    width: ${BREAKPOINTS.MD}px;
+    padding: 0 2.5rem;
+  }
+
+  ${MEDIA.LG} {
+    width: ${BREAKPOINTS.LG}px;
+    padding: 0 3rem;
   }
 
   > h1 {
