@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import { COLORS } from '@constants';
+import { COLORS, MEDIA } from '@constants';
 
 const appear = keyframes`
   from {
@@ -14,6 +14,11 @@ const appear = keyframes`
 const MenuDesktop = styled.nav`
   margin-right: auto;
   margin-left: 2rem;
+  display: none;
+
+  ${MEDIA.MD} {
+    display: inline-block;
+  }
 
   > menu {
     display: flex;

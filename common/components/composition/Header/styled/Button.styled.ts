@@ -8,6 +8,7 @@ const Button = styled(DefaultButton)`
   background-color: ${COLORS.LIME_MEDIUM};
   border: none;
   padding: 0.5rem 1.05rem;
+  margin-left: 0.5rem;
   font-size: 0.95rem;
   font-weight: 600;
 `;

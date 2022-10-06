@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { COLORS } from '@constants';
+import { COLORS, MEDIA } from '@constants';
 
 const Span = styled.span`
   color: ${COLORS.FONT_GRAY_MEDIUM};
@@ -9,6 +9,11 @@ const Span = styled.span`
   font-size: 0.85rem;
   font-weight: 600;
   align-self: center;
+  display: none;
+
+  ${MEDIA.MD} {
+    display: inline-block;
+  }
 
   &:hover {
     color: ${COLORS.LIME_DARK};
