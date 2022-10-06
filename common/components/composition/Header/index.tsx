@@ -27,19 +27,19 @@ const Header: React.FC = () => {
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) =>
               <li key={idx}>
-                <span>
+                <S.Span>
                   {item.label}
-                </span>
+                </S.Span>
 
-                <S.SubmenuContainerDesktop>
+                <S.SubmenuDesktop>
                   <menu>
                     {item.subitems.map((item, idx) =>
-                      <S.Span key={idx}>
+                      <li key={idx}>
                         {item.label}
-                      </S.Span>
+                      </li>
                     )}
                   </menu>
-                </S.SubmenuContainerDesktop>
+                </S.SubmenuDesktop>
               </li>
             )}
           </menu>
