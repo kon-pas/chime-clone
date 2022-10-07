@@ -32,7 +32,6 @@ const Menu = styled.div<MenuProps>`
     position: fixed;
     top: 0;
     background-color: ${COLORS.WHITE};
-    z-index: 1;
 
     > h1 {
       height: 100%;

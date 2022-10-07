@@ -4,7 +4,6 @@ import { COLORS } from '@constants';
 
 const SubmenuDesktop = styled.div`
   padding-top: .75rem;
-  z-index: 1;
 
   > menu {
     padding: 0.9rem;
