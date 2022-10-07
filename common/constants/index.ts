@@ -1,4 +1,4 @@
-export * as COLORS  from './colors';
+export { default as COLORS }  from './colors';
 
 export { default as NAVIGATION_ITEMS } from './navigation-items';
 

@@ -1,23 +1,16 @@
 import type { HexColor } from '@types';
 
-export const FONT_GRAY_LIGHT: HexColor = '#74758C';
+const COLORS: {[key: string]: HexColor} = {
+  FONT_GRAY_LIGHT: '#74758C',
+  FONT_GRAY_MEDIUM: '#4A4A4A',
+  FONT_GRAY_DARK: '#333333',
+  GRAY_LIGHT: '#FAFAFA',
+  GRAY_MEDIUM: '#D5D5D5',
+  LIME_LIGHT: '#F0FBF5',
+  LIME_MEDIUM: '#2DE28D',
+  LIME_DARK: '#1EC677',
+  WHITE: '#FFFFFF',
+  BLACK: '#000000',
+}
 
-export const FONT_GRAY_MEDIUM: HexColor = '#4A4A4A';
-
-export const FONT_GRAY_DARK: HexColor = '#333333';
-
-export const GRAY_LIGHT: HexColor = '#FAFAFA';
-
-export const GRAY_MEDIUM: HexColor = '#D5D5D5';
-
-export const LIME_LIGHT: HexColor = '#F0FBF5';
-
-export const LIME_MEDIUM: HexColor = '#2DE28D';
-
-export const LIME_DARK: HexColor = '#1EC677';
-
-export const LIME_MAIN: HexColor = LIME_DARK;
-
-export const WHITE: HexColor = '#FFFFFF';
-
-export const BLACK: HexColor = '#000000';
+export default COLORS;
