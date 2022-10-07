@@ -7,7 +7,7 @@ const TopSection = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 1rem;
+    gap: 5rem;
     margin: 0 auto;
   }
 `;

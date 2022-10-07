@@ -9,6 +9,8 @@ const MenuSection = styled.menu`
 
   ${MEDIA.MD} {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 
   > li {
