@@ -15,6 +15,7 @@ const Header = styled.header`
     height: 70px;
     width: ${BREAKPOINTS.MD}px;
     padding: 0 2.5rem;
+    margin: 0 auto;
   }
 
   ${MEDIA.LG} {
