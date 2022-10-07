@@ -7,7 +7,7 @@ const MenuSection = styled.menu`
   gap: 2rem;
   width: fit-content;
 
-  ${MEDIA.LG} {
+  ${MEDIA.MD} {
     display: flex;
   }
 
