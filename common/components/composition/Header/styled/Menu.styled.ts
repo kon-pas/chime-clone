@@ -24,7 +24,7 @@ const Menu = styled.div<MenuProps>`
     height: 60px;
     border-bottom: solid;
     border-bottom-width: 2px;
-    border-bottom-color: ${COLORS.LIME_MAIN};
+    border-bottom-color: ${COLORS.LIME_DARK};
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
