@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Chime clone home page" />
       </Head>
 
-      <DualArticle.Container>
+      <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Overdraft fee-free with SpotMe</h1>
           <p>

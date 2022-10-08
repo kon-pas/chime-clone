@@ -4,11 +4,15 @@ import { MEDIA } from '@constants';
 
 import ContentContainer from '@components/elements/ContentContainer';
 
-const Container = styled(ContentContainer)`
+interface ContainerProps {
+  imageFloat?: "left" | "right";
+}
+
+const Container = styled(ContentContainer)<ContainerProps>`
   ${MEDIA.MD} {
     display: flex;
-    flex-direction: row;
-    gap: 5rem;
+    flex-direction: ${props => props.imageFloat === "left" ? "row-reverse" : "row"};
+    gap: 4rem;
   }
 `;
 
