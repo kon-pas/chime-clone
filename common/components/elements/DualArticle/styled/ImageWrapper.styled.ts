@@ -3,10 +3,12 @@ import styled from 'styled-components';
 import { MEDIA } from '@constants';
 
 const ImageWrapper = styled.div`
-  margin-top: 1.25rem;
+  margin: 1.25rem auto 0 auto;
+  max-width: 450px;
 
   ${MEDIA.MD} {
-    width: 110%;
+    width: 100%;
+    margin: 0;
   }
 
   ${MEDIA.LG} {
