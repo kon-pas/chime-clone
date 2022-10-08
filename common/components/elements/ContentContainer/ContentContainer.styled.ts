@@ -8,11 +8,11 @@ const ContentContainer = styled.div`
   ${ MEDIA.MD } {
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
-    padding: 0;
   }
 
   ${ MEDIA.LG } {
     width: ${BREAKPOINTS.LG}px;
+    padding: 0 2rem;
   }
 `;
 
