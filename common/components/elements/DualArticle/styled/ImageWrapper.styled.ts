@@ -6,7 +6,7 @@ const ImageWrapper = styled.div`
   margin-top: 1.25rem;
 
   ${MEDIA.MD} {
-    width: 120%;
+    width: 110%;
   }
 
   ${MEDIA.LG} {
