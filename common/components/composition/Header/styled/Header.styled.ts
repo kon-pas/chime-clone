@@ -14,13 +14,13 @@ const Header = styled.header`
   ${MEDIA.MD} {
     height: 70px;
     width: ${BREAKPOINTS.MD}px;
-    padding: 0 2.5rem;
     margin: 0 auto;
+    padding: 0 1.4rem;
   }
 
   ${MEDIA.LG} {
     width: ${BREAKPOINTS.LG}px;
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   > h1 {
