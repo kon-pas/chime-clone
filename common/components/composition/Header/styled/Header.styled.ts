@@ -7,7 +7,7 @@ const Header = styled.header`
   height: 60px;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 1.4rem;
   justify-content: space-between;
   justify-self: center;
 
@@ -15,7 +15,6 @@ const Header = styled.header`
     height: 70px;
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
-    padding: 0 1.4rem;
   }
 
   ${MEDIA.LG} {
