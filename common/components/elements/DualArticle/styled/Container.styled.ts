@@ -15,6 +15,7 @@ const Container = styled(ContentContainer)<ContainerProps>`
   background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   padding-top: 3rem;
   padding-bottom: 3rem;
+  transition: all 0.5s ease-out;
 
   ${MEDIA.MD} {
     display: flex;
