@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 
-import { MEDIA } from '@constants';
+import type { HexColor } from '@types';
+
+import { MEDIA, COLORS } from '@constants';
 
 import ContentContainer from '@components/elements/ContentContainer';
 
 interface ContainerProps {
   imageFloat?: "left" | "right";
+  backgroundColor?: HexColor;
 }
 
 const Container = styled(ContentContainer)<ContainerProps>`
+  background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   padding-top: 3rem;
   padding-bottom: 3rem;
 
