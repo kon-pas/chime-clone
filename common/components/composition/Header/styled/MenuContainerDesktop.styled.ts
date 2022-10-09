@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA } from "@constants";
 
 const appear = keyframes`
   0% {

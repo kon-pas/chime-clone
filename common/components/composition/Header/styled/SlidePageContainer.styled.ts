@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA } from "@constants";
 
 interface SlidePageContainerProps {
   isVisible: boolean;
@@ -14,7 +14,7 @@ const SlidePageContainer = styled.div<SlidePageContainerProps>`
   opacity: 0.98;
   width: 100%;
   user-select: none;
-  left: ${props => props.isVisible ? '0' : '100%'};
+  left: ${props => props.isVisible ? "0" : "100%"};
   transition: left 0.2s ease-in-out;
 
   > header {

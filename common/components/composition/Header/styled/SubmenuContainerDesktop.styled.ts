@@ -1,9 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS } from '@constants';
+import { COLORS } from "@constants";
 
 const SubmenuContainerDesktop = styled.div`
-  padding-top: .75rem;
+  padding-top: 0.75rem;
 
   > menu {
     padding: 0.9rem;
@@ -21,7 +21,7 @@ const SubmenuContainerDesktop = styled.div`
       font-size: 0.85rem;
       font-weight: 600;
       align-self: center;
-      
+
       &:hover {
         color: ${COLORS.LIME_DARK};
       }

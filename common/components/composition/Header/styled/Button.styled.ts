@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA } from "@constants";
 
-import DefaultButton from '@components/elements/Button/Button.styled';
+import DefaultButton from "@components/elements/Button/Button.styled";
 
 const Button = styled(DefaultButton)`
   background-color: ${COLORS.LIME_MEDIUM};

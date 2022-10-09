@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA } from "@constants";
 
 const Span = styled.span`
   display: inline-block;
@@ -12,7 +12,7 @@ const Span = styled.span`
   align-self: center;
   display: none;
   transition: font-size 0.5s ease-out;
-  
+
   &:hover {
     transition-property: color;
     transition-duration: 0.2s;

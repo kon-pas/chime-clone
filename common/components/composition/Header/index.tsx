@@ -1,12 +1,12 @@
-import * as S from './styled';
+import * as S from "./styled";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import { NAVIGATION_ITEMS } from '@constants';
+import { NAVIGATION_ITEMS } from "@constants";
 
-import IconSVG from '@components/elements/IconSVG';
+import IconSVG from "@components/elements/IconSVG";
 
 const Header: React.FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
@@ -25,34 +25,26 @@ const Header: React.FC = () => {
 
         <S.MenuContainerDesktop>
           <menu>
-            {NAVIGATION_ITEMS.map((item, idx) =>
+            {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                <S.Span>
-                  {item.label}
-                </S.Span>
+                <S.Span>{item.label}</S.Span>
 
                 <S.SubmenuContainerDesktop>
                   <menu>
-                    {item.subitems.map((item, idx) =>
-                      <li key={idx}>
-                        {item.label}
-                      </li>
-                    )}
+                    {item.subitems.map((item, idx) => (
+                      <li key={idx}>{item.label}</li>
+                    ))}
                   </menu>
                 </S.SubmenuContainerDesktop>
               </li>
-            )}
+            ))}
           </menu>
         </S.MenuContainerDesktop>
 
         <nav>
-          <S.Span>
-            Log In
-          </S.Span>
+          <S.Span>Log In</S.Span>
 
-          <S.Button>
-            Sign Up
-          </S.Button>
+          <S.Button>Sign Up</S.Button>
 
           <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
             <path
@@ -86,20 +78,18 @@ const Header: React.FC = () => {
 
         <S.MenuContainer>
           <menu>
-            {NAVIGATION_ITEMS.map((item, idx) =>
+            {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
                 <a>{item.label}</a>
                 <menu>
-                  {item.subitems.map((subitem, idx) =>
+                  {item.subitems.map((subitem, idx) => (
                     <li key={idx}>
-                      <a>
-                        {subitem.label}
-                      </a>
+                      <a>{subitem.label}</a>
                     </li>
-                  )}
+                  ))}
                 </menu>
               </li>
-            )}
+            ))}
           </menu>
         </S.MenuContainer>
 
@@ -110,6 +100,6 @@ const Header: React.FC = () => {
       </S.SlidePageContainer>
     </>
   );
-}
+};
 
 export default Header;
