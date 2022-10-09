@@ -1,5 +1,5 @@
 const Z_INDEX: { [key: string]: number } = {
-  HEADER: 99
+  HEADER: 90
 }
 
 export default Z_INDEX;
