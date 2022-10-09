@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { COLORS, MEDIA } from '@constants';
 
-import { Button as DefaultButton } from '@components/elements/Button/Button.styled';
+import DefaultButton from '@components/elements/Button/Button.styled';
 
 const Button = styled(DefaultButton)`
   background-color: ${COLORS.LIME_MEDIUM};
@@ -12,15 +12,19 @@ const Button = styled(DefaultButton)`
   font-size: 0.95rem;
   font-weight: 600;
 
+  &:hover {
+    color: ${COLORS.BLACK};
+    background-color: ${COLORS.LIME_DARK};
+  }
+
   ${MEDIA.MD} {
     padding: 0.8rem 1.4rem;
   }
 
   ${MEDIA.LG} {
-    padding: 0.8rem 3rem;
+    padding: 0.85rem 3.85rem;
     margin-left: 1.8rem;
   }
-
 `;
 
 export default Button;
