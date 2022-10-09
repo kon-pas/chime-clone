@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { COLORS } from '@constants';
 
 const AccountActions = styled.div`
-  position: fixed;
+  position: sticky;
   bottom: 0;
   width: 100vw;
   height: 70px;
@@ -20,6 +20,7 @@ const AccountActions = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 `;
 
