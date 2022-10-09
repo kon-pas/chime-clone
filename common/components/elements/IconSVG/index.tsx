@@ -1,4 +1,4 @@
-import * as S from './IconSVG.styled';
+import * as S from "./IconSVG.styled";
 
 interface IconSVGProps {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ const IconSVG: React.FC<IconSVGProps> = ({
   title,
   desc,
   filled = false,
-  onClick
+  onClick,
 }) => {
   return (
     <S.SVG
@@ -28,13 +28,13 @@ const IconSVG: React.FC<IconSVGProps> = ({
       role="img"
       aria-hidden={title ? false : true}
       aria-label={`${title ?? null} ${desc ?? null}`}
-      aria-labelledby={`${title ? 'titleID' : null} ${desc ? 'descID' : null}`}
-     > 
-      { title && <title id="titleID">{title}</title> }
-      { desc && <desc id="descID">{desc}</desc> }
-      { path }
+      aria-labelledby={`${title ? "titleID" : null} ${desc ? "descID" : null}`}
+    >
+      {title && <title id="titleID">{title}</title>}
+      {desc && <desc id="descID">{desc}</desc>}
+      {path}
     </S.SVG>
-  )
-}
+  );
+};
 
 export default IconSVG;
