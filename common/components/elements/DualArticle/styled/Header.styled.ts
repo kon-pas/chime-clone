@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA } from "@constants";
 
 const Header = styled.header`
   transition: all 0.5s ease-out;

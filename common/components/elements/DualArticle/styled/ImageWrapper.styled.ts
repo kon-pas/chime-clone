@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { MEDIA } from '@constants';
+import { MEDIA } from "@constants";
 
 const ImageWrapper = styled.div`
   margin: 1.25rem auto 0 auto;

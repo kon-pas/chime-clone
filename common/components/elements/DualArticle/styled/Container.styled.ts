@@ -1,10 +1,10 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import type { HexColor } from '@types';
+import type { HexColor } from "@types";
 
-import { MEDIA, COLORS } from '@constants';
+import { MEDIA, COLORS } from "@constants";
 
-import ContentContainer from '@components/elements/ContentContainer';
+import ContentContainer from "@components/elements/ContentContainer";
 
 interface ContainerProps {
   imageFloat?: "left" | "right";
