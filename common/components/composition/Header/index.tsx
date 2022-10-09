@@ -9,7 +9,7 @@ import { NAVIGATION_ITEMS } from '@constants';
 import IconSVG from '@components/elements/IconSVG';
 
 const Header: React.FC = () => {
-  const [isOpened, setIsOpened] = useState<boolean>(false);
+  const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
 
   return (
     <>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
           />
         </h1>
 
-        <S.MenuDesktop>
+        <S.MenuContainerDesktop>
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) =>
               <li key={idx}>
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                   {item.label}
                 </S.Span>
 
-                <S.SubmenuDesktop>
+                <S.SubmenuContainerDesktop>
                   <menu>
                     {item.subitems.map((item, idx) =>
                       <li key={idx}>
@@ -39,15 +39,13 @@ const Header: React.FC = () => {
                       </li>
                     )}
                   </menu>
-                </S.SubmenuDesktop>
+                </S.SubmenuContainerDesktop>
               </li>
             )}
           </menu>
-        </S.MenuDesktop>
+        </S.MenuContainerDesktop>
 
         <nav>
-          {/* Log In */}
-
           <S.Span>
             Log In
           </S.Span>
@@ -56,7 +54,7 @@ const Header: React.FC = () => {
             Sign Up
           </S.Button>
 
-          <IconSVG onClick={() => setIsOpened(isOpened => !isOpened)}>
+          <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -66,7 +64,7 @@ const Header: React.FC = () => {
         </nav>
       </S.Header>
 
-      <S.Menu isVisible={isOpened} >
+      <S.SlidePageContainer isVisible={isSpliderOpened}>
         <header>
           <h1>
             <Image
@@ -77,7 +75,7 @@ const Header: React.FC = () => {
             />
           </h1>
 
-          <IconSVG onClick={() => setIsOpened(isOpened => !isOpened)}>
+          <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -86,7 +84,7 @@ const Header: React.FC = () => {
           </IconSVG>
         </header>
 
-        <nav>
+        <S.MenuContainer>
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) =>
               <li key={idx}>
@@ -103,13 +101,13 @@ const Header: React.FC = () => {
               </li>
             )}
           </menu>
-        </nav>
+        </S.MenuContainer>
 
         <S.AccountActions>
           <div>Log In</div>
           <div>Sign Up</div>
         </S.AccountActions>
-      </S.Menu>
+      </S.SlidePageContainer>
     </>
   );
 }
