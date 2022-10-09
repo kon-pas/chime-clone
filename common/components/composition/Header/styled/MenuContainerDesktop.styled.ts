@@ -48,6 +48,7 @@ const MenuContainerDesktop = styled.nav`
   > menu {
     display: flex;
     gap: 0.75rem;
+    transition: gap 0.5s ease-out;
 
     ${MEDIA.LG} {
       gap: 1.6rem;

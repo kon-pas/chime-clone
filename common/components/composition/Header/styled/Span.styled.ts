@@ -11,6 +11,7 @@ const Span = styled.span`
   user-select: none;
   align-self: center;
   display: none;
+  transition: font-size 0.5s ease-out;
   
   &:hover {
     transition-property: color;

@@ -19,6 +19,7 @@ const Button = styled(DefaultButton)`
 
   ${MEDIA.MD} {
     padding: 0.8rem 1.4rem;
+    transition: all 0.5s ease-out;
   }
 
   ${MEDIA.LG} {

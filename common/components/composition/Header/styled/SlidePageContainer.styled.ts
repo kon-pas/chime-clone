@@ -44,7 +44,7 @@ const SlidePageContainer = styled.div<SlidePageContainerProps>`
     }
   }
 
-  ${MEDIA.LG} {
+  ${MEDIA.MD} {
     display: none;
   }
 `;
