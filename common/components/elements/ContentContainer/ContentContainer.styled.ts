@@ -5,12 +5,12 @@ import { MEDIA, BREAKPOINTS } from "@constants";
 const ContentContainer = styled.div`
   padding: 0 1.4rem;
 
-  ${ MEDIA.MD } {
+  ${MEDIA.MD} {
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
   }
 
-  ${ MEDIA.LG } {
+  ${MEDIA.LG} {
     width: ${BREAKPOINTS.LG}px;
     padding: 0 2rem;
   }
