@@ -1,1 +1,1 @@
-export * as default from './styled';
+export * as default from "./styled";
