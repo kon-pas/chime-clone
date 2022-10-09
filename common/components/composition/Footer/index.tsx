@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
               />
             </a>
 
-            <div>
+            <S.IconWrapper>
               <a href="https://www.facebook.com/chime">
                 <Image
                   src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/facebook-bw.png"
@@ -55,9 +55,9 @@ const Footer: React.FC = () => {
                   height="32px"
                 />
               </a>
-            </div>
+            </S.IconWrapper>
 
-            <div>
+            <S.IconWrapper>
               <a href="https://twitter.com/chime">
                 <Image
                   src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/twitter-bw.png"
@@ -66,9 +66,9 @@ const Footer: React.FC = () => {
                   height="32px"
                 />
               </a>
-            </div>
+            </S.IconWrapper>
 
-            <div>
+            <S.IconWrapper>
               <a href="https://www.instagram.com/Chime/">
                 <Image
                   src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/instagram-bw.png"
@@ -77,7 +77,7 @@ const Footer: React.FC = () => {
                   height="32px"
                 />
               </a>
-            </div>
+            </S.IconWrapper>
           </S.SocialSection>
         </S.TopSection>
 
