@@ -1,14 +1,14 @@
-import * as S from './Button.styled';
+import StyledButton from './Button.styled';
 
 interface ButtonProps {
-  label: string;
+  children: React.ReactNode;
 }
 
-const Button: React.FC<ButtonProps> = ({label}) => {
+const Button: React.FC<ButtonProps> = ({children}) => {
   return (
-    <>
-      {label}
-    </>
+    <StyledButton>
+      {children}
+    </StyledButton>
   )
 }
 
