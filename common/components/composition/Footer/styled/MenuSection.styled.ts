@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, MEDIA } from '@constants';
+import { COLORS, MEDIA } from "@constants";
 
 const MenuSection = styled.menu`
   display: grid;
@@ -14,13 +14,12 @@ const MenuSection = styled.menu`
   }
 
   > li {
-
     > span {
       white-space: nowrap;
       font-size: 1rem;
       font-weight: 700;
     }
-    
+
     > menu {
       display: grid;
       grid-gap: 0.9rem;
@@ -32,17 +31,16 @@ const MenuSection = styled.menu`
         font-size: 0.85rem;
         user-select: none;
         cursor: pointer;
-  
+
         transition-property: color;
         transition-duration: 0.2s;
-  
+
         &:hover {
           color: ${COLORS.LIME_DARK};
         }
       }
     }
   }
-
 `;
 
 export default MenuSection;

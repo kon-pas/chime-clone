@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS } from '@constants';
+import { COLORS } from "@constants";
 
 interface HorizontalLineProps {
   hideAt?: number;

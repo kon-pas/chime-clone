@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { MEDIA } from '@constants';
+import { MEDIA } from "@constants";
 
 const SocialSection = styled.div`
   width: 170px;
   height: 150px;
   display: flex;
   flex-wrap: wrap;
-	justify-content: space-between;
+  justify-content: space-between;
   align-content: space-between;
   margin: 0 auto;
   transition: all 0.5s ease-out;

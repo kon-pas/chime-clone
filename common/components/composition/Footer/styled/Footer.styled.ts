@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, MEDIA, BREAKPOINTS } from '@constants';
+import { COLORS, MEDIA, BREAKPOINTS } from "@constants";
 
 const Footer = styled.footer`
   background-color: ${COLORS.WHITE};
