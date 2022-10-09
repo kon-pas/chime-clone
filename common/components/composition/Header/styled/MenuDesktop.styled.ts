@@ -3,11 +3,36 @@ import styled, { keyframes } from 'styled-components';
 import { COLORS, MEDIA } from '@constants';
 
 const appear = keyframes`
-  from {
+  0% {
+    visibility: hidden;
     opacity: 0;
   }
-  to {
-    opacity: 100;
+
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+`;
+
+const disappear = keyframes`
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  
+  100% {
+    visibility: hidden;
+    opacity: 0;
   }
 `;
 
@@ -46,15 +71,14 @@ const MenuDesktop = styled.nav`
       }
 
       &:hover > div {
-        display: block;
+        animation: ${appear} 0.2s ease-out;
+        visibility: visible;
       }
 
       > div {
-        display: none;
         position: absolute;
-        animation-name: ${appear};
-        animation-duration: 0.1s;
-        animation-timing-function: linear;
+        animation: ${disappear} 0.2s ease-out;
+        visibility: hidden;
       }
     }
   }
