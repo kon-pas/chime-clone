@@ -4,7 +4,11 @@ import Head from 'next/head';
 
 import Image from 'next/image';
 
+import { COLORS } from '@constants';
+
 import DualArticle from '@components/elements/DualArticle';
+import Button from '@components/elements/Button';
+import IconSVG from '@components/elements/IconSVG';
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +24,16 @@ const Home: NextPage = () => {
           <p>
             We&apos;ll spot you up to $200 on debit card purchases with no overdraft fees. Eligibility requirements apply.<sup>1</sup>
           </p>
+          <Button>
+            Learn more
+            <IconSVG strokeWidth={3}>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </IconSVG>
+          </Button>
         </DualArticle.Header>
 
         <DualArticle.ImageWrapper>
