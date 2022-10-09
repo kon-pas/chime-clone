@@ -10,6 +10,11 @@ const SocialSection = styled.div`
 	justify-content: space-between;
   align-content: space-between;
   margin: 0 auto;
+  transition: all 0.5s ease-out;
+
+  > a {
+    height: 40px;
+  }
 
   ${MEDIA.MD} {
     width: auto;
@@ -22,10 +27,6 @@ const SocialSection = styled.div`
     width: 170px;
     height: 150px;
     justify-content: space-between;
-  }
-
-  > a {
-    height: 40px;
   }
 `;
 
