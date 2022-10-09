@@ -1,14 +1,14 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 
-import Head from 'next/head';
+import Head from "next/head";
 
-import Image from 'next/image';
+import Image from "next/image";
 
-import { COLORS } from '@constants';
+import { COLORS } from "@constants";
 
-import DualArticle from '@components/elements/DualArticle';
-import Button from '@components/elements/Button';
-import IconSVG from '@components/elements/IconSVG';
+import DualArticle from "@components/elements/DualArticle";
+import Button from "@components/elements/Button";
+import IconSVG from "@components/elements/IconSVG";
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +22,8 @@ const Home: NextPage = () => {
         <DualArticle.Header>
           <h1>Overdraft fee-free with SpotMe</h1>
           <p>
-            We&apos;ll spot you up to $200 on debit card purchases with no overdraft fees. Eligibility requirements apply.<sup>1</sup>
+            We&apos;ll spot you up to $200 on debit card purchases with no
+            overdraft fees. Eligibility requirements apply.<sup>1</sup>
           </p>
           <Button>
             Learn more
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
         </DualArticle.ImageWrapper>
       </DualArticle.Container>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

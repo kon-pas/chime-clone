@@ -1,10 +1,10 @@
-import '@styles/fonts.css';
+import "@styles/fonts.css";
 
-import GlobalStyle from '@styles/GlobalStyle.styled';
+import GlobalStyle from "@styles/GlobalStyle.styled";
 
-import type { AppProps } from 'next/app';
+import type { AppProps } from "next/app";
 
-import MainLayout from '@components/composition/MainLayout';
+import MainLayout from "@components/composition/MainLayout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
