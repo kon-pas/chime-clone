@@ -10,15 +10,14 @@ const SubmenuDesktop = styled.div`
     border-radius: 0.3rem;
     border-color: ${COLORS.FONT_GRAY_LIGHT};
     background-color: ${COLORS.WHITE};
-    box-shadow: 0px 2px 24px -16px rgba(66, 68, 90, 1);
+    box-shadow: 1px 1px 7px #ccc;
     display: grid;
     gap: 1.1rem;
     user-select: none;
 
     > li {
       color: ${COLORS.FONT_GRAY_MEDIUM};
-      transition-property: color;
-      transition-duration: 0.2s;
+      transition: color 0.15s ease-out;
       font-size: 0.85rem;
       font-weight: 600;
       align-self: center;
