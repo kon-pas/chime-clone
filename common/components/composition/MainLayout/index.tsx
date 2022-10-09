@@ -1,4 +1,4 @@
-import * as S from './MainLayout.styled';
+import * as S from "./MainLayout.styled";
 
 import Header from "@components/composition/Header";
 import Footer from "@components/composition/Footer";
@@ -14,15 +14,13 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Header />
       </S.HeaderContainer>
 
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
       <S.FooterContainer>
         <Footer />
       </S.FooterContainer>
     </S.PageContainer>
   );
-}
+};
 
 export default MainLayout;

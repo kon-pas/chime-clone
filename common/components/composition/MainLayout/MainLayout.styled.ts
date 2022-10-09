@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import { COLORS, Z_INDEX } from '@constants';
+import { COLORS, Z_INDEX } from "@constants";
 
 export const PageContainer = styled.div`
   min-height: 100vh;
