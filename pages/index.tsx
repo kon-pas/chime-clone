@@ -179,7 +179,7 @@ const Home: NextPage = () => {
       </DualArticle.Container>
 
       {/* 6 */}
-      <DualArticle.Container imageFloat="left">
+      <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Make your money grow fast</h1>
           <p>
@@ -213,11 +213,10 @@ const Home: NextPage = () => {
       {/* 7 */}
       <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
-          <h1>Make your money grow fast</h1>
+          <h1>Stay in control with alerts</h1>
           <p>
-            1.50% Annual Percentage Yield (APY).<sup>7</sup> Set money aside
-            with Automatic Savings features. And never pay a fee on your Savings
-            Account.
+            You&apos;re always in-the-know with daily balance notifications and
+            transaction alerts
           </p>
           <Button>
             Learn more
@@ -233,11 +232,11 @@ const Home: NextPage = () => {
 
         <DualArticle.ImageWrapper>
           <Image
-            src="https://www.chime.com/wp-content/uploads/2022/08/APY.png"
+            src="https://www.chime.com/wp-content/uploads/2020/03/alerts.png"
             alt="Overdraft fee-free with SpotMe"
             layout="responsive"
-            width="774"
-            height="474"
+            width="734"
+            height="330"
           />
         </DualArticle.ImageWrapper>
       </DualArticle.Container>
