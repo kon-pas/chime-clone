@@ -177,6 +177,38 @@ const Home: NextPage = () => {
           />
         </DualArticle.ImageWrapper>
       </DualArticle.Container>
+
+      {/* 6 */}
+      <DualArticle.Container imageFloat="left">
+        <DualArticle.Header>
+          <h1>Pay anyone the fast, fee-free way</h1>
+          <p>
+            Pay friends and family fee-free, no matter what bank account they
+            use. They can cash out instantly<sup>6</sup> and securely, no
+            sign-up needed.
+          </p>
+          <Button>
+            Learn more
+            <IconSVG strokeWidth={3}>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </IconSVG>
+          </Button>
+        </DualArticle.Header>
+
+        <DualArticle.ImageWrapper>
+          <Image
+            src="https://www.chime.com/wp-content/uploads/2021/07/pay-anyone-desktop.png"
+            alt="Overdraft fee-free with SpotMe"
+            layout="responsive"
+            width="831"
+            height="916"
+          />
+        </DualArticle.ImageWrapper>
+      </DualArticle.Container>
     </div>
   );
 };
