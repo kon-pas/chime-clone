@@ -118,9 +118,10 @@ const Home: NextPage = () => {
         <DualArticle.Header>
           <h1>A new way to build credit</h1>
           <p>
-            Help increase your FICO Score<sup>®</sup> by an average of 30 points with our
-            new secured credit card.<sup>4</sup> No interest, no annual fees, no credit
-            check to apply. Eligibility requirements apply.<sup>5</sup>
+            Help increase your FICO Score<sup>®</sup> by an average of 30 points
+            with our new secured credit card.<sup>4</sup> No interest, no annual
+            fees, no credit check to apply. Eligibility requirements apply.
+            <sup>5</sup>
           </p>
           <Button>
             Learn more
@@ -148,11 +149,11 @@ const Home: NextPage = () => {
       {/* 5 */}
       <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
-          <h1>A new way to build credit</h1>
+          <h1>Pay anyone the fast, fee-free way</h1>
           <p>
-            Help increase your FICO Score<sup>®</sup> by an average of 30 points with our
-            new secured credit card.<sup>4</sup> No interest, no annual fees, no credit
-            check to apply. Eligibility requirements apply.<sup>5</sup>
+            Pay friends and family fee-free, no matter what bank account they
+            use. They can cash out instantly<sup>6</sup> and securely, no
+            sign-up needed.
           </p>
           <Button>
             Learn more
@@ -168,11 +169,11 @@ const Home: NextPage = () => {
 
         <DualArticle.ImageWrapper>
           <Image
-            src="https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png"
+            src="https://www.chime.com/wp-content/uploads/2021/07/pay-anyone-desktop.png"
             alt="Overdraft fee-free with SpotMe"
             layout="responsive"
-            width="826"
-            height="670"
+            width="831"
+            height="916"
           />
         </DualArticle.ImageWrapper>
       </DualArticle.Container>
