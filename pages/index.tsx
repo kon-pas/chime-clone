@@ -47,6 +47,36 @@ const Home: NextPage = () => {
           />
         </DualArticle.ImageWrapper>
       </DualArticle.Container>
+
+      <DualArticle.Container imageFloat="left">
+        <DualArticle.Header>
+          <h1>Get paid early</h1>
+          <p>
+            Set up direct deposit and get your paycheck up to 2 days earlier
+            than some of your co-workers!<sup>2</sup>
+          </p>
+          <Button>
+            Learn more
+            <IconSVG strokeWidth={3}>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </IconSVG>
+          </Button>
+        </DualArticle.Header>
+
+        <DualArticle.ImageWrapper>
+          <Image
+            src="https://www.chime.com/wp-content/uploads/2020/03/paid-early.png"
+            alt="Overdraft fee-free with SpotMe"
+            layout="responsive"
+            width="713"
+            height="202"
+          />
+        </DualArticle.ImageWrapper>
+      </DualArticle.Container>
     </div>
   );
 };
