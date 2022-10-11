@@ -17,11 +17,17 @@ const Header = styled.header`
     line-height: 1.75rem;
     margin-top: 0.75rem;
     margin-bottom: 1.25rem;
+    
+    > small {}
   }
 
   ${MEDIA.MD} {
-    width: 100%;
+    width: 365px;
     margin: auto 0;
+  }
+
+  ${MEDIA.LG} {
+    width: 400px;
   }
 `;
 
