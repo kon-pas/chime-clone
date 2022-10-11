@@ -4,12 +4,17 @@ import { MEDIA } from "@constants";
 
 const ImageWrapper = styled.div`
   margin: 1.25rem auto 0 auto;
-  max-width: 400px;
+  max-width: 440px;
   transition: all 0.5s ease-out;
 
   ${MEDIA.MD} {
+    width: 365px;
+    margin: auto 0;
+  }
+
+  ${MEDIA.LG} {
+    margin: auto;
     width: 100%;
-    margin: auto 0 auto 0;
   }
 `;
 
