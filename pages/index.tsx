@@ -24,6 +24,7 @@ const Home: NextPage = () => {
           alt: "Overdraft fee-free with SpotMe",
           width: 792,
           height: 526,
+          float: "right",
         }}
       >
         <h1>Overdraft fee-free with SpotMe</h1>
@@ -58,6 +59,7 @@ const Home: NextPage = () => {
           alt: "Overdraft fee-free with SpotMe",
           width: 644,
           height: 322,
+          float: "right",
         }}
       >
         <h1>Say goodbye to monthly fees</h1>
@@ -73,7 +75,7 @@ const Home: NextPage = () => {
       {/* 4 */}
       <DualArticle
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          src: "https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png",
           alt: "Overdraft fee-free with SpotMe",
           width: 826,
           height: 670,
@@ -96,13 +98,14 @@ const Home: NextPage = () => {
           alt: "Overdraft fee-free with SpotMe",
           width: 813,
           height: 916,
+          float: "right",
         }}
       >
         <h1>Pay anyone the fast, fee-free way</h1>
         <p>
-          Pay friends and family fee-free, no matter what bank account they
-          use. They can cash out instantly<sup>6</sup> and securely, no
-          sign-up needed.
+          Pay friends and family fee-free, no matter what bank account they use.
+          They can cash out instantly<sup>6</sup> and securely, no sign-up
+          needed.
         </p>
         <LearnMoreButton />
       </DualArticle>
@@ -110,95 +113,38 @@ const Home: NextPage = () => {
       {/* 6 */}
       <DualArticle
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          src: "https://www.chime.com/wp-content/uploads/2022/08/APY.png",
           alt: "Overdraft fee-free with SpotMe",
-          width: 713,
-          height: 202,
+          width: 774,
+          height: 474,
         }}
       >
-        <h1>Get paid early</h1>
+        <h1>Make your money grow fast</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier than
-          some of your co-workers!<sup>2</sup>
+          1.50% Annual Percentage Yield (APY).<sup>7</sup> Set money aside with
+          Automatic Savings features. And never pay a fee on your Savings
+          Account.
         </p>
         <LearnMoreButton />
       </DualArticle>
-      {/* <DualArticle.Container imageFloat="right">
-        <DualArticle.Header>
-          <h1>Make your money grow fast</h1>
-          <p>
-            1.50% Annual Percentage Yield (APY).<sup>7</sup> Set money aside
-            with Automatic Savings features. And never pay a fee on your Savings
-            Account.
-          </p>
-          <Button>
-            Learn more
-            <IconSVG strokeWidth={3}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </IconSVG>
-          </Button>
-        </DualArticle.Header>
-
-        <DualArticle.ImageWrapper>
-          <Image
-            src="https://www.chime.com/wp-content/uploads/2022/08/APY.png"
-            alt="Overdraft fee-free with SpotMe"
-            layout="responsive"
-            width="774"
-            height="474"
-          />
-        </DualArticle.ImageWrapper>
-      </DualArticle.Container> */}
 
       {/* 7 */}
       <DualArticle
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          src: "https://www.chime.com/wp-content/uploads/2020/03/alerts.png",
           alt: "Overdraft fee-free with SpotMe",
-          width: 713,
-          height: 202,
+          width: 734,
+          height: 330,
+          float: "right",
         }}
       >
-        <h1>Get paid early</h1>
+        <h1>Stay in control with alerts</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier than
-          some of your co-workers!<sup>2</sup>
+          You&apos;re always in-the-know with daily balance notifications and
+          transaction alerts
         </p>
         <LearnMoreButton />
       </DualArticle>
-      {/* <DualArticle.Container imageFloat="left">
-        <DualArticle.Header>
-          <h1>Stay in control with alerts</h1>
-          <p>
-            You&apos;re always in-the-know with daily balance notifications and
-            transaction alerts
-          </p>
-          <Button>
-            Learn more
-            <IconSVG strokeWidth={3}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </IconSVG>
-          </Button>
-        </DualArticle.Header>
-
-        <DualArticle.ImageWrapper>
-          <Image
-            src="https://www.chime.com/wp-content/uploads/2020/03/alerts.png"
-            alt="Overdraft fee-free with SpotMe"
-            layout="responsive"
-            width="734"
-            height="330"
-          />
-        </DualArticle.ImageWrapper>
-      </DualArticle.Container> */}
     </div>
   );
 };
