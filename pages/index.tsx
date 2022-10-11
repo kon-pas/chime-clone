@@ -2,8 +2,6 @@ import type { NextPage } from "next";
 
 import Head from "next/head";
 
-import Image from "next/image";
-
 import { COLORS } from "@constants";
 
 import DualArticle from "@components/elements/DualArticle";
@@ -43,6 +41,7 @@ const Home: NextPage = () => {
           width: 713,
           height: 202,
         }}
+        backgroundColor={COLORS.GRAY_LIGHT}
       >
         <h1>Get paid early</h1>
         <p>
@@ -80,6 +79,7 @@ const Home: NextPage = () => {
           width: 826,
           height: 670,
         }}
+        backgroundColor={COLORS.GRAY_LIGHT}
       >
         <h1>A new way to build credit</h1>
         <p>
@@ -89,6 +89,12 @@ const Home: NextPage = () => {
           <sup>5</sup>
         </p>
         <LearnMoreButton />
+        <p>
+          <small>
+            Regular on-time payment history can have a positive impact on your
+            credit score.
+          </small>
+        </p>
       </DualArticle>
 
       {/* 5 */}
@@ -118,6 +124,7 @@ const Home: NextPage = () => {
           width: 774,
           height: 474,
         }}
+        backgroundColor={COLORS.GRAY_LIGHT}
       >
         <h1>Make your money grow fast</h1>
         <p>
