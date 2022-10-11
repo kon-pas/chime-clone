@@ -4,6 +4,7 @@ import { COLORS, MEDIA } from "@constants";
 
 const Header = styled.header`
   transition: all 0.5s ease-out;
+  height: fit-content;
 
   > h1 {
     font-size: 2.1rem;
@@ -20,7 +21,7 @@ const Header = styled.header`
 
   ${MEDIA.MD} {
     width: 100%;
-    margin: 2rem 0;
+    margin: auto 0;
   }
 `;
 
