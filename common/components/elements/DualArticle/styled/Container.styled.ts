@@ -2,17 +2,15 @@ import styled from "styled-components";
 
 import type { HexColor } from "@types";
 
-import { MEDIA, COLORS } from "@constants";
+import { MEDIA, COLORS, BREAKPOINTS } from "@constants";
 
 import ContentContainer from "@components/elements/ContentContainer";
 
 interface ContainerProps {
-  imageFloat?: "left" | "right";
-  backgroundColor?: HexColor;
+  imageFloat: "left" | "right";
 }
 
 const Container = styled(ContentContainer)<ContainerProps>`
-  background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   padding-top: 3rem;
   padding-bottom: 3rem;
   transition: all 0.5s ease-out;
