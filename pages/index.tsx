@@ -18,6 +18,22 @@ const Home: NextPage = () => {
       </Head>
 
       {/* 1 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2021/03/spot-me-1.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 792,
+          height: 526,
+        }}
+      >
+        <h1>Overdraft fee-free with SpotMe</h1>
+        <p>
+          We&apos;ll spot you up to $200 on debit card purchases with no
+          overdraft fees. Eligibility requirements apply.<sup>1</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
+
       {/* <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Overdraft fee-free with SpotMe</h1>
@@ -49,6 +65,21 @@ const Home: NextPage = () => {
       </DualArticle.Container> */}
 
       {/* 2 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 713,
+          height: 202,
+        }}
+      >
+        <h1>Get paid early</h1>
+        <p>
+          Set up direct deposit and get your paycheck up to 2 days earlier
+          than some of your co-workers!<sup>2</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
       {/* <DualArticle.Container imageFloat="left" backgroundColor={COLORS.GRAY_MEDIUM}>
         <DualArticle.Header>
           <h1>Get paid early</h1>
@@ -80,6 +111,21 @@ const Home: NextPage = () => {
       </DualArticle.Container> */}
 
       {/* 3 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 713,
+          height: 202,
+        }}
+      >
+        <h1>Get paid early</h1>
+        <p>
+          Set up direct deposit and get your paycheck up to 2 days earlier
+          than some of your co-workers!<sup>2</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
       {/* <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Say goodbye to monthly fees</h1>
@@ -113,6 +159,21 @@ const Home: NextPage = () => {
       </DualArticle.Container> */}
 
       {/* 4 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 713,
+          height: 202,
+        }}
+      >
+        <h1>Get paid early</h1>
+        <p>
+          Set up direct deposit and get your paycheck up to 2 days earlier
+          than some of your co-workers!<sup>2</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
       {/* <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
           <h1>A new way to build credit</h1>
@@ -146,6 +207,21 @@ const Home: NextPage = () => {
       </DualArticle.Container> */}
 
       {/* 5 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 713,
+          height: 202,
+        }}
+      >
+        <h1>Get paid early</h1>
+        <p>
+          Set up direct deposit and get your paycheck up to 2 days earlier
+          than some of your co-workers!<sup>2</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
       {/* <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
           <h1>Pay anyone the fast, fee-free way</h1>
@@ -178,6 +254,21 @@ const Home: NextPage = () => {
       </DualArticle.Container> */}
 
       {/* 6 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 713,
+          height: 202,
+        }}
+      >
+        <h1>Get paid early</h1>
+        <p>
+          Set up direct deposit and get your paycheck up to 2 days earlier
+          than some of your co-workers!<sup>2</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
       {/* <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Make your money grow fast</h1>
@@ -210,6 +301,21 @@ const Home: NextPage = () => {
       </DualArticle.Container> */}
 
       {/* 7 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          alt: "Overdraft fee-free with SpotMe",
+          width: 713,
+          height: 202,
+        }}
+      >
+        <h1>Get paid early</h1>
+        <p>
+          Set up direct deposit and get your paycheck up to 2 days earlier
+          than some of your co-workers!<sup>2</sup>
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
       {/* <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
           <h1>Stay in control with alerts</h1>
