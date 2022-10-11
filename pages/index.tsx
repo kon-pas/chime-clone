@@ -34,36 +34,6 @@ const Home: NextPage = () => {
         <LearnMoreButton />
       </DualArticle>
 
-      {/* <DualArticle.Container imageFloat="right">
-        <DualArticle.Header>
-          <h1>Overdraft fee-free with SpotMe</h1>
-          <p>
-            We&apos;ll spot you up to $200 on debit card purchases with no
-            overdraft fees. Eligibility requirements apply.<sup>1</sup>
-          </p>
-          <Button>
-            Learn more
-            <IconSVG strokeWidth={3}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </IconSVG>
-          </Button>
-        </DualArticle.Header>
-
-        <DualArticle.ImageWrapper>
-          <Image
-            src="https://www.chime.com/wp-content/uploads/2021/03/spot-me-1.png"
-            alt="Overdraft fee-free with SpotMe"
-            layout="responsive"
-            width="792"
-            height="526"
-          />
-        </DualArticle.ImageWrapper>
-      </DualArticle.Container> */}
-
       {/* 2 */}
       <DualArticle
         img={{
@@ -75,88 +45,30 @@ const Home: NextPage = () => {
       >
         <h1>Get paid early</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier
-          than some of your co-workers!<sup>2</sup>
+          Set up direct deposit and get your paycheck up to 2 days earlier than
+          some of your co-workers!<sup>2</sup>
         </p>
         <LearnMoreButton />
       </DualArticle>
-      {/* <DualArticle.Container imageFloat="left" backgroundColor={COLORS.GRAY_MEDIUM}>
-        <DualArticle.Header>
-          <h1>Get paid early</h1>
-          <p>
-            Set up direct deposit and get your paycheck up to 2 days earlier
-            than some of your co-workers!<sup>2</sup>
-          </p>
-          <Button>
-            Learn more
-            <IconSVG strokeWidth={3}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </IconSVG>
-          </Button>
-        </DualArticle.Header>
-
-        <DualArticle.ImageWrapper>
-          <Image
-            src="https://www.chime.com/wp-content/uploads/2020/03/paid-early.png"
-            alt="Overdraft fee-free with SpotMe"
-            layout="responsive"
-            width="713"
-            height="202"
-          />
-        </DualArticle.ImageWrapper>
-      </DualArticle.Container> */}
 
       {/* 3 */}
       <DualArticle
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
           alt: "Overdraft fee-free with SpotMe",
-          width: 713,
-          height: 202,
+          width: 644,
+          height: 322,
         }}
       >
-        <h1>Get paid early</h1>
+        <h1>Say goodbye to monthly fees</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier
-          than some of your co-workers!<sup>2</sup>
+          No overdraft. No minimum balance. No monthly fees. No foreign
+          transaction fees. 60,000+ fee-free ATMs<sup>3</sup> at stores you
+          love, like Walgreens<sup>®</sup>, CVS<sup>®</sup>, 7-Eleven
+          <sup>®</sup>, and Circle K. Out-of-network fees apply.
         </p>
         <LearnMoreButton />
       </DualArticle>
-      {/* <DualArticle.Container imageFloat="right">
-        <DualArticle.Header>
-          <h1>Say goodbye to monthly fees</h1>
-          <p>
-            No overdraft. No minimum balance. No monthly fees. No foreign
-            transaction fees. 60,000+ fee-free ATMs<sup>3</sup> at stores you
-            love, like Walgreens<sup>®</sup>, CVS<sup>®</sup>, 7-Eleven
-            <sup>®</sup>, and Circle K. Out-of-network fees apply.
-          </p>
-          <Button>
-            Learn more
-            <IconSVG strokeWidth={3}>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </IconSVG>
-          </Button>
-        </DualArticle.Header>
-
-        <DualArticle.ImageWrapper>
-          <Image
-            src="https://www.chime.com/wp-content/uploads/2020/03/no-fees.png"
-            alt="Overdraft fee-free with SpotMe"
-            layout="responsive"
-            width="644"
-            height="322"
-          />
-        </DualArticle.ImageWrapper>
-      </DualArticle.Container> */}
 
       {/* 4 */}
       <DualArticle
@@ -169,8 +81,8 @@ const Home: NextPage = () => {
       >
         <h1>Get paid early</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier
-          than some of your co-workers!<sup>2</sup>
+          Set up direct deposit and get your paycheck up to 2 days earlier than
+          some of your co-workers!<sup>2</sup>
         </p>
         <LearnMoreButton />
       </DualArticle>
@@ -217,8 +129,8 @@ const Home: NextPage = () => {
       >
         <h1>Get paid early</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier
-          than some of your co-workers!<sup>2</sup>
+          Set up direct deposit and get your paycheck up to 2 days earlier than
+          some of your co-workers!<sup>2</sup>
         </p>
         <LearnMoreButton />
       </DualArticle>
@@ -264,8 +176,8 @@ const Home: NextPage = () => {
       >
         <h1>Get paid early</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier
-          than some of your co-workers!<sup>2</sup>
+          Set up direct deposit and get your paycheck up to 2 days earlier than
+          some of your co-workers!<sup>2</sup>
         </p>
         <LearnMoreButton />
       </DualArticle>
@@ -311,8 +223,8 @@ const Home: NextPage = () => {
       >
         <h1>Get paid early</h1>
         <p>
-          Set up direct deposit and get your paycheck up to 2 days earlier
-          than some of your co-workers!<sup>2</sup>
+          Set up direct deposit and get your paycheck up to 2 days earlier than
+          some of your co-workers!<sup>2</sup>
         </p>
         <LearnMoreButton />
       </DualArticle>
