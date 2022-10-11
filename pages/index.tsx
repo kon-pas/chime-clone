@@ -7,8 +7,7 @@ import Image from "next/image";
 import { COLORS } from "@constants";
 
 import DualArticle from "@components/elements/DualArticle";
-import Button from "@components/elements/Button";
-import IconSVG from "@components/elements/IconSVG";
+import LearnMoreButton from "@components/pages/home/LearnMoreButton";
 
 const Home: NextPage = () => {
   return (
@@ -19,7 +18,7 @@ const Home: NextPage = () => {
       </Head>
 
       {/* 1 */}
-      <DualArticle.Container imageFloat="right">
+      {/* <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Overdraft fee-free with SpotMe</h1>
           <p>
@@ -47,10 +46,10 @@ const Home: NextPage = () => {
             height="526"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
 
       {/* 2 */}
-      <DualArticle.Container imageFloat="left">
+      {/* <DualArticle.Container imageFloat="left" backgroundColor={COLORS.GRAY_MEDIUM}>
         <DualArticle.Header>
           <h1>Get paid early</h1>
           <p>
@@ -78,10 +77,10 @@ const Home: NextPage = () => {
             height="202"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
 
       {/* 3 */}
-      <DualArticle.Container imageFloat="right">
+      {/* <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Say goodbye to monthly fees</h1>
           <p>
@@ -111,10 +110,10 @@ const Home: NextPage = () => {
             height="322"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
 
       {/* 4 */}
-      <DualArticle.Container imageFloat="left">
+      {/* <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
           <h1>A new way to build credit</h1>
           <p>
@@ -144,10 +143,10 @@ const Home: NextPage = () => {
             height="670"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
 
       {/* 5 */}
-      <DualArticle.Container imageFloat="left">
+      {/* <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
           <h1>Pay anyone the fast, fee-free way</h1>
           <p>
@@ -176,10 +175,10 @@ const Home: NextPage = () => {
             height="916"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
 
       {/* 6 */}
-      <DualArticle.Container imageFloat="right">
+      {/* <DualArticle.Container imageFloat="right">
         <DualArticle.Header>
           <h1>Make your money grow fast</h1>
           <p>
@@ -208,10 +207,10 @@ const Home: NextPage = () => {
             height="474"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
 
       {/* 7 */}
-      <DualArticle.Container imageFloat="left">
+      {/* <DualArticle.Container imageFloat="left">
         <DualArticle.Header>
           <h1>Stay in control with alerts</h1>
           <p>
@@ -239,7 +238,7 @@ const Home: NextPage = () => {
             height="330"
           />
         </DualArticle.ImageWrapper>
-      </DualArticle.Container>
+      </DualArticle.Container> */}
     </div>
   );
 };
