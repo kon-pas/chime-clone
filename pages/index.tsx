@@ -166,6 +166,7 @@ const Home: NextPage = () => {
             <Image
               src="https://www.chime.com/wp-content/uploads/2020/03/lock.png"
               alt="Lock"
+              layout="fixed"
               width={174}
               height={220}
             />

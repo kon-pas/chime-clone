@@ -9,6 +9,7 @@ const ImageWrapper = styled.div`
 
   ${MEDIA.MD} {
     margin-bottom: 0;
+    align-items: center;
 
     img {
       width: 170px;
