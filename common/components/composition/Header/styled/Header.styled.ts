@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { COLORS, MEDIA, BREAKPOINTS } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 const Header = styled.header`
   width: 100%;
   height: 60px;
@@ -10,7 +12,8 @@ const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   justify-self: center;
-  transition: all 0.5s ease-out;
+
+  ${resizeTransition("all")}
 
   > h1 {
     line-height: 1rem;

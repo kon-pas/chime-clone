@@ -4,6 +4,8 @@ import type { HexColor } from "@types";
 
 import { MEDIA, COLORS, BREAKPOINTS } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 import ContentContainer from "@components/elements/ContentContainer";
 
 interface ContainerProps {
@@ -11,7 +13,7 @@ interface ContainerProps {
 }
 
 const Container = styled(ContentContainer)<ContainerProps>`
-  transition: all 0.5s ease-out;
+${resizeTransition("all")}
 
   ${MEDIA.MD} {
     display: flex;

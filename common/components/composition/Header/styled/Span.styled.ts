@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { COLORS, MEDIA } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 const Span = styled.span`
   display: inline-block;
   white-space: nowrap;
@@ -11,7 +13,8 @@ const Span = styled.span`
   user-select: none;
   align-self: center;
   display: none;
-  transition: font-size 0.5s ease-out;
+
+  ${resizeTransition("font-size")}
 
   &:hover {
     transition-property: color;

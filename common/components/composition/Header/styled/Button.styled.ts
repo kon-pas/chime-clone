@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { COLORS, MEDIA } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 import DefaultButton from "@components/elements/Button/Button.styled";
 
 const Button = styled(DefaultButton)`
@@ -19,7 +21,8 @@ const Button = styled(DefaultButton)`
 
   ${MEDIA.MD} {
     padding: 0.8rem 1.4rem;
-    transition: all 0.5s ease-out;
+
+    ${resizeTransition("all")}
   }
 
   ${MEDIA.LG} {
