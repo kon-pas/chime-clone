@@ -6,6 +6,10 @@ const TextWrapper = styled.div`
 
   h2 {
     font-size: 1.15rem;
+
+    ${MEDIA.LG} {
+      font-size: 1.5rem;
+    }
   }
 
   p {
@@ -17,11 +21,13 @@ const TextWrapper = styled.div`
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    ${MEDIA.LG} {
+      font-size: 1rem;
+    }
   }
 
-
   ${MEDIA.MD} {
-    width: 50%;
     display: inline-block;
     vertical-align:top;
   }
