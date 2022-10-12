@@ -1,4 +1,4 @@
-import * as S from "./IconSVG.styled";
+import * as Styled from "./IconSVG.styled";
 
 interface IconSVGProps {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ const IconSVG: React.FC<IconSVGProps> = ({
   onClick,
 }) => {
   return (
-    <S.SVG
+    <Styled.SVG
       onClick={() => onClick && onClick()}
       xmlns="http://www.w3.org/2000/svg"
       fill={filled ? "currentColor" : "none"}
@@ -33,7 +33,7 @@ const IconSVG: React.FC<IconSVGProps> = ({
       {title && <title id="titleID">{title}</title>}
       {desc && <desc id="descID">{desc}</desc>}
       {path}
-    </S.SVG>
+    </Styled.SVG>
   );
 };
 
