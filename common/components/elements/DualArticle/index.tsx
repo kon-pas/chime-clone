@@ -1,4 +1,4 @@
-import * as S from "./styled";
+import * as Styled from "./styled";
 
 import Image from "next/image";
 
@@ -20,10 +20,11 @@ interface DualArticleProps {
 
 const DualArticle: React.FC<DualArticleProps> = props => {
   return (
-    <S.Wrapper backgroundColor={props.backgroundColor ?? COLORS.WHITE}>
-      <S.Container imageFloat={props.img.float ?? "left"}>
-        <S.Header>{props.children}</S.Header>
-        <S.ImageWrapper>
+    <Styled.Wrapper backgroundColor={props.backgroundColor ?? COLORS.WHITE}>
+      <Styled.Container imageFloat={props.img.float ?? "left"}>
+        <Styled.Header>{props.children}</Styled.Header>
+
+        <Styled.ImageWrapper>
           <Image
             src={props.img.src}
             alt={props.img.alt}
@@ -31,9 +32,9 @@ const DualArticle: React.FC<DualArticleProps> = props => {
             width={props.img.width}
             height={props.img.height}
           />
-        </S.ImageWrapper>
-      </S.Container>
-    </S.Wrapper>
+        </Styled.ImageWrapper>
+      </Styled.Container>
+    </Styled.Wrapper>
   );
 };
 
