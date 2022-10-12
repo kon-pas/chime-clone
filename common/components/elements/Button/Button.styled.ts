@@ -15,7 +15,6 @@ const Button = styled.button`
   &:hover {
     background-color: ${COLORS.BLACK};
     color: ${COLORS.WHITE};
-    transition: all 0.2s linear;
   }
 
   svg {
