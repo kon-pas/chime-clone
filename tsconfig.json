@@ -20,12 +20,12 @@
       "@interfaces": ["common/ts/index.interfaces.ts"],
       "@enums": ["common/ts/index.enums.ts"],
       "@constants": ["common/constants/index.ts"],
+      "@hooks": ["common/hooks/index.ts"],
+      "@jsons": ["common/jsons/index.ts"],
+      "@utils": ["common/utils/index.ts"],
       "@components/*": ["common/components/*"],
-      "@hooks/*": ["common/hooks/*"],
-      "@jsons/*": ["common/jsons/*"],
+      "@static/*": ["public/static/*"],
       "@styles/*": ["common/styles/*"],
-      "@utils/*": ["common/utils/*"],
-      "@static/*": ["public/static/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
