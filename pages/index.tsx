@@ -196,6 +196,23 @@ const Home: NextPage = () => {
       </Styled.Section.Wrapper>
 
       {/* 9 */}
+      <DualArticle
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2021/03/Chime-Reviews.png",
+          alt: "Chime Reviews",
+          width: 884,
+          height: 568,
+          float: "right",
+        }}
+        backgroundColor={COLORS.LIME_LIGHT}
+      >
+        <h1>Get started</h1>
+        <p>
+          Applying for an account is free and takes less than 2 minutes. It
+          won&apos;t affect your credit score!
+        </p>
+        <LearnMoreButton />
+      </DualArticle>
     </div>
   );
 };
