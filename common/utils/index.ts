@@ -1,0 +1,1 @@
+export { default as resizeTransition } from "./resize-transition";
