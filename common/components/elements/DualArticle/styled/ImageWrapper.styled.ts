@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 import { MEDIA } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 const ImageWrapper = styled.div`
   margin: 1.25rem auto 0 auto;
   max-width: 440px;
-  transition: all 0.5s ease-out;
+
+  ${resizeTransition("all")}
 
   ${MEDIA.MD} {
     width: 365px;

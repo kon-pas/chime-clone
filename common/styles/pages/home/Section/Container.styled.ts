@@ -4,8 +4,12 @@ import ContentContainer from "@components/elements/ContentContainer";
 
 import { MEDIA } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 const Container = styled(ContentContainer)`
   margin-top: 0.75rem;
+
+  ${resizeTransition("margin-top")}
 
   ${MEDIA.MD} {
     margin-top: 3rem;
