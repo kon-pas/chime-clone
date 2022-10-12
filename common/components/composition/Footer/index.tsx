@@ -1,4 +1,4 @@
-import * as S from "./styled";
+import * as Styled from "./styled";
 
 import Image from "next/image";
 
@@ -8,10 +8,10 @@ import ContentContainer from "@components/elements/ContentContainer";
 
 const Footer: React.FC = () => {
   return (
-    <S.Footer>
+    <Styled.Footer>
       <ContentContainer>
-        <S.TopSection>
-          <S.MenuSection>
+        <Styled.TopSection>
+          <Styled.MenuSection>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
                 <span>{item.label}</span>
@@ -23,17 +23,17 @@ const Footer: React.FC = () => {
                 </menu>
               </li>
             ))}
-          </S.MenuSection>
+          </Styled.MenuSection>
 
-          <S.HorizontalLine hideAt={BREAKPOINTS.LG} />
+          <Styled.HorizontalLine hideAt={BREAKPOINTS.LG} />
 
-          <S.SocialSection>
+          <Styled.SocialSection>
             <a href="https://apps.apple.com/us/app/chime-banking/id836215269">
               <Image
                 src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/app-store.png"
                 alt="Chime App Store Download"
                 width="170px"
-                height="40px"
+                height="40ptyledx"
               />
             </a>
 
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
               />
             </a>
 
-            <S.IconWrapper>
+            <Styled.IconWrapper>
               <a href="https://www.facebook.com/chime">
                 <Image
                   src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/facebook-bw.png"
@@ -55,9 +55,9 @@ const Footer: React.FC = () => {
                   height="32px"
                 />
               </a>
-            </S.IconWrapper>
+            </Styled.IconWrapper>
 
-            <S.IconWrapper>
+            <Styled.IconWrapper>
               <a href="https://twitter.com/chime">
                 <Image
                   src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/twitter-bw.png"
@@ -66,9 +66,9 @@ const Footer: React.FC = () => {
                   height="32px"
                 />
               </a>
-            </S.IconWrapper>
+            </Styled.IconWrapper>
 
-            <S.IconWrapper>
+            <Styled.IconWrapper>
               <a href="https://www.instagram.com/Chime/">
                 <Image
                   src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/instagram-bw.png"
@@ -77,13 +77,13 @@ const Footer: React.FC = () => {
                   height="32px"
                 />
               </a>
-            </S.IconWrapper>
-          </S.SocialSection>
-        </S.TopSection>
+            </Styled.IconWrapper>
+          </Styled.SocialSection>
+        </Styled.TopSection>
 
-        <S.HorizontalLine />
+        <Styled.HorizontalLine />
 
-        <S.DisclaimerSection>
+        <Styled.DisclaimerSection>
           <p>
             Banking services provided by The Bancorp Bank or Stride Bank, N.A.,
             Members FDIC. The Chime Visa® Debit Card is issued by The Bancorp
@@ -186,9 +186,9 @@ const Footer: React.FC = () => {
             (&quot;NMLS&quot;) ID 2316451
           </p>
           <p>© 2013-2022 Chime. All Rights Reserved.</p>
-        </S.DisclaimerSection>
+        </Styled.DisclaimerSection>
       </ContentContainer>
-    </S.Footer>
+    </Styled.Footer>
   );
 };
 
