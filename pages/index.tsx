@@ -1,6 +1,8 @@
-import type { NextPage } from "next";
+import * as Styled from "@styles/pages/home";
 
+import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 import { COLORS } from "@constants";
 
@@ -19,7 +21,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/spot-me-1.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "SpotMe 1",
           width: 792,
           height: 526,
           float: "right",
@@ -37,7 +39,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "Paid Early",
           width: 713,
           height: 202,
         }}
@@ -55,7 +57,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "No Fees",
           width: 644,
           height: 322,
           float: "right",
@@ -75,7 +77,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "Credit Builder",
           width: 826,
           height: 670,
         }}
@@ -101,7 +103,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/07/pay-anyone-desktop.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "Pay Anyone Deskop",
           width: 813,
           height: 916,
           float: "right",
@@ -120,7 +122,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2022/08/APY.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "APY",
           width: 774,
           height: 474,
         }}
@@ -139,7 +141,7 @@ const Home: NextPage = () => {
       <DualArticle
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/alerts.png",
-          alt: "Overdraft fee-free with SpotMe",
+          alt: "Alerts",
           width: 734,
           height: 330,
           float: "right",
@@ -152,6 +154,47 @@ const Home: NextPage = () => {
         </p>
         <LearnMoreButton />
       </DualArticle>
+
+      {/* 8 */}
+      <Styled.Section.Wrapper>
+        <Styled.Section.Title>
+          Security & support you can trust
+        </Styled.Section.Title>
+
+        <Styled.Section.Container>
+          <Styled.Section.ImageWrapper>
+            <Image
+              src="https://www.chime.com/wp-content/uploads/2020/03/lock.png"
+              alt="Lock"
+              width={174}
+              height={220}
+            />
+          </Styled.Section.ImageWrapper>
+
+          <Styled.Section.TextWrapper>
+            <h2>Serious security</h2>
+            <p>
+              Chime uses secure processes to protect your information and help
+              prevent unauthorized use
+            </p>
+
+            <h2>Privacy and protection</h2>
+            <p>
+              Your funds are FDIC insured up to $250,000 through The Bancorp
+              Bank or Stride Bank, N.A., Members FDIC.
+            </p>
+
+            <h2>Anytime, anywhere support</h2>
+            <p>
+              If you need help, Chime&apos;s support channels are standing by
+              24/7. Reach our friendly team by phone, email, in the app, or
+              check out the Help Center.
+            </p>
+          </Styled.Section.TextWrapper>
+        </Styled.Section.Container>
+      </Styled.Section.Wrapper>
+
+      {/* 9 */}
     </div>
   );
 };
