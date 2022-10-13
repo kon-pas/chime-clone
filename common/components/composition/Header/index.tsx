@@ -3,6 +3,7 @@ import * as S from "./styled";
 import { useState } from "react";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { NAVIGATION_ITEMS } from "@constants";
 
@@ -27,13 +28,25 @@ const Header: React.FC = () => {
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                <S.Span>{item.label}</S.Span>
+                {item.path
+                  ? (
+                      <Link href={item.path}>
+                        <S.Span>{item.label}</S.Span>
+                      </Link>
+                    )
+                  : <S.Span><span style={{opacity: 0.3}}>{item.label}</span></S.Span>
+                }
 
                 <S.SubmenuContainerDesktop>
                   <menu>
-                    {item.subitems.map((item, idx) => (
-                      <li key={idx}>{item.label}</li>
-                    ))}
+                    {item.subitems.map((subitem, idx) =>
+                      <li key={idx}>
+                        {subitem.path
+                          ? <Link href={subitem.path}>{subitem.label}</Link>
+                          : <span style={{opacity: 0.3}}>{subitem.label}</span>
+                        }
+                      </li>
+                    )}
                   </menu>
                 </S.SubmenuContainerDesktop>
               </li>
@@ -80,11 +93,18 @@ const Header: React.FC = () => {
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                <a>{item.label}</a>
+                {item.path
+                  ? <Link href={item.path}>{item.label}</Link>
+                  : <span style={{opacity: 0.3}}>{item.label}</span>
+                }
+
                 <menu>
                   {item.subitems.map((subitem, idx) => (
                     <li key={idx}>
-                      <a>{subitem.label}</a>
+                      {subitem.path
+                        ? <Link href={subitem.path}><span>{subitem.label}</span></Link>
+                        : <span style={{opacity: 0.3}}>{subitem.label}</span>
+                      }
                     </li>
                   ))}
                 </menu>
