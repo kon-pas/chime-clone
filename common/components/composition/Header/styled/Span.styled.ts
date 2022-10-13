@@ -13,6 +13,7 @@ const Span = styled.span`
   user-select: none;
   align-self: center;
   display: none;
+  cursor: pointer;
 
   ${resizeTransition("font-size")}
 

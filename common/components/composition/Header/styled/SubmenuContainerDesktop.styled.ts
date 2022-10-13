@@ -21,6 +21,7 @@ const SubmenuContainerDesktop = styled.div`
       font-size: 0.85rem;
       font-weight: 600;
       align-self: center;
+      cursor: pointer;
 
       &:hover {
         color: ${COLORS.LIME_DARK};
