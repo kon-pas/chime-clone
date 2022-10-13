@@ -16,7 +16,7 @@ const Header = styled.header`
   ${resizeTransition("all")}
 
   > h1 {
-    // line-height: 1rem;
+    line-height: 1rem;
   }
 
   > nav:nth-of-type(2) {
@@ -41,6 +41,10 @@ const Header = styled.header`
     height: 65px;
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
+
+    > h1 {
+      line-height: normal;
+    }
   }
 
   ${MEDIA.LG} {
