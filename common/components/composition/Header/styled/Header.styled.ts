@@ -17,13 +17,13 @@ const Header = styled.header`
 
   > h1 {
     line-height: 1rem;
+    cursor: pointer;
   }
 
   > nav:nth-of-type(2) {
-    display: grid;
-    justify-items: end;
-    align-content: center;
-    grid-template-columns: 1fr 0.4fr;
+    height: 60%;
+    display: flex;
+    gap: 10px;
 
     > svg {
       height: 80%;
