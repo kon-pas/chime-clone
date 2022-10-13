@@ -22,8 +22,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/spot-me-1.png",
           alt: "SpotMe 1",
-          width: 792,
-          height: 526,
+          originalSize: [792, 526],
           float: "right",
         }}
       >
@@ -40,8 +39,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
           alt: "Paid Early",
-          width: 713,
-          height: 202,
+          originalSize: [713, 202],
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -58,8 +56,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
           alt: "No Fees",
-          width: 644,
-          height: 322,
+          originalSize: [644, 322],
           float: "right",
         }}
       >
@@ -78,8 +75,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png",
           alt: "Credit Builder",
-          width: 826,
-          height: 670,
+          originalSize: [826, 670],
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -104,8 +100,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/07/pay-anyone-desktop.png",
           alt: "Pay Anyone Deskop",
-          width: 813,
-          height: 916,
+          originalSize: [813, 916],
           float: "right",
         }}
       >
@@ -123,8 +118,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2022/08/APY.png",
           alt: "APY",
-          width: 774,
-          height: 474,
+          originalSize: [774, 474],
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -142,8 +136,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/alerts.png",
           alt: "Alerts",
-          width: 734,
-          height: 330,
+          originalSize: [734, 330],
           float: "right",
         }}
       >
@@ -200,8 +193,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/Chime-Reviews.png",
           alt: "Chime Reviews",
-          width: 884,
-          height: 568,
+          originalSize: [884, 568],
           float: "right",
         }}
         backgroundColor={COLORS.LIME_LIGHT}

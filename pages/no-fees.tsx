@@ -21,8 +21,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
           alt: "No Fees",
-          width: 644,
-          height: 322,
+          originalSize: [644, 322],
         }}
       >
         <h1>Banking shouldn&apos;t cost you money</h1>
@@ -39,8 +38,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/05/spot-me-1.png",
           alt: "No Fees",
-          width: 792,
-          height: 526,
+          originalSize: [792, 526],
           float: "right",
         }}
       >
@@ -58,8 +56,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/09/ATM-Image-08312021-approved.png",
           alt: "No Fees",
-          width: 562,
-          height: 1100,
+          originalSize: [562, 1100],
           // forceHeight: 450,
         }}
       >
@@ -80,8 +77,7 @@ const Home: NextPage = () => {
         img={{
           src: "https://www.chime.com/wp-content/uploads/2019/05/Debit-Card-Front.png",
           alt: "No Fees",
-          width: 745,
-          height: 483,
+          originalSize: [745, 483],
           float: "right",
         }}
       >
