@@ -2,6 +2,8 @@ import styled, { keyframes } from "styled-components";
 
 import { COLORS, MEDIA } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 const appear = keyframes`
   0% {
     visibility: hidden;
@@ -10,11 +12,9 @@ const appear = keyframes`
 
   1% {
     visibility: visible;
-    opacity: 0;
   }
 
   100% {
-    visibility: visible;
     opacity: 1;
   }
 `;
@@ -26,13 +26,11 @@ const disappear = keyframes`
   }
 
   99% {
-    visibility: visible;
     opacity: 0;
   }
 
   100% {
     visibility: hidden;
-    opacity: 0;
   }
 `;
 
@@ -48,7 +46,8 @@ const MenuContainerDesktop = styled.nav`
   > menu {
     display: flex;
     gap: 0.75rem;
-    transition: gap 0.5s ease-out;
+
+    ${resizeTransition("gap")}
 
     ${MEDIA.LG} {
       gap: 1.6rem;
@@ -63,8 +62,7 @@ const MenuContainerDesktop = styled.nav`
       user-select: none;
 
       > span {
-        transition-property: color;
-        transition-duration: 0.2s;
+        transition: color 0.2s ease-out;
 
         &:hover {
           color: ${COLORS.LIME_DARK};
@@ -73,8 +71,11 @@ const MenuContainerDesktop = styled.nav`
 
       > div {
         position: absolute;
-        animation: ${disappear} 0.2s ease-out;
         visibility: hidden;
+
+        @media (prefers-reduced-motion) {
+          animation: ${disappear} 0.2s ease-out;
+        }
       }
 
       &:hover > div {
