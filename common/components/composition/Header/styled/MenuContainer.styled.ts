@@ -15,7 +15,7 @@ const MenuContainer = styled.nav`
     > li {
       margin: 25px 0;
 
-      > a {
+      > span {
         font-weight: 700;
         cursor: pointer;
         transition-property: color;
@@ -34,7 +34,7 @@ const MenuContainer = styled.nav`
         > li {
           margin: 12px 0;
 
-          > a {
+          > span {
             font-size: 0.85rem;
             cursor: pointer;
             width: auto;
