@@ -33,8 +33,13 @@ const SlidePageContainer = styled.div<SlidePageContainerProps>`
 
     > h1 {
       height: 100%;
-      display: flex;
-      align-items: center;
+
+      > div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
     }
 
     > svg {
