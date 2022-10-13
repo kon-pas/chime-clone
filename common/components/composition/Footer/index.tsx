@@ -1,6 +1,7 @@
 import * as Styled from "./styled";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import { NAVIGATION_ITEMS, BREAKPOINTS } from "@constants";
 
@@ -14,11 +15,19 @@ const Footer: React.FC = () => {
           <Styled.MenuSection>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                <span>{item.label}</span>
+                {item.path
+                  ? <Link href={item.path}>{item.label}</Link>
+                  : <span style={{opacity: 0.3}}>{item.label}</span>
+                }
 
                 <menu>
-                  {item.subitems.map((item, idx) => (
-                    <li key={idx}>{item.label}</li>
+                  {item.subitems.map((subitem, idx) => (
+                    <li key={idx}>
+                      {subitem.path
+                        ? <Link href={subitem.path}>{subitem.label}</Link>
+                        : <span style={{opacity: 0.3}}>{subitem.label}</span>
+                      }
+                    </li>
                   ))}
                 </menu>
               </li>
