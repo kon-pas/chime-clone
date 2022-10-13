@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 import { COLORS, MEDIA } from "@constants";
 
+import { resizeTransition } from "@utils";
+
 const Header = styled.header`
-  transition: all 0.5s ease-out;
   height: fit-content;
 
-  > h1 {
+  ${resizeTransition("all")}
+
+> h1 {
     font-size: 2.1rem;
     line-height: 2.65rem;
     letter-spacing: 0.005em;
