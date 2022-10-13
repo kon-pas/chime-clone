@@ -11,9 +11,13 @@ interface DualSectionProps {
   img: {
     src: `https://www.chime.com/${string}`;
     alt: string;
-    width: number;
-    height: number;
+    originalSize: [number, number];
     float?: "left" | "right";
+    width?: {
+      sm?: number;
+      md?: number;
+      lg?: number;
+    }
   };
   backgroundColor?: HexColor;
 }
@@ -24,13 +28,13 @@ const DualSection: React.FC<DualSectionProps> = props => {
       <Styled.Container imageFloat={props.img.float ?? "left"}>
         <Styled.Header>{props.children}</Styled.Header>
 
-        <Styled.ImageWrapper>
+        <Styled.ImageWrapper {...props.img.width}>
           <Image
             src={props.img.src}
             alt={props.img.alt}
             layout="responsive"
-            width={props.img.width}
-            height={props.img.height}
+            width={props.img.originalSize[0]}
+            height={props.img.originalSize[1]}
           />
         </Styled.ImageWrapper>
       </Styled.Container>
