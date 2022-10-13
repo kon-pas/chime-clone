@@ -6,19 +6,19 @@ import Image from "next/image";
 
 import { COLORS } from "@constants";
 
-import DualArticle from "@components/elements/DualArticle";
+import DualSection from "@components/elements/DualSection";
 import LearnMoreButton from "@components/pages/home/LearnMoreButton";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
-        <title>Chime</title>
+        <title>Chime - Banking with No Monthly Fees. Fee-Free Overdraft. Build Craft.</title>
         <meta name="description" content="Chime clone home page" />
       </Head>
 
       {/* 1 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/spot-me-1.png",
           alt: "SpotMe 1",
@@ -33,10 +33,10 @@ const Home: NextPage = () => {
           overdraft fees. Eligibility requirements apply.<sup>1</sup>
         </p>
         <LearnMoreButton />
-      </DualArticle>
+      </DualSection>
 
       {/* 2 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
           alt: "Paid Early",
@@ -51,10 +51,10 @@ const Home: NextPage = () => {
           some of your co-workers!<sup>2</sup>
         </p>
         <LearnMoreButton />
-      </DualArticle>
+      </DualSection>
 
       {/* 3 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
           alt: "No Fees",
@@ -71,10 +71,10 @@ const Home: NextPage = () => {
           <sup>®</sup>, and Circle K. Out-of-network fees apply.
         </p>
         <LearnMoreButton />
-      </DualArticle>
+      </DualSection>
 
       {/* 4 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png",
           alt: "Credit Builder",
@@ -97,10 +97,10 @@ const Home: NextPage = () => {
             credit score.
           </small>
         </p>
-      </DualArticle>
+      </DualSection>
 
       {/* 5 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/07/pay-anyone-desktop.png",
           alt: "Pay Anyone Deskop",
@@ -116,10 +116,10 @@ const Home: NextPage = () => {
           needed.
         </p>
         <LearnMoreButton />
-      </DualArticle>
+      </DualSection>
 
       {/* 6 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2022/08/APY.png",
           alt: "APY",
@@ -135,10 +135,10 @@ const Home: NextPage = () => {
           Account.
         </p>
         <LearnMoreButton />
-      </DualArticle>
+      </DualSection>
 
       {/* 7 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/alerts.png",
           alt: "Alerts",
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
           transaction alerts
         </p>
         <LearnMoreButton />
-      </DualArticle>
+      </DualSection>
 
       {/* 8 */}
       <Styled.Section.Wrapper>
@@ -196,7 +196,7 @@ const Home: NextPage = () => {
       </Styled.Section.Wrapper>
 
       {/* 9 */}
-      <DualArticle
+      <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/03/Chime-Reviews.png",
           alt: "Chime Reviews",
@@ -212,8 +212,8 @@ const Home: NextPage = () => {
           won&apos;t affect your credit score!
         </p>
         <LearnMoreButton />
-      </DualArticle>
-    </div>
+      </DualSection>
+    </>
   );
 };
 
