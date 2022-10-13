@@ -40,9 +40,9 @@ const Header: React.FC = () => {
               <li key={idx}>
                 {item.path
                   ? (
-                      <Link href={item.path}>
-                        <S.Span>{item.label}</S.Span>
-                      </Link>
+                      <S.Span>
+                        <Link href={item.path}>{item.label}</Link>
+                      </S.Span>
                     )
                   : <S.Span><span style={{opacity: 0.3}}>{item.label}</span></S.Span>
                 }
@@ -82,13 +82,15 @@ const Header: React.FC = () => {
       <S.SlidePageContainer isVisible={isSpliderOpened}>
         <header>
           <h1>
-            <Link href="/">
-              <Image
-                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
-                alt="Chime Logo"
-                width="90px"
-                height="30px"
-              />
+            <Link href="/" passHref>
+              <div>
+                <Image
+                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+                  alt="Chime Logo"
+                  width="90px"
+                  height="30px"
+                />
+              </div>
             </Link>
           </h1>
 
