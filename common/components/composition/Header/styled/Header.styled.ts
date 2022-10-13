@@ -16,7 +16,7 @@ const Header = styled.header`
   ${resizeTransition("all")}
 
   > h1 {
-    line-height: 1rem;
+    // line-height: 1rem;
   }
 
   > nav:nth-of-type(2) {
@@ -24,7 +24,6 @@ const Header = styled.header`
     justify-items: end;
     align-content: center;
     grid-template-columns: 1fr 0.4fr;
-    height: 55%;
 
     > svg {
       height: 80%;
@@ -39,7 +38,7 @@ const Header = styled.header`
   }
 
   ${MEDIA.MD} {
-    height: 70px;
+    height: 65px;
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
   }

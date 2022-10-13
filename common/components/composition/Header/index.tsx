@@ -19,8 +19,8 @@ const Header: React.FC = () => {
           <Image
             src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
             alt="Chime Clone Home Page Brand Logo"
-            width="100px"
-            height="50px"
+            width="90px"
+            height="30px"
           />
         </h1>
 
