@@ -1,9 +1,10 @@
 import * as S from "./styled";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { NAVIGATION_ITEMS } from "@constants";
 
@@ -11,6 +12,15 @@ import IconSVG from "@components/elements/IconSVG";
 
 const Header: React.FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
+
+  const { events } = useRouter();
+
+  useEffect(() => {
+    const closeModal = () => setIsSpliderOpened(false);
+
+    events.on("routeChangeComplete", closeModal);
+    return () => events.off("routeChangeComplete", closeModal);
+  }, [events]);
 
   return (
     <>
@@ -72,12 +82,14 @@ const Header: React.FC = () => {
       <S.SlidePageContainer isVisible={isSpliderOpened}>
         <header>
           <h1>
-            <Image
-              src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
-              alt="Chime Logo"
-              width="90px"
-              height="30px"
-            />
+            <Link href="/">
+              <Image
+                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+                alt="Chime Logo"
+                width="90px"
+                height="30px"
+              />
+            </Link>
           </h1>
 
           <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
