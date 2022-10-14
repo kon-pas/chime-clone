@@ -6,6 +6,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
     subitems: [
       {
         label: 'No Monthly Fees',
+        path: '/no-fees'
       },
       {
         label: 'Free Debit Card',
