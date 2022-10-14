@@ -11,6 +11,7 @@ const Button = styled(DefaultButton)`
   border: none;
   padding: 0.5rem 1.05rem;
   margin-left: 0.5rem;
+  // margin-right: 20px;
   font-size: 0.95rem;
   font-weight: 600;
 
@@ -20,13 +21,13 @@ const Button = styled(DefaultButton)`
   }
 
   ${MEDIA.MD} {
-    padding: 0.8rem 1.4rem;
+    padding: 0.75rem 1.4rem;
 
     ${resizeTransition("all")}
   }
 
   ${MEDIA.LG} {
-    padding: 0.85rem 3.85rem;
+    padding: 0.75rem 3.85rem;
     margin-left: 1.8rem;
   }
 `;
