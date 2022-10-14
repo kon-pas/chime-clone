@@ -25,14 +25,16 @@ const Header: React.FC = () => {
   return (
     <>
       <S.Header>
-        <h1>
-          <Image
-            src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
-            alt="Chime Logo"
-            width="90px"
-            height="30px"
-          />
-        </h1>
+        <Link href="/" passHref>
+          <h1>
+            <Image
+              src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+              alt="Chime Logo"
+              width="90px"
+              height="30px"
+            />
+          </h1>
+        </Link>
 
         <S.MenuContainerDesktop>
           <menu>
@@ -81,18 +83,16 @@ const Header: React.FC = () => {
 
       <S.SlidePageContainer isVisible={isSpliderOpened}>
         <header>
-          <h1>
-            <Link href="/" passHref>
-              <div>
-                <Image
-                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
-                  alt="Chime Logo"
-                  width="90px"
-                  height="30px"
-                />
-              </div>
-            </Link>
-          </h1>
+          <Link href="/" passHref>
+            <h1>
+              <Image
+                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+                alt="Chime Logo"
+                width="90px"
+                height="30px"
+              />
+            </h1>
+          </Link>
 
           <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
             <path
