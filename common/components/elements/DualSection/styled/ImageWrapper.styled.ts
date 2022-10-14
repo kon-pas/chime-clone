@@ -13,17 +13,17 @@ interface ImageWrapperProps {
 const ImageWrapper = styled.div<ImageWrapperProps>`
   margin: 1.25rem auto 0 auto;
   width: 100%;
-  max-width: ${props => props.sm ?? '440px'};
+  max-width: ${props => `${props.sm}px` ?? '440px'};
 
   ${resizeTransition("all")}
 
   ${MEDIA.MD} {
-    max-width: ${props => props.md ?? '365px'};
+    max-width: ${props => `${props.md}px` ?? '365px'};
     margin: auto 0;
   }
 
   ${MEDIA.LG} {
-    max-width: ${props => props.lg ?? '365px'};
+    max-width: ${props => `${props.lg}px` ?? '420px'};
     margin: auto;
   }
 `;
