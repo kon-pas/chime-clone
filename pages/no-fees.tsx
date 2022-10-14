@@ -22,6 +22,9 @@ const Home: NextPage = () => {
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
+          width: {
+            sm: 490,
+          }
         }}
       >
         <h1>Banking shouldn&apos;t cost you money</h1>
@@ -40,6 +43,10 @@ const Home: NextPage = () => {
           alt: "No Fees",
           originalSize: [792, 526],
           float: "right",
+          width: {
+            sm: 450,
+            lg: 450,
+          }
         }}
       >
         <h1>No fees for overdrafts</h1>
@@ -57,7 +64,11 @@ const Home: NextPage = () => {
           src: "https://www.chime.com/wp-content/uploads/2021/09/ATM-Image-08312021-approved.png",
           alt: "No Fees",
           originalSize: [562, 1100],
-          // forceHeight: 450,
+          width: {
+            sm: 150,
+            md: 230,
+            lg: 230,
+          }
         }}
       >
         <h1>
@@ -79,6 +90,11 @@ const Home: NextPage = () => {
           alt: "No Fees",
           originalSize: [745, 483],
           float: "right",
+          width: {
+            sm: 310,
+            md: 310,
+            lg: 310,
+          }
         }}
       >
         <h1>Checking Account and Debit Card with no monthly fees</h1>
