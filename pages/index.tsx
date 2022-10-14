@@ -24,6 +24,10 @@ const Home: NextPage = () => {
           alt: "SpotMe 1",
           originalSize: [792, 526],
           float: "right",
+          width: {
+            sm: 450,
+            lg: 450,
+          }
         }}
       >
         <h1>Overdraft fee-free with SpotMe</h1>
@@ -40,6 +44,9 @@ const Home: NextPage = () => {
           src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
           alt: "Paid Early",
           originalSize: [713, 202],
+          width: {
+            sm: 490,
+          }
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -58,6 +65,9 @@ const Home: NextPage = () => {
           alt: "No Fees",
           originalSize: [644, 322],
           float: "right",
+          width: {
+            sm: 490,
+          }
         }}
       >
         <h1>Say goodbye to monthly fees</h1>
@@ -76,6 +86,10 @@ const Home: NextPage = () => {
           src: "https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png",
           alt: "Credit Builder",
           originalSize: [826, 670],
+          width: {
+            sm: 340,
+            md: 340,
+          }
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -102,6 +116,10 @@ const Home: NextPage = () => {
           alt: "Pay Anyone Deskop",
           originalSize: [813, 916],
           float: "right",
+          width: {
+            sm: 320,
+            lg: 400,
+          }
         }}
       >
         <h1>Pay anyone the fast, fee-free way</h1>
@@ -119,6 +137,10 @@ const Home: NextPage = () => {
           src: "https://www.chime.com/wp-content/uploads/2022/08/APY.png",
           alt: "APY",
           originalSize: [774, 474],
+          width: {
+            sm: 410,
+            lg: 410,
+          }
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -138,6 +160,9 @@ const Home: NextPage = () => {
           alt: "Alerts",
           originalSize: [734, 330],
           float: "right",
+          width: {
+            sm: 490,
+          }
         }}
       >
         <h1>Stay in control with alerts</h1>
@@ -195,6 +220,10 @@ const Home: NextPage = () => {
           alt: "Chime Reviews",
           originalSize: [884, 568],
           float: "right",
+          width: {
+            sm: 465,
+            lg: 465,
+          }
         }}
         backgroundColor={COLORS.LIME_LIGHT}
       >
