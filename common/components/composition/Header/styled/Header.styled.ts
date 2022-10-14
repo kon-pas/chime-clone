@@ -21,13 +21,11 @@ const Header = styled.header`
   }
 
   > nav:nth-of-type(2) {
-    height: 60%;
     display: flex;
     gap: 10px;
 
     > svg {
-      height: 80%;
-      margin: auto 0;
+      width: 30px;
       color: ${COLORS.LIME_DARK};
       cursor: pointer;
 
