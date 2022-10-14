@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/app-store.png"
                 alt="Chime App Store Download"
                 width="170px"
-                height="40ptyledx"
+                height="40px"
               />
             </a>
 
