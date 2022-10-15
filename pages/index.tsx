@@ -190,7 +190,7 @@ const Home: NextPage = () => {
             />
           </Styled.Section.ImageWrapper>
 
-          <Styled.Section.TextWrapper>
+          <Styled.Section.TextContainer>
             <h2>Serious security</h2>
             <p>
               Chime uses secure processes to protect your information and help
@@ -209,7 +209,7 @@ const Home: NextPage = () => {
               24/7. Reach our friendly team by phone, email, in the app, or
               check out the Help Center.
             </p>
-          </Styled.Section.TextWrapper>
+          </Styled.Section.TextContainer>
         </Styled.Section.Container>
       </Styled.Section.Wrapper>
 
