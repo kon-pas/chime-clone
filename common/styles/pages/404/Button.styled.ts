@@ -4,12 +4,9 @@ import { COLORS, MEDIA } from "@constants";
 
 import { resizeTransition } from "@utils";
 
-import DefaultButton from "@components/elements/Button/Button.styled";
+import GreenButton from "@components/elements/GreenButton";
 
-const Button = styled(DefaultButton)`
-  background-color: ${COLORS.LIME_MEDIUM};
-  border: none;
-  font-weight: 600;
+const Button = styled(GreenButton)`
   padding-top: 1rem;
   padding-bottom: 1rem;
 
