@@ -11,6 +11,7 @@ const COLORS: {[key: string]: HexColor} = {
   LIME_DARK: '#1EC677',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
+  CYAN_LIGTH: '#EBFFFB',
 }
 
 export default COLORS;
