@@ -7,8 +7,8 @@ import ContentContainer from "@components/elements/ContentContainer";
 
 const Page404: NextPage = () => {
   return (
-    <Styled.Container>
-      <ContentContainer>
+    <Styled.Wrapper>
+      <Styled.Container>
         <Styled.TextContainer>
           <Styled.Heading>
             Uh-oh. The page you&apos;re looking for isn&apos;t here!
@@ -28,8 +28,8 @@ const Page404: NextPage = () => {
             height={564}
           />
         </Styled.ImageWrapper>
-      </ContentContainer>
-    </Styled.Container>
+      </Styled.Container>
+    </Styled.Wrapper>
   );
 };
 
