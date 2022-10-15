@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     font-weight: inherit;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    color: ${COLORS.FONT_GRAY_DARK};
+  }
+
   ul, menu, li {
     padding: 0;
     list-style: none;
