@@ -31,6 +31,7 @@ const Home: NextPage = () => {
         }}
       >
         <h1>Overdraft fee-free with SpotMe</h1>
+
         <p>
           We&apos;ll spot you up to $200 on debit card purchases with no
           overdraft fees. Eligibility requirements apply.<sup>1</sup>
@@ -51,6 +52,7 @@ const Home: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
       >
         <h1>Get paid early</h1>
+
         <p>
           Set up direct deposit and get your paycheck up to 2 days earlier than
           some of your co-workers!<sup>2</sup>
@@ -71,6 +73,7 @@ const Home: NextPage = () => {
         }}
       >
         <h1>Say goodbye to monthly fees</h1>
+
         <p>
           No overdraft. No minimum balance. No monthly fees. No foreign
           transaction fees. 60,000+ fee-free ATMs<sup>3</sup> at stores you
@@ -94,13 +97,16 @@ const Home: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
       >
         <h1>A new way to build credit</h1>
+
         <p>
           Help increase your FICO Score<sup>®</sup> by an average of 30 points
           with our new secured credit card.<sup>4</sup> No interest, no annual
           fees, no credit check to apply. Eligibility requirements apply.
           <sup>5</sup>
         </p>
+
         <LearnMoreButton />
+
         <p>
           <small>
             Regular on-time payment history can have a positive impact on your
@@ -123,11 +129,13 @@ const Home: NextPage = () => {
         }}
       >
         <h1>Pay anyone the fast, fee-free way</h1>
+
         <p>
           Pay friends and family fee-free, no matter what bank account they use.
           They can cash out instantly<sup>6</sup> and securely, no sign-up
           needed.
         </p>
+
         <LearnMoreButton />
       </DualSection>
 
@@ -145,11 +153,13 @@ const Home: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
       >
         <h1>Make your money grow fast</h1>
+
         <p>
           1.50% Annual Percentage Yield (APY).<sup>7</sup> Set money aside with
           Automatic Savings features. And never pay a fee on your Savings
           Account.
         </p>
+
         <LearnMoreButton />
       </DualSection>
 
@@ -166,10 +176,12 @@ const Home: NextPage = () => {
         }}
       >
         <h1>Stay in control with alerts</h1>
+
         <p>
           You&apos;re always in-the-know with daily balance notifications and
           transaction alerts
         </p>
+
         <LearnMoreButton />
       </DualSection>
 
@@ -192,18 +204,21 @@ const Home: NextPage = () => {
 
           <Styled.Section.TextContainer>
             <h2>Serious security</h2>
+
             <p>
               Chime uses secure processes to protect your information and help
               prevent unauthorized use
             </p>
 
             <h2>Privacy and protection</h2>
+
             <p>
               Your funds are FDIC insured up to $250,000 through The Bancorp
               Bank or Stride Bank, N.A., Members FDIC.
             </p>
 
             <h2>Anytime, anywhere support</h2>
+
             <p>
               If you need help, Chime&apos;s support channels are standing by
               24/7. Reach our friendly team by phone, email, in the app, or
@@ -228,10 +243,12 @@ const Home: NextPage = () => {
         backgroundColor={COLORS.LIME_LIGHT}
       >
         <h1>Get started</h1>
+
         <p>
           Applying for an account is free and takes less than 2 minutes. It
           won&apos;t affect your credit score!
         </p>
+
         <LearnMoreButton />
       </DualSection>
     </>
