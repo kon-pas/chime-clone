@@ -2,10 +2,13 @@ import * as Styled from "@styles/pages/404";
 
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useRouter } from 'next/router'
 
 import ContentContainer from "@components/elements/ContentContainer";
 
 const Page404: NextPage = () => {
+  const { push: navigate } = useRouter();
+
   return (
     <Styled.Wrapper>
       <Styled.Container>
@@ -14,7 +17,7 @@ const Page404: NextPage = () => {
             Uh-oh. The page you&apos;re looking for isn&apos;t here!
           </Styled.Heading>
 
-          <Styled.Button>
+          <Styled.Button onClick={() => navigate("/")}>
             Back to Homepage
           </Styled.Button>
         </Styled.TextContainer>
