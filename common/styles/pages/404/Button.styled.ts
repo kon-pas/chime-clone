@@ -16,7 +16,8 @@ const Button = styled(DefaultButton)`
   // ${resizeTransition('padding-top', 'padding-bottom')}
 
   ${MEDIA.MD} {
-
+    width: fit-content;
+    padding: 1rem 2rem;
   }
 `;
 
