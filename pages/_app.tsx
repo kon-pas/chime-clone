@@ -16,8 +16,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { events } = useRouter();
 
   useEffect(() => {
-    const hidePageContent = ()  => setIsLoading(true);
-    const showPageContent = ()  => setIsLoading(false);
+    const hidePageContent = () => setIsLoading(true);
+    const showPageContent = () => setIsLoading(false);
 
     events.on("routeChangeStart", hidePageContent);
     events.on("routeChangeComplete", showPageContent);
@@ -27,17 +27,17 @@ function MyApp({ Component, pageProps }: AppProps) {
       events.off("routeChangeStart", hidePageContent);
       events.off("routeChangeComplete", showPageContent);
       events.off("routeChangeError", showPageContent);
-    }
-  })
+    };
+  });
 
-  return isLoading
-    ? <LoadingPage />
-    : (
+  return isLoading ? (
+    <LoadingPage />
+  ) : (
     <MainLayout>
       <GlobalStyle />
       <Component {...pageProps} />
     </MainLayout>
-    );
+  );
 }
 
 export default MyApp;
