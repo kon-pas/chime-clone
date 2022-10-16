@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { COLORS } from "@constants";
 
+import MonoSection from "@components/elements/MonoSection";
 import DualSection from "@components/elements/DualSection";
 
 const Home: NextPage = () => {
@@ -104,6 +105,17 @@ const Home: NextPage = () => {
           also provide free debit card replacement.
         </p>
       </DualSection>
+
+      {/* 5 */}
+      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+        <h1>
+          Get Started Today
+        </h1>
+
+        <p>
+          Applying for an account is free and takes less than 2 minutes with no impact to your credit score. 
+        </p>
+      </MonoSection>
     </div>
   );
 };
