@@ -5,7 +5,7 @@ import { COLORS } from "@constants";
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
-    font-family: 'Inter';
+    font-family: 'Inter', sans-serif;
     margin: 0;
   }
   
