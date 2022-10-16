@@ -17,7 +17,7 @@ interface DualSectionProps {
       sm?: number;
       md?: number;
       lg?: number;
-    }
+    };
   };
   backgroundColor?: HexColor;
 }
@@ -26,7 +26,9 @@ const DualSection: React.FC<DualSectionProps> = props => {
   return (
     <Styled.Wrapper backgroundColor={props.backgroundColor ?? COLORS.WHITE}>
       <Styled.Container imageFloat={props.img.float ?? "left"}>
-        <Styled.Header>{props.children}</Styled.Header>
+        <Styled.ChildrenWrapper>
+          {props.children}
+        </Styled.ChildrenWrapper>
 
         <Styled.ImageWrapper {...props.img.width}>
           <Image
