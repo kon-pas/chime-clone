@@ -1,4 +1,4 @@
-import "@styles/fonts.css";
+// import "@styles/fonts.css";
 
 import GlobalStyle from "@styles/GlobalStyle.styled";
 
