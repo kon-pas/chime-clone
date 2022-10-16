@@ -1,17 +1,15 @@
-import * as Styled from "@styles/pages/home";
-
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 
 import { COLORS } from "@constants";
 
 import MonoSection from "@components/elements/MonoSection";
 import DualSection from "@components/elements/DualSection";
+import BreadcrumbTrial from "@components/elements/BreadcrumbTrail";
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Banking with No Monthly Fees and No Overdraft | Chime</title>
         <meta name="description" content="Chime clone no fees" />
@@ -116,7 +114,9 @@ const Home: NextPage = () => {
           Applying for an account is free and takes less than 2 minutes with no impact to your credit score. 
         </p>
       </MonoSection>
-    </div>
+
+      <BreadcrumbTrial />
+    </>
   );
 };
 
