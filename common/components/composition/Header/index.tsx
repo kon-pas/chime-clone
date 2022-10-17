@@ -27,12 +27,14 @@ const Header: React.FC = () => {
       <S.Header>
         <Link href="/" passHref>
           <h1>
-            <Image
-              src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
-              alt="Chime Logo"
-              width="90px"
-              height="30px"
-            />
+            <a>
+              <Image
+                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+                alt="Chime Logo"
+                width="90px"
+                height="30px"
+              />
+            </a>
           </h1>
         </Link>
 
@@ -85,12 +87,14 @@ const Header: React.FC = () => {
         <header>
           <Link href="/" passHref>
             <h1>
-              <Image
-                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
-                alt="Chime Logo"
-                width="90px"
-                height="30px"
-              />
+              <a>
+                <Image
+                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+                  alt="Chime Logo"
+                  width="90px"
+                  height="30px"
+                />
+              </a>
             </h1>
           </Link>
 
