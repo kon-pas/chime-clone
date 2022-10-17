@@ -2,7 +2,7 @@ import * as S from "./MainLayout.styled";
 
 import Header from "@components/composition/Header";
 import Footer from "@components/composition/Footer";
-import LoadingPage from "@components/composition/LoadingPage";
+import Loader from "@components/composition/Loader";
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ interface MainLayoutProps {
 const MainLayout: React.FC<MainLayoutProps> = props => {
   return (
     <S.PageContainer>
-      <LoadingPage />
+      <Loader />
 
       <S.HeaderContainer>
         <Header />
