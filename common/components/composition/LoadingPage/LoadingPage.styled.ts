@@ -34,9 +34,4 @@ export const LoadingPageWrapper = styled.div`
   }
 `;
 
-export const AnimationWrapper = styled.div`
-
-`;
-
-
-
+export const AnimationWrapper = styled.div``;
