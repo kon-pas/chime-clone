@@ -2,14 +2,14 @@ import GlobalStyle from "@styles/GlobalStyle.styled";
 
 import type { AppProps } from "next/app";
 
-import MainLayout from "@components/composition/MainLayout";
+import Layout from "@components/composition/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MainLayout>
+    <Layout>
       <GlobalStyle /> 
       <Component {...pageProps} />
-    </MainLayout>
+    </Layout>
     );
 }
 
