@@ -5,7 +5,6 @@ import { COLORS } from "@constants";
 
 import MonoSection from "@components/elements/MonoSection";
 import DualSection from "@components/elements/DualSection";
-import BreadcrumbTrial from "@components/elements/BreadcrumbTrail";
 
 const Home: NextPage = () => {
   return (
@@ -114,8 +113,6 @@ const Home: NextPage = () => {
           Applying for an account is free and takes less than 2 minutes with no impact to your credit score. 
         </p>
       </MonoSection>
-
-      <BreadcrumbTrial />
     </>
   );
 };
