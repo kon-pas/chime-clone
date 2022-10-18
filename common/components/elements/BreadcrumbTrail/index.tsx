@@ -1,17 +1,37 @@
-import * as Styled from './BreadcrumbTrail.styled';
+// import * as Styled from "./BreadcrumbTrail.styled";
 
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
-import ContentContainer from "@components/elements/ContentContainer";
+// import ContentContainer from "@components/elements/ContentContainer";
+// import IconSVG from "@components/elements/IconSVG";
 
-const BreadcrumbTrial: React.FC = () => {
+// const BreadcrumbTrial: React.FC = () => {
+//   const { pathname } = useRouter();
 
-  return (
-    <Styled.BreadcrumbTrial>
-      <ContentContainer>
-      </ContentContainer>
-    </Styled.BreadcrumbTrial>
-  );
-}
+//   return (
+//     <ContentContainer>
+//       <Styled.List>
+//         {pathname
+//           .slice(1)
+//           .split("/")
+//           .map((label, idx) => (
+//             <Styled.Item key={idx}>
+//               <Styled.ArrowWrapper>
+//                 <IconSVG>
+//                   <path
+//                     strokeLinecap="round"
+//                     strokeLinejoin="round"
+//                     d="M8.25 4.5l7.5 7.5-7.5 7.5"
+//                   />
+//                 </IconSVG>
+//               </Styled.ArrowWrapper>
 
-export default BreadcrumbTrial;
+//               <Styled.LabelWrapper>{label}</Styled.LabelWrapper>
+//             </Styled.Item>
+//           ))}
+//       </Styled.List>
+//     </ContentContainer>
+//   );
+// };
+
+// export default BreadcrumbTrial;
