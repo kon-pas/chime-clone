@@ -13,9 +13,9 @@ const Wrapper = styled.div<WrapperProps>`
   background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   padding: 3rem 0;
 
-  ${MEDIA} {
-    padding: 6rem 0;
-  }
+  // ${MEDIA.MD} {
+  //   padding: 6rem 0;
+  // }
 `;
 
 export default Wrapper;
