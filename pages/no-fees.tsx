@@ -18,8 +18,34 @@ const NoFeesPage: NextPage = () => {
       </Head>
 
       {/* 1 */}
-      <BannerSection>
-        
+      <BannerSection
+        img={{
+          src: "https://www.chime.com/wp-content/uploads/2020/01/Landingpage-control-1432x854.png",
+          alt: "Landing page control",
+          originalSize: [1400, 835],
+          width: {
+            sm: 590,
+            md: 365,
+            lg: 485,
+          },
+        }}
+      >
+        <small>No Monthly Fees Online Checking Account</small>
+
+        <h1>Banking with no monthly fees</h1>
+
+        <p>Say goodbye to monthly fees when you bank through Chime</p>
+
+        <ul>
+          <li>No monthly fees and no minimum balance fees</li>
+          <li>No overdraft fees</li>
+
+          <li>
+            60,000+ fee-free<sup>1</sup> ATMs at stores like Walgreens
+            <sup>®</sup>, 7-Eleven<sup>®</sup>, CVS Pharmacy<sup>®</sup>, Circle
+            K & more
+          </li>
+        </ul>
       </BannerSection>
 
       {/* 2 */}
@@ -30,7 +56,7 @@ const NoFeesPage: NextPage = () => {
           originalSize: [644, 322],
           width: {
             sm: 490,
-          }
+          },
         }}
       >
         <h1>Banking shouldn&apos;t cost you money</h1>
@@ -52,7 +78,7 @@ const NoFeesPage: NextPage = () => {
           width: {
             sm: 450,
             lg: 450,
-          }
+          },
         }}
       >
         <h1>No fees for overdrafts</h1>
@@ -74,7 +100,7 @@ const NoFeesPage: NextPage = () => {
             sm: 150,
             md: 230,
             lg: 230,
-          }
+          },
         }}
       >
         <h1>
@@ -100,7 +126,7 @@ const NoFeesPage: NextPage = () => {
             sm: 310,
             md: 310,
             lg: 310,
-          }
+          },
         }}
       >
         <h1>Checking Account and Debit Card with no monthly fees</h1>
@@ -113,12 +139,11 @@ const NoFeesPage: NextPage = () => {
 
       {/* 6 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
-        <h1>
-          Get Started Today
-        </h1>
+        <h1>Get Started Today</h1>
 
         <p>
-          Applying for an account is free and takes less than 2 minutes with no impact to your credit score.
+          Applying for an account is free and takes less than 2 minutes with no
+          impact to your credit score.
         </p>
       </MonoSection>
     </>
