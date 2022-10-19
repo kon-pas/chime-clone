@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
+
+import { getMedia } from "@utils";
 
 const ChildrenContainer = styled.div`
   display: grid;
@@ -9,11 +11,11 @@ const ChildrenContainer = styled.div`
   h1 {
     font-size: 2.3rem;
 
-    ${MEDIA.MD} {
+    ${getMedia('md')} {
       font-size: 2.7rem;
     }
   
-    ${MEDIA.LG} {
+    ${getMedia('lg')} {
       font-size: 3.3rem;
     }
   }
@@ -49,11 +51,11 @@ const ChildrenContainer = styled.div`
     color: ${COLORS.FONT_GRAY_LIGHT};
   }
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: 365px;
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: 485px;
   }
 `;

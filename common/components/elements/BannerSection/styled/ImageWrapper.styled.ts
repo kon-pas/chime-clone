@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 interface ImageWrapper {
   align?: "center" | "bottom";
@@ -15,7 +15,7 @@ const ImageWrapper = styled.div<ImageWrapper>`
   margin-right: auto;
   max-width: ${props => `${props.sm}px` ?? "100%"};
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: 50%;
     display: grid;
     margin-top: 0;
@@ -25,7 +25,7 @@ const ImageWrapper = styled.div<ImageWrapper>`
     max-width: ${props => `${props.md}px` ?? "50%"};
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     max-width: ${props => `${props.lg}px` ?? "50%"};
   }
 `;

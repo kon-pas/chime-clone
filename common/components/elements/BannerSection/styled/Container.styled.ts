@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import ContentContainer from "@components/elements/ContentContainer";
 
 const Container = styled(ContentContainer)`
   position: relative;
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: flex;
     flex-direction: row;
     gap: 2rem;
