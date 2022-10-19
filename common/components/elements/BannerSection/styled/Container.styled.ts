@@ -11,6 +11,7 @@ const Container = styled(ContentContainer)`
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    justify-content: space-between;
   }
 `;
 
