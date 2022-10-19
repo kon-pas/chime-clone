@@ -3,21 +3,14 @@ import * as Styled from "./styled";
 import Image from "next/image";
 
 import type { HexColor } from "@types";
+import type { NextImageProps } from "@interfaces";
 
 import { COLORS } from "@constants";
 
 interface DualSectionProps {
   children: React.ReactNode;
-  img: {
-    src: `https://www.chime.com/${string}`;
-    alt: string;
-    originalSize: [number, number];
+  img: NextImageProps & {
     float?: "left" | "right";
-    width?: {
-      sm?: number;
-      md?: number;
-      lg?: number;
-    };
   };
   backgroundColor?: HexColor;
 }
