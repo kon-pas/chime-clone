@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
-const ImageWrapper = styled.div``;
+import { MEDIA } from "@constants";
+
+const ImageWrapper = styled.div`
+  margin-top: 3rem;
+`;
 
 export default ImageWrapper;
