@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { MEDIA, BREAKPOINTS } from "@constants";
 
 const ImageWrapper = styled.div`
-  margin-top: 3rem;
-  width: 50%;
+  margin: 3rem auto 0 auto;
+
+  ${MEDIA.MD} {
+    width: 50%;
+  }
 `;
 
 export default ImageWrapper;
