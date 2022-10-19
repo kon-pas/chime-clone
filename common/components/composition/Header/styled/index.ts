@@ -2,7 +2,7 @@ export { default as Header } from "./Header.styled";
 
 export { default as Button } from "./Button.styled";
 
-export { default as SlidePageContainer } from "./SlidePageContainer.styled";
+export { default as ModalContainer } from "./ModalContainer.styled";
 
 export { default as MenuContainer } from "./MenuContainer.styled";
 

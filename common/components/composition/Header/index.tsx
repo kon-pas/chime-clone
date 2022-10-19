@@ -83,7 +83,7 @@ const Header: React.FC = () => {
         </nav>
       </S.Header>
 
-      <S.SlidePageContainer isVisible={isSpliderOpened}>
+      <S.ModalContainer isVisible={isSpliderOpened}>
         <header>
           <Link href="/" passHref>
             <h1>
@@ -135,7 +135,7 @@ const Header: React.FC = () => {
           <div>Log In</div>
           <div>Sign Up</div>
         </S.AccountActions>
-      </S.SlidePageContainer>
+      </S.ModalContainer>
     </>
   );
 };
