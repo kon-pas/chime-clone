@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
+
+import { getMedia } from "@utils";
 
 interface ModalContainerProps {
   isVisible: boolean;
@@ -50,7 +52,7 @@ const ModalContainer = styled.div<ModalContainerProps>`
     }
   }
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: none;
   }
 `;
