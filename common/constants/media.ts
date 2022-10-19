@@ -1,5 +1,6 @@
-// This approach might be an overkill, but for now I will stick to it.
-
+/**
+ * Deprecated: moved this feat to @utils/use-media
+ */
 import { BREAKPOINTS } from "@constants";
 
 const MEDIA: { [key: string]: `@media (min-width: ${string}px)` } = Object.fromEntries(
