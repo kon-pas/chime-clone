@@ -1,3 +1,5 @@
+import GlobalStyle from "@styles/GlobalStyle.styled";
+
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -5,8 +7,9 @@ import { COLORS } from "@constants";
 
 import MonoSection from "@components/elements/MonoSection";
 import DualSection from "@components/elements/DualSection";
+import BannerSection from "@components/elements/BannerSection";
 
-const Home: NextPage = () => {
+const NoFeesPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -15,6 +18,11 @@ const Home: NextPage = () => {
       </Head>
 
       {/* 1 */}
+      <BannerSection>
+        
+      </BannerSection>
+
+      {/* 2 */}
       <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
@@ -34,7 +42,7 @@ const Home: NextPage = () => {
         </p>
       </DualSection>
 
-      {/* 2 */}
+      {/* 3 */}
       <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/05/spot-me-1.png",
@@ -56,7 +64,7 @@ const Home: NextPage = () => {
         </p>
       </DualSection>
 
-      {/* 3 */}
+      {/* 4 */}
       <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/09/ATM-Image-08312021-approved.png",
@@ -81,7 +89,7 @@ const Home: NextPage = () => {
         </p>
       </DualSection>
 
-      {/* 4 */}
+      {/* 5 */}
       <DualSection
         img={{
           src: "https://www.chime.com/wp-content/uploads/2019/05/Debit-Card-Front.png",
@@ -103,18 +111,18 @@ const Home: NextPage = () => {
         </p>
       </DualSection>
 
-      {/* 5 */}
+      {/* 6 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
         <h1>
           Get Started Today
         </h1>
 
         <p>
-          Applying for an account is free and takes less than 2 minutes with no impact to your credit score. 
+          Applying for an account is free and takes less than 2 minutes with no impact to your credit score.
         </p>
       </MonoSection>
     </>
   );
 };
 
-export default Home;
+export default NoFeesPage;
