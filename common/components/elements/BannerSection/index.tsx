@@ -21,7 +21,7 @@ const BannerSection: React.FC<BannerSectionProps> = props => {
           {props.children}
         </Styled.ChildrenContainer>
 
-        <Styled.ImageWrapper>
+        <Styled.ImageWrapper align={props.img.align} {...props.img.width}>
           <Image
             src={props.img.src}
             alt={props.img.alt}
