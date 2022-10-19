@@ -1,0 +1,1 @@
+// @@@ Convert constants to enums
