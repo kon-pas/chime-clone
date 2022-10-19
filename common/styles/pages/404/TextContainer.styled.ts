@@ -1,19 +1,19 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 const TextContainer = styled.div`
   display: grid;
   gap: 4rem;
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: 320px;
     gap: 0;
     align-content: space-between;
     margin: 3rem 0;
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: 420px;
     margin: 4rem 0;
   }

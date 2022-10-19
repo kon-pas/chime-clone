@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 const ImageWrapper = styled.div`
   max-width: 405px;
   margin: 0 auto;
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: inline-block;
     margin-right: 0;
     width: 100%;

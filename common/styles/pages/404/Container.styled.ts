@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import ContentContainer from "@components/elements/ContentContainer/ContentContainer.styled";
 
 const Container = styled(ContentContainer)`
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: flex;
   }
 `;
