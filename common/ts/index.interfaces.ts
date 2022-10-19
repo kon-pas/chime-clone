@@ -14,14 +14,12 @@ export interface NavigationItem {
  * Contains props for creating Next's Image
  */
 export interface NextImageProps {
-  img: {
-    readonly src: `https://www.chime.com/${string}`;
-    readonly alt: string;
-    readonly originalSize: [number, number];
-    readonly width?: {
-      readonly sm?: number;
-      readonly md?: number;
-      readonly lg?: number;
-    };
-  }
+  readonly src: `https://www.chime.com/${string}`;
+  readonly alt: string;
+  readonly originalSize: [number, number];
+  readonly width?: {
+    readonly sm?: number;
+    readonly md?: number;
+    readonly lg?: number;
+  };
 }
