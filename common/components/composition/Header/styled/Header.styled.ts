@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA, BREAKPOINTS } from "@constants";
+import { COLORS, BREAKPOINTS } from "@constants";
+
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -29,13 +31,13 @@ const Header = styled.header`
       color: ${COLORS.LIME_DARK};
       cursor: pointer;
 
-      ${MEDIA.MD} {
+      ${getMedia('md')} {
         display: none;
       }
     }
   }
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     height: 65px;
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
@@ -45,7 +47,7 @@ const Header = styled.header`
     }
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: ${BREAKPOINTS.LG}px;
     padding: 0 2rem;
   }

@@ -1,6 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
+
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -39,7 +41,7 @@ const MenuContainerDesktop = styled.nav`
   margin-left: 2rem;
   display: none;
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: inline-block;
   }
 
@@ -49,7 +51,7 @@ const MenuContainerDesktop = styled.nav`
 
     ${resizeTransition("gap")}
 
-    ${MEDIA.LG} {
+    ${getMedia('lg')} {
       gap: 1.6rem;
     }
 
