@@ -8,6 +8,14 @@ const ChildrenContainer = styled.div`
 
   h1 {
     font-size: 2.3rem;
+
+    ${MEDIA.MD} {
+      font-size: 2.7rem;
+    }
+  
+    ${MEDIA.LG} {
+      font-size: 3.3rem;
+    }
   }
 
   p {
@@ -43,6 +51,10 @@ const ChildrenContainer = styled.div`
 
   ${MEDIA.MD} {
     width: 365px;
+  }
+
+  ${MEDIA.LG} {
+    width: 485px;
   }
 `;
 
