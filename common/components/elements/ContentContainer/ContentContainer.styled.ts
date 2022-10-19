@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
-import { MEDIA, BREAKPOINTS } from "@constants";
+import { BREAKPOINTS } from "@constants";
+
+import { getMedia } from "@utils";
 
 const ContentContainer = styled.div`
   padding: 0 1.4rem;
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: ${BREAKPOINTS.LG}px;
     padding: 0 2rem;
   }
