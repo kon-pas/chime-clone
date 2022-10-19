@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
+
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -12,7 +14,7 @@ const Footer = styled.footer`
 
   ${resizeTransition('padding')}
   
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     padding: 4rem 0 5rem 0;
   }
 `;

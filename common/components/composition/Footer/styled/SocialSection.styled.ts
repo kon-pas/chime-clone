@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -19,14 +19,14 @@ const SocialSection = styled.div`
     height: 40px;
   }
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: auto;
     height: 40px;
     gap: 1rem;
     justify-content: center;
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: 170px;
     height: 150px;
     justify-content: space-between;

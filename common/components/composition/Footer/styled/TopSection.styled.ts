@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 const TopSection = styled.div`
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto;

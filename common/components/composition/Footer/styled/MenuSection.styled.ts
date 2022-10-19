@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
+
+import { getMedia } from "@utils";
 
 const MenuSection = styled.menu`
   display: grid;
   gap: 2rem;
   width: fit-content;
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: flex;
     width: 100%;
     justify-content: space-between;
