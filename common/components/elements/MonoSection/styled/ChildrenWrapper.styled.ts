@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants"
+import { getMedia } from "@utils";
 
 const ChildrenWrapper = styled.div`
   display: grid;
@@ -11,12 +11,12 @@ const ChildrenWrapper = styled.div`
   }
   
   h1 {
-    ${MEDIA.LG} {
+    ${getMedia('lg')} {
       font-size: 2.25rem;
     }
   }
   
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: 500px;
     margin: 0 auto;
     justify-items: center;
