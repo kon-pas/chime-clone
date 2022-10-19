@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS } from "@constants";
+import { COLORS, MEDIA } from "@constants";
 
 const ChildrenContainer = styled.div`
   display: grid;
@@ -17,7 +17,8 @@ const ChildrenContainer = styled.div`
   ul {
     display: grid;
     gap: 0.75rem;
-
+    margin-left: 30px;
+    
     li {
       font-weight: 600;
       line-height: 1.5em;
@@ -31,13 +32,17 @@ const ChildrenContainer = styled.div`
         background-size: 20px 20px;
         width: 20px; 
         height: 20px;
-        margin: auto 10px auto 0;
+        margin: auto 10px auto -30px;
       }
     }
   }
 
   small {
     color: ${COLORS.FONT_GRAY_LIGHT};
+  }
+
+  ${MEDIA.MD} {
+    width: 365px;
   }
 `;
 
