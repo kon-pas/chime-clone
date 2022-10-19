@@ -1,1 +1,4 @@
-// @@@ Convert constants to enums
+export enum breakpoints {
+  md = 860,
+  lg = 1100,
+}
