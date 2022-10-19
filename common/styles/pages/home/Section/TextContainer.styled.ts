@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -9,7 +9,7 @@ const TextWrapper = styled.div`
   h2 {
     font-size: 1.15rem;
 
-    ${MEDIA.LG} {
+    ${getMedia('lg')} {
       font-size: 1.5rem;
     }
   }
@@ -26,12 +26,12 @@ const TextWrapper = styled.div`
       margin-bottom: 0;
     }
 
-    ${MEDIA.LG} {
+    ${getMedia('lg')} {
       font-size: 1rem;
     }
   }
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: inline-block;
     vertical-align:top;
   }

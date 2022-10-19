@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -11,7 +11,7 @@ const ImageWrapper = styled.div`
 
   ${resizeTransition("margin-bottom")}
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     margin-bottom: 0;
     align-items: center;
 
