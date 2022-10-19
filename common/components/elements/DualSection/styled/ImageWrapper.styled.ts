@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -17,12 +17,12 @@ const ImageWrapper = styled.div<ImageWrapperProps>`
 
   ${resizeTransition("all")}
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     max-width: ${props => `${props.md}px` ?? '365px'};
     margin: auto 0;
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     max-width: ${props => `${props.lg}px` ?? '420px'};
     margin: auto;
   }

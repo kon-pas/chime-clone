@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
+
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -24,12 +26,12 @@ const ChildrenWrapper = styled.div`
     > small {}
   }
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     width: 365px;
     margin: auto 0;
   }
 
-  ${MEDIA.LG} {
+  ${getMedia('lg')} {
     width: 400px;
   }
 `;

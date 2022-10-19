@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import type { HexColor } from "@types";
 
-import { MEDIA } from "@constants";
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -18,7 +18,7 @@ const Wrapper = styled.div<WrapperProps>`
 
   ${resizeTransition("padding")}
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     padding: 7rem 0;
   }
 `;

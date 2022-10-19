@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import type { HexColor } from "@types";
-
-import { MEDIA, COLORS, BREAKPOINTS } from "@constants";
+import { getMedia } from "@utils";
 
 import { resizeTransition } from "@utils";
 
@@ -15,7 +13,7 @@ interface ContainerProps {
 const Container = styled(ContentContainer)<ContainerProps>`
   ${resizeTransition("all")}
 
-  ${MEDIA.MD} {
+  ${getMedia('md')} {
     display: flex;
     flex-direction: ${props => props.imageFloat === "left" ? "row-reverse" : "row"};
     gap: 2rem;
