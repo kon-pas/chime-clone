@@ -15,13 +15,20 @@ interface BannerSectionProps {
 
 const BannerSection: React.FC<BannerSectionProps> = props => {
   return (
-    <Styled.Wrapper>
+    <Styled.Wrapper backgroundColor={props.backgroundColor}>
       <Styled.Container>
         <Styled.ChildrenContainer>
           {props.children}
         </Styled.ChildrenContainer>
-        <Styled.ImageWrapper>
 
+        <Styled.ImageWrapper>
+          <Image
+            src={props.img.src}
+            alt={props.img.alt}
+            layout="responsive"
+            width={props.img.originalSize[0]}
+            height={props.img.originalSize[1]}
+          />
         </Styled.ImageWrapper>
       </Styled.Container>
     </Styled.Wrapper>
