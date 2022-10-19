@@ -1,5 +1,44 @@
 import styled from "styled-components";
 
-const ChildrenContainer = styled.div``;
+import { COLORS } from "@constants";
+
+const ChildrenContainer = styled.div`
+  display: grid;
+  gap: 1rem;
+
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  p {
+    line-height: 2em;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.75rem;
+
+    li {
+      font-weight: 600;
+      line-height: 1.5em;
+
+      &::before {
+        vertical-align: sub;
+        content:"";
+        background-image: url('https://www.chime.com/wp-content/uploads/2020/11/check@2x.png');
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+        width: 20px; 
+        height: 20px;
+        margin: auto 10px auto 0;
+      }
+    }
+  }
+
+  small {
+    color: ${COLORS.FONT_GRAY_LIGHT};
+  }
+`;
 
 export default ChildrenContainer;
