@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const ChildrenWrapper = styled.div`
   display: grid;
@@ -11,10 +11,14 @@ const ChildrenWrapper = styled.div`
   }
   
   h1 {
+    ${getResizeTransition('font-size')}
+
     ${getMedia('lg')} {
       font-size: 2.25rem;
     }
   }
+
+  ${getResizeTransition('width', 'margin')}
   
   ${getMedia('md')} {
     width: 500px;
