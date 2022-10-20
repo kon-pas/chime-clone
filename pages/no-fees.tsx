@@ -38,6 +38,7 @@ const NoFeesPage: NextPage = () => {
 
         <ul>
           <li>No monthly fees and no minimum balance fees</li>
+
           <li>No overdraft fees</li>
 
           <li>
@@ -50,6 +51,7 @@ const NoFeesPage: NextPage = () => {
 
       {/* 2 */}
       <DualSection
+        centered
         img={{
           src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
           alt: "No Fees",
@@ -70,6 +72,7 @@ const NoFeesPage: NextPage = () => {
 
       {/* 3 */}
       <DualSection
+        centered
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/05/spot-me-1.png",
           alt: "No Fees",
@@ -92,6 +95,7 @@ const NoFeesPage: NextPage = () => {
 
       {/* 4 */}
       <DualSection
+        centered
         img={{
           src: "https://www.chime.com/wp-content/uploads/2021/09/ATM-Image-08312021-approved.png",
           alt: "No Fees",
@@ -117,6 +121,7 @@ const NoFeesPage: NextPage = () => {
 
       {/* 5 */}
       <DualSection
+        centered
         img={{
           src: "https://www.chime.com/wp-content/uploads/2019/05/Debit-Card-Front.png",
           alt: "No Fees",
