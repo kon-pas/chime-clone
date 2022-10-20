@@ -2,14 +2,12 @@ import styled from "styled-components";
 
 import ContentContainer from "@components/elements/ContentContainer";
 
-import { getMedia } from "@utils";
-
-import { resizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const Container = styled(ContentContainer)`
   margin-top: 0.75rem;
 
-  ${resizeTransition("margin-top")}
+  ${getResizeTransition("margin-top")}
 
   ${getMedia('md')} {
     margin-top: 3rem;

@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const TextWrapper = styled.div`
 
   h2 {
     font-size: 1.15rem;
+
+    ${getResizeTransition('font-size')}
 
     ${getMedia('lg')} {
       font-size: 1.5rem;
@@ -20,7 +22,7 @@ const TextWrapper = styled.div`
     line-height: 1.75rem;
     font-size: 0.95rem;
 
-    ${resizeTransition("font-size")}
+    ${getResizeTransition("font-size")}
 
     &:last-of-type {
       margin-bottom: 0;

@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const ImageWrapper = styled.div`
   margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
 
-  ${resizeTransition("margin-bottom")}
+  ${getResizeTransition('margin-bottom', 'width')}
 
   ${getMedia('md')} {
     margin-bottom: 0;

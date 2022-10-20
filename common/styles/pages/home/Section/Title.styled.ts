@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const Heading = styled.h2`
   width: 100%;
   text-align: center;
 
-  ${resizeTransition("font-size")}
+  ${getResizeTransition('font-size')}
 
   ${getMedia('md')} {
     font-size: 1.9rem;
