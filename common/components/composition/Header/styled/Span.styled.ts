@@ -4,7 +4,7 @@ import { COLORS } from "@constants";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const Span = styled.span`
   display: inline-block;
@@ -17,7 +17,7 @@ const Span = styled.span`
   display: none;
   cursor: pointer;
 
-  ${resizeTransition("font-size")}
+  ${getResizeTransition("font-size")}
 
   &:hover {
     transition-property: color;

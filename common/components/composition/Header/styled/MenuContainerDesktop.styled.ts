@@ -4,7 +4,7 @@ import { COLORS } from "@constants";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const appear = keyframes`
   0% {
@@ -49,7 +49,7 @@ const MenuContainerDesktop = styled.nav`
     display: flex;
     gap: 0.75rem;
 
-    ${resizeTransition("gap")}
+    ${getResizeTransition("gap")}
 
     ${getMedia('lg')} {
       gap: 1.6rem;

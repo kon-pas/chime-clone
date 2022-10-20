@@ -4,7 +4,7 @@ import { COLORS, BREAKPOINTS } from "@constants";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const Header = styled.header`
   width: 100%;
@@ -15,7 +15,7 @@ const Header = styled.header`
   justify-content: space-between;
   justify-self: center;
 
-  ${resizeTransition("all")}
+  ${getResizeTransition("all")}
 
   > h1 {
     line-height: 1rem;
