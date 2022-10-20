@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           <Styled.SocialSection>
             <a href="https://apps.apple.com/us/app/chime-banking/id836215269">
               <Image
-                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/app-store.png"
+                src="/static/app-store.png"
                 alt="Chime App Store Download"
                 width="170px"
                 height="40px"
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
 
             <a href="https://play.google.com/store/apps/details?id=com.onedebit.chime&hl=en">
               <Image
-                src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/google-play.png"
+                src="/static/google-play.png"
                 alt="Chime Google Play Download"
                 width="170px"
                 height="40px"
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://www.facebook.com/chime">
                 <Image
-                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/facebook-bw.png"
+                  src="/static/facebook-bw.png"
                   alt="Chime Facebook"
                   width="32px"
                   height="32px"
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://twitter.com/chime">
                 <Image
-                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/twitter-bw.png"
+                  src="/static/twitter-bw.png"
                   alt="Chime Twitter"
                   width="32px"
                   height="32px"
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://www.instagram.com/Chime/">
                 <Image
-                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/footer/instagram-bw.png"
+                  src="/static/instagram-bw.png"
                   alt="Chime Instagram"
                   width="32px"
                   height="32px"
