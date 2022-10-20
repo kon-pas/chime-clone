@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { COLORS } from "@constants";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const ChildrenContainer = styled.div`
   display: grid;
@@ -10,6 +10,8 @@ const ChildrenContainer = styled.div`
 
   h1 {
     font-size: 2.3rem;
+
+    ${getResizeTransition('font-size')}
 
     ${getMedia('md')} {
       font-size: 2.7rem;

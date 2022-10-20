@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 import ContentContainer from "@components/elements/ContentContainer";
 
 const Container = styled(ContentContainer)`
   position: relative;
+
+  ${getResizeTransition('all')}
 
   ${getMedia('md')} {
     display: flex;
