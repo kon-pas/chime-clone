@@ -6,8 +6,9 @@ import Image from "next/image";
 
 import { COLORS } from "@constants";
 
-import DualSection from "@components/elements/DualSection";
 import LearnMoreButton from "@components/pages/home/LearnMoreButton";
+import DualSection from "@components/sections/DualSection";
+import PlaceholderSection from "@components/sections/PlaceholderSection";
 
 const Home: NextPage = () => {
   return (
@@ -17,10 +18,12 @@ const Home: NextPage = () => {
         <meta name="description" content="Chime clone home page" />
       </Head>
 
+      <PlaceholderSection />
+
       {/* 1 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2021/03/spot-me-1.png",
+          src: "/static/spot-me-1.png",
           alt: "SpotMe 1",
           originalSize: [792, 526],
           float: "right",
@@ -42,7 +45,7 @@ const Home: NextPage = () => {
       {/* 2 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/paid-early.png",
+          src: "/static/paid-early.png",
           alt: "Paid Early",
           originalSize: [713, 202],
           width: {
@@ -63,7 +66,7 @@ const Home: NextPage = () => {
       {/* 3 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
+          src: "/static/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
           float: "right",
@@ -86,7 +89,7 @@ const Home: NextPage = () => {
       {/* 4 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2021/03/CreditBuilder.png",
+          src: "/static/credit-builder.png",
           alt: "Credit Builder",
           originalSize: [826, 670],
           width: {
@@ -118,7 +121,7 @@ const Home: NextPage = () => {
       {/* 5 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2021/07/pay-anyone-desktop.png",
+          src: "/static/pay-anyone-desktop.png",
           alt: "Pay Anyone Deskop",
           originalSize: [813, 916],
           float: "right",
@@ -142,7 +145,7 @@ const Home: NextPage = () => {
       {/* 6 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2022/08/APY.png",
+          src: "/static/apy.png",
           alt: "APY",
           originalSize: [774, 474],
           width: {
@@ -166,7 +169,7 @@ const Home: NextPage = () => {
       {/* 7 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/alerts.png",
+          src: "/static/alerts.png",
           alt: "Alerts",
           originalSize: [734, 330],
           float: "right",
@@ -194,7 +197,7 @@ const Home: NextPage = () => {
         <Styled.Section.Container>
           <Styled.Section.ImageWrapper>
             <Image
-              src="https://www.chime.com/wp-content/uploads/2020/03/lock.png"
+              src="/static/lock.png"
               alt="Lock"
               layout="fixed"
               width={174}
@@ -231,7 +234,7 @@ const Home: NextPage = () => {
       {/* 9 */}
       <DualSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2021/03/Chime-Reviews.png",
+          src: "/static/chime-reviews.png",
           alt: "Chime Reviews",
           originalSize: [884, 568],
           float: "right",
