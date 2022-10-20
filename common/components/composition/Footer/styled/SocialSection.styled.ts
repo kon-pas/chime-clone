@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const SocialSection = styled.div`
   width: 170px;
@@ -13,7 +13,7 @@ const SocialSection = styled.div`
   align-content: space-between;
   margin: 0 auto;
 
-  ${resizeTransition("all")}
+  ${getResizeTransition("all")}
 
   > a {
     height: 40px;

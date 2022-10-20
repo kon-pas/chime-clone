@@ -4,7 +4,7 @@ import { COLORS } from "@constants";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 const Footer = styled.footer`
   background-color: ${COLORS.WHITE};
@@ -12,7 +12,7 @@ const Footer = styled.footer`
   width: 100%;
   margin: 0 auto;
 
-  ${resizeTransition('padding')}
+  ${getResizeTransition('padding')}
   
   ${getMedia('md')} {
     padding: 4rem 0 5rem 0;

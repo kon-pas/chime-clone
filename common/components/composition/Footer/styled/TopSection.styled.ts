@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const TopSection = styled.div`
+  ${getResizeTransition('all')}
+
   ${getMedia('lg')} {
     width: 100%;
     display: grid;

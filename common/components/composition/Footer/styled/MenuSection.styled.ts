@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 import { COLORS } from "@constants";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const MenuSection = styled.menu`
   display: grid;
   gap: 2rem;
   width: fit-content;
+
+  ${getResizeTransition('width')}
 
   ${getMedia('md')} {
     display: flex;
