@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const TextContainer = styled.div`
   display: grid;
   gap: 4rem;
+
+  ${getResizeTransition('width', 'margin', 'gap')}
 
   ${getMedia('md')} {
     width: 320px;

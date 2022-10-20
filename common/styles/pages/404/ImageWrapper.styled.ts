@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const ImageWrapper = styled.div`
   max-width: 405px;
   margin: 0 auto;
+
+  ${getResizeTransition('all')}
 
   ${getMedia('md')} {
     display: inline-block;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { resizeTransition, getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 import GreenButton from "@components/elements/GreenButton";
 
@@ -8,7 +8,7 @@ const Button = styled(GreenButton)`
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  // ${resizeTransition('padding-top', 'padding-bottom')}
+  ${getResizeTransition('width')}
 
   ${getMedia('md')} {
     width: fit-content;
