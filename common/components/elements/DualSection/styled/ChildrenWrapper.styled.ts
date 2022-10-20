@@ -4,14 +4,18 @@ import { COLORS } from "@constants";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
-const ChildrenWrapper = styled.div`
+interface ChildrenWrapper {
+  isCentered?: boolean;
+}
+
+const ChildrenWrapper = styled.div<ChildrenWrapper>`
   height: fit-content;
 
-  ${resizeTransition("all")}
+  ${getResizeTransition("width", "margin")}
 
-> h1 {
+  > h1 {
     font-size: 2.1rem;
     line-height: 2.65rem;
     letter-spacing: 0.005em;
@@ -33,6 +37,7 @@ const ChildrenWrapper = styled.div`
 
   ${getMedia('lg')} {
     width: 400px;
+    margin: ${props => props.isCentered ? 'auto auto' : 'auto 0'};
   }
 `;
 

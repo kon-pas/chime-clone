@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 interface ImageWrapperProps {
   sm?: number;
@@ -15,7 +15,7 @@ const ImageWrapper = styled.div<ImageWrapperProps>`
   width: 100%;
   max-width: ${props => `${props.sm}px` ?? '440px'};
 
-  ${resizeTransition("all")}
+  ${getResizeTransition('max-width', 'margin')}
 
   ${getMedia('md')} {
     max-width: ${props => `${props.md}px` ?? '365px'};

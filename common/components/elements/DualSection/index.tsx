@@ -13,13 +13,14 @@ interface DualSectionProps {
     float?: "left" | "right";
   };
   backgroundColor?: HexColor;
+  centered?: boolean;
 }
 
 const DualSection: React.FC<DualSectionProps> = props => {
   return (
     <Styled.Wrapper backgroundColor={props.backgroundColor ?? COLORS.WHITE}>
       <Styled.Container imageFloat={props.img.float ?? "left"}>
-        <Styled.ChildrenWrapper>
+        <Styled.ChildrenWrapper isCentered={props.centered}>
           {props.children}
         </Styled.ChildrenWrapper>
 

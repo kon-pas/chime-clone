@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 import { BREAKPOINTS } from "@constants";
 
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const ContentContainer = styled.div`
   padding: 0 1.4rem;
+
+  ${getResizeTransition('width', 'padding', 'margin')}
 
   ${getMedia('md')} {
     width: ${BREAKPOINTS.MD}px;

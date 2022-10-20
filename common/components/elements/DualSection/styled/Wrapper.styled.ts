@@ -4,7 +4,7 @@ import type { HexColor } from "@types";
 
 import { getMedia } from "@utils";
 
-import { resizeTransition } from "@utils";
+import { getResizeTransition } from "@utils";
 
 interface WrapperProps {
   backgroundColor?: HexColor;
@@ -16,7 +16,7 @@ const Wrapper = styled.div<WrapperProps>`
   background-color: ${props => props.backgroundColor};
   padding: 3rem 0;
 
-  ${resizeTransition("padding")}
+  ${getResizeTransition("padding")}
 
   ${getMedia('md')} {
     padding: 7rem 0;
