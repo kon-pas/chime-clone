@@ -5,9 +5,9 @@ import Head from "next/head";
 
 import { COLORS } from "@constants";
 
-import MonoSection from "@components/elements/MonoSection";
-import DualSection from "@components/elements/DualSection";
-import BannerSection from "@components/elements/BannerSection";
+import MonoSection from "@components/sections/MonoSection";
+import DualSection from "@components/sections/DualSection";
+import BannerSection from "@components/sections/BannerSection";
 
 const NoFeesPage: NextPage = () => {
   return (
@@ -20,7 +20,7 @@ const NoFeesPage: NextPage = () => {
       {/* 1 */}
       <BannerSection
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/01/Landingpage-control-1432x854.png",
+          src: "/static/landingpage-control.png",
           alt: "Landing page control",
           originalSize: [1400, 835],
           width: {
@@ -53,7 +53,7 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2020/03/no-fees.png",
+          src: "/static/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
           width: {
@@ -74,7 +74,7 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2021/05/spot-me-1.png",
+          src: "/static/spot-me-1.png",
           alt: "No Fees",
           originalSize: [792, 526],
           float: "right",
@@ -97,7 +97,7 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2021/09/ATM-Image-08312021-approved.png",
+          src: "/static/approved.png",
           alt: "No Fees",
           originalSize: [562, 1100],
           width: {
@@ -123,7 +123,7 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "https://www.chime.com/wp-content/uploads/2019/05/Debit-Card-Front.png",
+          src: "/static/debit-card-front.png",
           alt: "No Fees",
           originalSize: [745, 483],
           float: "right",
