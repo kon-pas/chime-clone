@@ -1,6 +1,8 @@
 /**
  * Deprecated: moved this feat to @utils/use-media
  */
+
+/*
 import { BREAKPOINTS } from "@constants";
 
 const MEDIA: { [key: string]: `@media (min-width: ${string}px)` } = Object.fromEntries(
@@ -11,3 +13,5 @@ const MEDIA: { [key: string]: `@media (min-width: ${string}px)` } = Object.fromE
 );
 
 export default MEDIA;
+*/
+
