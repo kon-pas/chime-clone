@@ -10,6 +10,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: 'Free Debit Card',
+        path: '/debit-card'
       },
       {
         label: 'Fee-Free Overdraft',
@@ -19,12 +20,14 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: 'Get Paid Early',
+        path: '/get-paid-early'
       },
       {
         label: '60,000+ Fee-Free ATMs',
       },
       {
         label: 'High Yield Savings',
+        path: '/savings-account',
       },
       {
         label: 'Account',
@@ -34,6 +37,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: 'Security and Control',
+        path: '/security-and-control'
       }
     ],
   },
@@ -48,14 +52,17 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: 'Savings Account',
+        path: '/savings-account'
       }
     ],
   },
   {
-    label: "Who we are",
+    label: 'Who we are',
+    path: '/about-us',
     subitems: [
       {
         label: 'About Us',
+        path: '/about-us',
       },
       {
         label: 'In the News',
@@ -82,12 +89,14 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: 'FAQs',
+        path: '/faq'
       },
       {
         label: 'Online Banking',
       },
       {
         label: 'Second Chance Banking',
+        path: '/second-chance-banking'
       },
       {
         label: 'Tax Refund',
