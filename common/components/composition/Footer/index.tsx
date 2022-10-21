@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           <Styled.SocialSection>
             <a href="https://apps.apple.com/us/app/chime-banking/id836215269">
               <Image
-                src="/static/app-store.png"
+                src="/static/elements/app-store.png"
                 alt="Chime App Store Download"
                 width="170px"
                 height="40px"
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
 
             <a href="https://play.google.com/store/apps/details?id=com.onedebit.chime&hl=en">
               <Image
-                src="/static/google-play.png"
+                src="/static/elements/google-play.png"
                 alt="Chime Google Play Download"
                 width="170px"
                 height="40px"
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://www.facebook.com/chime">
                 <Image
-                  src="/static/facebook-bw.png"
+                  src="/static/elements/facebook-bw.png"
                   alt="Chime Facebook"
                   width="32px"
                   height="32px"
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://twitter.com/chime">
                 <Image
-                  src="/static/twitter-bw.png"
+                  src="/static/elements/twitter-bw.png"
                   alt="Chime Twitter"
                   width="32px"
                   height="32px"
@@ -80,7 +80,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://www.instagram.com/Chime/">
                 <Image
-                  src="/static/instagram-bw.png"
+                  src="/static/elements/instagram-bw.png"
                   alt="Chime Instagram"
                   width="32px"
                   height="32px"
