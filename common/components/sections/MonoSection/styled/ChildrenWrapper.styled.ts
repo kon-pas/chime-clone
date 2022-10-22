@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 import { getMedia, getResizeTransition } from "@utils";
 
-const ChildrenWrapper = styled.div`
+interface ChildrenWrapperProps {
+  textAlign: "start" | "center" | "end";
+  width: number;
+}
+
+const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   display: grid;
   gap: 2rem;
 
@@ -21,10 +26,10 @@ const ChildrenWrapper = styled.div`
   ${getResizeTransition('width', 'margin')}
   
   ${getMedia('md')} {
-    width: 500px;
+    width: ${props => `${props.width}px`};
     margin: 0 auto;
     justify-items: center;
-    text-align: center;
+    text-align: ${props => props.textAlign};
   }
 `;
 
