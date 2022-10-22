@@ -11,7 +11,7 @@ const Button = styled.button`
   background: none;
   padding: 0.7rem 1.3rem;
   cursor: pointer;
-  transition: all 0.2s linear;
+  transition: color 0.2s linear, background-color 0.2s linear;
 
   &:hover {
     background-color: ${COLORS.BLACK};
