@@ -1,11 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
+import { COLORS } from "@constants";
+
 import MonoSection from "@components/sections/MonoSection";
 import DualSection from "@components/sections/DualSection";
 import BannerSection from "@components/sections/BannerSection";
+import PlaceholderSection from "@components/sections/PlaceholderSection";
 
-const DebitCard: NextPage = () => {
+const DebitCardPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -13,14 +16,176 @@ const DebitCard: NextPage = () => {
         <meta name="description" content="Chime Clone Debit Card" />
       </Head>
 
-      {/* <BannerSection
-      img={{
-        src
-      }}>
+      {/* 1 */}
+      <BannerSection
+        img={{
+          align: "center",
+          src: "/static/content/debit-card/debit-card-front-2.png",
+          alt: "Debit Card Front",
+          originalSize: [580, 377],
+          width: {
+            sm: 320,
+            md: 385,
+          },
+        }}
+      >
+        <small>Chime Debit Card</small>
 
-      </BannerSection> */}
+        <h1>
+          Chime Checking Account and Visa<sup>®</sup> Debit Card
+        </h1>
+
+        <p>
+          Your Chime Checking Account comes with a debit card, no monthly fees
+          or maintenance fees.
+        </p>
+      </BannerSection>
+
+      {/* 2 */}
+      <DualSection
+        centered
+        backgroundColor={COLORS.GRAY_LIGHT}
+        img={{
+          float: "left",
+          src: "/static/content/debit-card/no-fees.png",
+          alt: "No Fees",
+          originalSize: [301, 121],
+          width: {
+            sm: 301,
+          },
+        }}
+      >
+        <h2>
+          Forget about confusing fees for using your Debit Card or Checking
+          Account
+        </h2>
+
+        <p>
+          Our debit card works everywhere Visa debit cards are accepted. And
+          unlike some prepaid cards and traditional bank accounts, there are no
+          monthly account fees and minimum balance requirements. Out-of-network
+          cash withdrawal fees apply.
+        </p>
+      </DualSection>
+
+      {/* 3 */}
+      <DualSection
+        img={{
+          float: "right",
+          src: "/static/content/debit-card/swis-1.png",
+          alt: "SWIS",
+          originalSize: [1032, 566],
+          width: {
+            sm: 545,
+            md: 365,
+            lg: 547,
+          },
+        }}
+      >
+        <h2>Grow your savings as you spend</h2>
+
+        <p>
+          Saving money is a no-brainer through Chime online banking. Every time
+          you swipe your debit card, we round up to the nearest dollar and
+          transfer the round-up from your Checking Account straight into your
+          Savings Account. A magical, little way to make your money grow over
+          time.
+        </p>
+      </DualSection>
+
+      {/* 4 */}
+      <DualSection
+        backgroundColor={COLORS.GRAY_LIGHT}
+        img={{
+          float: "left",
+          src: "/static/content/debit-card/approved.png",
+          alt: "ATM Approved",
+          originalSize: [562, 1100],
+          width: {
+            sm: 222,
+            md: 277,
+            lg: 277,
+          },
+        }}
+      >
+        <h2>
+          60,000+ fee-free ATMs at stores you love<sup>3</sup>
+        </h2>
+
+        <p>
+          Avoid out of network ATM fees. With Chime, you get access to 60,000+
+          fee-free ATMs—more than the top 3 national banks combined! Find them
+          at stores you love, like Walgreens®, CVS®, and 7-Eleven®. You can also
+          use the map in your Chime app to find the closest fee-free ATM near
+          you.
+        </p>
+      </DualSection>
+
+      {/* 5 */}
+      <DualSection
+        img={{
+          float: "right",
+          src: "/static/content/debit-card/card-security.png",
+          alt: "Card Security",
+          originalSize: [940, 388],
+          width: {
+            sm: 725,
+            md: 365,
+            lg: 570,
+          },
+        }}
+      >
+        <h2>You&apos;re always in control</h2>
+
+        <p>
+          Can&apos;t find your Chime debit card? No worries. You can instantly
+          disable transactions in the app. No need to call us or explain
+          yourself. And if you need a replacement card, just let us know. Debit
+          card replacement is always free!
+        </p>
+      </DualSection>
+
+      {/* 6 */}
+      <DualSection
+        backgroundColor={COLORS.GRAY_LIGHT}
+        img={{
+          float: "left",
+          src: "/static/content/debit-card/pays.png",
+          alt: "Pays",
+          originalSize: [500, 250],
+          width: {
+            sm: 500,
+            md: 365,
+            lg: 500,
+          },
+        }}
+      >
+        <h2>We love mobile payments</h2>
+
+        <p>
+          We support mobile payment platforms including Apple Pay<sup>TM</sup>{" "}
+          and Google Pay<sup>TM</sup>. Combining your Chime debit card with
+          mobile pay means you can leave your wallet at home.
+        </p>
+      </DualSection>
+
+      {/* 7 */}
+      <PlaceholderSection />
+
+      {/* 8 */}
+      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+        <h1>Get Started Today</h1>
+
+        <p>
+          Applying for an account is free and takes less than 2 minutes with no
+          impact to your credit score.
+        </p>
+      </MonoSection>
+
+      {/* 9 */}
+      <PlaceholderSection />
     </>
   );
 };
 
-export default DebitCard;
+export default DebitCardPage;
