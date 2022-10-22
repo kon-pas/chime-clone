@@ -13,7 +13,7 @@ const spin = keyframes`
 `;
 
 export const LoaderWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
