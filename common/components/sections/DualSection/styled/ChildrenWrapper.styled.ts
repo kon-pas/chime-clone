@@ -16,6 +16,10 @@ const ChildrenWrapper = styled.div<ChildrenWrapper>`
   ${getResizeTransition("width", "margin")}
 
   > h1 {
+    
+  }
+
+  > h2 {
     font-size: 2.1rem;
     line-height: 2.65rem;
     letter-spacing: 0.005em;
