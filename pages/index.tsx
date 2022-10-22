@@ -1,4 +1,4 @@
-import * as Styled from "@styles/pages/home";
+import * as HomeComponents from "@components/pages/home";
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -6,16 +6,15 @@ import Image from "next/image";
 
 import { COLORS } from "@constants";
 
-import LearnMoreButton from "@components/pages/home/LearnMoreButton";
 import DualSection from "@components/sections/DualSection";
 import PlaceholderSection from "@components/sections/PlaceholderSection";
 
-const Home: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <>
       <Head>
         <title>Chime - Banking with No Monthly Fees. Fee-Free Overdraft. Build Craft.</title>
-        <meta name="description" content="Chime clone home page" />
+        <meta name="description" content="Chime Clone Home Page" />
       </Head>
 
       <PlaceholderSection />
@@ -23,29 +22,31 @@ const Home: NextPage = () => {
       {/* 1 */}
       <DualSection
         img={{
-          src: "/static/spot-me-1.png",
+          float: "right",
+          src: "/static/content/home/spot-me-1.png",
           alt: "SpotMe 1",
           originalSize: [792, 526],
-          float: "right",
           width: {
             sm: 450,
             lg: 450,
           }
         }}
       >
-        <h1>Overdraft fee-free with SpotMe</h1>
+        <h2>Overdraft fee-free with SpotMe</h2>
 
         <p>
           We&apos;ll spot you up to $200 on debit card purchases with no
           overdraft fees. Eligibility requirements apply.<sup>1</sup>
         </p>
-        <LearnMoreButton />
+
+        <HomeComponents.LearnMoreButton />
       </DualSection>
 
       {/* 2 */}
       <DualSection
         img={{
-          src: "/static/paid-early.png",
+          float: "left",
+          src: "/static/content/home/paid-early.png",
           alt: "Paid Early",
           originalSize: [713, 202],
           width: {
@@ -54,28 +55,29 @@ const Home: NextPage = () => {
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
-        <h1>Get paid early</h1>
+        <h2>Get paid early</h2>
 
         <p>
           Set up direct deposit and get your paycheck up to 2 days earlier than
           some of your co-workers!<sup>2</sup>
         </p>
-        <LearnMoreButton />
+
+        <HomeComponents.LearnMoreButton />
       </DualSection>
 
       {/* 3 */}
       <DualSection
         img={{
-          src: "/static/no-fees.png",
+          float: "right",
+          src: "/static/content/home/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
-          float: "right",
           width: {
             sm: 490,
           }
         }}
       >
-        <h1>Say goodbye to monthly fees</h1>
+        <h2>Say goodbye to monthly fees</h2>
 
         <p>
           No overdraft. No minimum balance. No monthly fees. No foreign
@@ -83,13 +85,15 @@ const Home: NextPage = () => {
           love, like Walgreens<sup>®</sup>, CVS<sup>®</sup>, 7-Eleven
           <sup>®</sup>, and Circle K. Out-of-network fees apply.
         </p>
-        <LearnMoreButton />
+
+        <HomeComponents.LearnMoreButton />
       </DualSection>
 
       {/* 4 */}
       <DualSection
         img={{
-          src: "/static/credit-builder.png",
+          float: "left",
+          src: "/static/content/home/credit-builder.png",
           alt: "Credit Builder",
           originalSize: [826, 670],
           width: {
@@ -99,7 +103,7 @@ const Home: NextPage = () => {
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
-        <h1>A new way to build credit</h1>
+        <h2>A new way to build credit</h2>
 
         <p>
           Help increase your FICO Score<sup>®</sup> by an average of 30 points
@@ -108,7 +112,7 @@ const Home: NextPage = () => {
           <sup>5</sup>
         </p>
 
-        <LearnMoreButton />
+        <HomeComponents.LearnMoreButton />
 
         <p>
           <small>
@@ -121,17 +125,17 @@ const Home: NextPage = () => {
       {/* 5 */}
       <DualSection
         img={{
-          src: "/static/pay-anyone-desktop.png",
+          float: "right",
+          src: "/static/content/home/pay-anyone-desktop.png",
           alt: "Pay Anyone Deskop",
           originalSize: [813, 916],
-          float: "right",
           width: {
             sm: 320,
             lg: 400,
           }
         }}
       >
-        <h1>Pay anyone the fast, fee-free way</h1>
+        <h2>Pay anyone the fast, fee-free way</h2>
 
         <p>
           Pay friends and family fee-free, no matter what bank account they use.
@@ -139,13 +143,14 @@ const Home: NextPage = () => {
           needed.
         </p>
 
-        <LearnMoreButton />
+        <HomeComponents.LearnMoreButton />
       </DualSection>
 
       {/* 6 */}
       <DualSection
         img={{
-          src: "/static/apy.png",
+          float: "left",
+          src: "/static/content/home/apy.png",
           alt: "APY",
           originalSize: [774, 474],
           width: {
@@ -155,7 +160,7 @@ const Home: NextPage = () => {
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
-        <h1>Make your money grow fast</h1>
+        <h2>Make your money grow fast</h2>
 
         <p>
           1.50% Annual Percentage Yield (APY).<sup>7</sup> Set money aside with
@@ -163,49 +168,49 @@ const Home: NextPage = () => {
           Account.
         </p>
 
-        <LearnMoreButton />
+        <HomeComponents.LearnMoreButton />
       </DualSection>
 
       {/* 7 */}
       <DualSection
         img={{
-          src: "/static/alerts.png",
+          float: "right",
+          src: "/static/content/home/alerts.png",
           alt: "Alerts",
           originalSize: [734, 330],
-          float: "right",
           width: {
             sm: 490,
           }
         }}
       >
-        <h1>Stay in control with alerts</h1>
+        <h2>Stay in control with alerts</h2>
 
         <p>
           You&apos;re always in-the-know with daily balance notifications and
           transaction alerts
         </p>
 
-        <LearnMoreButton />
+        <HomeComponents.LearnMoreButton />
       </DualSection>
 
       {/* 8 */}
-      <Styled.Section.Wrapper>
-        <Styled.Section.Title>
+      <HomeComponents.Section.Wrapper>
+        <HomeComponents.Section.Title>
           Security & support you can trust
-        </Styled.Section.Title>
+        </HomeComponents.Section.Title>
 
-        <Styled.Section.Container>
-          <Styled.Section.ImageWrapper>
+        <HomeComponents.Section.Container>
+          <HomeComponents.Section.ImageWrapper>
             <Image
-              src="/static/lock.png"
+              src="/static/content/home/lock.png"
               alt="Lock"
               layout="fixed"
               width={174}
               height={220}
             />
-          </Styled.Section.ImageWrapper>
+          </HomeComponents.Section.ImageWrapper>
 
-          <Styled.Section.TextContainer>
+          <HomeComponents.Section.TextContainer>
             <h2>Serious security</h2>
 
             <p>
@@ -227,17 +232,17 @@ const Home: NextPage = () => {
               24/7. Reach our friendly team by phone, email, in the app, or
               check out the Help Center.
             </p>
-          </Styled.Section.TextContainer>
-        </Styled.Section.Container>
-      </Styled.Section.Wrapper>
+          </HomeComponents.Section.TextContainer>
+        </HomeComponents.Section.Container>
+      </HomeComponents.Section.Wrapper>
 
       {/* 9 */}
       <DualSection
         img={{
-          src: "/static/chime-reviews.png",
+          float: "right",
+          src: "/static/content/home/chime-reviews.png",
           alt: "Chime Reviews",
           originalSize: [884, 568],
-          float: "right",
           width: {
             sm: 465,
             lg: 465,
@@ -245,17 +250,17 @@ const Home: NextPage = () => {
         }}
         backgroundColor={COLORS.LIME_LIGHT}
       >
-        <h1>Get started</h1>
+        <h2>Get started</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes. It
           won&apos;t affect your credit score!
         </p>
 
-        <LearnMoreButton />
+        <HomeComponents.LearnMoreButton />
       </DualSection>
     </>
   );
 };
 
-export default Home;
+export default HomePage;
