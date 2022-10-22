@@ -8,7 +8,6 @@ export default function Document() {
           rel="icon"
           href="https://www.chime.com/wp-content/uploads/2018/03/favicon.png"
         />
-
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -17,7 +16,6 @@ export default function Document() {
 
       <body>
         <Main />
-
         <NextScript />
       </body>
     </Html>
