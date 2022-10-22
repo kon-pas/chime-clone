@@ -47,7 +47,7 @@ const SecondChangeBankingPage: NextPage = () => {
       </MonoSection>
 
       {/* 3 */}
-      <MonoSection backgroundColor={COLORS.WHITE}>
+      <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
         <h1>
           Bad Credit Is No Longer a Dealbreaker for a New Traditional Bank
           Account
@@ -85,7 +85,7 @@ const SecondChangeBankingPage: NextPage = () => {
       </MonoSection>
 
       {/* 5 */}
-      <MonoSection backgroundColor={COLORS.WHITE}>
+      <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
         <h1>Finding a Bank Account with No Credit Reporting Agencies</h1>
 
         <p>
@@ -100,7 +100,11 @@ const SecondChangeBankingPage: NextPage = () => {
       </MonoSection>
 
       {/* 6 */}
-      <MonoSection backgroundColor={COLORS.GRAY_LIGHT}>
+      <MonoSection
+        backgroundColor={COLORS.GRAY_LIGHT}
+        textAlign="start"
+        width={700}
+      >
         <h1>Automatic Savings Builds Positive Financial Habits</h1>
 
         <p>
@@ -180,7 +184,11 @@ const SecondChangeBankingPage: NextPage = () => {
       </DualSection>
 
       {/* 8 */}
-      <MonoSection backgroundColor={COLORS.GRAY_LIGHT}>
+      <MonoSection
+        backgroundColor={COLORS.GRAY_LIGHT}
+        textAlign="start"
+        width={700}
+      >
         <h1>An Alternative to a Prepaid Debit Card</h1>
 
         <p>
@@ -228,7 +236,7 @@ const SecondChangeBankingPage: NextPage = () => {
       </MonoSection>
 
       {/* 9 */}
-      <MonoSection backgroundColor={COLORS.WHITE}>
+      <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
         <h1>A Second Chance to Rebuild Your Financial Health</h1>
 
         <p>At Chime, we&apos;re changing the way people feel about banking.</p>
@@ -254,7 +262,11 @@ const SecondChangeBankingPage: NextPage = () => {
       </MonoSection>
 
       {/* 10 */}
-      <MonoSection backgroundColor={COLORS.GRAY_LIGHT}>
+      <MonoSection
+        backgroundColor={COLORS.GRAY_LIGHT}
+        textAlign="start"
+        width={700}
+      >
         <h1>
           Don&apos;t Let Overdraft Fees Hurt Your Financial Health and Credit
           Score
@@ -295,7 +307,7 @@ const SecondChangeBankingPage: NextPage = () => {
       </MonoSection>
 
       {/* 11 */}
-      <MonoSection backgroundColor={COLORS.WHITE}>
+      <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
         <h1>Ready for Your Second Chance?</h1>
 
         <p>
