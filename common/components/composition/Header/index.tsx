@@ -1,4 +1,4 @@
-import * as S from "./styled";
+import * as Styled from "./styled";
 
 import { useState, useEffect } from "react";
 
@@ -24,12 +24,12 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <S.Header>
+      <Styled.Header>
         <Link href="/" passHref>
           <h1>
             <a>
               <Image
-                src="https://www.chime.com/wp-content/themes/project-sscms-2022-10-19T17-25-09/images/brand/chime-logo.svg"
+                src="/static/elements/chime-logo.svg"
                 alt="Chime Logo"
                 width="90px"
                 height="30px"
@@ -38,20 +38,20 @@ const Header: React.FC = () => {
           </h1>
         </Link>
 
-        <S.MenuContainerDesktop>
+        <Styled.MenuContainerDesktop>
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
                 {item.path
                   ? (
-                      <S.Span>
+                      <Styled.Span>
                         <Link href={item.path}>{item.label}</Link>
-                      </S.Span>
+                      </Styled.Span>
                     )
-                  : <S.Span><span style={{opacity: 0.3}}>{item.label}</span></S.Span>
+                  : <Styled.Span><span style={{opacity: 0.3}}>{item.label}</span></Styled.Span>
                 }
 
-                <S.SubmenuContainerDesktop>
+                <Styled.SubmenuContainerDesktop>
                   <menu>
                     {item.subitems.map((subitem, idx) =>
                       <li key={idx}>
@@ -62,16 +62,16 @@ const Header: React.FC = () => {
                       </li>
                     )}
                   </menu>
-                </S.SubmenuContainerDesktop>
+                </Styled.SubmenuContainerDesktop>
               </li>
             ))}
           </menu>
-        </S.MenuContainerDesktop>
+        </Styled.MenuContainerDesktop>
 
         <nav>
-          <S.Span>Log In</S.Span>
+          <Styled.Span>Log In</Styled.Span>
 
-          <S.Button>Sign Up</S.Button>
+          <Styled.Button>Sign Up</Styled.Button>
 
           <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
             <path
@@ -81,9 +81,9 @@ const Header: React.FC = () => {
             />
           </IconSVG>
         </nav>
-      </S.Header>
+      </Styled.Header>
 
-      <S.ModalContainer isVisible={isSpliderOpened}>
+      <Styled.ModalContainer isVisible={isSpliderOpened}>
         <header>
           <Link href="/" passHref>
             <h1>
@@ -107,7 +107,7 @@ const Header: React.FC = () => {
           </IconSVG>
         </header>
 
-        <S.MenuContainer>
+        <Styled.MenuContainer>
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
@@ -129,13 +129,13 @@ const Header: React.FC = () => {
               </li>
             ))}
           </menu>
-        </S.MenuContainer>
+        </Styled.MenuContainer>
 
-        <S.AccountActions>
+        <Styled.AccountActions>
           <div>Log In</div>
           <div>Sign Up</div>
-        </S.AccountActions>
-      </S.ModalContainer>
+        </Styled.AccountActions>
+      </Styled.ModalContainer>
     </>
   );
 };
