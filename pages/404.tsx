@@ -1,10 +1,8 @@
-import * as Styled from "@styles/pages/404";
+import * as Styled from "@components/pages/404";
 
 import type { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from 'next/router'
-
-import ContentContainer from "@components/elements/ContentContainer";
 
 const Page404: NextPage = () => {
   const { push: navigate } = useRouter();
