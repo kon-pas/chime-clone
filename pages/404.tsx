@@ -22,7 +22,7 @@ const Page404: NextPage = () => {
 
         <Styled.ImageWrapper>
           <Image
-            src="https://www.chime.com/wp-content/themes/project-sscms-2022-10-05T17-28-22/images/404.png"
+            src="/static/pages/404/404.png"
             alt="404 Robot"
             layout="responsive"
             width={654}
