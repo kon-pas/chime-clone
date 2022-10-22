@@ -26,11 +26,8 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
         label: '60,000+ Fee-Free ATMs',
       },
       {
-        label: 'High Yield Savings',
+        label: 'High Yield Savings Account',
         path: '/savings-account',
-      },
-      {
-        label: 'Account',
       },
       {
         label: 'Send and Receive Money',
@@ -80,6 +77,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
   },
   {
     label: "Learn",
+    path: '/faq',
     subitems: [
       {
         label: 'Blog',
