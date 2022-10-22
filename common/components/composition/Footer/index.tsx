@@ -15,18 +15,20 @@ const Footer: React.FC = () => {
           <Styled.MenuSection>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                {item.path
-                  ? <Link href={item.path}>{item.label}</Link>
-                  : <span style={{opacity: 0.3}}>{item.label}</span>
-                }
+                {item.path ? (
+                  <Link href={item.path}>{item.label}</Link>
+                ) : (
+                  <span style={{ opacity: 0.3 }}>{item.label}</span>
+                )}
 
                 <menu>
                   {item.subitems.map((subitem, idx) => (
                     <li key={idx}>
-                      {subitem.path
-                        ? <Link href={subitem.path}>{subitem.label}</Link>
-                        : <span style={{opacity: 0.3}}>{subitem.label}</span>
-                      }
+                      {subitem.path ? (
+                        <Link href={subitem.path}>{subitem.label}</Link>
+                      ) : (
+                        <span style={{ opacity: 0.3 }}>{subitem.label}</span>
+                      )}
                     </li>
                   ))}
                 </menu>
@@ -39,7 +41,7 @@ const Footer: React.FC = () => {
           <Styled.SocialSection>
             <a href="https://apps.apple.com/us/app/chime-banking/id836215269">
               <Image
-                src="/static/elements/app-store.png"
+                src="/static/components/Footer/app-store.png"
                 alt="Chime App Store Download"
                 width="170px"
                 height="40px"
@@ -48,7 +50,7 @@ const Footer: React.FC = () => {
 
             <a href="https://play.google.com/store/apps/details?id=com.onedebit.chime&hl=en">
               <Image
-                src="/static/elements/google-play.png"
+                src="/static/components/Footer/google-play.png"
                 alt="Chime Google Play Download"
                 width="170px"
                 height="40px"
@@ -58,7 +60,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://www.facebook.com/chime">
                 <Image
-                  src="/static/elements/facebook-bw.png"
+                  src="/static/components/Footer/facebook-bw.png"
                   alt="Chime Facebook"
                   width="32px"
                   height="32px"
@@ -69,7 +71,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://twitter.com/chime">
                 <Image
-                  src="/static/elements/twitter-bw.png"
+                  src="/static/components/Footer/twitter-bw.png"
                   alt="Chime Twitter"
                   width="32px"
                   height="32px"
@@ -80,7 +82,7 @@ const Footer: React.FC = () => {
             <Styled.IconWrapper>
               <a href="https://www.instagram.com/Chime/">
                 <Image
-                  src="/static/elements/instagram-bw.png"
+                  src="/static/components/Footer/instagram-bw.png"
                   alt="Chime Instagram"
                   width="32px"
                   height="32px"
