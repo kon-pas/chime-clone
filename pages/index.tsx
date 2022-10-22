@@ -8,6 +8,7 @@ import { COLORS } from "@constants";
 
 import DualSection from "@components/sections/DualSection";
 import PlaceholderSection from "@components/sections/PlaceholderSection";
+import BrandsLogoLine from "@components/elements/BrandsLogoLine";
 
 const HomePage: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage: NextPage = () => {
       </Head>
 
       <PlaceholderSection />
+      <BrandsLogoLine />
 
       {/* 1 */}
       <DualSection
