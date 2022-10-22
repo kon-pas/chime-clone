@@ -12,7 +12,6 @@ const Button = styled(GreenButton)`
 
   ${getMedia('md')} {
     padding: 0.75rem 1.4rem;
-
   }
 
   ${getMedia('lg')} {
