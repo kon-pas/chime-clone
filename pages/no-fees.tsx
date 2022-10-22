@@ -1,5 +1,3 @@
-import GlobalStyle from "@styles/GlobalStyle.styled";
-
 import type { NextPage } from "next";
 import Head from "next/head";
 
@@ -20,7 +18,7 @@ const NoFeesPage: NextPage = () => {
       {/* 1 */}
       <BannerSection
         img={{
-          src: "/static/landingpage-control.png",
+          src: "/static/content/no-fees/landingpage-control.png",
           alt: "Landing page control",
           originalSize: [1400, 835],
           width: {
@@ -53,7 +51,8 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "/static/no-fees.png",
+          float: "left",
+          src: "/static/content/no-fees/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
           width: {
@@ -62,6 +61,7 @@ const NoFeesPage: NextPage = () => {
         }}
       >
         <h1>Banking shouldn&apos;t cost you money</h1>
+
         <p>
           You earned it, so you deserve to keep it. We believe an online
           checking account with no monthly fees should be available to everyone.
@@ -74,10 +74,10 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "/static/spot-me-1.png",
+          float: "right",
+          src: "/static/content/no-fees/spot-me-1.png",
           alt: "No Fees",
           originalSize: [792, 526],
-          float: "right",
           width: {
             sm: 450,
             lg: 450,
@@ -85,6 +85,7 @@ const NoFeesPage: NextPage = () => {
         }}
       >
         <h1>No fees for overdrafts</h1>
+
         <p>
           Traditional banks charged $11 Billion in overdraft fees in 2019.² At
           Chime, we do things differently. Instead of charging you an overdraft
@@ -97,7 +98,8 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "/static/approved.png",
+          float: "left",
+          src: "/static/content/no-fees/approved.png",
           alt: "No Fees",
           originalSize: [562, 1100],
           width: {
@@ -110,6 +112,7 @@ const NoFeesPage: NextPage = () => {
         <h1>
           60,000+ fee-free ATMs at stores you love<sup>1</sup>
         </h1>
+
         <p>
           Avoid out of network ATM fees. With Chime, you get access to 60,000+
           fee-free ATMs<sup>1</sup>—more than the top 3 national banks combined!
@@ -123,10 +126,10 @@ const NoFeesPage: NextPage = () => {
       <DualSection
         centered
         img={{
-          src: "/static/debit-card-front.png",
+          float: "right",
+          src: "/static/content/no-fees/debit-card-front.png",
           alt: "No Fees",
           originalSize: [745, 483],
-          float: "right",
           width: {
             sm: 310,
             md: 310,
@@ -135,6 +138,7 @@ const NoFeesPage: NextPage = () => {
         }}
       >
         <h1>Checking Account and Debit Card with no monthly fees</h1>
+
         <p>
           When you open a Chime Checking Account, you will receive a Visa Debit
           Card that can be used everywhere Visa debit cards are accepted. We
