@@ -1,4 +1,4 @@
-import * as S from "./styled";
+import * as Styled from "./styled";
 
 import Header from "@components/composition/Header";
 import Footer from "@components/composition/Footer";
@@ -10,19 +10,19 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = props => {
   return (
-    <S.PageContainer>
+    <Styled.PageContainer>
       <Loader />
 
-      <S.HeaderContainer>
+      <Styled.HeaderContainer>
         <Header />
-      </S.HeaderContainer>
+      </Styled.HeaderContainer>
 
       <main>{props.children}</main>
 
-      <S.FooterContainer>
+      <Styled.FooterContainer>
         <Footer />
-      </S.FooterContainer>
-    </S.PageContainer>
+      </Styled.FooterContainer>
+    </Styled.PageContainer>
   );
 };
 
