@@ -202,7 +202,7 @@ const HomePage: NextPage = () => {
         <HomeComponents.Section.Container>
           <HomeComponents.Section.ImageWrapper>
             <Image
-              src="/static/content/home/lock.png"
+              src="/static/pages/home/lock.png"
               alt="Lock"
               layout="fixed"
               width={174}
@@ -240,7 +240,7 @@ const HomePage: NextPage = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/home/chime-reviews.png",
+          src: "/static/pages/home/chime-reviews.png",
           alt: "Chime Reviews",
           originalSize: [884, 568],
           width: {

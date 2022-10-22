@@ -22,7 +22,7 @@ const SavingsAccountPage: NextPage = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/content/savings-account/apy-phone.png",
+          src: "/static/pages/savings-account/apy-phone.png",
           alt: "APY Phone",
           originalSize: [1225, 682],
           width: {
@@ -46,7 +46,7 @@ const SavingsAccountPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/savings-account/apy.png",
+          src: "/static/pages/savings-account/apy.png",
           alt: "APY",
           originalSize: [774, 474],
           width: {
@@ -69,7 +69,7 @@ const SavingsAccountPage: NextPage = () => {
         centered
         img={{
           float: "right",
-          src: "/static/content/savings-account/fees.png",
+          src: "/static/pages/savings-account/fees.png",
           alt: "Fees",
           originalSize: [305, 120],
           width: {
@@ -90,7 +90,7 @@ const SavingsAccountPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/savings-account/image-7.png",
+          src: "/static/pages/savings-account/image-7.png",
           alt: "Round Ups",
           originalSize: [587, 345],
           width: {
@@ -112,7 +112,7 @@ const SavingsAccountPage: NextPage = () => {
         centered
         img={{
           float: "right",
-          src: "/static/content/savings-account/icon-shield.png",
+          src: "/static/pages/savings-account/icon-shield.png",
           alt: "Icon Shield",
           originalSize: [135, 166],
           width: {
@@ -134,7 +134,7 @@ const SavingsAccountPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/savings-account/apy-average.png",
+          src: "/static/pages/savings-account/apy-average.png",
           alt: "APY Average",
           originalSize: [1326, 936],
           width: {

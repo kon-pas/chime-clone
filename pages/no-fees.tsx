@@ -18,7 +18,7 @@ const NoFeesPage: NextPage = () => {
       {/* 1 */}
       <BannerSection
         img={{
-          src: "/static/content/no-fees/landingpage-control.png",
+          src: "/static/pages/no-fees/landingpage-control.png",
           alt: "Landing page control",
           originalSize: [1400, 835],
           width: {
@@ -52,7 +52,7 @@ const NoFeesPage: NextPage = () => {
         centered
         img={{
           float: "left",
-          src: "/static/content/no-fees/no-fees.png",
+          src: "/static/pages/no-fees/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
           width: {
@@ -75,7 +75,7 @@ const NoFeesPage: NextPage = () => {
         centered
         img={{
           float: "right",
-          src: "/static/content/no-fees/spot-me-1.png",
+          src: "/static/pages/no-fees/spot-me-1.png",
           alt: "No Fees",
           originalSize: [792, 526],
           width: {
@@ -99,7 +99,7 @@ const NoFeesPage: NextPage = () => {
         centered
         img={{
           float: "left",
-          src: "/static/content/no-fees/approved.png",
+          src: "/static/pages/no-fees/approved.png",
           alt: "No Fees",
           originalSize: [562, 1100],
           width: {
@@ -127,7 +127,7 @@ const NoFeesPage: NextPage = () => {
         centered
         img={{
           float: "right",
-          src: "/static/content/no-fees/debit-card-front.png",
+          src: "/static/pages/no-fees/debit-card-front.png",
           alt: "No Fees",
           originalSize: [745, 483],
           width: {

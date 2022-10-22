@@ -19,7 +19,7 @@ const SecondChangeBankingPage: NextPage = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/content/second-chance-banking/chime-app-and-card.png",
+          src: "/static/pages/second-chance-banking/chime-app-and-card.png",
           alt: "Shield",
           originalSize: [964, 1024],
           width: {
@@ -143,7 +143,7 @@ const SecondChangeBankingPage: NextPage = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/second-chance-banking/control.png",
+          src: "/static/pages/second-chance-banking/control.png",
           alt: "Chime Control",
           originalSize: [1400, 835],
           width: {

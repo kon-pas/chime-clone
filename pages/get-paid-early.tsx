@@ -19,7 +19,7 @@ const GetPaidEarlyPage: NextPage = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/content/get-paid-early/calendar-2.png",
+          src: "/static/pages/get-paid-early/calendar-2.png",
           alt: "Calendar",
           originalSize: [528, 352],
           width: {
@@ -47,7 +47,7 @@ const GetPaidEarlyPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/get-paid-early/website-payday.png",
+          src: "/static/pages/get-paid-early/website-payday.png",
           alt: "Website Payday",
           originalSize: [792, 362],
           width: {
@@ -71,7 +71,7 @@ const GetPaidEarlyPage: NextPage = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/get-paid-early/notification-mobile.png",
+          src: "/static/pages/get-paid-early/notification-mobile.png",
           alt: "Website Payday",
           originalSize: [750, 559],
           width: {

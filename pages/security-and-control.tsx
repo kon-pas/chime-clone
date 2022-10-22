@@ -20,7 +20,7 @@ const SecurityAndControlPage: NextPage = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/content/security-and-control/asset-shield.png",
+          src: "/static/pages/security-and-control/asset-shield.png",
           alt: "Shield",
           originalSize: [326, 412],
           width: {
@@ -47,7 +47,7 @@ const SecurityAndControlPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/security-and-control/card-security-mobile.png",
+          src: "/static/pages/security-and-control/card-security-mobile.png",
           alt: "Card Security",
           originalSize: [750, 310],
           width: {
@@ -71,7 +71,7 @@ const SecurityAndControlPage: NextPage = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/security-and-control/website-notifications-mobile.png",
+          src: "/static/pages/security-and-control/website-notifications-mobile.png",
           alt: "Website Notifications",
           originalSize: [750, 511],
           width: {

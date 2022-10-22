@@ -20,7 +20,7 @@ const DebitCardPage: NextPage = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/content/debit-card/debit-card-front-2.png",
+          src: "/static/pages/debit-card/debit-card-front-2.png",
           alt: "Debit Card Front",
           originalSize: [580, 377],
           width: {
@@ -47,7 +47,7 @@ const DebitCardPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/debit-card/no-fees.png",
+          src: "/static/pages/debit-card/no-fees.png",
           alt: "No Fees",
           originalSize: [301, 121],
           width: {
@@ -72,7 +72,7 @@ const DebitCardPage: NextPage = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/debit-card/swis-1.png",
+          src: "/static/pages/debit-card/swis-1.png",
           alt: "SWIS",
           originalSize: [1032, 566],
           width: {
@@ -98,7 +98,7 @@ const DebitCardPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/debit-card/approved.png",
+          src: "/static/pages/debit-card/approved.png",
           alt: "ATM Approved",
           originalSize: [562, 1100],
           width: {
@@ -125,7 +125,7 @@ const DebitCardPage: NextPage = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/debit-card/card-security.png",
+          src: "/static/pages/debit-card/card-security.png",
           alt: "Card Security",
           originalSize: [940, 388],
           width: {
@@ -150,7 +150,7 @@ const DebitCardPage: NextPage = () => {
         backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
-          src: "/static/content/debit-card/pays.png",
+          src: "/static/pages/debit-card/pays.png",
           alt: "Pays",
           originalSize: [500, 250],
           width: {
