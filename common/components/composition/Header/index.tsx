@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           <h1>
             <a>
               <Image
-                src="/static/elements/chime-logo.svg"
+                src="/static/components/Header/chime-logo.svg"
                 alt="Chime Logo"
                 width="90px"
                 height="30px"
@@ -89,7 +89,7 @@ const Header: React.FC = () => {
             <h1>
               <a>
                 <Image
-                  src="https://www.chime.com/wp-content/themes/project-sscms-2022-09-29T19-35-23/images/brand/chime-logo.svg"
+                  src="/static/components/Header/chime-logo.svg"
                   alt="Chime Logo"
                   width="90px"
                   height="30px"
