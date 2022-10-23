@@ -28,7 +28,7 @@ const ToggleBox: React.FC<ToggleBoxProps> = props => {
         </Styled.ImageWrapper>
       </Styled.Tab>
 
-      <Styled.Modal isVisible={isOpened}>{props.children}</Styled.Modal>
+      {isOpened && <Styled.Modal isOpened={isOpened}>{props.children}</Styled.Modal>}
     </Styled.Container>
   );
 };
