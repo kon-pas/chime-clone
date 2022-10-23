@@ -182,7 +182,7 @@ const DebitCardPage: NextPage = () => {
 
       {/* 8 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
-        <h1>Get Started Today</h1>
+        <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no

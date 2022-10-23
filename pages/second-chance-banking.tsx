@@ -41,17 +41,17 @@ const SecondChangeBankingPage: NextPage = () => {
 
       {/* 2 */}
       <MonoSection backgroundColor={COLORS.GRAY_LIGHT}>
-        <h1>An award-winning mobile banking app and debit card.</h1>
+        <h2>An award-winning mobile banking app and debit card.</h2>
 
         {/* List Here */}
       </MonoSection>
 
       {/* 3 */}
       <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
-        <h1>
+        <h2>
           Bad Credit Is No Longer a Dealbreaker for a New Traditional Bank
           Account
-        </h1>
+        </h2>
 
         <p>
           In many situations, it can be hard to find banks that don&apos;t use
@@ -76,7 +76,7 @@ const SecondChangeBankingPage: NextPage = () => {
 
       {/* 4 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
-        <h1>Get Started Today</h1>
+        <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
@@ -105,7 +105,7 @@ const SecondChangeBankingPage: NextPage = () => {
         textAlign="start"
         width={700}
       >
-        <h1>Automatic Savings Builds Positive Financial Habits</h1>
+        <h2>Automatic Savings Builds Positive Financial Habits</h2>
 
         <p>
           The road to financial health starts with building better money habits
@@ -189,7 +189,7 @@ const SecondChangeBankingPage: NextPage = () => {
         textAlign="start"
         width={700}
       >
-        <h1>An Alternative to a Prepaid Debit Card</h1>
+        <h2>An Alternative to a Prepaid Debit Card</h2>
 
         <p>
           Prepaid debit cards are cards that only let you access funds that you
@@ -237,7 +237,7 @@ const SecondChangeBankingPage: NextPage = () => {
 
       {/* 9 */}
       <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
-        <h1>A Second Chance to Rebuild Your Financial Health</h1>
+        <h2>A Second Chance to Rebuild Your Financial Health</h2>
 
         <p>At Chime, we&apos;re changing the way people feel about banking.</p>
 
@@ -267,10 +267,10 @@ const SecondChangeBankingPage: NextPage = () => {
         textAlign="start"
         width={700}
       >
-        <h1>
+        <h2>
           Don&apos;t Let Overdraft Fees Hurt Your Financial Health and Credit
           Score
-        </h1>
+        </h2>
 
         <p>
           You may be very well aware of overdraft fees if you have ever used a
@@ -308,7 +308,7 @@ const SecondChangeBankingPage: NextPage = () => {
 
       {/* 11 */}
       <MonoSection backgroundColor={COLORS.WHITE} textAlign="start" width={700}>
-        <h1>Ready for Your Second Chance?</h1>
+        <h2>Ready for Your Second Chance?</h2>
 
         <p>
           AChime is a great second chance banking option to help you take back
@@ -341,7 +341,7 @@ const SecondChangeBankingPage: NextPage = () => {
 
       {/* 12 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
-        <h1>Get Started Today</h1>
+        <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
