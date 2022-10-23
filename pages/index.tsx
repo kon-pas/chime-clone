@@ -14,7 +14,9 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Chime - Banking with No Monthly Fees. Fee-Free Overdraft. Build Craft.</title>
+        <title>
+          Chime - Banking with No Monthly Fees. Fee-Free Overdraft. Build Craft.
+        </title>
         <meta name="description" content="Chime Clone Home Page" />
       </Head>
 
@@ -31,7 +33,7 @@ const HomePage: NextPage = () => {
           width: {
             sm: 450,
             lg: 450,
-          }
+          },
         }}
       >
         <h2>Overdraft fee-free with SpotMe</h2>
@@ -53,7 +55,7 @@ const HomePage: NextPage = () => {
           originalSize: [713, 202],
           width: {
             sm: 490,
-          }
+          },
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -76,7 +78,7 @@ const HomePage: NextPage = () => {
           originalSize: [644, 322],
           width: {
             sm: 490,
-          }
+          },
         }}
       >
         <h2>Say goodbye to monthly fees</h2>
@@ -101,7 +103,7 @@ const HomePage: NextPage = () => {
           width: {
             sm: 340,
             md: 340,
-          }
+          },
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -134,7 +136,7 @@ const HomePage: NextPage = () => {
           width: {
             sm: 320,
             lg: 400,
-          }
+          },
         }}
       >
         <h2>Pay anyone the fast, fee-free way</h2>
@@ -158,7 +160,7 @@ const HomePage: NextPage = () => {
           width: {
             sm: 410,
             lg: 410,
-          }
+          },
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
       >
@@ -182,7 +184,7 @@ const HomePage: NextPage = () => {
           originalSize: [734, 330],
           width: {
             sm: 490,
-          }
+          },
         }}
       >
         <h2>Stay in control with alerts</h2>
@@ -213,21 +215,21 @@ const HomePage: NextPage = () => {
           </HomeComponents.Section.ImageWrapper>
 
           <HomeComponents.Section.TextContainer>
-            <h2>Serious security</h2>
+            <h3>Serious security</h3>
 
             <p>
               Chime uses secure processes to protect your information and help
               prevent unauthorized use
             </p>
 
-            <h2>Privacy and protection</h2>
+            <h3>Privacy and protection</h3>
 
             <p>
               Your funds are FDIC insured up to $250,000 through The Bancorp
               Bank or Stride Bank, N.A., Members FDIC.
             </p>
 
-            <h2>Anytime, anywhere support</h2>
+            <h3>Anytime, anywhere support</h3>
 
             <p>
               If you need help, Chime&apos;s support channels are standing by
@@ -248,7 +250,7 @@ const HomePage: NextPage = () => {
           width: {
             sm: 465,
             lg: 465,
-          }
+          },
         }}
         backgroundColor={COLORS.LIME_LIGHT}
       >
