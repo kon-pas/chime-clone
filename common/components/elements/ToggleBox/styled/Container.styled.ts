@@ -4,7 +4,6 @@ import { COLORS } from "@constants";
 
 const Container = styled.div`
   border-bottom: 1px solid ${COLORS.GRAY_MEDIUM};
-  padding-bottom: 1.5rem;
 `;
 
 export default Container;
