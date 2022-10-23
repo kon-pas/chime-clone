@@ -15,7 +15,11 @@ const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
     line-height: 1.75rem;
   }
   
-  h1 {
+  h2 {
+    font-size: 2.1rem;
+    line-height: 2.65rem;
+    letter-spacing: 0.005em;
+
     ${getResizeTransition('font-size')}
 
     ${getMedia('lg')} {
