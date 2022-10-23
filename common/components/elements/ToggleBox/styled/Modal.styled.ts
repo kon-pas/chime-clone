@@ -1,5 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
+import { p } from "@styles/Tags.styled";
+
 const show = keyframes`
   from {
     visibility: hidden;
@@ -21,6 +23,10 @@ interface ModalProps {
 const Modal = styled.div<ModalProps>`
   animation: ${show} 0.5s ease-out;
   padding-bottom: 1.5rem;
+
+  > p {
+    ${p}
+  }
 `;
 
 export default Modal;

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { h2, p } from "@styles/Tags.styled";
+
 import { COLORS } from "@constants";
 
 import { getMedia, getResizeTransition } from "@utils";
@@ -13,25 +15,12 @@ const ChildrenWrapper = styled.div<ChildrenWrapper>`
 
   ${getResizeTransition("width", "margin")}
 
-  > h1 {
-    
-  }
-
   > h2 {
-    font-size: 2.1rem;
-    line-height: 2.65rem;
-    letter-spacing: 0.005em;
-    color: ${COLORS.FONT_GRAY_DARK};
-
-    ${getResizeTransition('font-size')}
-
-    ${getMedia('lg')} {
-      font-size: 2.25rem;
-    }
+    ${h2}
   }
 
   > p {
-    line-height: 1.75rem;
+    ${p}
     margin-top: 0.75rem;
     margin-bottom: 1.25rem;
     

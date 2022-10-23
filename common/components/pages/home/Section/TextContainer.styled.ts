@@ -1,19 +1,15 @@
 import styled from "styled-components";
 
+import { h3 } from "@styles/Tags.styled";
+
 import { getMedia } from "@utils";
 
 import { getResizeTransition } from "@utils";
 
 const TextWrapper = styled.div`
 
-  h2 {
-    font-size: 1.15rem;
-
-    ${getResizeTransition('font-size')}
-
-    ${getMedia('lg')} {
-      font-size: 1.5rem;
-    }
+  h3 {
+    ${h3}
   }
 
   p {

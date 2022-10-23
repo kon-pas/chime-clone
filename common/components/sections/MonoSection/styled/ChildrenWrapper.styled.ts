@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import { getMedia, getResizeTransition } from "@utils";
 
+import { h2, p } from "@styles/Tags.styled";
+
 interface ChildrenWrapperProps {
   textAlign: "start" | "center" | "end";
   width: number;
@@ -12,19 +14,11 @@ const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   gap: 2rem;
 
   p {
-    line-height: 1.75rem;
+    ${p}
   }
   
   h2 {
-    font-size: 2.1rem;
-    line-height: 2.65rem;
-    letter-spacing: 0.005em;
-
-    ${getResizeTransition('font-size')}
-
-    ${getMedia('lg')} {
-      font-size: 2.25rem;
-    }
+    ${h2}
   }
 
   ${getResizeTransition('width', 'margin')}

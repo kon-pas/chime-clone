@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { h1, p } from "@styles/Tags.styled";
+
 import { COLORS } from "@constants";
 
 import { getMedia, getResizeTransition } from "@utils";
@@ -9,21 +11,11 @@ const ChildrenContainer = styled.div`
   gap: 1rem;
 
   h1 {
-    font-size: 2.3rem;
-
-    ${getResizeTransition('font-size')}
-
-    ${getMedia('md')} {
-      font-size: 2.7rem;
-    }
-  
-    ${getMedia('lg')} {
-      font-size: 3.3rem;
-    }
+    ${h1}
   }
 
   p {
-    line-height: 2em;
+    ${p}
   }
 
   ul {
