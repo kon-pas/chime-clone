@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 import { COLORS } from "@constants";
 
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 interface ChildrenWrapper {
   isCentered?: boolean;
@@ -24,6 +22,12 @@ const ChildrenWrapper = styled.div<ChildrenWrapper>`
     line-height: 2.65rem;
     letter-spacing: 0.005em;
     color: ${COLORS.FONT_GRAY_DARK};
+
+    ${getResizeTransition('font-size')}
+
+    ${getMedia('lg')} {
+      font-size: 2.25rem;
+    }
   }
 
   > p {
