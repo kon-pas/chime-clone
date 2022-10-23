@@ -1,18 +1,20 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 import { COLORS } from "@constants";
 
 import MonoSection from "@components/sections/MonoSection";
 import DualSection from "@components/sections/DualSection";
 import BannerSection from "@components/sections/BannerSection";
+import PlaceholderSection from "@components/sections/PlaceholderSection";
 
 const NoFeesPage: NextPage = () => {
   return (
     <>
       <Head>
         <title>Banking with No Monthly Fees and No Overdraft | Chime</title>
-        <meta name="description" content="Chime clone no fees" />
+        <meta name="description" content="Chime Clone No Fees" />
       </Head>
 
       {/* 1 */}
@@ -120,6 +122,13 @@ const NoFeesPage: NextPage = () => {
           <sup>®</sup>, 7-Eleven<sup>®</sup> and Circle K. You can also use the
           map in your Chime app to find the closest fee-free ATM near you.
         </p>
+
+        <Image
+          src="/static/shared/atm-locations.png"
+          alt="ATC Locations"
+          width={247}
+          height={49}
+        />
       </DualSection>
 
       {/* 5 */}
@@ -147,6 +156,9 @@ const NoFeesPage: NextPage = () => {
       </DualSection>
 
       {/* 6 */}
+      <PlaceholderSection />
+
+      {/* 7 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
         <h1>Get Started Today</h1>
 

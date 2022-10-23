@@ -11,8 +11,8 @@ const SecondChangeBankingPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title></title>
-        <meta name="description" content="Chime Clone [placeholder]" />
+        <title>Second Change Banking: Open an Account Today | Chime</title>
+        <meta name="description" content="Chime Clone Second Change Banking" />
       </Head>
 
       {/* 1 */}

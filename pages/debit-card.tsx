@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Image from "next/image";
 
 import { COLORS } from "@constants";
 
@@ -119,6 +120,13 @@ const DebitCardPage: NextPage = () => {
           use the map in your Chime app to find the closest fee-free ATM near
           you.
         </p>
+
+        <Image
+          src="/static/shared/atm-locations.png"
+          alt="ATC Locations"
+          width={247}
+          height={49}
+        />
       </DualSection>
 
       {/* 5 */}

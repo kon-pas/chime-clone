@@ -12,7 +12,7 @@ const SecurityAndControlPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Security and Control</title>
+        <title>Security and Control | Chime</title>
         <meta name="description" content="Chime Clone Security and Control" />
       </Head>
 
