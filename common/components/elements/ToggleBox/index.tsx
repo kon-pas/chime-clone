@@ -1,0 +1,36 @@
+import * as Styled from "./styled";
+
+import { useState } from "react";
+
+import IconSVG from "@components/elements/IconSVG";
+
+interface ToggleBoxProps {
+  text: string;
+  children: React.ReactNode;
+}
+
+const ToggleBox: React.FC<ToggleBoxProps> = props => {
+  const [isOpened, setIsOpened] = useState<boolean>(false);
+
+  return (
+    <Styled.Container>
+      <Styled.Tab onClick={() => setIsOpened(isOpened => !isOpened)}>
+        <Styled.TextWrapper>{props.text}</Styled.TextWrapper>
+
+        <Styled.ImageWrapper isOpened={isOpened}>
+          <IconSVG>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </IconSVG>
+        </Styled.ImageWrapper>
+      </Styled.Tab>
+
+      <Styled.Modal isVisible={isOpened}>{props.children}</Styled.Modal>
+    </Styled.Container>
+  );
+};
+
+export default ToggleBox;
