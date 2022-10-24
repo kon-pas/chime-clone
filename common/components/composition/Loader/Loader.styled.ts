@@ -24,7 +24,7 @@ export const LoaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  z-index: ${Z_INDEX.LOADING_PAGE};
+  z-index: ${Z_INDEX.LOADER};
 
   svg {
     width: 2rem;
