@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 import MainLayout from "@components/composition/MainLayout";
 
-const Page404: NextPageWithLayout = () => {
+const LogInPage: NextPageWithLayout = () => {
   const { push: navigate } = useRouter();
 
   return (
@@ -37,6 +37,6 @@ const Page404: NextPageWithLayout = () => {
   );
 };
 
-Page404.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+LogInPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
-export default Page404;
+export default LogInPage;
