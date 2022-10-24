@@ -1,13 +1,15 @@
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Head from "next/head";
 
 import { COLORS } from "@constants";
 
+import MainLayout from "@components/composition/MainLayout";
 import MonoSection from "@components/sections/MonoSection";
 import DualSection from "@components/sections/DualSection";
 import BannerSection from "@components/sections/BannerSection";
 
-const GetPaidEarlyPage: NextPage = () => {
+const GetPaidEarlyPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -105,5 +107,7 @@ const GetPaidEarlyPage: NextPage = () => {
     </>
   );
 };
+
+GetPaidEarlyPage
 
 export default GetPaidEarlyPage;

@@ -1,10 +1,13 @@
 import * as Styled from "@components/pages/404";
 
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Image from "next/image";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
-const Page404: NextPage = () => {
+import MainLayout from "@components/composition/MainLayout";
+
+const Page404: NextPageWithLayout = () => {
   const { push: navigate } = useRouter();
 
   return (
@@ -33,5 +36,7 @@ const Page404: NextPage = () => {
     </Styled.Wrapper>
   );
 };
+
+Page404.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export default Page404;

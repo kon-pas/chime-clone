@@ -1,16 +1,18 @@
 import * as FaqComponents from "@components/pages/faq";
 
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Head from "next/head";
 
 import { COLORS } from "@constants";
 
+import MainLayout from "@components/composition/MainLayout";
 import BannerSection from "@components/sections/BannerSection";
 import ToggleBox from "@components/elements/ToggleBox";
 import ContentContainer from "@components/elements/ContentContainer";
 import MonoSection from "@components/sections/MonoSection";
 
-const FaqPage: NextPage = () => {
+const FaqPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -221,5 +223,7 @@ const FaqPage: NextPage = () => {
     </>
   );
 };
+
+FaqPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export default FaqPage;
