@@ -69,9 +69,13 @@ const Header: React.FC = () => {
         </Styled.MenuContainerDesktop>
 
         <nav>
-          <Styled.Span>Log In</Styled.Span>
+          <Link href="/users/log-in">
+            <Styled.Span>Log In</Styled.Span>
+          </Link>
 
-          <Styled.Button>Sign Up</Styled.Button>
+          <Link href="/users/sign-up">
+            <Styled.Button>Sign Up</Styled.Button>
+          </Link>
 
           <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
             <path
