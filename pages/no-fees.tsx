@@ -1,15 +1,17 @@
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Head from "next/head";
 import Image from "next/image";
 
 import { COLORS } from "@constants";
 
+import MainLayout from "@components/composition/MainLayout";
 import MonoSection from "@components/sections/MonoSection";
 import DualSection from "@components/sections/DualSection";
 import BannerSection from "@components/sections/BannerSection";
 import PlaceholderSection from "@components/sections/PlaceholderSection";
 
-const NoFeesPage: NextPage = () => {
+const NoFeesPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -170,5 +172,7 @@ const NoFeesPage: NextPage = () => {
     </>
   );
 };
+
+NoFeesPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export default NoFeesPage;

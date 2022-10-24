@@ -1,16 +1,18 @@
 import * as HomeComponents from "@components/pages/home";
 
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Head from "next/head";
 import Image from "next/image";
 
 import { COLORS } from "@constants";
 
+import MainLayout from "@components/composition/MainLayout";
 import DualSection from "@components/sections/DualSection";
 import PlaceholderSection from "@components/sections/PlaceholderSection";
 import BrandsLogoLine from "@components/elements/BrandsLogoLine";
 
-const HomePage: NextPage = () => {
+const HomePage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -266,5 +268,7 @@ const HomePage: NextPage = () => {
     </>
   );
 };
+
+HomePage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export default HomePage;

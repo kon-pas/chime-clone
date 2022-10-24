@@ -1,14 +1,16 @@
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Head from "next/head";
 
 import { COLORS } from "@constants";
 
+import MainLayout from "@components/composition/MainLayout";
 import MonoSection from "@components/sections/MonoSection";
 import DualSection from "@components/sections/DualSection";
 import BannerSection from "@components/sections/BannerSection";
 import PlaceholderSection from "@components/sections/PlaceholderSection";
 
-const SavingsAccountPage: NextPage = () => {
+const SavingsAccountPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -162,5 +164,7 @@ const SavingsAccountPage: NextPage = () => {
     </>
   );
 };
+
+SavingsAccountPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export default SavingsAccountPage;
