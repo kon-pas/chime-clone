@@ -26,6 +26,7 @@
       "@components/*": ["common/components/*"],
       "@static/*": ["public/static/*"],
       "@styles/*": ["common/styles/*"],
+      "@pages/*": ["pages/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
