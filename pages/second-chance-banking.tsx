@@ -1,13 +1,15 @@
-import type { NextPage } from "next";
+import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "./_app";
 import Head from "next/head";
 
 import { COLORS } from "@constants";
 
+import MainLayout from "@components/composition/MainLayout";
 import MonoSection from "@components/sections/MonoSection";
 import DualSection from "@components/sections/DualSection";
 import BannerSection from "@components/sections/BannerSection";
 
-const SecondChangeBankingPage: NextPage = () => {
+const SecondChangeBankingPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -351,5 +353,7 @@ const SecondChangeBankingPage: NextPage = () => {
     </>
   );
 };
+
+SecondChangeBankingPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
 
 export default SecondChangeBankingPage;
