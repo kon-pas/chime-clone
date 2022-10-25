@@ -1,5 +1,6 @@
 import * as Styled from "./styled";
 
+import type { FC } from "react";
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
@@ -10,7 +11,7 @@ import { NAVIGATION_ITEMS } from "@constants";
 
 import IconSVG from "@components/elements/IconSVG";
 
-const Header: React.FC = () => {
+const Header: FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
 
   const { events } = useRouter();

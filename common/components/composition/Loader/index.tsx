@@ -1,11 +1,12 @@
 import * as Styled from "./Loader.styled";
 
+import type { FC } from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import IconSVG from "@components/elements/IconSVG";
 
-const Loader: React.FC = () => {
+const Loader: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const { events, asPath } = useRouter();

@@ -1,10 +1,12 @@
 import * as Styled from "./styled";
 
+import type { FC, ReactNode } from "react";
+
 interface ModalProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const ModalLayout: React.FC<ModalProps> = props => {
+const ModalLayout: FC<ModalProps> = props => {
   return (
     <Styled.Container>
       {props.children}

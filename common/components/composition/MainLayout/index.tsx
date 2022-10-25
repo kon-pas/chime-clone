@@ -1,14 +1,16 @@
 import * as Styled from "./styled";
 
+import type { FC, ReactNode } from "react";
+
 import Header from "@components/composition/Header";
 import Footer from "@components/composition/Footer";
 import Loader from "@components/composition/Loader";
 
 interface LayoutProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = props => {
+const Layout: FC<LayoutProps> = props => {
   return (
     <Styled.PageContainer>
       <Loader />
