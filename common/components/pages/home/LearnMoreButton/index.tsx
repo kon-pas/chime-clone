@@ -1,7 +1,9 @@
+import type { FC } from "react"
+
 import Button from "@components/elements/Button";
 import IconSVG from "@components/elements/IconSVG";
 
-const LearnMoreButton: React.FC = () => (
+const LearnMoreButton: FC = () => (
   <Button>
     Learn more
     <IconSVG strokeWidth={3}>
