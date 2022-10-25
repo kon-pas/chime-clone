@@ -1,15 +1,16 @@
 import * as Styled from "./styled";
 
+import type { FC, ReactNode } from "react";
 import { useState } from "react";
 
 import IconSVG from "@components/elements/IconSVG";
 
 interface ToggleBoxProps {
   text: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const ToggleBox: React.FC<ToggleBoxProps> = props => {
+const ToggleBox: FC<ToggleBoxProps> = props => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
 
   return (

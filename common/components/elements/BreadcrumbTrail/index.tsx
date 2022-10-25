@@ -1,11 +1,12 @@
 // import * as Styled from "./BreadcrumbTrail.styled";
 
+// import type { FC } from "react"
 // import { useRouter } from "next/router";
 
 // import ContentContainer from "@components/elements/ContentContainer";
 // import IconSVG from "@components/elements/IconSVG";
 
-// const BreadcrumbTrial: React.FC = () => {
+// const BreadcrumbTrial: FC = () => {
 //   const { pathname } = useRouter();
 
 //   return (

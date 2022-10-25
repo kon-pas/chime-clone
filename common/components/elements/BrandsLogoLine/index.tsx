@@ -1,8 +1,9 @@
 import * as Styled from "./styled";
 
+import type { FC } from "react";
 import Image from "next/image";
 
-const BrandsLogoLine: React.FC = () => {
+const BrandsLogoLine: FC = () => {
   return (
     <Styled.Wrapper>
       <Styled.Container>

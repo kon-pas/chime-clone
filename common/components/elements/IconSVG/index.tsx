@@ -1,7 +1,9 @@
 import * as Styled from "./IconSVG.styled";
 
+import type { FC, ReactNode } from "react";
+
 interface IconSVGProps {
-  children: React.ReactNode;
+  children: ReactNode;
   strokeWidth?: number;
   title?: string;
   desc?: string;
@@ -9,7 +11,7 @@ interface IconSVGProps {
   onClick?: () => void;
 }
 
-const IconSVG: React.FC<IconSVGProps> = ({
+const IconSVG: FC<IconSVGProps> = ({
   children: path,
   strokeWidth,
   title,
