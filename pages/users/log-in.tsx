@@ -1,42 +1,47 @@
-import * as Styled from "@components/pages/404";
+import * as LogInComponents from "@components/pages/log-in";
 
 import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "@pages/_app";
-import Image from "next/image";
-import { useRouter } from "next/router";
 
-import MainLayout from "@components/composition/MainLayout";
+import Image from "next/image";
+import Link from "next/link";
+
+import ModalLayout from "@components/composition/ModalLayout";
 
 const LogInPage: NextPageWithLayout = () => {
-  const { push: navigate } = useRouter();
-
   return (
-    <Styled.Wrapper>
-      <Styled.Container>
-        <Styled.TextContainer>
-          <Styled.Heading>
-            Uh-oh. The page you&apos;re looking for isn&apos;t here!
-          </Styled.Heading>
-
-          <Styled.Button onClick={() => navigate("/")}>
-            Back to Homepage
-          </Styled.Button>
-        </Styled.TextContainer>
-
-        <Styled.ImageWrapper>
+    <LogInComponents.Container>
+      <Link href="/" passHref>
+        <a>
           <Image
-            src="/static/pages/404/404.png"
-            alt="404 Robot"
-            layout="responsive"
-            width={654}
-            height={564}
+            src="/static/components/Header/chime-logo.svg"
+            alt="Chime Logo"
+            width="130px"
+            height="39px"
           />
-        </Styled.ImageWrapper>
-      </Styled.Container>
-    </Styled.Wrapper>
+        </a>
+      </Link>
+
+      <LogInComponents.Text1>
+        By clicking “Log In”, you agree to receive SMS text messages from Chime
+        to verify your identity
+      </LogInComponents.Text1>
+
+      <LogInComponents.Text2>
+        © 2022 Chime. All Rights Reserved.
+      </LogInComponents.Text2>
+
+      <LogInComponents.Text3>
+        Banking Services provided by The Bancorp Bank or Stride Bank, N.A.,
+        Members FDIC. The Chime Visa® Debit Card is issued by The Bancorp Bank
+        or Stride Bank pursuant to a license from Visa U.S.A. Inc. and may be
+        used everywhere Visa debit cards are accepted. Please see back of your
+        Card for its issuing bank.
+      </LogInComponents.Text3>
+    </LogInComponents.Container>
   );
 };
 
-LogInPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+LogInPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
 
 export default LogInPage;
