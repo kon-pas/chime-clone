@@ -36,8 +36,8 @@ const LogInPage: NextPageWithLayout = () => {
         </a>
       </Link>
 
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input
+      <LogInComponents.Form.Container onSubmit={handleSubmit(onSubmit)}>
+        <LogInComponents.Form.Input
           type="email"
           {...register("email", {
             required: "required",
@@ -47,9 +47,13 @@ const LogInPage: NextPageWithLayout = () => {
             },
           })}
         />
-        {errors.email && <div>Please correct your email address</div>}
+        {errors.email && (
+          <LogInComponents.Form.Error>
+            Please correct your email address
+          </LogInComponents.Form.Error>
+        )}
 
-        <input
+        <LogInComponents.Form.Input
           type="password"
           {...register("password", {
             required: "required",
@@ -59,10 +63,16 @@ const LogInPage: NextPageWithLayout = () => {
             },
           })}
         />
-        {errors.password && <div>Please correct your password</div>}
+        {errors.email && (
+          <LogInComponents.Form.Error>
+            Please correct your password
+          </LogInComponents.Form.Error>
+        )}
 
-        <button disabled={isSubmitting}>Login</button>
-      </form>
+        <LogInComponents.Form.Submit disabled={isSubmitting}>
+          Login
+        </LogInComponents.Form.Submit>
+      </LogInComponents.Form.Container>
 
       <LogInComponents.Text1>
         By clicking “Log In”, you agree to receive SMS text messages from Chime
