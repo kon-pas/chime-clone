@@ -9,7 +9,20 @@ import type { NextPageWithLayout } from "@pages/_app";
 
 import ModalLayout from "@components/composition/ModalLayout";
 
+type FormValues = {
+  email: string;
+  password: string;
+};
+
 const LogInPage: NextPageWithLayout = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<FormValues>();
+
+  const onSubmit = (data: any) => console.log(data);
+
   return (
     <LogInComponents.Container>
       <Link href="/" passHref>
@@ -22,6 +35,34 @@ const LogInPage: NextPageWithLayout = () => {
           />
         </a>
       </Link>
+
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <input
+          type="email"
+          {...register("email", {
+            required: "required",
+            pattern: {
+              value: /\S+@\S+\.\S+/,
+              message: "Entered value does not match email format",
+            },
+          })}
+        />
+        {errors.email && <div>Please correct your email address</div>}
+
+        <input
+          type="password"
+          {...register("password", {
+            required: "required",
+            minLength: {
+              value: 5,
+              message: "min length is 5",
+            },
+          })}
+        />
+        {errors.password && <div>Please correct your password</div>}
+
+        <button disabled={isSubmitting}>Login</button>
+      </form>
 
       <LogInComponents.Text1>
         By clicking “Log In”, you agree to receive SMS text messages from Chime
