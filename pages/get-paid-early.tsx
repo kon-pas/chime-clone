@@ -1,6 +1,7 @@
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
 import Head from "next/head";
+
+import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
 
@@ -108,6 +109,8 @@ const GetPaidEarlyPage: NextPageWithLayout = () => {
   );
 };
 
-GetPaidEarlyPage
+GetPaidEarlyPage.getLayout = (page: ReactElement) => (
+  <MainLayout>{page}</MainLayout>
+);
 
 export default GetPaidEarlyPage;

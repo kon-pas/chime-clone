@@ -1,9 +1,10 @@
 import * as Styled from "@components/pages/404";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
 import Image from "next/image";
 import { useRouter } from "next/router";
+
+import type { NextPageWithLayout } from "@pages/_app";
 
 import MainLayout from "@components/composition/MainLayout";
 

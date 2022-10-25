@@ -1,8 +1,9 @@
 import * as FaqComponents from "@components/pages/faq";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
 import Head from "next/head";
+
+import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
 

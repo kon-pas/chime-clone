@@ -1,7 +1,8 @@
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
 import Head from "next/head";
 import Image from "next/image";
+
+import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
 
@@ -198,6 +199,8 @@ const DebitCardPage: NextPageWithLayout = () => {
   );
 };
 
-DebitCardPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+DebitCardPage.getLayout = (page: ReactElement) => (
+  <MainLayout>{page}</MainLayout>
+);
 
 export default DebitCardPage;
