@@ -1,19 +1,20 @@
 import * as Styled from "./styled";
 
+import type { FC, ReactNode } from "react";
 import Image from "next/image";
 
 import type { HexColor } from "@types";
 import type { NextImageProps } from "@interfaces";
 
 interface BannerSectionProps {
-  children: React.ReactNode;
+  children: ReactNode;
   backgroundColor?: HexColor;
   img: NextImageProps & {
     align?: "center" | "bottom";
   };
 }
 
-const BannerSection: React.FC<BannerSectionProps> = props => {
+const BannerSection: FC<BannerSectionProps> = props => {
   return (
     <Styled.Wrapper backgroundColor={props.backgroundColor}>
       <Styled.Container>

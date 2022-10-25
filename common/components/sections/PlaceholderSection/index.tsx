@@ -1,6 +1,8 @@
 import * as Styled from "./PlaceholderSection.styled";
 
-const PlaceholderSection: React.FC = () => {
+import type { FC } from "react"
+
+const PlaceholderSection: FC = () => {
   console.warn("Placeholder component rendered. 🚧 Remove before production!");
 
   return (

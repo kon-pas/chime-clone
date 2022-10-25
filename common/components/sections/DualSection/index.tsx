@@ -1,5 +1,6 @@
 import * as Styled from "./styled";
 
+import type { FC, ReactNode } from "react"
 import Image from "next/image";
 
 import type { HexColor } from "@types";
@@ -8,7 +9,7 @@ import type { NextImageProps } from "@interfaces";
 import { COLORS } from "@constants";
 
 interface DualSectionProps {
-  children: React.ReactNode;
+  children: ReactNode;
   img: NextImageProps & {
     float?: "left" | "right";
   };
@@ -16,7 +17,7 @@ interface DualSectionProps {
   centered?: boolean;
 }
 
-const DualSection: React.FC<DualSectionProps> = props => {
+const DualSection: FC<DualSectionProps> = props => {
   return (
     <Styled.Wrapper backgroundColor={props.backgroundColor ?? COLORS.WHITE}>
       <Styled.Container imageFloat={props.img.float ?? "left"}>

@@ -1,17 +1,19 @@
 import * as Styled from "./styled";
 
+import type { FC, ReactNode } from "react"
+
 import type { HexColor } from "@types";
 
 import ContentContainer from "@components/elements/ContentContainer";
 
 interface MonoSectionProps {
-  children: React.ReactNode;
+  children: ReactNode;
   textAlign?: "start" | "center" | "end";
   width?: number;
   backgroundColor?: HexColor;
 }
 
-const MonoSection: React.FC<MonoSectionProps> = props => {
+const MonoSection: FC<MonoSectionProps> = props => {
   return (
     <Styled.Wrapper backgroundColor={props.backgroundColor}>
       <ContentContainer>
