@@ -110,6 +110,8 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
   );
 };
 
-SecurityAndControlPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+SecurityAndControlPage.getLayout = (page: ReactElement) => (
+  <MainLayout>{page}</MainLayout>
+);
 
 export default SecurityAndControlPage;

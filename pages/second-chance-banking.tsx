@@ -355,6 +355,8 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
   );
 };
 
-SecondChangeBankingPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+SecondChangeBankingPage.getLayout = (page: ReactElement) => (
+  <MainLayout>{page}</MainLayout>
+);
 
 export default SecondChangeBankingPage;

@@ -166,6 +166,8 @@ const SavingsAccountPage: NextPageWithLayout = () => {
   );
 };
 
-SavingsAccountPage.getLayout = (page: ReactElement) => <MainLayout>{page}</MainLayout>;
+SavingsAccountPage.getLayout = (page: ReactElement) => (
+  <MainLayout>{page}</MainLayout>
+);
 
 export default SavingsAccountPage;
