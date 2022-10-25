@@ -1,4 +1,4 @@
-import * as Styled from "./styled";
+import * as Styled from "./ModalLayout.styled";
 
 import type { FC, ReactNode } from "react";
 
