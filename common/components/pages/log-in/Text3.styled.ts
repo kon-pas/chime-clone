@@ -7,6 +7,7 @@ const Text3 = styled.div`
   color: ${COLORS.FONT_GRAY_LIGHT};
   line-height: 1.4rem;
   margin-top: 2rem;
+  font-weight: 300;
 `;
 
 export default Text3;
