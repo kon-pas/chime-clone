@@ -8,6 +8,8 @@ import { useForm } from "react-hook-form";
 import type { NextPageWithLayout } from "@pages/_app";
 import type { User } from "@interfaces";
 
+import { login } from "@services";
+
 import ModalLayout from "@components/composition/ModalLayout";
 
 const LogInPage: NextPageWithLayout = () => {
@@ -17,7 +19,7 @@ const LogInPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<User>();
 
-  const onSubmit = (data: User) => console.log(data);
+  const onSubmit = (data: User) => login(data);
 
   return (
     <LogInComponents.Container>
@@ -35,6 +37,7 @@ const LogInPage: NextPageWithLayout = () => {
       <LogInComponents.Form.Container onSubmit={handleSubmit(onSubmit)}>
         <LogInComponents.Form.Input
           type="email"
+          placeholder="Email address"
           {...register("email", {
             required: "required",
             pattern: {
@@ -51,6 +54,7 @@ const LogInPage: NextPageWithLayout = () => {
 
         <LogInComponents.Form.Input
           type="password"
+          placeholder="Password"
           {...register("password", {
             required: "required",
             minLength: {
@@ -65,7 +69,7 @@ const LogInPage: NextPageWithLayout = () => {
           </LogInComponents.Form.Error>
         )}
 
-        <LogInComponents.Form.Submit disabled={isSubmitting}>
+        <LogInComponents.Form.Submit disabled={isSubmitting} type="submit">
           Login
         </LogInComponents.Form.Submit>
       </LogInComponents.Form.Container>
