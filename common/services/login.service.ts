@@ -5,14 +5,13 @@ import { User } from "@interfaces";
 type loginSignature = (user: User) => Promise<boolean>
 
 const login: loginSignature = async (user) => {
-  const res = await fetch("/api/user/login", {
+  const res = await fetch("/api/users/log-in", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ ...user }),
   }).then(res => res.json());
 
-  if (res.error) return false;
-  return true;
+  return res.error;
 };
 
 export default login;
