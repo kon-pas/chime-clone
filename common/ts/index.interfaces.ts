@@ -23,3 +23,8 @@ export interface NextImageProps {
     readonly lg?: number;
   };
 }
+
+export interface User {
+  email: `${string}@${string}.${string}`;
+  password: string;
+}
