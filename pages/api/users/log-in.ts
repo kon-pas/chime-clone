@@ -9,8 +9,13 @@ type handlerSignature = (
   res: NextApiResponse<Data>
 ) => any;
 
-const handler: handlerSignature = (req, res) => {
-  console.log(req.body)
+const handler: handlerSignature = async (req, res) => {
+  const { email, password } = req.body;
+
+  const users = await fetch(`${process.env.HOST}/api/database/users`)
+    .then(res => res.json());
+
+  console.log(users);
 
   // res.status(200).json({ name: "John Doe" });
 };
