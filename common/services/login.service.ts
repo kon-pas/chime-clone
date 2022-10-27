@@ -1,8 +1,13 @@
 // move to fetch-wrapper
 
-import { User } from "@interfaces";
+import { Email, Password } from "@types";
 
-type loginSignature = (user: User) => Promise<boolean>
+interface LoginValues {
+  email: Email;
+  password: Password;
+}
+
+type loginSignature = (user: LoginValues) => Promise<boolean>
 
 const login: loginSignature = async (user) => {
   const res = await fetch("/api/users/log-in", {
