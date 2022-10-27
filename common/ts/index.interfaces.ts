@@ -1,3 +1,5 @@
+import type { Email, Password, Username } from "@types";
+
 /**
  * Interface for two-level navigation item
  */
@@ -25,6 +27,7 @@ export interface NextImageProps {
 }
 
 export interface User {
-  email: `${string}@${string}.${string}`;
-  password: string;
+  email: Email;
+  password: Password;
+  username: Username;
 }
