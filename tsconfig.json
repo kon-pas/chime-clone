@@ -21,13 +21,13 @@
       "@enums": ["common/ts/index.enums.ts"],
       "@constants": ["common/constants/index.ts"],
       "@hooks": ["common/hooks/index.ts"],
-      "@database": ["common/database/index.ts"],
       "@utils": ["common/utils/index.ts"],
       "@services": ["common/services/index.ts"],
-      "@components/*": ["common/components/*"],
-      "@static/*": ["public/static/*"],
-      "@styles/*": ["common/styles/*"],
+      "@database": ["common/database/index.ts"],
       "@pages/*": ["pages/*"],
+      "@components/*": ["common/components/*"],
+      "@styles/*": ["common/styles/*"],
+      "@static/*": ["public/static/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
