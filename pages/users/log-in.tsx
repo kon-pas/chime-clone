@@ -1,25 +1,29 @@
 import * as LogInComponents from "@components/pages/log-in";
 
 import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "@pages/_app";
+import type { Email, Password } from "@types";
+
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 
-import type { NextPageWithLayout } from "@pages/_app";
-import type { User } from "@interfaces";
-
 import { login } from "@services";
-
 import ModalLayout from "@components/composition/ModalLayout";
+
+interface FormValues {
+  email: Email;
+  password: Password;
+}
 
 const LogInPage: NextPageWithLayout = () => {
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<User>();
+  } = useForm<FormValues>();
 
-  const onSubmit = (data: User) => login(data);
+  const onSubmit = (data: FormValues) => login(data);
 
   return (
     <LogInComponents.Container>
