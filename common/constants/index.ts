@@ -7,3 +7,5 @@ export { default as BREAKPOINTS } from './breakpoints';
 // export { default as MEDIA } from './media';
 
 export { default as Z_INDEX } from './z-index';
+
+export { default as HTTP } from './http';
