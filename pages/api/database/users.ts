@@ -2,12 +2,18 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import { users } from "@database";
 
-const handler = async (_: NextApiRequest, res: NextApiResponse) => {
+type handlerSignature = (req: NextApiRequest, res: NextApiResponse) => void;
+
+const handler: handlerSignature = async (req, res) => {
   try {
-    res.status(200).json(users);
+    if(req.method == "GET")
+      res.status(200).send({ ...users });
   } catch (error) {
     console.error(error);
-    res.status(500).send({ statusCode: 500, statusMessage: "Internal Server Error" });
+    console.log(2);
+    res
+      .status(500)
+      .send({ statusCode: 500, statusMessage: "Internal Server Error" });
   }
 };
 
