@@ -14,4 +14,3 @@ const MEDIA: { [key: string]: `@media (min-width: ${string}px)` } = Object.fromE
 
 export default MEDIA;
 */
-
