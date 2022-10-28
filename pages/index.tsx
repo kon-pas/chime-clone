@@ -30,7 +30,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/home/spot-me-1.png",
+          src: "/static/pages/home/spot-me-1.png",
           alt: "SpotMe 1",
           originalSize: [792, 526],
           width: {
@@ -53,7 +53,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "left",
-          src: "/static/content/home/paid-early.png",
+          src: "/static/pages/home/paid-early.png",
           alt: "Paid Early",
           originalSize: [713, 202],
           width: {
@@ -76,7 +76,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/home/no-fees.png",
+          src: "/static/pages/home/no-fees.png",
           alt: "No Fees",
           originalSize: [644, 322],
           width: {
@@ -100,7 +100,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "left",
-          src: "/static/content/home/credit-builder.png",
+          src: "/static/pages/home/credit-builder.png",
           alt: "Credit Builder",
           originalSize: [826, 670],
           width: {
@@ -133,7 +133,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/home/pay-anyone-desktop.png",
+          src: "/static/pages/home/pay-anyone-desktop.png",
           alt: "Pay Anyone Deskop",
           originalSize: [813, 916],
           width: {
@@ -157,7 +157,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "left",
-          src: "/static/content/home/apy.png",
+          src: "/static/pages/home/apy.png",
           alt: "APY",
           originalSize: [774, 474],
           width: {
@@ -182,7 +182,7 @@ const HomePage: NextPageWithLayout = () => {
       <DualSection
         img={{
           float: "right",
-          src: "/static/content/home/alerts.png",
+          src: "/static/pages/home/alerts.png",
           alt: "Alerts",
           originalSize: [734, 330],
           width: {
