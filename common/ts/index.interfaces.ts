@@ -31,3 +31,8 @@ export interface User {
   password: Password;
   username: Username;
 }
+
+export interface HttpStatus {
+  readonly statusCode: number;
+  readonly statusMessage: string;
+}
