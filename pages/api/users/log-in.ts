@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+import { fetchWrapper } from "@utils";
+
 import { HTTP } from "@constants";
 
 import type { HttpStatus, User } from "@interfaces";
-
-const { NEXT_PUBLIC_API_URL } = process.env;
 
 type handlerSignature = (
   req: NextApiRequest,
@@ -12,11 +12,10 @@ type handlerSignature = (
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
+  const { NEXT_PUBLIC_API_URL } = process.env;
   try {
-    // @@@ Use fetch-wrapper
-    const response = fetch(`${NEXT_PUBLIC_API_URL}/database/users`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json; charset=utf8" },
+    const response = fetchWrapper.get({
+      url: `${NEXT_PUBLIC_API_URL}/database/users`,
     });
 
     if (req.method === "POST") {
