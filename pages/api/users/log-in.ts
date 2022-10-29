@@ -8,7 +8,7 @@ import type { HttpStatus, User } from "@interfaces";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<User | HttpStatus>
+  res: NextApiResponse<Omit<User, "password"> | HttpStatus>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
@@ -18,10 +18,10 @@ const handler: handlerSignature = async (req, res) => {
       url: `${NEXT_PUBLIC_API_URL}/database/users`,
     });
 
+    const users = await response.then(res => res.json());
+
     if (req.method === "POST") {
       const { email: targetEmail, password: targetPassword } = req.body;
-
-      const users = await response.then(res => res.json());
 
       if (users?.statusCode === 500) res.status(500).send(HTTP.STATUS_500);
 
@@ -30,7 +30,10 @@ const handler: handlerSignature = async (req, res) => {
           user.email === targetEmail && user.password === targetPassword
       );
 
-      if (targetUser) res.status(200).send(targetUser);
+      if (targetUser)
+        res
+          .status(200)
+          .send({ username: targetUser.username, email: targetUser.email });
       else res.status(404).send(HTTP.STATUS_404);
     }
   } catch (error) {
