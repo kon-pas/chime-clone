@@ -1,8 +1,6 @@
-// move to fetch-wrapper
-
 import { Email, Password } from "@types";
 
-const { LOCALHOST } = process.env;
+const { NEXT_PUBLIC_API_URL } = process.env;
 
 interface LoginValues {
   email: Email;
@@ -13,11 +11,13 @@ type loginSignature = (user: LoginValues) => Promise<boolean>;
 
 const login: loginSignature = async user => {
   try {
-    const users = await fetch(`/api/users/log-in`
-      // method: "GET",
-      // headers: { "Content-Type": "application/json; charset=utf8" },
-      // body: JSON.stringify({ ...user }),
-    ).then(res => res.json());
+    const userData = await fetch(`http://localhost:3000/api/users/log-in`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf8" },
+      body: JSON.stringify({ ...user }),
+    }).then(res => res.json());
+
+    console.log(userData);
   } catch (error) {
     console.error(error);
   }
