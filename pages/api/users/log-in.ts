@@ -1,40 +1,42 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import https from "https";
+import { HTTP } from "@constants";
 
 import type { HttpStatus, User } from "@interfaces";
 
-const { LOCALHOST } = process.env;
-
-type Data = User[];
+const { NEXT_PUBLIC_API_URL } = process.env;
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<Data | HttpStatus>
+  res: NextApiResponse<User | HttpStatus>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
-  const { email, password } = req.body;
   try {
     // @@@ Use fetch-wrapper
-
-    // const users = await fetch("/api/database/users").then(res =>
-    //   res.json()
-    // );
-
-    const users = await fetch(`${LOCALHOST}/api/database/users`, {
+    const response = fetch(`${NEXT_PUBLIC_API_URL}/database/users`, {
       method: "GET",
       headers: { "Content-Type": "application/json; charset=utf8" },
-    }).then(res => res.json());
+    });
 
-    // @@@ handle errors
-    res.status(200).send(users);
+    if (req.method === "POST") {
+      const { email: targetEmail, password: targetPassword } = req.body;
+
+      const users = await response.then(res => res.json());
+
+      if (users?.statusCode === 500) res.status(500).send(HTTP.STATUS_500);
+
+      const targetUser = users.find(
+        (user: User) =>
+          user.email === targetEmail && user.password === targetPassword
+      );
+
+      if (targetUser) res.status(200).send(targetUser);
+      else res.status(404).send(HTTP.STATUS_404);
+    }
   } catch (error) {
     console.error(error);
-    console.log(2);
-    res
-      .status(500)
-      .send({ statusCode: 500, statusMessage: "Internal Server Error" });
+    res.status(500).send(HTTP.STATUS_500);
   }
 };
 
