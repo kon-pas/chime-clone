@@ -1,6 +1,6 @@
 import { Email, Password } from "@types";
 
-const { NEXT_PUBLIC_API_URL } = process.env;
+import { fetchWrapper } from "@utils";
 
 interface LoginValues {
   email: Email;
@@ -10,12 +10,13 @@ interface LoginValues {
 type loginSignature = (user: LoginValues) => Promise<boolean>;
 
 const login: loginSignature = async user => {
+  const { NEXT_PUBLIC_API_URL } = process.env;
+
   try {
-    const response = fetch(`${NEXT_PUBLIC_API_URL}/users/log-in`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json; charset=utf8" },
+    const response = fetchWrapper.post({
+      url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
       body: JSON.stringify({ ...user }),
-    });
+    })
 
     const userData = await response.then(res => res.json());
 
