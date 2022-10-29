@@ -11,18 +11,21 @@ type loginSignature = (user: LoginValues) => Promise<boolean>;
 
 const login: loginSignature = async user => {
   try {
-    const userData = await fetch(`http://localhost:3000/api/users/log-in`, {
+    const response = fetch(`${NEXT_PUBLIC_API_URL}/users/log-in`, {
       method: "POST",
       headers: { "Content-Type": "application/json; charset=utf8" },
       body: JSON.stringify({ ...user }),
-    }).then(res => res.json());
+    });
 
-    console.log(userData);
+    const userData = await response.then(res => res.json());
+
+    if (userData?.statusCode === 500) return false;
+
+    return true;
   } catch (error) {
     console.error(error);
+    return false;
   }
-
-  return true;
 };
 
 export default login;
