@@ -5,3 +5,15 @@ export const get: getSignature = ({ url }) =>
     method: "GET",
     headers: { "Content-Type": "application/json; charset=utf8" },
   });
+
+type postSignature = (options: {
+  url: string;
+  body: BodyInit | null | undefined;
+}) => Promise<Response>;
+
+export const post: postSignature = ({ url, body }) =>
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf8" },
+    body,
+  });
