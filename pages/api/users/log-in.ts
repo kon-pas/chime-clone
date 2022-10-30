@@ -13,6 +13,7 @@ type handlerSignature = (
 
 const handler: handlerSignature = async (req, res) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
+
   try {
     const response = fetchWrapper.get({
       url: `${NEXT_PUBLIC_API_URL}/database/users`,

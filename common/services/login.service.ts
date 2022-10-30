@@ -21,8 +21,11 @@ const login: loginSignature = async user => {
     const userData = await response.then(res => res.json());
 
     if (userData?.statusCode === 500) return false;
+    else {
+      
 
-    return true;
+      return true;
+    }
   } catch (error) {
     console.error(error);
     return false;
