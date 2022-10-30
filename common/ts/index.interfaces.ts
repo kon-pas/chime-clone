@@ -26,7 +26,7 @@ export interface NextImageProps {
   };
 }
 
-export interface User {
+export interface FullUser {
   email: Email;
   password: Password;
   username: Username;
