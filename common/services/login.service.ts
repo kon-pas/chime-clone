@@ -1,4 +1,6 @@
-import { Email, Password } from "@types";
+import type { Email, Password, SafeUser } from "@types";
+
+import type { HttpStatus } from "@interfaces";
 
 import { fetchWrapper } from "@utils";
 
@@ -7,28 +9,28 @@ interface LoginValues {
   password: Password;
 }
 
-type loginSignature = (user: LoginValues) => Promise<boolean>;
+type loginSignature = (user: LoginValues) => Promise<SafeUser | Error>;
 
 const login: loginSignature = async user => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
+  const isHttpStatus = (obj: any): obj is HttpStatus => "statusCode" in obj;
+
   try {
-    const response = fetchWrapper.post({
+    const response: Promise<Response> = fetchWrapper.post({
       url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
       body: JSON.stringify({ ...user }),
-    })
+    });
 
-    const userData = await response.then(res => res.json());
+    const userData: SafeUser | HttpStatus = await response.then(res =>
+      res.json()
+    );
 
-    if (userData?.statusCode === 500) return false;
-    else {
-      
-
-      return true;
-    }
+    if (isHttpStatus(userData)) throw new Error(userData.statusMessage);
+    else return userData;
   } catch (error) {
     console.error(error);
-    return false;
+    throw new Error("foo"); // @@@
   }
 };
 
