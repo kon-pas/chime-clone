@@ -1,12 +1,10 @@
 import { createContext, useState } from "react";
 import type { FC, ReactNode } from "react";
-import type { User } from "@interfaces";
-
-type UserSafe = Omit<User, "password">;
+import type { SafeUser } from "@types";
 
 export interface UserContextProps {
-  user: UserSafe | null;
-  setUser: (value: UserSafe | null) => void;
+  user: SafeUser | null;
+  setUser: (value: SafeUser | null) => void;
 }
 
 export const UserContext = createContext<UserContextProps>({
@@ -19,7 +17,7 @@ interface UserContextProviderProps {
 }
 
 export const UserContextProvider: FC<UserContextProviderProps> = props => {
-  const [user, setUser] = useState<UserSafe | null>(null);
+  const [user, setUser] = useState<SafeUser | null>(null);
 
   return (
     <UserContext.Provider value={{ user, setUser }}>
