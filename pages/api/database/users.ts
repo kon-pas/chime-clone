@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import type { HttpStatus, User } from "@interfaces";
+import type { HttpStatus, FullUser } from "@interfaces";
 
 import { HTTP } from "@constants";
 
 import { users } from "@database";
 
-type Data = HttpStatus | User[];
+type Data = HttpStatus | FullUser[];
 
 type handlerSignature = (
   req: NextApiRequest,
