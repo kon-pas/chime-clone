@@ -4,11 +4,12 @@ import { fetchWrapper } from "@utils";
 
 import { HTTP } from "@constants";
 
-import type { HttpStatus, User } from "@interfaces";
+import type { HttpStatus, FullUser } from "@interfaces";
+import type { SafeUser } from "@types";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<Omit<User, "password"> | HttpStatus>
+  res: NextApiResponse<SafeUser | HttpStatus>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
@@ -27,7 +28,7 @@ const handler: handlerSignature = async (req, res) => {
       if (users?.statusCode === 500) res.status(500).send(HTTP.STATUS_500);
 
       const targetUser = users.find(
-        (user: User) =>
+        (user: FullUser) =>
           user.email === targetEmail && user.password === targetPassword
       );
 
