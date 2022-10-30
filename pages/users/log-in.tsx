@@ -1,14 +1,16 @@
 import * as LogInComponents from "@components/pages/log-in";
 
-import type { ReactElement } from "react";
+import { ReactElement, useEffect } from "react";
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
 import { login } from "@services";
+import { useUser } from "@hooks";
 import ModalLayout from "@components/composition/ModalLayout";
 
 interface FormValues {
@@ -23,7 +25,27 @@ const LogInPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => login(data);
+  const { push: navigate } = useRouter();
+
+  const [user, setUser] = useUser();
+
+  // @@@ This may not be the best solution, but was trying to not Google
+  const onSubmit = (data: FormValues) =>
+    login(data)
+      .then(res => {
+        if (res instanceof Error) throw new Error(res.message);
+        else return res;
+      })
+      .then(user => {
+        navigate("/");
+        return user;
+      })
+      .then(user => setUser(user))
+      .catch(error => console.error(error.message));
+
+  useEffect(() => {
+    if (user) console.info(`Logged in as ${user.username}`);
+  }, [user]);
 
   return (
     <LogInComponents.Container>
