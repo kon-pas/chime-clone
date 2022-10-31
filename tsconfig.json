@@ -21,6 +21,7 @@
       "@enums": ["common/ts/index.enums.ts"],
       "@constants": ["common/constants/index.ts"],
       "@hooks": ["common/hooks/index.ts"],
+      "@utils/api": ["common/utils/api/index.ts"],
       "@utils": ["common/utils/index.ts"],
       "@services": ["common/services/index.ts"],
       "@database": ["common/database/index.ts"],
