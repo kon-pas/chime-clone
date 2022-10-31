@@ -1,12 +1,12 @@
-import type { HttpResponseStatus } from "@interfaces";
-
 import { ErrorResponse } from "@utils/api";
+
+import { HttpResponseStatusCode } from "@types";
 
 export default class LoadedResponse extends ErrorResponse {
   private _body: string;
 
-  constructor(status: HttpResponseStatus, body: object) {
-    super(status);
+  constructor(statusCode: HttpResponseStatusCode, body: object) {
+    super(statusCode);
     this._body = JSON.stringify(body);
   }
 
