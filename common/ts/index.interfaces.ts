@@ -32,7 +32,7 @@ export interface FullUser {
   username: Username;
 }
 
-export interface HttpStatus {
-  readonly statusCode: number;
-  readonly statusMessage: string;
+export interface HttpResponseStatus {
+  readonly code: number;
+  readonly message: string;
 }
