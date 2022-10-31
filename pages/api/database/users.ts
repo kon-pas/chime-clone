@@ -1,21 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import type { HttpResponseStatus, FullUser } from "@interfaces";
+import type { Response } from "@types";
 
-import { HTTP } from "@constants";
+import { ErrorResponse, LoadedResponse } from "@utils/api";
 
-import { users } from "@database";
+import { USERS } from "@database";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<HttpResponseStatus | FullUser[]>
+  res: NextApiResponse<Response>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
   try {
-    if (req.method === "GET") res.status(200).send([...users]);
+    if (req.method === "GET")
+      res.status(200).send(new LoadedResponse(200, [...USERS]));
   } catch (error) {
-    res.status(500).send(HTTP.STATUS_500);
+    res.status(500).send(new ErrorResponse(500));
   }
 };
 
