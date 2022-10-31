@@ -1,13 +1,13 @@
-import type { HttpStatus } from "@interfaces";
+import type { HttpResponseStatus } from "@interfaces";
 
-const HTTP: { [key: string]: HttpStatus } = {
+const HTTP: { [key: string]: HttpResponseStatus } = {
   STATUS_404: {
-    statusCode: 404,
-    statusMessage: "Not Found",
+    code: 404,
+    message: "Not Found",
   },
   STATUS_500: {
-    statusCode: 500,
-    statusMessage: "Internal Server Error",
+    code: 500,
+    message: "Internal Server Error",
   },
 };
 
