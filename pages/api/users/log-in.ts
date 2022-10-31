@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { fetchWrapper } from "@utils";
+import { fetchWrapper } from "@utils/api";
 
 import { HTTP } from "@constants";
 
-import type { HttpStatus, FullUser } from "@interfaces";
+import type { HttpResponseStatus, FullUser } from "@interfaces";
 import type { SafeUser } from "@types";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<SafeUser | HttpStatus>
+  res: NextApiResponse<SafeUser | HttpResponseStatus>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
@@ -39,7 +39,6 @@ const handler: handlerSignature = async (req, res) => {
       else res.status(404).send(HTTP.STATUS_404);
     }
   } catch (error) {
-    console.error(error);
     res.status(500).send(HTTP.STATUS_500);
   }
 };
