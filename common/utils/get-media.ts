@@ -1,8 +1,8 @@
 import { BREAKPOINTS } from "@constants";
 
-import { breakpoints } from "@enums";
+import { Breakpoints } from "@enums";
 
-type getMediaSignature = (size: keyof typeof breakpoints) => `@media (min-width: ${string}px)`
+type getMediaSignature = (size: keyof typeof Breakpoints) => `@media (min-width: ${string}px)`
 
 /**
  * Shorthand for css media queries
