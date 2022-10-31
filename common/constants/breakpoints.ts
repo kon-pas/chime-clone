@@ -1,13 +1,13 @@
-import { breakpoints } from "@enums";
+import { Breakpoints } from "@enums";
 
-interface Breakpoints {
+interface BreakpointsSignature {
   readonly [key: string]: number;
 }
 
 /**
  * Creates an object from enum with all keys being upper case.
  */
-const BREAKPOINTS: Breakpoints = Object.entries(breakpoints).reduce(
+const BREAKPOINTS: BreakpointsSignature = Object.entries(Breakpoints).reduce(
   (prev, [key, value]) =>
     typeof value === "number" && { [key.toUpperCase()]: value, ...prev },
   {}
