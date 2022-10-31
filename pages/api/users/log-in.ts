@@ -4,12 +4,13 @@ import { fetchWrapper } from "@utils/api";
 
 import { HTTP } from "@constants";
 
-import type { HttpResponseStatus, FullUser } from "@interfaces";
-import type { SafeUser } from "@types";
+import type { Response } from "@types";
+
+import { ErrorResponse, LoadedResponse } from "@utils/api";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<SafeUser | HttpResponseStatus>
+  res: NextApiResponse<Response>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
@@ -25,7 +26,8 @@ const handler: handlerSignature = async (req, res) => {
     if (req.method === "POST") {
       const { email: targetEmail, password: targetPassword } = req.body;
 
-      if (users?.statusCode === 500) res.status(500).send(HTTP.STATUS_500);
+      if (users?.statusCode === 500)
+        res.status(500).send(new ErrorResponse(500));
 
       const targetUser = users.find(
         (user: FullUser) =>
@@ -36,10 +38,10 @@ const handler: handlerSignature = async (req, res) => {
         res
           .status(200)
           .send({ username: targetUser.username, email: targetUser.email });
-      else res.status(404).send(HTTP.STATUS_404);
+      else res.status(404).send(new ErrorResponse(404));
     }
   } catch (error) {
-    res.status(500).send(HTTP.STATUS_500);
+    res.status(500).send(new ErrorResponse(500));
   }
 };
 
