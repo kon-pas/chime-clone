@@ -2,7 +2,7 @@ import type { Email, Password, SafeUser } from "@types";
 
 import type { HttpStatus } from "@interfaces";
 
-import { fetchWrapper } from "@utils";
+import { fetchWrapper } from "@utils/api";
 
 interface LoginValues {
   email: Email;
@@ -14,7 +14,7 @@ type loginSignature = (user: LoginValues) => Promise<SafeUser | Error>;
 const login: loginSignature = async user => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
-  const isHttpStatus = (obj: any): obj is HttpStatus => "statusCode" in obj;
+  const isHttpStatus = (obj: object): obj is HttpStatus => "statusCode" in obj;
 
   try {
     const response: Promise<Response> = fetchWrapper.post({
@@ -29,7 +29,6 @@ const login: loginSignature = async user => {
     if (isHttpStatus(userData)) throw new Error(userData.statusMessage);
     else return userData;
   } catch (error) {
-    console.error(error);
     throw new Error("foo"); // @@@
   }
 };
