@@ -22,7 +22,9 @@ const handler: handlerSignature = async (req, res) => {
       .then(res => res.json());
 
     if (req.method === "POST") {
-      const { email: targetEmail, password: targetPassword } = req.body;
+      const { email: targetEmail, password: targetPassword } = JSON.parse(
+        req.body
+      );
 
       if (response instanceof LoadedResponse) {
         const { body } = response as any;
