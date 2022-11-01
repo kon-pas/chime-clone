@@ -16,7 +16,7 @@ const login: loginSignature = async user => {
     const response: Response = await fetchWrapper
       .post({
         url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
-        body: JSON.stringify({ ...user }),
+        body: JSON.stringify(user),
       })
       .then(res => res.json());
 
