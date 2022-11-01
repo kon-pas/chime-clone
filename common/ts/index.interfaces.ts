@@ -1,7 +1,4 @@
-// @@@
-// import type { Email, Password, Username } from "@types";
-
-import type { HttpResponseStatusCode } from "@types";
+import type { Email, Password, Username, HttpResponseStatusCode } from "@types";
 
 /**
  * Interface for two-level navigation item
@@ -29,12 +26,14 @@ export interface NextImageProps {
   };
 }
 
-// @@@
-// export interface FullUser {
-//   email: Email;
-//   password: Password;
-//   username: Username;
-// }
+export interface SafeUser {
+  email: Email;
+  username: Username;
+}
+
+export interface FullUser extends SafeUser {
+  password: Password;
+}
 
 export interface HttpResponseStatus {
   readonly code: HttpResponseStatusCode;
