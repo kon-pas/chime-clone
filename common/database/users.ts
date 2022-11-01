@@ -1,9 +1,9 @@
-import type { User } from "@interfaces";
+import type { FullUser } from "@interfaces";
 
 /**
  * Available via `/api/database/users` as JSON
  */
-const users: User[] = [
+const users: FullUser[] = [
   {
     username: "Jan_Kowalski",
     email: "jan@kowalski.com",
