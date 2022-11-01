@@ -12,12 +12,9 @@ type handlerSignature = (
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
-  try {
-    if (req.method === "GET")
-      res.status(200).send(new LoadedResponse(200, [...USERS]));
-  } catch (error) {
-    res.status(500).send(new ErrorResponse(500));
-  }
+  if (req.method === "GET")
+    res.status(200).send(new LoadedResponse(200, [...USERS]));
+  else res.status(500).send(new ErrorResponse(500));
 };
 
 export default handler;
