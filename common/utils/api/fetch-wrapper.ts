@@ -8,7 +8,7 @@ export const get: getSignature = ({ url }) =>
 
 type postSignature = (options: {
   url: string;
-  body: BodyInit | null | undefined;
+  body: string;
 }) => Promise<Response>;
 
 export const post: postSignature = ({ url, body }) =>

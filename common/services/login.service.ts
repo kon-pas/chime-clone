@@ -1,7 +1,5 @@
 import type { Email, Password, Response } from "@types";
 
-// import type { HttpResponseStatus, SafeUser } from "@interfaces";
-
 import { fetchWrapper, ErrorResponse, LoadedResponse } from "@utils/api";
 
 interface LoginValues {
@@ -23,8 +21,8 @@ const login: loginSignature = async user => {
       .then(res => res.json());
 
     if (response instanceof LoadedResponse)
-      return new LoadedResponse(200, response.body);
-    else if (response instanceof ErrorResponse) {
+      return new LoadedResponse(200, { ...response.body });
+    else {
       switch (response.statusCode) {
         case 404:
           return new ErrorResponse(404);
