@@ -1,35 +1,40 @@
-import type { Email, Password, SafeUser } from "@types";
+import type { Email, Password, Response } from "@types";
 
-import type { HttpStatus } from "@interfaces";
+// import type { HttpResponseStatus, SafeUser } from "@interfaces";
 
-import { fetchWrapper } from "@utils/api";
+import { fetchWrapper, ErrorResponse, LoadedResponse } from "@utils/api";
 
 interface LoginValues {
   email: Email;
   password: Password;
 }
 
-type loginSignature = (user: LoginValues) => Promise<SafeUser | Error>;
+type loginSignature = (user: LoginValues) => Promise<Response>;
 
 const login: loginSignature = async user => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
-  const isHttpStatus = (obj: object): obj is HttpStatus => "statusCode" in obj;
-
   try {
-    const response: Promise<Response> = fetchWrapper.post({
-      url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
-      body: JSON.stringify({ ...user }),
-    });
+    const response: Response = await fetchWrapper
+      .post({
+        url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
+        body: JSON.stringify({ ...user }),
+      })
+      .then(res => res.json());
 
-    const userData: SafeUser | HttpStatus = await response.then(res =>
-      res.json()
-    );
-
-    if (isHttpStatus(userData)) throw new Error(userData.statusMessage);
-    else return userData;
+    if (response instanceof LoadedResponse)
+      return new LoadedResponse(200, response.body);
+    else if (response instanceof ErrorResponse) {
+      switch (response.statusCode) {
+        case 404:
+          return new ErrorResponse(404);
+        case 500:
+        default:
+          return new ErrorResponse(500);
+      }
+    }
   } catch (error) {
-    throw new Error("foo"); // @@@
+    return new ErrorResponse(500);
   }
 };
 
