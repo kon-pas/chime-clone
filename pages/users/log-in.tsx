@@ -1,9 +1,9 @@
 import * as LogInComponents from "@components/pages/log-in";
 
-import { ReactElement, useEffect } from "react";
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
 
+import { ReactElement, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { login } from "@services";
 import { useUser } from "@hooks";
 import ModalLayout from "@components/composition/ModalLayout";
+import { ErrorResponse, LoadedResponse } from "@utils/api";
 
 interface FormValues {
   email: Email;
@@ -33,15 +34,14 @@ const LogInPage: NextPageWithLayout = () => {
   const onSubmit = (data: FormValues) =>
     login(data)
       .then(res => {
-        if (res instanceof Error) throw new Error(res.message);
-        else return res;
+        console.error("UGH")
+        if (res instanceof LoadedResponse) {
+          setUser(res.body)
+          navigate("/");
+        }
+        else throw new Error(`${res.statusCode}`);
       })
-      .then(user => {
-        navigate("/");
-        return user;
-      })
-      .then(user => setUser(user))
-      .catch(error => console.error(error.message));
+      .catch(error => console.error('error.message'));
 
   useEffect(() => {
     if (user) console.info(`Logged in as ${user.username}`);
