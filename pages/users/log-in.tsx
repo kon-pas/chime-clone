@@ -31,17 +31,20 @@ const LogInPage: NextPageWithLayout = () => {
   const [user, setUser] = useUser();
 
   // @@@ This may not be the best solution, but was trying to not Google
-  const onSubmit = (data: FormValues) =>
-    login(data)
-      .then(res => {
-        console.error("UGH")
-        if (res instanceof LoadedResponse) {
-          setUser(res.body)
-          navigate("/");
-        }
-        else throw new Error(`${res.statusCode}`);
-      })
-      .catch(error => console.error('error.message'));
+  const onSubmit = (data: FormValues) => {
+    try {
+      login(data)
+        .then(res => {
+          if (res instanceof LoadedResponse) {
+            setUser(res.body);
+            navigate("/");
+          } else throw new Error(`${res.statusCode}`);
+        })
+        .catch(error => console.error("AGH"));
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     if (user) console.info(`Logged in as ${user.username}`);
