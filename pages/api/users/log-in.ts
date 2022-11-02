@@ -13,6 +13,7 @@ type handlerSignature = (
 
 const handler: handlerSignature = async (req, res) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
+  console.error("EGH");
 
   try {
     const response: Response = await fetchWrapper
@@ -47,6 +48,7 @@ const handler: handlerSignature = async (req, res) => {
       }
     }
   } catch (error) {
+    console.error("EGH");
     res.status(500).send(new ErrorResponse(500));
   }
 };
