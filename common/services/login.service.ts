@@ -22,15 +22,7 @@ const login: loginSignature = async user => {
 
     if (response instanceof LoadedResponse)
       return new LoadedResponse(200, { ...response.body });
-    else {
-      switch (response.statusCode) {
-        case 404:
-          return new ErrorResponse(404);
-        case 500:
-        default:
-          return new ErrorResponse(500);
-      }
-    }
+    else return new ErrorResponse(response.statusCode);
   } catch (error) {
     return new ErrorResponse(500);
   }
