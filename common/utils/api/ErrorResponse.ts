@@ -6,14 +6,16 @@ import { HTTP } from "@constants";
 
 export default class ErrorResponse {
   public readonly statusCode: HttpResponseStatusCode;
+  public readonly statusMessage: string;
 
   constructor(statusCode: HttpResponseStatusCode) {
     this.statusCode = statusCode;
+    this.statusMessage = ErrorResponse.codeMessage(this.statusCode);
   }
 
-  get statusMessage(): string {
+  static codeMessage(statusCode: HttpResponseStatusCode): string {
     for (const [_, { code, message }] of Object.entries(HTTP)) {
-      if (this.statusCode === code) return message;
+      if (statusCode === code) return message;
     }
 
     // @@@ TODO: Get rid of this hard-coded return, although it is
