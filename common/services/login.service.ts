@@ -1,4 +1,4 @@
-import type { Email, Password, Response } from "@types";
+import type { Email, Password } from "@types";
 
 import { fetchWrapper, HttpResponse } from "@utils/api";
 
@@ -7,20 +7,20 @@ interface LoginValues {
   password: Password;
 }
 
-type loginSignature = (user: LoginValues) => Promise<Response>;
+type loginSignature = (user: LoginValues) => Promise<HttpResponse>;
 
 const login: loginSignature = async user => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
   try {
-    const response: Response = await fetchWrapper
+    const response: HttpResponse = await fetchWrapper
       .post({
         url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
         body: JSON.stringify(user),
       })
       .then(res => res.json());
 
-    if (response.statusCode === 200 && response instanceof HttpResponse) {
+    if (response.success) {
       return new HttpResponse(200, { ...response.body });
     } else return new HttpResponse(response.statusCode);
   } catch (error) {
