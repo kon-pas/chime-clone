@@ -1,15 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import type { Response } from "@types";
-
 import type { FullUser } from "@interfaces";
 
-import { ErrorResponse, LoadedResponse, fetchWrapper } from "@utils/api";
+import { HttpResponse, fetchWrapper } from "@utils/api";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<Response>
-  // res: NextApiResponse
+  res: NextApiResponse<HttpResponse>
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
@@ -35,16 +32,16 @@ const handler: handlerSignature = async (req, res) => {
 
         if (targetUser)
           res.status(200).send(
-            new LoadedResponse(200, {
+            new HttpResponse(200, {
               username: targetUser.username,
               email: targetUser.email,
             })
           );
-        else res.status(404).send(new ErrorResponse(404));
-      } else res.status(500).send(new ErrorResponse(500));
+        else res.status(404).send(new HttpResponse(404));
+      } else res.status(500).send(new HttpResponse(500));
     }
   } catch (error) {
-    res.status(500).send(new ErrorResponse(500));
+    res.status(500).send(new HttpResponse(500));
   }
 };
 
