@@ -4,6 +4,10 @@ import type { HttpResponseStatusCode } from "@types";
 
 import { HTTP } from "@constants";
 
+/**
+ * Deprecated.
+ * @see `@utils/api/HttpResponse`
+ */
 export default class ErrorResponse {
   public readonly statusCode: HttpResponseStatusCode;
   public readonly statusMessage: string;
