@@ -1,18 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import type { Response } from "@types";
-
 import { HttpResponse } from "@utils/api";
 
 import { USERS } from "@database";
 
 type handlerSignature = (
   req: NextApiRequest,
-  res: NextApiResponse<Response>
+  res: NextApiResponse<HttpResponse>
 ) => void;
 
 /**
- * Imitating real database
+ * Imitating `users` document in database.
  */
 const handler: handlerSignature = async (req, res) => {
   if (req.method === "GET")
