@@ -11,6 +11,9 @@ type handlerSignature = (
   res: NextApiResponse<Response>
 ) => void;
 
+/**
+ * Imitating real database
+ */
 const handler: handlerSignature = async (req, res) => {
   if (req.method === "GET")
     res.status(200).send(new LoadedResponse(200, [...USERS]));
