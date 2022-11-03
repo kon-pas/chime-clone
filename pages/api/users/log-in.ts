@@ -9,25 +9,23 @@ import { ErrorResponse, LoadedResponse, fetchWrapper } from "@utils/api";
 type handlerSignature = (
   req: NextApiRequest,
   res: NextApiResponse<Response>
+  // res: NextApiResponse
 ) => void;
 
 const handler: handlerSignature = async (req, res) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
-  console.error("EGH");
 
   try {
-    const response: Response = await fetchWrapper
+    const response = await fetchWrapper
       .get({
         url: `${NEXT_PUBLIC_API_URL}/database/users`,
       })
       .then(res => res.json());
 
     if (req.method === "POST") {
-      const { email: targetEmail, password: targetPassword } = JSON.parse(
-        req.body
-      );
+      const { email: targetEmail, password: targetPassword } = req.body;
 
-      if (response instanceof LoadedResponse) {
+      if (response.statusCode === 200) {
         const { body } = response as any;
 
         const targetUser: FullUser | undefined = body.find(
@@ -43,12 +41,9 @@ const handler: handlerSignature = async (req, res) => {
             })
           );
         else res.status(404).send(new ErrorResponse(404));
-      } else if (response instanceof ErrorResponse) {
-        res.status(500).send(new ErrorResponse(500));
-      }
+      } else res.status(500).send(new ErrorResponse(500));
     }
   } catch (error) {
-    console.error("EGH");
     res.status(500).send(new ErrorResponse(500));
   }
 };
