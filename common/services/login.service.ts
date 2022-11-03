@@ -1,6 +1,6 @@
 import type { Email, Password, Response } from "@types";
 
-import { fetchWrapper, ErrorResponse, LoadedResponse } from "@utils/api";
+import { fetchWrapper, HttpResponse } from "@utils/api";
 
 interface LoginValues {
   email: Email;
@@ -20,11 +20,11 @@ const login: loginSignature = async user => {
       })
       .then(res => res.json());
 
-    if (response instanceof LoadedResponse)
-      return new LoadedResponse(200, { ...response.body });
-    else return new ErrorResponse(response.statusCode);
+    if (response.statusCode === 200 && response instanceof HttpResponse) {
+      return new HttpResponse(200, { ...response.body });
+    } else return new HttpResponse(response.statusCode);
   } catch (error) {
-    return new ErrorResponse(500);
+    return new HttpResponse(500);
   }
 };
 
