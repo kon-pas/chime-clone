@@ -8,9 +8,13 @@ export type Username = string;
 
 export type Password = string;
 
-export type Response = ErrorResponse | LoadedResponse;
-
 export type HttpResponseStatusCode = 
-  | 200
-  | 404
-  | 500
+| 200
+| 404
+| 500
+
+/**
+ * Deprecated.
+ * @see `@utils/api/HttpResponse`
+ */
+export type Response = ErrorResponse | LoadedResponse;
