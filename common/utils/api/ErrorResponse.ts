@@ -19,7 +19,7 @@ export default class ErrorResponse {
     }
 
     // @@@ TODO: Get rid of this hard-coded return, although it is
-    // never reached as long as `HTTP` contains objects to all
+    // never reached as long as `HTTP` contains entries to all
     // corresponding `HttpResponseStatusCode`s
     return "Wrong code";
   }

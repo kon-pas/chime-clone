@@ -13,7 +13,7 @@ export interface NavigationItem {
 }
 
 /**
- * Contains props for creating Next's Image
+ * Contains props for creating Next Image
  */
 export interface NextImageProps {
   readonly src: `https://www.chime.com/${string}` | `/static/${string}`;
