@@ -22,7 +22,7 @@ const handler: handlerSignature = async (req, res) => {
     if (req.method === "POST") {
       const { email: targetEmail, password: targetPassword } = req.body;
 
-      if (response.statusCode === 200) {
+      if (response.success) {
         const { body } = response as any;
 
         const targetUser: FullUser | undefined = body.find(
@@ -38,7 +38,10 @@ const handler: handlerSignature = async (req, res) => {
             })
           );
         else res.status(404).send(new HttpResponse(404));
-      } else res.status(500).send(new HttpResponse(500));
+      } else
+        res
+          .status(response.statusCode)
+          .send(new HttpResponse(response.statusCode));
     }
   } catch (error) {
     res.status(500).send(new HttpResponse(500));
