@@ -12,7 +12,6 @@ import { useForm } from "react-hook-form";
 import { login } from "@services";
 import { useUser } from "@hooks";
 import ModalLayout from "@components/composition/ModalLayout";
-import { ErrorResponse, LoadedResponse } from "@utils/api";
 
 interface FormValues {
   email: Email;
@@ -31,19 +30,16 @@ const LogInPage: NextPageWithLayout = () => {
   const [user, setUser] = useUser();
 
   // @@@ This may not be the best solution, but was trying to not Google
-  const onSubmit = (data: FormValues) => {
-    try {
-      login(data)
-        .then(res => {
-          if (res instanceof LoadedResponse) {
-            setUser(res.body);
-            navigate("/");
-          } else throw new Error(`${res.statusCode}`);
-        })
-        .catch(error => console.error("AGH"));
-    } catch (error) {
-      console.error(error);
-    }
+  const onSubmit = (loginData: FormValues) => {
+    login(
+      loginData,
+      safeUserData => {
+        setUser(safeUserData);
+        navigate("/");
+      }
+      // ,
+      // () => console.warn("I failed")
+    );
   };
 
   useEffect(() => {
