@@ -12,7 +12,7 @@ interface LoginValues {
 type loginSignature = (
   loginData: LoginValues,
   onSuccess: (safeUserData?: SafeUser) => void,
-  onFailure?: (safeUserData?: SafeUser) => void
+  onFailure?: () => void
 ) => Promise<boolean>;
 
 const login: loginSignature = async (loginData, onSuccess, onFailure) => {
@@ -26,13 +26,12 @@ const login: loginSignature = async (loginData, onSuccess, onFailure) => {
       })
       .then(res => res.json());
 
-    const safeUserData = response.body as SafeUser;
-
     if (response.success) {
+      const safeUserData = response.body as SafeUser;
       onSuccess(safeUserData);
       return true;
     } else {
-      onFailure && onFailure(safeUserData);
+      onFailure && onFailure();
       return false;
     }
   } catch (error) {
