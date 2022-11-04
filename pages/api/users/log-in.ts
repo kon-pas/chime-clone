@@ -13,7 +13,7 @@ const handler: handlerSignature = async (req, res) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
   try {
-    const response = await fetchWrapper
+    const response: HttpResponse = await fetchWrapper
       .get({
         url: `${NEXT_PUBLIC_API_URL}/database/users`,
       })
@@ -23,9 +23,9 @@ const handler: handlerSignature = async (req, res) => {
       const { email: targetEmail, password: targetPassword } = req.body;
 
       if (response.success) {
-        const { body } = response as any;
+        const users = response.body as FullUser[];
 
-        const targetUser: FullUser | undefined = body.find(
+        const targetUser: FullUser | undefined = users.find(
           (user: FullUser) =>
             user.email === targetEmail && user.password === targetPassword
         );
