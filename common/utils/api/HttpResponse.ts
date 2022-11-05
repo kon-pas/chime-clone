@@ -1,6 +1,6 @@
 import type { HttpResponseStatus } from "@interfaces";
 
-import type { HttpResponseStatusCode } from "@types";
+import type { HttpResponseStatusCode, HttpResponseStatusMessage } from "@types";
 
 import { HTTP } from "@constants";
 
@@ -19,7 +19,7 @@ import { HTTP } from "@constants";
  */
 export default class HttpResponse {
   public readonly statusCode: HttpResponseStatusCode;
-  public readonly statusMessage: string;
+  public readonly statusMessage: HttpResponseStatusMessage;
   public readonly success?: boolean;
   public readonly body?: object;
 
@@ -30,7 +30,7 @@ export default class HttpResponse {
     this.body = body;
   }
 
-  static codeMessage(statusCode: HttpResponseStatusCode): string {
+  static codeMessage(statusCode: HttpResponseStatusCode): HttpResponseStatusMessage {
     for (const [_, { code, message }] of Object.entries(HTTP)) {
       if (statusCode === code) return message;
     }
@@ -38,7 +38,7 @@ export default class HttpResponse {
     // @@@ TODO: Get rid of this hard-coded return, although it is
     // never reached as long as `HTTP` contains entries to all
     // corresponding `HttpResponseStatusCode`s
-    return "Wrong code";
+    return "Not Found";
   }
 
   get status(): HttpResponseStatus {
