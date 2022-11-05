@@ -13,9 +13,15 @@ type handlerSignature = (
  * Imitating `users` document in database.
  */
 const handler: handlerSignature = async (req, res) => {
-  if (req.method === "GET")
-    res.status(200).send(new HttpResponse(200, [...USERS]));
-  else res.status(500).send(new HttpResponse(500));
+  switch (req.method) {
+    case "GET":
+      res.status(200).send(new HttpResponse(200, [...USERS]));
+    case "PUT":
+      USERS.push(req.body);
+      res.status(201).send(new HttpResponse(201));
+    default:
+      res.status(500).send(new HttpResponse(500));
+  }
 };
 
 export default handler;
