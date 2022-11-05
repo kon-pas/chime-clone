@@ -1,4 +1,10 @@
-import type { Email, Password, Username, HttpResponseStatusCode } from "@types";
+import type {
+  Email,
+  Password,
+  Username,
+  HttpResponseStatusCode,
+  HttpResponseStatusMessage,
+} from "@types";
 
 /**
  * Interface for two-level navigation item
@@ -37,5 +43,5 @@ export interface FullUser extends SafeUser {
 
 export interface HttpResponseStatus {
   readonly code: HttpResponseStatusCode;
-  readonly message: string;
+  readonly message: HttpResponseStatusMessage;
 }
