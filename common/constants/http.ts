@@ -5,6 +5,10 @@ const HTTP: { [key: string]: HttpResponseStatus } = {
     code: 200,
     message: "OK",
   },
+  STATUS_201: {
+    code: 201,
+    message: "Created",
+  },
   STATUS_404: {
     code: 404,
     message: "Not Found",
