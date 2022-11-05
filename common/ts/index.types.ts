@@ -9,9 +9,16 @@ export type Username = string;
 export type Password = string;
 
 export type HttpResponseStatusCode = 
-| 200
-| 404
-| 500
+  | 200
+  | 201
+  | 404
+  | 500
+
+export type HttpResponseStatusMessage =
+  | "OK"
+  | "Created"
+  | "Not Found"
+  | "Internal Server Error"
 
 /**
  * Deprecated.
