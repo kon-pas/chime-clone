@@ -17,3 +17,15 @@ export const post: postSignature = ({ url, body }) =>
     headers: { "Content-Type": "application/json; charset=utf8" },
     body,
   });
+
+type putSignature = (options: {
+  url: string;
+  body: string;
+}) => Promise<Response>;
+
+export const put: putSignature = ({ url, body }) =>
+  fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json; charset=utf8" },
+    body,
+  });
