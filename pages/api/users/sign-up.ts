@@ -12,11 +12,13 @@ const handler: handlerSignature = async (req, res) => {
 
   try {
     const response: HttpResponse = await fetchWrapper
-      .get({
+      .put({
         url: `${NEXT_PUBLIC_API_URL}/database/users`,
+        body: JSON.stringify(req.body),
       })
       .then(res => res.json());
 
+    res.status(response.statusCode).send(new HttpResponse(response.statusCode));
   } catch (error) {
     res.status(500).send(new HttpResponse(500));
   }
