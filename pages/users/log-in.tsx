@@ -6,6 +6,7 @@ import type { Email, Password } from "@types";
 import { ReactElement, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
@@ -48,6 +49,11 @@ const LogInPage: NextPageWithLayout = () => {
 
   return (
     <LogInComponents.Container>
+      <Head>
+        <title>Member Login | Chime</title>
+        <meta name="description" content="Chime Clone Member Log In" />
+      </Head>
+
       <Link href="/" passHref>
         <a>
           <Image
