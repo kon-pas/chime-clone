@@ -1,4 +1,5 @@
 import * as LogInComponents from "@components/pages/log-in";
+import * as SignUpComponents from "@components/pages/sing-up";
 
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
@@ -6,6 +7,7 @@ import type { Email, Password } from "@types";
 import { ReactElement, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 // import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
@@ -35,6 +37,11 @@ const SignUpPage: NextPageWithLayout = () => {
 
   return (
     <LogInComponents.Container>
+      <Head>
+        <title>Apply Today | Chime</title>
+        <meta name="description" content="Chime Clone Sign Up" />
+      </Head>
+
       <Link href="/" passHref>
         <a>
           <Image
