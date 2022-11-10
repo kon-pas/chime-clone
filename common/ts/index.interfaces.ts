@@ -1,7 +1,8 @@
 import type {
   Email,
   Password,
-  Username,
+  FirstName,
+  SecondName,
   HttpResponseStatusCode,
   HttpResponseStatusMessage,
 } from "@types";
@@ -34,7 +35,8 @@ export interface NextImageProps {
 
 export interface SafeUser {
   email: Email;
-  username: Username;
+  firstName: FirstName;
+  secondName: SecondName;
 }
 
 export interface FullUser extends SafeUser {
