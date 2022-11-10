@@ -10,7 +10,7 @@ const Input = styled.input`
   border-radius: 0.25rem;
 
   &:focus {
-    border: 1px solid ${COLORS.BLACK};
+    outline: 2px solid ${COLORS.LIME_MEDIUM};
   }
 `;
 
