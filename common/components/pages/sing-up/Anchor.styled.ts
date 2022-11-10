@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-const Anchor = styled.div`
+import { COLORS } from "@constants";
 
+const Anchor = styled.div`
+  font-weight: 700;
+  color: ${COLORS.LIME_DARK};
 `;
 
 export default Anchor;
