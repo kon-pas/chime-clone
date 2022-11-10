@@ -1,21 +1,21 @@
-import * as LogInComponents from "@components/pages/log-in";
 import * as SignUpComponents from "@components/pages/sing-up";
 
 import type { NextPageWithLayout } from "@pages/_app";
-import type { Email, Password } from "@types";
+import type { FirstName, SecondName, Email, Password } from "@types";
 
 import { ReactElement, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
-// import { login } from "@services";
-// import { useUser } from "@hooks";
+import { register } from "@services";
 import ModalLayout from "@components/composition/ModalLayout";
 
 interface FormValues {
+  firstName: FirstName;
+  secondName: SecondName;
   email: Email;
   password: Password;
 }
@@ -27,7 +27,7 @@ const SignUpPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  // const { push: navigate } = useRouter();
+  const { push: navigate } = useRouter();
 
   // const [user, setUser] = useUser();
 
@@ -62,42 +62,50 @@ const SignUpPage: NextPageWithLayout = () => {
       </SignUpComponents.Text1>
 
       <SignUpComponents.Form.Container onSubmit={handleSubmit(() => {})}>
-        {/* @@@ TODO: handle submit */}
         <SignUpComponents.Form.Splitter>
+          {/* First name */}
           <SignUpComponents.Form.Input
-            type="email"
+            type="firstName"
             placeholder="First name"
-            {...register("email", {
+            {...register("firstName", {
               required: "required",
-              pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: "Entered value does not match email format",
+              minLength: {
+                value: 2,
+                message: "Minimum length is 2",
               },
             })}
           />
-          {errors.email && (
-            <SignUpComponents.Form.Error>
-              Please correct your email address
-            </SignUpComponents.Form.Error>
-          )}
 
+          {/* Second name */}
           <SignUpComponents.Form.Input
-            type="email"
+            type="secondName"
             placeholder="First name"
-            {...register("email", {
+            {...register("secondName", {
               required: "required",
-              pattern: {
-                value: /\S+@\S+\.\S+/,
-                message: "Entered value does not match email format",
+              minLength: {
+                value: 2,
+                message: "Minimum length is 2",
               },
             })}
           />
-          {errors.email && (
-            <SignUpComponents.Form.Error>
-              Please correct your email address
-            </SignUpComponents.Form.Error>
-          )}
         </SignUpComponents.Form.Splitter>
+
+        {(errors.firstName || errors.secondName) && (
+          <SignUpComponents.Form.Splitter>
+            {errors.firstName && (
+              <SignUpComponents.Form.Error>
+                Please correct your first name
+              </SignUpComponents.Form.Error>
+            )}
+            {errors.secondName && (
+              <SignUpComponents.Form.Error>
+                Please correct your second name
+              </SignUpComponents.Form.Error>
+            )}
+          </SignUpComponents.Form.Splitter>
+        )}
+
+        {/* Email */}
         <SignUpComponents.Form.Input
           type="email"
           placeholder="First name"
@@ -114,6 +122,8 @@ const SignUpPage: NextPageWithLayout = () => {
             Please correct your email address
           </SignUpComponents.Form.Error>
         )}
+
+        {/* Password */}
         <SignUpComponents.Form.Input
           type="password"
           placeholder="Password"
@@ -121,7 +131,7 @@ const SignUpPage: NextPageWithLayout = () => {
             required: "required",
             minLength: {
               value: 5,
-              message: "min length is 5",
+              message: "Minimum length is 5",
             },
           })}
         />
@@ -130,6 +140,8 @@ const SignUpPage: NextPageWithLayout = () => {
             Please correct your password
           </SignUpComponents.Form.Error>
         )}
+
+        {/* Submit */}
         <SignUpComponents.Form.Submit disabled={isSubmitting} type="submit">
           Sign Up
         </SignUpComponents.Form.Submit>
