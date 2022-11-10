@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-`;
+import { Container as LogInContainer } from "@components/pages/log-in";
+
+const Container = styled(LogInContainer)``;
 
 export default Container;
