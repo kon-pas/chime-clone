@@ -53,7 +53,23 @@ const SignUpPage: NextPageWithLayout = () => {
         </a>
       </Link>
 
+      <SignUpComponents.Heading>
+        Hi, what&apos;s your name?
+      </SignUpComponents.Heading>
 
+      <SignUpComponents.Text1>
+        Let&apos;s start with some basic information.
+      </SignUpComponents.Text1>
+
+      {/* Form */}
+
+      <SignUpComponents.Text2>
+        You can change your preffered name later in your profile.
+      </SignUpComponents.Text2>
+
+      <SignUpComponents.Anchor>
+        Already have an account?
+      </SignUpComponents.Anchor>
     </SignUpComponents.Container>
 
     //   <LogInComponents.Form.Container>  {/* handle submit */}
@@ -95,26 +111,11 @@ const SignUpPage: NextPageWithLayout = () => {
     //       Login
     //     </LogInComponents.Form.Submit>
     //   </LogInComponents.Form.Container>
-
-    //   <LogInComponents.Text1>
-    //     By clicking “Log In”, you agree to receive SMS text messages from Chime
-    //     to verify your identity
-    //   </LogInComponents.Text1>
-
-    //   <LogInComponents.Text2>
-    //     © 2022 Chime. All Rights Reserved.
-    //   </LogInComponents.Text2>
-
-    //   <LogInComponents.Text3>
-    //     Banking Services provided by The Bancorp Bank or Stride Bank, N.A.,
-    //     Members FDIC. The Chime Visa® Debit Card is issued by The Bancorp Bank
-    //     or Stride Bank pursuant to a license from Visa U.S.A. Inc. and may be
-    //     used everywhere Visa debit cards are accepted. Please see back of your
-    //     Card for its issuing bank.
-    //   </LogInComponents.Text3>
   );
 };
 
-SignUpPage.getLayout = (page: ReactElement) => <ModalLayout>{page}</ModalLayout>;
+SignUpPage.getLayout = (page: ReactElement) => (
+  <ModalLayout>{page}</ModalLayout>
+);
 
 export default SignUpPage;
