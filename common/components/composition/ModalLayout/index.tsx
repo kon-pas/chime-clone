@@ -2,13 +2,16 @@ import * as Styled from "./ModalLayout.styled";
 
 import type { FC, ReactNode } from "react";
 
-interface ModalProps {
+interface ModalLayoutrops {
   children: ReactNode;
+  width?: number;
 }
 
-const ModalLayout: FC<ModalProps> = props => {
+const ModalLayout: FC<ModalLayoutrops> = props => {
+  console.log(props.width);
+
   return (
-    <Styled.Container>
+    <Styled.Container width={props.width ?? 35}>
       {props.children}
     </Styled.Container>
   );
