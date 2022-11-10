@@ -2,6 +2,13 @@ import styled from "styled-components";
 
 import { Input as LogInInput } from "@components/pages/log-in/Form";
 
-const Input = styled(LogInInput)``;
+interface InputProps {
+  width?: number;
+}
+
+const Input = styled(LogInInput)<InputProps>`
+  width: ${props => props.width ?? 100}%;
+  display: inline-block;
+`;
 
 export default Input;
