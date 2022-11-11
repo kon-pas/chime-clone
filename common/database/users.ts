@@ -5,17 +5,20 @@ import type { FullUser } from "@interfaces";
  */
 const users: FullUser[] = [
   {
-    username: "Jan_Kowalski",
+    firstName: "Jan",
+    secondName: "Kowalski",
     email: "jan@kowalski.com",
     password: "kowal123",
   },
   {
-    username: "Jan_Nowak",
+    firstName: "Jan",
+    secondName: "Nowak",
     email: "jan@nowak.com",
     password: "nowak123",
   },
   {
-    username: "Jan_Jankowski",
+    firstName: "Jan",
+    secondName: "Jankowski",
     email: "jan@jankowski.com",
     password: "janek123",
   },
