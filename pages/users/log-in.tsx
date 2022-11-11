@@ -3,14 +3,14 @@ import * as LogInComponents from "@components/pages/log-in";
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
 
-import { ReactElement, useEffect } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
-import { login } from "@services";
+import { loginUser } from "@services";
 import { useUser } from "@hooks";
 import ModalLayout from "@components/composition/ModalLayout";
 
@@ -26,20 +26,20 @@ const LogInPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
+  const [isUserInvalid, setisUserInvalid] = useState<boolean>(false);
+
   const { push: navigate } = useRouter();
 
   const [user, setUser] = useUser();
 
-  // @@@ This may not be the best solution, but was trying to not Google
   const onSubmit = (loginData: FormValues) => {
-    login(
+    loginUser(
       loginData,
       safeUserData => {
         setUser(safeUserData);
         navigate("/");
-      }
-      // ,
-      // () => console.warn("I failed")
+      },
+      () => setisUserInvalid(true)
     );
   };
 
@@ -90,11 +90,11 @@ const LogInPage: NextPageWithLayout = () => {
             required: "required",
             minLength: {
               value: 5,
-              message: "min length is 5",
+              message: "Minimum length is 5",
             },
           })}
         />
-        {errors.email && (
+        {errors.password && (
           <LogInComponents.Form.Error>
             Please correct your password
           </LogInComponents.Form.Error>
@@ -103,6 +103,11 @@ const LogInPage: NextPageWithLayout = () => {
         <LogInComponents.Form.Submit disabled={isSubmitting} type="submit">
           Login
         </LogInComponents.Form.Submit>
+        {isUserInvalid && (
+          <LogInComponents.Form.Error>
+            User not found
+          </LogInComponents.Form.Error>
+        )}
       </LogInComponents.Form.Container>
 
       <LogInComponents.Text1>
