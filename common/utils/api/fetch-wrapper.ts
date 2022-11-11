@@ -25,7 +25,7 @@ type putSignature = (options: {
 
 export const put: putSignature = ({ url, body }) =>
   fetch(url, {
-    method: "POST",
+    method: "PUT",
     headers: { "Content-Type": "application/json; charset=utf8" },
     body,
   });
