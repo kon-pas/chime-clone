@@ -18,6 +18,8 @@ const handler: handlerSignature = async (req, res) => {
       })
       .then(res => res.json());
 
+    // console.log("hi");
+
     res.status(response.statusCode).send(new HttpResponse(response.statusCode));
   } catch (error) {
     res.status(500).send(new HttpResponse(500));

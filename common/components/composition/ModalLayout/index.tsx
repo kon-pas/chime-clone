@@ -8,8 +8,6 @@ interface ModalLayoutrops {
 }
 
 const ModalLayout: FC<ModalLayoutrops> = props => {
-  console.log(props.width);
-
   return (
     <Styled.Container width={props.width ?? 35}>
       {props.children}
