@@ -10,7 +10,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
-import { register } from "@services";
+import { registerUser } from "@services";
 import ModalLayout from "@components/composition/ModalLayout";
 
 interface FormValues {
@@ -28,6 +28,19 @@ const SignUpPage: NextPageWithLayout = () => {
   } = useForm<FormValues>();
 
   const { push: navigate } = useRouter();
+
+  const onSubmit = (registerData: FormValues) => {
+    registerUser(
+      registerData,
+      () => {
+        console.info("User created", registerData);
+        navigate("/users/log-in");
+      },
+      () => {
+        console.warn("User creation failed!")
+      }
+    );
+  };
 
   // const [user, setUser] = useUser();
 
@@ -61,7 +74,7 @@ const SignUpPage: NextPageWithLayout = () => {
         Let&apos;s start with some basic information.
       </SignUpComponents.Text1>
 
-      <SignUpComponents.Form.Container onSubmit={handleSubmit(() => {})}>
+      <SignUpComponents.Form.Container onSubmit={handleSubmit(onSubmit)}>
         <SignUpComponents.Form.Splitter>
           {/* First name */}
           <SignUpComponents.Form.Input
