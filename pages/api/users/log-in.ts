@@ -33,7 +33,8 @@ const handler: handlerSignature = async (req, res) => {
         if (targetUser)
           res.status(200).send(
             new HttpResponse(200, {
-              username: targetUser.username,
+              firstName: targetUser.firstName,
+              secondName: targetUser.secondName,
               email: targetUser.email,
             })
           );
