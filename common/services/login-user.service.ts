@@ -9,13 +9,13 @@ interface LoginValues {
   password: Password;
 }
 
-type loginSignature = (
+type loginUserSignature = (
   loginData: LoginValues,
   onSuccess: (safeUserData?: SafeUser) => void,
   onFailure?: () => void
 ) => Promise<boolean>;
 
-const login: loginSignature = async (loginData, onSuccess, onFailure) => {
+const loginUser: loginUserSignature = async (loginData, onSuccess, onFailure) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
   try {
@@ -40,4 +40,4 @@ const login: loginSignature = async (loginData, onSuccess, onFailure) => {
   }
 };
 
-export default login;
+export default loginUser;
