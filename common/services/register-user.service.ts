@@ -1,20 +1,25 @@
-import type { Username, Email, Password } from "@types";
+import type { FirstName, SecondName, Email, Password } from "@types";
 
 import { fetchWrapper, HttpResponse } from "@utils/api";
 
 interface RegisterValues {
-  username: Username;
+  firstName: FirstName;
+  secondName: SecondName;
   email: Email;
   password: Password;
 }
 
-type loginSignature = (
+type registerUserSignature = (
   loginData: RegisterValues,
   onSuccess?: () => void,
   onFailure?: () => void
 ) => Promise<boolean>;
 
-const login: loginSignature = async (registerData, onSuccess, onFailure) => {
+const registerUser: registerUserSignature = async (
+  registerData,
+  onSuccess,
+  onFailure
+) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
   try {
@@ -38,4 +43,4 @@ const login: loginSignature = async (registerData, onSuccess, onFailure) => {
   }
 };
 
-export default login;
+export default registerUser;
