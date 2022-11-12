@@ -13,6 +13,6 @@ const ModalLayout: FC<ModalLayoutrops> = props => {
       {props.children}
     </Styled.Container>
   );
-}
+};
 
 export default ModalLayout;

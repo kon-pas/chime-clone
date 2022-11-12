@@ -12,8 +12,10 @@ const Loader: FC = () => {
   const { events, asPath } = useRouter();
 
   useEffect(() => {
-    const hidePageContent = (url: string) => (url !== asPath) && setIsLoading(true);
-    const showPageContent = (url: string) => (url === asPath) && setIsLoading(false);
+    const hidePageContent = (url: string) =>
+      url !== asPath && setIsLoading(true);
+    const showPageContent = (url: string) =>
+      url === asPath && setIsLoading(false);
 
     events.on("routeChangeStart", hidePageContent);
     events.on("routeChangeComplete", showPageContent);
@@ -28,7 +30,7 @@ const Loader: FC = () => {
 
   return (
     <>
-      {isLoading && 
+      {isLoading && (
         <Styled.LoaderWrapper>
           <Styled.AnimationWrapper>
             <IconSVG>
@@ -40,7 +42,7 @@ const Loader: FC = () => {
             </IconSVG>
           </Styled.AnimationWrapper>
         </Styled.LoaderWrapper>
-      }
+      )}
     </>
   );
 };

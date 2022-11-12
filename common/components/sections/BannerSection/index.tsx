@@ -18,9 +18,7 @@ const BannerSection: FC<BannerSectionProps> = props => {
   return (
     <Styled.Wrapper backgroundColor={props.backgroundColor}>
       <Styled.Container>
-        <Styled.ChildrenContainer>
-          {props.children}
-        </Styled.ChildrenContainer>
+        <Styled.ChildrenContainer>{props.children}</Styled.ChildrenContainer>
 
         <Styled.ImageWrapper align={props.img.align} {...props.img.width}>
           <Image
@@ -34,6 +32,6 @@ const BannerSection: FC<BannerSectionProps> = props => {
       </Styled.Container>
     </Styled.Wrapper>
   );
-}
+};
 
 export default BannerSection;

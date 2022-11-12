@@ -43,25 +43,27 @@ const Header: FC = () => {
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                {item.path
-                  ? (
-                      <Styled.Span>
-                        <Link href={item.path}>{item.label}</Link>
-                      </Styled.Span>
-                    )
-                  : <Styled.Span><span style={{opacity: 0.3}}>{item.label}</span></Styled.Span>
-                }
+                {item.path ? (
+                  <Styled.Span>
+                    <Link href={item.path}>{item.label}</Link>
+                  </Styled.Span>
+                ) : (
+                  <Styled.Span>
+                    <span style={{ opacity: 0.3 }}>{item.label}</span>
+                  </Styled.Span>
+                )}
 
                 <Styled.SubmenuContainerDesktop>
                   <menu>
-                    {item.subitems.map((subitem, idx) =>
+                    {item.subitems.map((subitem, idx) => (
                       <li key={idx}>
-                        {subitem.path
-                          ? <Link href={subitem.path}>{subitem.label}</Link>
-                          : <span style={{opacity: 0.3}}>{subitem.label}</span>
-                        }
+                        {subitem.path ? (
+                          <Link href={subitem.path}>{subitem.label}</Link>
+                        ) : (
+                          <span style={{ opacity: 0.3 }}>{subitem.label}</span>
+                        )}
                       </li>
-                    )}
+                    ))}
                   </menu>
                 </Styled.SubmenuContainerDesktop>
               </li>
@@ -78,7 +80,11 @@ const Header: FC = () => {
             <Styled.Button>Sign Up</Styled.Button>
           </Link>
 
-          <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
+          <IconSVG
+            onClick={() =>
+              setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)
+            }
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -103,7 +109,11 @@ const Header: FC = () => {
             </h1>
           </Link>
 
-          <IconSVG onClick={() => setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)}>
+          <IconSVG
+            onClick={() =>
+              setIsSpliderOpened(isSpliderOpened => !isSpliderOpened)
+            }
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -116,18 +126,22 @@ const Header: FC = () => {
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
-                {item.path
-                  ? <Link href={item.path}>{item.label}</Link>
-                  : <span style={{opacity: 0.3}}>{item.label}</span>
-                }
+                {item.path ? (
+                  <Link href={item.path}>{item.label}</Link>
+                ) : (
+                  <span style={{ opacity: 0.3 }}>{item.label}</span>
+                )}
 
                 <menu>
                   {item.subitems.map((subitem, idx) => (
                     <li key={idx}>
-                      {subitem.path
-                        ? <Link href={subitem.path}><span>{subitem.label}</span></Link>
-                        : <span style={{opacity: 0.3}}>{subitem.label}</span>
-                      }
+                      {subitem.path ? (
+                        <Link href={subitem.path}>
+                          <span>{subitem.label}</span>
+                        </Link>
+                      ) : (
+                        <span style={{ opacity: 0.3 }}>{subitem.label}</span>
+                      )}
                     </li>
                   ))}
                 </menu>

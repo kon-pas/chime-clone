@@ -1,6 +1,6 @@
 import * as Styled from "./styled";
 
-import type { FC, ReactNode } from "react"
+import type { FC, ReactNode } from "react";
 import Image from "next/image";
 
 import type { HexColor } from "@types";
