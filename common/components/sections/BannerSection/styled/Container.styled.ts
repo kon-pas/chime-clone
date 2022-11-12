@@ -7,9 +7,9 @@ import ContentContainer from "@components/elements/ContentContainer";
 const Container = styled(ContentContainer)`
   position: relative;
 
-  ${getResizeTransition('all')}
+  ${getResizeTransition("all")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: flex;
     flex-direction: row;
     gap: 2rem;

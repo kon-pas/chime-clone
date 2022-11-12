@@ -18,7 +18,7 @@ const Wrapper = styled.div<WrapperProps>`
 
   ${getResizeTransition("padding")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     padding: 7rem 0;
   }
 `;

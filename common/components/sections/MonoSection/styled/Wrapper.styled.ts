@@ -15,9 +15,9 @@ const Wrapper = styled.div<WrapperProps>`
   background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   padding: 3rem 0;
 
-  ${getResizeTransition('padding')}
+  ${getResizeTransition("padding")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     padding: 6rem 0;
   }
 `;

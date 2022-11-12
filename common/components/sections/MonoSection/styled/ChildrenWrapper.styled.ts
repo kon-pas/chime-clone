@@ -16,14 +16,14 @@ const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   p {
     ${p}
   }
-  
+
   h2 {
     ${h2}
   }
 
-  ${getResizeTransition('width', 'margin')}
-  
-  ${getMedia('md')} {
+  ${getResizeTransition("width", "margin")}
+
+  ${getMedia("md")} {
     width: ${props => `${props.width}px`};
     margin: 0 auto;
     justify-items: center;

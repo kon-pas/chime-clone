@@ -15,17 +15,18 @@ const ImageWrapper = styled.div<ImageWrapper>`
   margin-right: auto;
   max-width: ${props => `${props.sm}px` ?? "100%"};
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     width: 50%;
     display: grid;
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
-    align-content: ${props => props.align === "bottom" ? "flex-end" : "center"};
+    align-content: ${props =>
+      props.align === "bottom" ? "flex-end" : "center"};
     max-width: ${props => `${props.md}px` ?? "50%"};
   }
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     max-width: ${props => `${props.lg}px` ?? "50%"};
   }
 `;

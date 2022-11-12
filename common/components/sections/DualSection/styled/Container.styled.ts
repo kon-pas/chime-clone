@@ -11,11 +11,12 @@ interface ContainerProps {
 }
 
 const Container = styled(ContentContainer)<ContainerProps>`
-  ${getResizeTransition('padding', 'gap')}
+  ${getResizeTransition("padding", "gap")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: flex;
-    flex-direction: ${props => props.imageFloat === "left" ? "row-reverse" : "row"};
+    flex-direction: ${props =>
+      props.imageFloat === "left" ? "row-reverse" : "row"};
     padding: 0 2rem;
     justify-content: space-between;
   }
