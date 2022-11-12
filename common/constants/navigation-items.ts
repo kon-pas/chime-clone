@@ -79,7 +79,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
   },
   {
     label: "Learn",
-    path: '/faq',
+    path: "/faq",
     subitems: [
       {
         label: "Blog",

@@ -30,7 +30,9 @@ export default class HttpResponse {
     this.body = body;
   }
 
-  static codeMessage(statusCode: HttpResponseStatusCode): HttpResponseStatusMessage {
+  static codeMessage(
+    statusCode: HttpResponseStatusCode
+  ): HttpResponseStatusMessage {
     for (const [_, { code, message }] of Object.entries(HTTP)) {
       if (statusCode === code) return message;
     }

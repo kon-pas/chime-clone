@@ -4,14 +4,14 @@ import { getMedia, getResizeTransition } from "@utils";
 
 export const h1 = css`
   font-size: 2.3rem;
-    
-  ${getResizeTransition('font-size')}
 
-  ${getMedia('md')} {
+  ${getResizeTransition("font-size")}
+
+  ${getMedia("md")} {
     font-size: 2.7rem;
   }
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     font-size: 3.3rem;
   }
 `;
@@ -21,9 +21,9 @@ export const h2 = css`
   line-height: 2.65rem;
   letter-spacing: 0.005em;
 
-  ${getResizeTransition('font-size')}
+  ${getResizeTransition("font-size")}
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     font-size: 2.25rem;
   }
 `;
@@ -31,9 +31,9 @@ export const h2 = css`
 export const h3 = css`
   font-size: 1.15rem;
 
-  ${getResizeTransition('font-size')}
+  ${getResizeTransition("font-size")}
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     font-size: 1.5rem;
   }
 `;

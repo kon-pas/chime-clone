@@ -15,7 +15,11 @@ type loginUserSignature = (
   onFailure?: () => void
 ) => Promise<boolean>;
 
-const loginUser: loginUserSignature = async (loginData, onSuccess, onFailure) => {
+const loginUser: loginUserSignature = async (
+  loginData,
+  onSuccess,
+  onFailure
+) => {
   const { NEXT_PUBLIC_API_URL } = process.env;
 
   try {
