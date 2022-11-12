@@ -37,7 +37,7 @@ const SignUpPage: NextPageWithLayout = () => {
         navigate("/users/log-in");
       },
       () => {
-        console.warn("User creation failed!")
+        console.warn("User creation failed!");
       }
     );
   };
