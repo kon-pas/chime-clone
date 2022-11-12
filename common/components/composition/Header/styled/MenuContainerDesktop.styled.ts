@@ -41,7 +41,7 @@ const MenuContainerDesktop = styled.nav`
   margin-left: 2rem;
   display: none;
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: inline-block;
   }
 
@@ -51,7 +51,7 @@ const MenuContainerDesktop = styled.nav`
 
     ${getResizeTransition("gap")}
 
-    ${getMedia('lg')} {
+    ${getMedia("lg")} {
       gap: 1.6rem;
     }
 

@@ -9,9 +9,9 @@ const Tab = styled.div`
   height: 5rem;
   cursor: pointer;
 
-  ${getResizeTransition('height')}
+  ${getResizeTransition("height")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     height: 6rem;
   }
 `;

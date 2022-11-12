@@ -12,9 +12,9 @@ const Container = styled(ContentContainer)`
   gap: 1.5rem;
   flex-wrap: wrap;
 
-  ${getResizeTransition('width')}
+  ${getResizeTransition("width")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     justify-content: space-between;
   }
 `;

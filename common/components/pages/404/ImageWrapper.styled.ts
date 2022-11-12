@@ -6,9 +6,9 @@ const ImageWrapper = styled.div`
   max-width: 405px;
   margin: 0 auto;
 
-  ${getResizeTransition('all')}
+  ${getResizeTransition("all")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: inline-block;
     margin-right: 0;
     width: 100%;

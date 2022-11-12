@@ -8,9 +8,9 @@ const Button = styled(GreenButton)`
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  ${getResizeTransition('width', 'color', 'background-color')}
+  ${getResizeTransition("width", "color", "background-color")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     width: fit-content;
     padding: 1rem 2rem;
   }

@@ -8,13 +8,13 @@ const Button = styled(GreenButton)`
   padding: 0.5rem 1.05rem;
   margin-left: 0.5rem;
 
-  ${getResizeTransition('padding', 'margin-left')}
+  ${getResizeTransition("padding", "margin-left")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     padding: 0.75rem 1.4rem;
   }
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     padding: 0.75rem 3.85rem;
     margin-left: 1.8rem;
   }

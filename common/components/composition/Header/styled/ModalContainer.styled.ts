@@ -16,7 +16,7 @@ const ModalContainer = styled.div<ModalContainerProps>`
   opacity: 0.98;
   width: 100%;
   user-select: none;
-  left: ${props => props.isVisible ? "0" : "100%"};
+  left: ${props => (props.isVisible ? "0" : "100%")};
   transition: left 0.2s ease-in-out;
 
   > header {
@@ -42,7 +42,6 @@ const ModalContainer = styled.div<ModalContainerProps>`
         align-items: center;
         cursor: pointer;
       }
-      
     }
 
     > svg {
@@ -52,7 +51,7 @@ const ModalContainer = styled.div<ModalContainerProps>`
     }
   }
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: none;
   }
 `;

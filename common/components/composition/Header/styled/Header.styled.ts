@@ -31,13 +31,13 @@ const Header = styled.header`
       color: ${COLORS.LIME_DARK};
       cursor: pointer;
 
-      ${getMedia('md')} {
+      ${getMedia("md")} {
         display: none;
       }
     }
   }
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     height: 65px;
     width: ${BREAKPOINTS.MD}px;
     margin: 0 auto;
@@ -47,7 +47,7 @@ const Header = styled.header`
     }
   }
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     width: ${BREAKPOINTS.LG}px;
     padding: 0 2rem;
   }

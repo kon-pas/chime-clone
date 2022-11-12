@@ -5,7 +5,7 @@ import { getMedia } from "@utils";
 import ContentContainer from "@components/elements/ContentContainer/ContentContainer.styled";
 
 const Container = styled(ContentContainer)`
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: flex;
   }
 `;

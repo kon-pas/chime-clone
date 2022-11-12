@@ -25,7 +25,7 @@ const Span = styled.span`
     color: ${COLORS.LIME_DARK};
   }
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: inline-block;
     font-size: 1rem;
   }
