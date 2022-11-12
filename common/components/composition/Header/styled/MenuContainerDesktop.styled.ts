@@ -74,10 +74,7 @@ const MenuContainerDesktop = styled.nav`
       > div {
         position: absolute;
         visibility: hidden;
-
-        @media (prefers-reduced-motion) {
-          animation: ${disappear} 0.2s ease-out;
-        }
+        animation: ${disappear} 0.2s ease-out;
       }
 
       &:hover > div {
