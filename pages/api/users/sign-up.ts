@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import { HttpResponse, fetchWrapper } from "@utils/api";
+import { generateId } from "@utils";
 
 type handlerSignature = (
   req: NextApiRequest,
@@ -14,11 +15,9 @@ const handler: handlerSignature = async (req, res) => {
     const response: HttpResponse = await fetchWrapper
       .put({
         url: `${NEXT_PUBLIC_API_URL}/database/users`,
-        body: JSON.stringify(req.body),
+        body: JSON.stringify({ id: generateId(), ...req.body }),
       })
       .then(res => res.json());
-
-    // console.log("hi");
 
     res.status(response.statusCode).send(new HttpResponse(response.statusCode));
   } catch (error) {

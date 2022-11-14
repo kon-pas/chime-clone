@@ -42,12 +42,6 @@ const SignUpPage: NextPageWithLayout = () => {
     );
   };
 
-  // const [user, setUser] = useUser();
-
-  // useEffect(() => {
-  //   if (user) console.info(`Logged in as ${user.username}`);
-  // }, [user]);
-
   return (
     <SignUpComponents.Container>
       <Head>
