@@ -3,9 +3,11 @@ import { hash, genSalt } from "bcrypt";
 const { HASH_BASE_SALT } = process.env;
 
 /**
+ * @deprecated Does not work client-side. Use `bcrypt` directly.
+ * 
  * Returns hashed value.
  * Use only server-side.
- * 
+ *
  * @param value - string to hash
  * @returns `Promise` resolving a hashed string
  */
