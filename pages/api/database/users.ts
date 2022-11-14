@@ -17,7 +17,7 @@ const { DB_AUTH_TOKEN } = process.env;
  * Imitating database.
  */
 const handler: handlerSignature = async (req, res) => {
-  const authToken = undefined;
+  const authToken = req.headers.authorization as string;
 
   const authTokenTrimmed: string | undefined =
     authToken && req.headers.authorization?.slice(7);
