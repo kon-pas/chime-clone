@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+import { hash, genSalt } from "bcrypt";
+
 import type { FullUser } from "@interfaces";
 
 import { HttpResponse, fetchWrapper } from "@utils/api";
@@ -9,7 +11,7 @@ type handlerSignature = (
   res: NextApiResponse<HttpResponse>
 ) => void;
 
-const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN } = process.env;
+const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN, HASH_BASE_SALT } = process.env;
 
 const handler: handlerSignature = async (req, res) => {
   try {
@@ -21,7 +23,9 @@ const handler: handlerSignature = async (req, res) => {
       .then(res => res.json());
 
     if (req.method === "POST") {
-      const { email: targetEmail, password: targetPassword } = req.body;
+      const { email: targetEmail, password } = req.body;
+      const salt = await genSalt(Number(HASH_BASE_SALT));
+      const targetPassword =  await hash(password, salt);
 
       if (response.success) {
         const users = response.body as FullUser[];
