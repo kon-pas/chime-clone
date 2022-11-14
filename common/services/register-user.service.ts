@@ -9,19 +9,13 @@ interface RegisterValues {
   password: Password;
 }
 
-type registerUserSignature = (
-  loginData: RegisterValues,
-  onSuccess?: () => void,
-  onFailure?: () => void
-) => Promise<boolean>;
-
 const { NEXT_PUBLIC_API_URL } = process.env;
 
-const registerUser: registerUserSignature = async (
-  registerData,
-  onSuccess,
-  onFailure
-) => {
+const registerUser = async (
+  registerData: RegisterValues,
+  onSuccess?: () => void,
+  onFailure?: () => void
+): Promise<boolean> => {
   try {
     const response: HttpResponse = await fetchWrapper
       .post({

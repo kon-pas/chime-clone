@@ -9,19 +9,13 @@ interface LoginValues {
   password: Password;
 }
 
-type loginUserSignature = (
+const { NEXT_PUBLIC_API_URL } = process.env;
+
+const loginUser = async (
   loginData: LoginValues,
   onSuccess: (safeUserData?: SafeUser) => void,
   onFailure?: () => void
-) => Promise<boolean>;
-
-const { NEXT_PUBLIC_API_URL } = process.env;
-
-const loginUser: loginUserSignature = async (
-  loginData,
-  onSuccess,
-  onFailure
-) => {
+): Promise<boolean> => {
   try {
     const response: HttpResponse = await fetchWrapper
       .post({
