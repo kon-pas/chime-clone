@@ -6,14 +6,12 @@ import type { FullUser } from "@interfaces";
 
 import { HttpResponse, fetchWrapper } from "@utils/api";
 
-type handlerSignature = (
-  req: NextApiRequest,
-  res: NextApiResponse<HttpResponse>
-) => void;
-
 const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN, HASH_BASE_SALT } = process.env;
 
-const handler: handlerSignature = async (req, res) => {
+const handler = async (
+  req: NextApiRequest,
+  res: NextApiResponse<HttpResponse>
+): Promise<void> => {
   try {
     const response: HttpResponse = await fetchWrapper
       .get({
@@ -25,7 +23,7 @@ const handler: handlerSignature = async (req, res) => {
     if (req.method === "POST") {
       const { email: targetEmail, password } = req.body;
       const salt = await genSalt(Number(HASH_BASE_SALT));
-      const targetPassword =  await hash(password, salt);
+      const targetPassword = await hash(password, salt);
 
       if (response.success) {
         const users = response.body as FullUser[];

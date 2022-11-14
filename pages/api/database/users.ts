@@ -6,17 +6,15 @@ import { HttpResponse } from "@utils/api";
 
 import { USERS } from "@database";
 
-type handlerSignature = (
-  req: NextApiRequest,
-  res: NextApiResponse<HttpResponse>
-) => void;
-
 const { DB_AUTH_TOKEN } = process.env;
 
 /**
  * Imitating database.
  */
-const handler: handlerSignature = async (req, res) => {
+const handler = async (
+  req: NextApiRequest,
+  res: NextApiResponse<HttpResponse>
+): Promise<void> => {
   const authToken = req.headers.authorization as string;
 
   const authTokenTrimmed: string | undefined =

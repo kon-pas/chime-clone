@@ -5,14 +5,12 @@ import { hash, genSalt } from "bcrypt";
 import { generateId } from "@utils";
 import { HttpResponse, fetchWrapper } from "@utils/api";
 
-type handlerSignature = (
-  req: NextApiRequest,
-  res: NextApiResponse<HttpResponse>
-) => void;
-
 const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN, HASH_BASE_SALT } = process.env;
 
-const handler: handlerSignature = async (req, res) => {
+const handler = async (
+  req: NextApiRequest,
+  res: NextApiResponse<HttpResponse>
+): Promise<void> => {
   try {
     const salt = await genSalt(Number(HASH_BASE_SALT));
     const password = await hash(req.body.password, salt);
