@@ -15,13 +15,13 @@ type loginUserSignature = (
   onFailure?: () => void
 ) => Promise<boolean>;
 
+const { NEXT_PUBLIC_API_URL } = process.env;
+
 const loginUser: loginUserSignature = async (
   loginData,
   onSuccess,
   onFailure
 ) => {
-  const { NEXT_PUBLIC_API_URL } = process.env;
-
   try {
     const response: HttpResponse = await fetchWrapper
       .post({
