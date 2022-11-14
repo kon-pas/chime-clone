@@ -8,14 +8,15 @@ type handlerSignature = (
   res: NextApiResponse<HttpResponse>
 ) => void;
 
-const handler: handlerSignature = async (req, res) => {
-  const { NEXT_PUBLIC_API_URL } = process.env;
+const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN } = process.env;
 
+const handler: handlerSignature = async (req, res) => {
   try {
     const response: HttpResponse = await fetchWrapper
       .put({
         url: `${NEXT_PUBLIC_API_URL}/database/users`,
         body: JSON.stringify({ id: generateId(), ...req.body }),
+        auth: DB_AUTH_TOKEN,
       })
       .then(res => res.json());
 
