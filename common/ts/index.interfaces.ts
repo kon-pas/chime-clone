@@ -1,6 +1,7 @@
 import type {
   Email,
   Password,
+  Id,
   FirstName,
   SecondName,
   HttpResponseStatusCode,
@@ -41,6 +42,7 @@ export interface SafeUser {
 
 export interface FullUser extends SafeUser {
   password: Password;
+  id: Id;
 }
 
 export interface HttpResponseStatus {

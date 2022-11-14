@@ -10,6 +10,8 @@ export type SecondName = string;
 
 export type Password = string;
 
+export type Id = string;
+
 export type HttpResponseStatusCode = 200 | 201 | 404 | 500;
 
 export type HttpResponseStatusMessage =
