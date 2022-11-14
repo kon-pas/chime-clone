@@ -20,8 +20,5 @@ export type HttpResponseStatusMessage =
   | "Not Found"
   | "Internal Server Error";
 
-/**
- * Deprecated.
- * @see `@utils/api/HttpResponse`
- */
-export type Response = ErrorResponse | LoadedResponse;
+// @@@ Deprecated.
+// export type Response = ErrorResponse | LoadedResponse;

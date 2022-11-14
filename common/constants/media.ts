@@ -1,5 +1,5 @@
 /**
- * Deprecated: moved this feat to @utils/use-media
+ * Deprecated - moved this feat to @utils/use-media
  */
 
 /*

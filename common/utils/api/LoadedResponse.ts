@@ -3,8 +3,7 @@ import { ErrorResponse } from "@utils/api";
 import { HttpResponseStatusCode } from "@types";
 
 /**
- * Deprecated.
- * @see `@utils/api/HttpResponse`
+ * @deprecated Use {@link [HttpResponse](./HttpResponse.ts)} instead.
  */
 export default class LoadedResponse extends ErrorResponse {
   public readonly body: object;

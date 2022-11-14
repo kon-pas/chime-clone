@@ -8,7 +8,5 @@ export { default as Z_INDEX } from "./z-index";
 
 export { default as HTTP } from "./http";
 
-/**
- * Deprecated
- */
+// @@@ Deprecated.
 // export { default as MEDIA } from './media';
