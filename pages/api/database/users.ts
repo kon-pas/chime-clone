@@ -19,12 +19,13 @@ const handler: handlerSignature = async (req, res) => {
     case "GET":
       res.status(200).send(new HttpResponse(200, [...USERS]));
     case "PUT": {
-      const { firstName, secondName, email, password } = req.body as FullUser;
+      const { firstName, secondName, email, password, id } =
+        req.body as FullUser;
 
       if (USERS.some(user => user.email === email)) {
         res.status(500).send(new HttpResponse(500));
       } else {
-        USERS.push({ firstName, secondName, email, password });
+        USERS.push({ firstName, secondName, email, password, id });
         res.status(201).send(new HttpResponse(201));
       }
     }
