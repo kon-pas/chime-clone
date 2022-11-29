@@ -58,6 +58,7 @@ const HomePage: NextPageWithLayout = () => {
           originalSize: [713, 202],
           width: {
             sm: 490,
+            md: 400,
           },
         }}
         backgroundColor={COLORS.GRAY_LIGHT}
