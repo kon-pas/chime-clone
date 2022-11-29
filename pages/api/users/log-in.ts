@@ -6,7 +6,7 @@ import type { FullUser } from "@interfaces";
 
 import { HttpResponse, fetchWrapper } from "@utils/api";
 
-const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN, HASH_BASE_SALT } = process.env;
+const { DB_HOST, DB_AUTH_TOKEN, HASH_SALT_ROUNDS } = process.env;
 
 const handler = async (
   req: NextApiRequest,
@@ -15,14 +15,14 @@ const handler = async (
   try {
     const response: HttpResponse = await fetchWrapper
       .get({
-        url: `${NEXT_PUBLIC_API_URL}/database/users`,
+        url: `${DB_HOST}/users`,
         auth: DB_AUTH_TOKEN,
       })
       .then(res => res.json());
 
     if (req.method === "POST") {
       const { email: targetEmail, password } = req.body;
-      const salt = await genSalt(Number(HASH_BASE_SALT));
+      const salt = await genSalt(Number(HASH_SALT_ROUNDS));
       const targetPassword = await hash(password, salt);
 
       if (response.success) {

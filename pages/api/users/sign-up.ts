@@ -5,19 +5,19 @@ import { hash, genSalt } from "bcrypt";
 import { generateId } from "@utils";
 import { HttpResponse, fetchWrapper } from "@utils/api";
 
-const { NEXT_PUBLIC_API_URL, DB_AUTH_TOKEN, HASH_BASE_SALT } = process.env;
+const { DB_HOST, DB_AUTH_TOKEN, HASH_SALT_ROUNDS } = process.env;
 
 const handler = async (
   req: NextApiRequest,
   res: NextApiResponse<HttpResponse>
 ): Promise<void> => {
   try {
-    const salt = await genSalt(Number(HASH_BASE_SALT));
+    const salt = await genSalt(Number(HASH_SALT_ROUNDS));
     const password = await hash(req.body.password, salt);
 
     const response: HttpResponse = await fetchWrapper
       .put({
-        url: `${NEXT_PUBLIC_API_URL}/database/users`,
+        url: `${DB_HOST}/users`,
         body: JSON.stringify({ id: generateId(), ...req.body, password }),
         auth: DB_AUTH_TOKEN,
       })
