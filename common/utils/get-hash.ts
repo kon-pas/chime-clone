@@ -1,6 +1,6 @@
 import { hash, genSalt } from "bcrypt";
 
-const { HASH_BASE_SALT } = process.env;
+const { HASH_SALT_ROUNDS } = process.env;
 
 /**
  * @deprecated Does not work client-side. Use `bcrypt` directly.
@@ -12,7 +12,7 @@ const { HASH_BASE_SALT } = process.env;
  * @returns `Promise` resolving a hashed string
  */
 const getHash = async (value: string): Promise<string> => {
-  const salt = await genSalt(Number(HASH_BASE_SALT));
+  const salt = await genSalt(Number(HASH_SALT_ROUNDS));
   return await hash(value, salt);
 };
 
