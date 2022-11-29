@@ -22,8 +22,11 @@ const handler = async (
 
   if (authTokenTrimmed === DB_AUTH_TOKEN) {
     switch (req.method) {
-      case "GET":
+      case "GET": {
         res.status(200).send(new HttpResponse(200, [...USERS]));
+        break;
+      }
+
       case "PUT": {
         const { firstName, secondName, email, password, id } =
           req.body as FullUser;
@@ -34,9 +37,14 @@ const handler = async (
           USERS.push({ firstName, secondName, email, password, id });
           res.status(201).send(new HttpResponse(201));
         }
+
+        break;
       }
-      default:
+
+      default: {
         res.status(500).send(new HttpResponse(500));
+        break;
+      }
     }
   } else res.status(500).send(new HttpResponse(500));
 };
