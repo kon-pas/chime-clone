@@ -19,7 +19,9 @@ const Footer: FC = () => {
                 {item.path ? (
                   <Link href={item.path}>{item.label}</Link>
                 ) : (
-                  <span style={{ opacity: 0.3 }}>{item.label}</span>
+                  <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
+                    {item.label}
+                  </span>
                 )}
 
                 <menu>
@@ -28,7 +30,9 @@ const Footer: FC = () => {
                       {subitem.path ? (
                         <Link href={subitem.path}>{subitem.label}</Link>
                       ) : (
-                        <span style={{ opacity: 0.3 }}>{subitem.label}</span>
+                        <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
+                          {subitem.label}
+                        </span>
                       )}
                     </li>
                   ))}

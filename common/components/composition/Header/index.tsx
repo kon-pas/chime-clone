@@ -28,14 +28,12 @@ const Header: FC = () => {
       <Styled.Header>
         <Link href="/" passHref>
           <h1>
-            <a>
-              <Image
-                src="/static/components/Header/chime-logo.svg"
-                alt="Chime Logo"
-                width="90px"
-                height="30px"
-              />
-            </a>
+            <Image
+              src="/static/components/Header/chime-logo.svg"
+              alt="Chime Logo"
+              width="90px"
+              height="30px"
+            />
           </h1>
         </Link>
 
@@ -49,7 +47,9 @@ const Header: FC = () => {
                   </Styled.Span>
                 ) : (
                   <Styled.Span>
-                    <span style={{ opacity: 0.3 }}>{item.label}</span>
+                    <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
+                      {item.label}
+                    </span>
                   </Styled.Span>
                 )}
 
@@ -60,7 +60,9 @@ const Header: FC = () => {
                         {subitem.path ? (
                           <Link href={subitem.path}>{subitem.label}</Link>
                         ) : (
-                          <span style={{ opacity: 0.3 }}>{subitem.label}</span>
+                          <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
+                            {subitem.label}
+                          </span>
                         )}
                       </li>
                     ))}
@@ -129,7 +131,9 @@ const Header: FC = () => {
                 {item.path ? (
                   <Link href={item.path}>{item.label}</Link>
                 ) : (
-                  <span style={{ opacity: 0.3 }}>{item.label}</span>
+                  <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
+                    {item.label}
+                  </span>
                 )}
 
                 <menu>
@@ -140,7 +144,9 @@ const Header: FC = () => {
                           <span>{subitem.label}</span>
                         </Link>
                       ) : (
-                        <span style={{ opacity: 0.3 }}>{subitem.label}</span>
+                        <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
+                          {subitem.label}
+                        </span>
                       )}
                     </li>
                   ))}
