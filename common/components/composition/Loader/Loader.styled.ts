@@ -13,19 +13,20 @@ const spin = keyframes`
 `;
 
 export const LoaderWrapper = styled.div`
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100%;
   background-color: ${COLORS.WHITE};
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   z-index: ${Z_INDEX.LOADER};
+`;
 
+export const AnimationWrapper = styled.div`
   svg {
     width: 2rem;
     height: 2rem;
@@ -33,5 +34,3 @@ export const LoaderWrapper = styled.div`
     animation: ${spin} 2s linear infinite;
   }
 `;
-
-export const AnimationWrapper = styled.div``;
