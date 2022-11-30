@@ -115,7 +115,7 @@ const SignUpPage: NextPageWithLayout = () => {
         {/* Email */}
         <SignUpComponents.Form.Input
           type="email"
-          placeholder="First name"
+          placeholder="Email address"
           {...register("email", {
             required: "required",
             pattern: {

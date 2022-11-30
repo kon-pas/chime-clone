@@ -17,7 +17,6 @@ const Container = styled(ContentContainer)<ContainerProps>`
     display: flex;
     flex-direction: ${props =>
       props.imageFloat === "left" ? "row-reverse" : "row"};
-    padding: 0 2rem;
     justify-content: space-between;
   }
 `;

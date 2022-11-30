@@ -9,13 +9,11 @@ import IconSVG from "@components/elements/IconSVG";
 const Loader: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
-  const { events, asPath } = useRouter();
+  const { events } = useRouter();
 
   useEffect(() => {
-    const hidePageContent = (url: string) =>
-      url !== asPath && setIsLoading(true);
-    const showPageContent = (url: string) =>
-      url === asPath && setIsLoading(false);
+    const hidePageContent = () => setIsLoading(true);
+    const showPageContent = () => setIsLoading(false);
 
     events.on("routeChangeStart", hidePageContent);
     events.on("routeChangeComplete", showPageContent);
