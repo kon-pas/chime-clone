@@ -49,16 +49,16 @@ const SignUpPage: NextPageWithLayout = () => {
         <meta name="description" content="Chime Clone Sign Up" />
       </Head>
 
-      <Link href="/" passHref>
-        <a>
+      <SignUpComponents.Logo>
+        <Link href="/" passHref>
           <Image
             src="/static/components/Header/chime-logo.svg"
             alt="Chime Logo"
             width="130px"
             height="39px"
           />
-        </a>
-      </Link>
+        </Link>
+      </SignUpComponents.Logo>
 
       <SignUpComponents.Heading>
         Hi, what&apos;s your name?

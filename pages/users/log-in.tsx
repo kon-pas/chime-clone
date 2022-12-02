@@ -44,7 +44,7 @@ const LogInPage: NextPageWithLayout = () => {
   };
 
   useEffect(() => {
-    if (user) console.info(`Logged in as ${user.username}`);
+    if (user) console.info(`Logged in as ${user.firstName} ${user.secondName}`);
   }, [user]);
 
   return (
@@ -54,16 +54,16 @@ const LogInPage: NextPageWithLayout = () => {
         <meta name="description" content="Chime Clone Member Log In" />
       </Head>
 
-      <Link href="/" passHref>
-        <a>
+      <LogInComponents.Logo>
+        <Link href="/" passHref>
           <Image
             src="/static/components/Header/chime-logo.svg"
             alt="Chime Logo"
             width="130px"
             height="39px"
           />
-        </a>
-      </Link>
+        </Link>
+      </LogInComponents.Logo>
 
       <LogInComponents.Form.Container onSubmit={handleSubmit(onSubmit)}>
         <LogInComponents.Form.Input

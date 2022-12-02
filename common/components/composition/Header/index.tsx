@@ -100,14 +100,12 @@ const Header: FC = () => {
         <header>
           <Link href="/" passHref>
             <h1>
-              <a>
-                <Image
-                  src="/static/components/Header/chime-logo.svg"
-                  alt="Chime Logo"
-                  width="90px"
-                  height="30px"
-                />
-              </a>
+              <Image
+                src="/static/components/Header/chime-logo.svg"
+                alt="Chime Logo"
+                width="90px"
+                height="30px"
+              />
             </h1>
           </Link>
 
