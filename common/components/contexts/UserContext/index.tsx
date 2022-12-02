@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
+
 import type { FC, ReactNode } from "react";
-import type { SafeUser } from "@types";
+import type { SafeUser } from "@interfaces";
 
 export interface UserContextProps {
   user: SafeUser | null;

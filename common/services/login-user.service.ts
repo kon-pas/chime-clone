@@ -13,7 +13,7 @@ const { NEXT_PUBLIC_API_URL } = process.env;
 
 const loginUser = async (
   loginData: LoginValues,
-  onSuccess: (safeUserData?: SafeUser) => void,
+  onSuccess: (safeUserData: SafeUser) => void,
   onFailure?: () => void
 ): Promise<boolean> => {
   try {
