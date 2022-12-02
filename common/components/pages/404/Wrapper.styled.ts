@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { COLORS, MEDIA } from "@constants";
+import { COLORS } from "@constants";
 
 const Wrapper = styled.div`
   padding-top: 3rem;
