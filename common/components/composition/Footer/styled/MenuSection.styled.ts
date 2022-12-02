@@ -9,9 +9,9 @@ const MenuSection = styled.menu`
   gap: 2rem;
   width: fit-content;
 
-  ${getResizeTransition('width')}
+  ${getResizeTransition("width")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -22,6 +22,13 @@ const MenuSection = styled.menu`
       white-space: nowrap;
       font-size: 1rem;
       font-weight: 700;
+
+      transition-property: color;
+      transition-duration: 0.2s;
+
+      &:hover {
+        color: ${COLORS.LIME_DARK};
+      }
     }
 
     > menu {

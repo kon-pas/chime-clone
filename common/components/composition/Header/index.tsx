@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 import { NAVIGATION_ITEMS } from "@constants";
 
 import IconSVG from "@components/elements/IconSVG";
+import InactiveSpan from "@components/elements/InactiveSpan";
 
 const Header: FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
@@ -47,9 +48,7 @@ const Header: FC = () => {
                   </Styled.Span>
                 ) : (
                   <Styled.Span>
-                    <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
-                      {item.label}
-                    </span>
+                    <InactiveSpan>{item.label}</InactiveSpan>
                   </Styled.Span>
                 )}
 
@@ -60,9 +59,7 @@ const Header: FC = () => {
                         {subitem.path ? (
                           <Link href={subitem.path}>{subitem.label}</Link>
                         ) : (
-                          <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
-                            {subitem.label}
-                          </span>
+                          <InactiveSpan>{subitem.label}</InactiveSpan>
                         )}
                       </li>
                     ))}
@@ -129,9 +126,7 @@ const Header: FC = () => {
                 {item.path ? (
                   <Link href={item.path}>{item.label}</Link>
                 ) : (
-                  <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
-                    {item.label}
-                  </span>
+                  <InactiveSpan>{item.label}</InactiveSpan>
                 )}
 
                 <menu>
@@ -142,9 +137,7 @@ const Header: FC = () => {
                           <span>{subitem.label}</span>
                         </Link>
                       ) : (
-                        <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
-                          {subitem.label}
-                        </span>
+                        <InactiveSpan>{subitem.label}</InactiveSpan>
                       )}
                     </li>
                   ))}

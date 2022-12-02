@@ -7,6 +7,7 @@ import Link from "next/link";
 import { NAVIGATION_ITEMS, BREAKPOINTS } from "@constants";
 
 import ContentContainer from "@components/elements/ContentContainer";
+import InactiveSpan from "@components/elements/InactiveSpan";
 
 const Footer: FC = () => {
   return (
@@ -17,11 +18,11 @@ const Footer: FC = () => {
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
                 {item.path ? (
-                  <Link href={item.path}>{item.label}</Link>
-                ) : (
-                  <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
-                    {item.label}
+                  <span>
+                    <Link href={item.path}>{item.label}</Link>
                   </span>
+                ) : (
+                  <InactiveSpan>{item.label}</InactiveSpan>
                 )}
 
                 <menu>
@@ -30,9 +31,7 @@ const Footer: FC = () => {
                       {subitem.path ? (
                         <Link href={subitem.path}>{subitem.label}</Link>
                       ) : (
-                        <span style={{ opacity: 0.3, cursor: "not-allowed" }}>
-                          {subitem.label}
-                        </span>
+                        <InactiveSpan>{subitem.label}</InactiveSpan>
                       )}
                     </li>
                   ))}
