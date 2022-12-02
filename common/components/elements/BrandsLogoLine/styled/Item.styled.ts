@@ -7,13 +7,18 @@ interface ItemProps {
 }
 
 const Item = styled.div<ItemProps>`
-  width: ${props => `${props.width / 2}px`};
+  width: ${props => `${Math.ceil(props.width / 2)}px`};
 
   ${getResizeTransition("width")}
 
   ${getMedia("md")} {
-    width: ${props => `${props.width / 1.5}px`};
+    width: ${props => `${Math.ceil(props.width / 1.5)}px`};
   }
+
+  ${getMedia("lg")} {
+    width: ${props => `${Math.ceil(props.width / 1.25)}px`};
+  }
+
 `;
 
 export default Item;

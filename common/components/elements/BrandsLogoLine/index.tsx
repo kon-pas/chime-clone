@@ -7,12 +7,12 @@ const BrandsLogoLine: FC = () => {
   return (
     <Styled.Wrapper>
       <Styled.Container>
-        <Styled.Item width={81}>
+        <Styled.Item width={82}>
           <Image
             src="/static/components/BrandsLogoLine/WSJ.png"
             alt="WSJ"
             layout="responsive"
-            width="81"
+            width="82"
             height="46"
           />
         </Styled.Item>
@@ -47,7 +47,7 @@ const BrandsLogoLine: FC = () => {
           />
         </Styled.Item>
 
-        <Styled.Item width={87}>
+        <Styled.Item width={82}>
           <Image
             src="/static/components/BrandsLogoLine/TC.png"
             alt="TC"
