@@ -30,7 +30,7 @@ const ChildrenContainer = styled.div`
       &::before {
         vertical-align: sub;
         content: "";
-        background-image: url("https://www.chime.com/wp-content/uploads/2020/11/check@2x.png");
+        background-image: url("/static/shared/check.png");
         display: inline-block;
         background-repeat: no-repeat;
         background-size: 20px 20px;
