@@ -27,6 +27,7 @@ const BannerSection: FC<BannerSectionProps> = props => {
             layout="responsive"
             width={props.img.originalSize[0]}
             height={props.img.originalSize[1]}
+            priority
           />
         </Styled.ImageWrapper>
       </Styled.Container>
