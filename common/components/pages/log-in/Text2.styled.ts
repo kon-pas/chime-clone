@@ -9,4 +9,4 @@ const Text2 = styled.div`
   font-weight: 300;
 `;
 
-export default Text2
+export default Text2;
