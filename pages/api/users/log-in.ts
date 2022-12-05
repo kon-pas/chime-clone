@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import { hash, genSalt } from "bcrypt";
+import { compare } from "bcrypt";
 
 import type { FullUser } from "@interfaces";
 
@@ -21,27 +21,32 @@ const handler = async (
       .then(res => res.json());
 
     if (req.method === "POST") {
-      const { email: targetEmail, password } = req.body;
-      const salt = await genSalt(Number(HASH_SALT_ROUNDS));
-      const targetPassword = await hash(password, salt);
+      const { email: targetEmail, password: targetPassword } = req.body;
 
       if (response.success) {
         const users = response.body as FullUser[];
 
-        const targetUser: FullUser | undefined = users.find(
-          (user: FullUser) =>
-            user.email === targetEmail && user.password === targetPassword
+        const foundUser: FullUser | undefined = users.find(
+          (user: FullUser) => user.email === targetEmail
         );
 
-        if (targetUser)
-          res.status(200).send(
-            new HttpResponse(200, {
-              firstName: targetUser.firstName,
-              secondName: targetUser.secondName,
-              email: targetUser.email,
-            })
-          );
-        else res.status(404).send(new HttpResponse(404));
+        if (foundUser) {
+          if (await compare(targetPassword, foundUser.password))
+            res.status(200).send(
+              new HttpResponse(200, {
+                firstName: foundUser.firstName,
+                secondName: foundUser.secondName,
+                email: foundUser.email,
+              })
+            );
+          else
+            res
+              .status(404)
+              .send(new HttpResponse(404, { msg: "Wrong password" }));
+        } else
+          res
+            .status(404)
+            .send(new HttpResponse(404, { msg: "User not found" }));
       } else
         res
           .status(response.statusCode)
