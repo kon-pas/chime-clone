@@ -15,7 +15,7 @@ import InactiveSpan from "@components/elements/InactiveSpan";
 const Header: FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
 
-  const { events } = useRouter();
+  const { events, push: navigate } = useRouter();
 
   useEffect(() => {
     const closeModal = () => setIsSpliderOpened(false);
@@ -148,8 +148,8 @@ const Header: FC = () => {
         </Styled.MenuContainer>
 
         <Styled.AccountActions>
-          <div>Log In</div>
-          <div>Sign Up</div>
+          <div onClick={() => navigate("/users/log-in")}>Log In</div>
+          <div onClick={() => navigate("/users/sign-up")}>Sign Up</div>
         </Styled.AccountActions>
       </Styled.ModalContainer>
     </>

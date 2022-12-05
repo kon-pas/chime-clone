@@ -175,7 +175,9 @@ const SignUpPage: NextPageWithLayout = () => {
       </SignUpComponents.Text2>
 
       <SignUpComponents.Anchor>
-        Already have an account?
+        <Link href="/users/log-in">
+          Already have an account?
+        </Link>
       </SignUpComponents.Anchor>
 
       <SignUpComponents.Disclaimer.Container>
