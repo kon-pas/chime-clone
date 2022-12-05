@@ -32,7 +32,13 @@ const handler = async (
           req.body as FullUser;
 
         if (USERS.some(user => user.email === email)) {
-          res.status(500).send(new HttpResponse(500));
+          res
+            .status(409)
+            .send(
+              new HttpResponse(409, {
+                msg: "Email Address Has Already Been Taken",
+              })
+            );
         } else {
           USERS.push({ firstName, secondName, email, password, id });
           res.status(201).send(new HttpResponse(201));
