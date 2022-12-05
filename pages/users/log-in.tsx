@@ -28,6 +28,8 @@ const LogInPage: NextPageWithLayout = () => {
 
   const [isUserInvalid, setisUserInvalid] = useState<boolean>(false);
 
+  const [invalidUserMsg, setInvalidUserMsg] = useState<string>("");
+
   const { push: navigate } = useRouter();
 
   const [user, setUser] = useUser();
@@ -39,7 +41,10 @@ const LogInPage: NextPageWithLayout = () => {
         setUser(safeUserData);
         navigate("/");
       },
-      () => setisUserInvalid(true)
+      msg => {
+        setisUserInvalid(true);
+        setInvalidUserMsg(msg);
+      }
     );
   };
 
@@ -105,7 +110,7 @@ const LogInPage: NextPageWithLayout = () => {
         </LogInComponents.Form.Submit>
         {isUserInvalid && (
           <LogInComponents.Form.Error>
-            User not found
+            {invalidUserMsg}
           </LogInComponents.Form.Error>
         )}
       </LogInComponents.Form.Container>

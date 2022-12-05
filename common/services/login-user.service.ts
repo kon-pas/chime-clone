@@ -14,7 +14,7 @@ const { NEXT_PUBLIC_API_HOST } = process.env;
 const loginUser = async (
   loginData: LoginValues,
   onSuccess: (safeUserData: SafeUser) => void,
-  onFailure?: () => void
+  onFailure?: (msg: string) => void
 ): Promise<boolean> => {
   try {
     const response: HttpResponse = await fetchWrapper
@@ -29,7 +29,10 @@ const loginUser = async (
       onSuccess(safeUserData);
       return true;
     } else {
-      onFailure && onFailure();
+      if (onFailure) {
+        const { msg } = response.body as { msg: string };
+        onFailure(msg);
+      }
       return false;
     }
   } catch (error) {
