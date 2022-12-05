@@ -13,7 +13,7 @@ const { NEXT_PUBLIC_API_HOST } = process.env;
 
 const loginUser = async (
   loginData: LoginValues,
-  onSuccess: (safeUserData: SafeUser) => void,
+  onSuccess?: (safeUserData: SafeUser) => void,
   onFailure?: (msg: string) => void
 ): Promise<boolean> => {
   try {
@@ -26,17 +26,23 @@ const loginUser = async (
 
     if (response.success) {
       const safeUserData = response.body as SafeUser;
-      onSuccess(safeUserData);
+
+      onSuccess && onSuccess(safeUserData);
+
       return true;
     } else {
       if (onFailure) {
         const { msg } = response.body as { msg: string };
+
         onFailure(msg);
       }
       return false;
     }
   } catch (error) {
+    onFailure && onFailure("Internal Server Error");
+
     console.error(error);
+
     return false;
   }
 };
