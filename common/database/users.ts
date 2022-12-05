@@ -11,21 +11,32 @@ const users: FullUser[] = [
     firstName: "Jan",
     secondName: "Kowalski",
     email: "jan@kowalski.com",
-    password: "kowal123",
+    // @@@ Hashed "kowal123"
+    password: "$2b$10$OKuxdzGueg4rmIQXWzLDKej1Csi9ZamrIDVGovOEYEBkTnPOyknEi",
   },
   {
     id: generateId(),
     firstName: "Jan",
     secondName: "Nowak",
     email: "jan@nowak.com",
-    password: "nowak123",
+    // @@@ Hashed "nowak123"
+    password: "$2b$10$QB1XUAHk0E31PBk8mzKymuB/OV8KsfIldp.tNqkF6DkW.1Y9zlBSm",
   },
   {
     id: generateId(),
     firstName: "Jan",
     secondName: "Jankowski",
     email: "jan@jankowski.com",
-    password: "janek123",
+    // @@@ Hashed "janek123"
+    password: "$2b$10$MF8DtZFx2OkKrEJis7zN6etrC6TpsoUcsoFZeQVulDm3dFPNYs9eW",
+  },
+  {
+    id: generateId(),
+    firstName: "dsa",
+    secondName: "dsa",
+    email: "dsa@dsa.dsa",
+    // @@@ Hashed "dsadsa"
+    password: "$2b$10$3z6W.Fm8QamjeHYdZ/RLAOfrRVg.TQq/ux5e9Mirr3XGWhp3.6sIK",
   },
 ];
 
