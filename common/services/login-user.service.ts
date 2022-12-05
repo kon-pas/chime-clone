@@ -9,7 +9,7 @@ interface LoginValues {
   password: Password;
 }
 
-const { NEXT_PUBLIC_API_URL } = process.env;
+const { NEXT_PUBLIC_API_HOST } = process.env;
 
 const loginUser = async (
   loginData: LoginValues,
@@ -19,7 +19,7 @@ const loginUser = async (
   try {
     const response: HttpResponse = await fetchWrapper
       .post({
-        url: `${NEXT_PUBLIC_API_URL}/users/log-in`,
+        url: `${NEXT_PUBLIC_API_HOST}/users/log-in`,
         body: JSON.stringify(loginData),
       })
       .then(res => res.json());

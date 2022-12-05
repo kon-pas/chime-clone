@@ -9,7 +9,7 @@ interface RegisterValues {
   password: Password;
 }
 
-const { NEXT_PUBLIC_API_URL } = process.env;
+const { NEXT_PUBLIC_API_HOST } = process.env;
 
 const registerUser = async (
   registerData: RegisterValues,
@@ -19,7 +19,7 @@ const registerUser = async (
   try {
     const response: HttpResponse = await fetchWrapper
       .post({
-        url: `${NEXT_PUBLIC_API_URL}/users/sign-up`,
+        url: `${NEXT_PUBLIC_API_HOST}/users/sign-up`,
         body: JSON.stringify(registerData),
       })
       .then(res => res.json());
