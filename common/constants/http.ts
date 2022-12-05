@@ -13,6 +13,10 @@ const HTTP: { [key: string]: HttpResponseStatus } = {
     code: 404,
     message: "Not Found",
   },
+  STATUS_409: {
+    code: 409,
+    message: "Conflict",
+  },
   STATUS_500: {
     code: 500,
     message: "Internal Server Error",
