@@ -48,7 +48,7 @@ const Header: FC = () => {
                   </Styled.Span>
                 ) : (
                   <Styled.Span>
-                    <InactiveSpan>{item.label}</InactiveSpan>
+                    <InactiveSpan width={2}>{item.label}</InactiveSpan>
                   </Styled.Span>
                 )}
 
@@ -126,7 +126,7 @@ const Header: FC = () => {
                 {item.path ? (
                   <Link href={item.path}>{item.label}</Link>
                 ) : (
-                  <InactiveSpan>{item.label}</InactiveSpan>
+                  <InactiveSpan width={2}>{item.label}</InactiveSpan>
                 )}
 
                 <menu>

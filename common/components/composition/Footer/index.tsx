@@ -22,7 +22,7 @@ const Footer: FC = () => {
                     <Link href={item.path}>{item.label}</Link>
                   </span>
                 ) : (
-                  <InactiveSpan>{item.label}</InactiveSpan>
+                  <InactiveSpan width={2}>{item.label}</InactiveSpan>
                 )}
 
                 <menu>

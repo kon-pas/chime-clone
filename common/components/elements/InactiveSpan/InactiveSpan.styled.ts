@@ -2,10 +2,14 @@ import styled from "styled-components";
 
 import { COLORS } from "@constants";
 
-const InactiveSpan = styled.span`
-  text-decoration: line-through;
+interface InactiveSpanProps {
+  width?: number;
+}
+
+const InactiveSpan = styled.span<InactiveSpanProps>`
+  text-decoration: line-through ${props => props.width ?? 1}px;
   cursor: not-allowed;
-  color: ${COLORS.BLACK} !important;
+  color: ${COLORS.FONT_GRAY_MEDIUM} !important;
 `;
 
 export default InactiveSpan;
