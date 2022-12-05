@@ -27,10 +27,7 @@ const SignUpPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  const [isRegisterDataInvalid, setIsRegisterDataInvalid] =
-    useState<boolean>(false);
-
-  const [registerMsg, setRegisterMsg] = useState<string>("");
+  const [registrationErrorMsg, setRegistrationErrorMsg] = useState<string>("");
 
   const { push: navigate } = useRouter();
 
@@ -38,15 +35,13 @@ const SignUpPage: NextPageWithLayout = () => {
     registerUser(
       registerData,
       () => {
-        setIsRegisterDataInvalid(false);
-        setRegisterMsg("");
+        setRegistrationErrorMsg("");
 
         console.info("User created:", registerData);
         navigate("/users/log-in");
       },
       msg => {
-        setIsRegisterDataInvalid(true);
-        setRegisterMsg(msg);
+        setRegistrationErrorMsg(msg);
       }
     );
   };
@@ -163,9 +158,9 @@ const SignUpPage: NextPageWithLayout = () => {
         <SignUpComponents.Form.Submit disabled={isSubmitting} type="submit">
           Sign Up
         </SignUpComponents.Form.Submit>
-        {isRegisterDataInvalid && (
+        {registrationErrorMsg !== "" && (
           <SignUpComponents.Form.Error>
-            {registerMsg}
+            {registrationErrorMsg}
           </SignUpComponents.Form.Error>
         )}
       </SignUpComponents.Form.Container>
@@ -175,9 +170,7 @@ const SignUpPage: NextPageWithLayout = () => {
       </SignUpComponents.Text2>
 
       <SignUpComponents.Anchor>
-        <Link href="/users/log-in">
-          Already have an account?
-        </Link>
+        <Link href="/users/log-in">Already have an account?</Link>
       </SignUpComponents.Anchor>
 
       <SignUpComponents.Disclaimer.Container>

@@ -26,9 +26,7 @@ const LogInPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
-  const [isUserInvalid, setisUserInvalid] = useState<boolean>(false);
-
-  const [invalidUserMsg, setInvalidUserMsg] = useState<string>("");
+  const [loginErrorMsg, setLoginErrorMsg] = useState<string>("");
 
   const { push: navigate } = useRouter();
 
@@ -38,15 +36,12 @@ const LogInPage: NextPageWithLayout = () => {
     loginUser(
       loginData,
       safeUserData => {
-        setisUserInvalid(true);
-        setInvalidUserMsg("");
-
+        setLoginErrorMsg("");
         setUser(safeUserData);
         navigate("/");
       },
       msg => {
-        setisUserInvalid(true);
-        setInvalidUserMsg(msg);
+        setLoginErrorMsg(msg);
       }
     );
   };
@@ -116,9 +111,9 @@ const LogInPage: NextPageWithLayout = () => {
         <LogInComponents.Form.Submit disabled={isSubmitting} type="submit">
           Login
         </LogInComponents.Form.Submit>
-        {isUserInvalid && (
+        {loginErrorMsg !== "" && (
           <LogInComponents.Form.Error>
-            {invalidUserMsg}
+            {loginErrorMsg}
           </LogInComponents.Form.Error>
         )}
       </LogInComponents.Form.Container>
