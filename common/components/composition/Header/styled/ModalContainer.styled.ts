@@ -13,7 +13,6 @@ const ModalContainer = styled.div<ModalContainerProps>`
   top: 0;
   min-height: 100vh;
   background-color: ${COLORS.WHITE};
-  opacity: 0.98;
   width: 100%;
   user-select: none;
   left: ${props => (props.isVisible ? "0" : "100%")};
