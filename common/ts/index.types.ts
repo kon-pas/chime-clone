@@ -1,4 +1,4 @@
-import { ErrorResponse, LoadedResponse } from "@utils/api";
+// import { ErrorResponse, LoadedResponse } from "@utils/api";
 
 export type HexColor = `#${string}`;
 
@@ -12,12 +12,13 @@ export type Password = string;
 
 export type Id = string;
 
-export type HttpResponseStatusCode = 200 | 201 | 404 | 500;
+export type HttpResponseStatusCode = 200 | 201 | 404 | 409 | 500;
 
 export type HttpResponseStatusMessage =
   | "OK"
   | "Created"
   | "Not Found"
+  | "Conflict"
   | "Internal Server Error";
 
 // @@@ Deprecated.
