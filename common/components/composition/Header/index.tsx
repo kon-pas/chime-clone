@@ -124,7 +124,9 @@ const Header: FC = () => {
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
                 {item.path ? (
-                  <Link href={item.path}>{item.label}</Link>
+                  <Link href={item.path}>
+                    <span>{item.label}</span>
+                  </Link>
                 ) : (
                   <InactiveSpan width={2}>{item.label}</InactiveSpan>
                 )}
