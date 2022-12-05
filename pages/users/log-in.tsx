@@ -38,6 +38,9 @@ const LogInPage: NextPageWithLayout = () => {
     loginUser(
       loginData,
       safeUserData => {
+        setisUserInvalid(true);
+        setInvalidUserMsg("");
+
         setUser(safeUserData);
         navigate("/");
       },
@@ -60,17 +63,20 @@ const LogInPage: NextPageWithLayout = () => {
       </Head>
 
       <LogInComponents.Logo>
-        <Link href="/" passHref>
-          <Image
-            src="/static/components/Header/chime-logo.svg"
-            alt="Chime Logo"
-            width="130px"
-            height="39px"
-          />
+        <Link href="/">
+          <a>
+            <Image
+              src="/static/components/Header/chime-logo.svg"
+              alt="Chime Logo"
+              width="130px"
+              height="39px"
+            />
+          </a>
         </Link>
       </LogInComponents.Logo>
 
       <LogInComponents.Form.Container onSubmit={handleSubmit(onSubmit)}>
+        {/* Email */}
         <LogInComponents.Form.Input
           type="email"
           placeholder="Email address"
@@ -88,6 +94,7 @@ const LogInPage: NextPageWithLayout = () => {
           </LogInComponents.Form.Error>
         )}
 
+        {/* Password */}
         <LogInComponents.Form.Input
           type="password"
           placeholder="Password"
@@ -105,6 +112,7 @@ const LogInPage: NextPageWithLayout = () => {
           </LogInComponents.Form.Error>
         )}
 
+        {/* Submit */}
         <LogInComponents.Form.Submit disabled={isSubmitting} type="submit">
           Login
         </LogInComponents.Form.Submit>
