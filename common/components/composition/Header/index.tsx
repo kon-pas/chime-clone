@@ -27,7 +27,7 @@ const Header: FC = () => {
   return (
     <>
       <Styled.Header>
-        <Link href="/" passHref>
+        <Link href="/">
           <h1>
             <Image
               src="/static/components/Header/chime-logo.svg"
@@ -95,7 +95,7 @@ const Header: FC = () => {
 
       <Styled.ModalContainer isVisible={isSpliderOpened}>
         <header>
-          <Link href="/" passHref>
+          <Link href="/">
             <h1>
               <Image
                 src="/static/components/Header/chime-logo.svg"
