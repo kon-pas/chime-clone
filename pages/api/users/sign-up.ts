@@ -23,7 +23,9 @@ const handler = async (
       })
       .then(res => res.json());
 
-    res.status(response.statusCode).send(new HttpResponse(response.statusCode));
+    res
+      .status(response.statusCode)
+      .send(new HttpResponse(response.statusCode, response.body));
   } catch (error) {
     res.status(500).send(new HttpResponse(500));
   }

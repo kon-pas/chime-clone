@@ -42,11 +42,11 @@ const handler = async (
           else
             res
               .status(404)
-              .send(new HttpResponse(404, { msg: "Wrong password" }));
+              .send(new HttpResponse(404, { msg: "Incorrect Password" }));
         } else
           res
             .status(404)
-            .send(new HttpResponse(404, { msg: "User not found" }));
+            .send(new HttpResponse(404, { msg: "User Not Found" }));
       } else
         res
           .status(response.statusCode)
