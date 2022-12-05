@@ -3,7 +3,7 @@ import * as SignUpComponents from "@components/pages/sing-up";
 import type { NextPageWithLayout } from "@pages/_app";
 import type { FirstName, SecondName, Email, Password } from "@types";
 
-import { ReactElement, useEffect } from "react";
+import { ReactElement, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -27,17 +27,26 @@ const SignUpPage: NextPageWithLayout = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>();
 
+  const [isRegisterDataInvalid, setIsRegisterDataInvalid] =
+    useState<boolean>(false);
+
+  const [registerMsg, setRegisterMsg] = useState<string>("");
+
   const { push: navigate } = useRouter();
 
   const onSubmit = (registerData: FormValues) => {
     registerUser(
       registerData,
       () => {
-        console.info("User created", registerData);
+        setIsRegisterDataInvalid(false);
+        setRegisterMsg("");
+
+        console.info("User created:", registerData);
         navigate("/users/log-in");
       },
-      () => {
-        console.warn("User creation failed!");
+      msg => {
+        setIsRegisterDataInvalid(true);
+        setRegisterMsg(msg);
       }
     );
   };
@@ -51,12 +60,14 @@ const SignUpPage: NextPageWithLayout = () => {
 
       <SignUpComponents.Logo>
         <Link href="/" passHref>
-          <Image
-            src="/static/components/Header/chime-logo.svg"
-            alt="Chime Logo"
-            width="130px"
-            height="39px"
-          />
+          <a>
+            <Image
+              src="/static/components/Header/chime-logo.svg"
+              alt="Chime Logo"
+              width="130px"
+              height="39px"
+            />
+          </a>
         </Link>
       </SignUpComponents.Logo>
 
@@ -152,6 +163,11 @@ const SignUpPage: NextPageWithLayout = () => {
         <SignUpComponents.Form.Submit disabled={isSubmitting} type="submit">
           Sign Up
         </SignUpComponents.Form.Submit>
+        {isRegisterDataInvalid && (
+          <SignUpComponents.Form.Error>
+            {registerMsg}
+          </SignUpComponents.Form.Error>
+        )}
       </SignUpComponents.Form.Container>
 
       <SignUpComponents.Text2>
