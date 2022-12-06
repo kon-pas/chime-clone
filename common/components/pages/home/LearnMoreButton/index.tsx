@@ -4,7 +4,7 @@ import Button from "@components/elements/Button";
 import IconSVG from "@components/elements/IconSVG";
 
 const LearnMoreButton: FC = () => (
-  <Button>
+  <Button style={{cursor: "not-allowed"}}>
     Learn more
     <IconSVG strokeWidth={3}>
       <path
