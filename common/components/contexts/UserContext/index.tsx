@@ -17,6 +17,7 @@ interface UserContextProviderProps {
   children: ReactNode;
 }
 
+// @@@ NOTE: Use session instead at `@services/session`.
 export const UserContextProvider: FC<UserContextProviderProps> = props => {
   const [user, setUser] = useState<SafeUser | null>(null);
 
