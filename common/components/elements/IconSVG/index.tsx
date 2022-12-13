@@ -32,8 +32,8 @@ const IconSVG: FC<IconSVGProps> = ({
       aria-label={`${title ?? null} ${desc ?? null}`}
       aria-labelledby={`${title ? "titleID" : null} ${desc ? "descID" : null}`}
     >
-      {title && <title id="titleID">{title}</title>}
-      {desc && <desc id="descID">{desc}</desc>}
+      {title && <title id={title}>{title}</title>}
+      {desc && <desc id={desc}>{desc}</desc>}
       {path}
     </Styled.SVG>
   );
