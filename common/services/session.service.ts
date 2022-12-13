@@ -1,4 +1,5 @@
-import { SafeUser } from "@interfaces";
+import type { SafeUser } from "@interfaces";
+import type { Email } from "@types";
 
 const user = {
   logIn(user: SafeUser): void {
@@ -10,12 +11,17 @@ const user = {
   },
 
   isLogged(): boolean {
-    return this.get() === null;
+    return window.sessionStorage.getItem("user") === null;
   },
 
-  get(): SafeUser | null {
-    const user = window.sessionStorage.getItem("user");
-    return user ? JSON.parse(user) : null;
+  getSafeData(): SafeUser | null {
+    const data = window.sessionStorage.getItem("user");
+    return data ? JSON.parse(data) : null;
+  },
+
+  getEmail(): Email | null {
+    const data = window.sessionStorage.getItem("user");
+    return data ? JSON.parse(data).email : null;
   },
 };
 
