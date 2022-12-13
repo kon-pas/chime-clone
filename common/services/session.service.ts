@@ -1,24 +1,21 @@
 import { SafeUser } from "@interfaces";
 
-// interface User {
-//   save(user: SafeUser): void;
-// }
-
-// interface Session {
-//   user(): User;
-// }
-
-// const session: Session = () => {
-//   user() {
-//     save(user) {
-//       window.sessionStorage.setItem("user", JSON.stringify(user));
-//     }
-//   }
-// }
-
 const user = {
-  set(user: SafeUser): void {
+  logIn(user: SafeUser): void {
     window.sessionStorage.setItem("user", JSON.stringify(user));
+  },
+
+  logOut(): void {
+    window.sessionStorage.setItem("user", "");
+  },
+
+  isLogged(): boolean {
+    return this.get() === null;
+  },
+
+  get(): SafeUser | null {
+    const user = window.sessionStorage.getItem("user");
+    return user ? JSON.parse(user) : null;
   },
 };
 
