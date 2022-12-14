@@ -1,5 +1,5 @@
 import type { SafeUser } from "@interfaces";
-import type { Email } from "@types";
+import type { Email, FirstName, SecondName } from "@types";
 
 const user = {
   logIn(user: SafeUser): void {
@@ -23,8 +23,19 @@ const user = {
     const data = window.sessionStorage.getItem("user");
     return data ? JSON.parse(data).email : null;
   },
+
+  getFirstName(): FirstName | null {
+    const data = window.sessionStorage.getItem("user");
+    return data ? JSON.parse(data).firstName : null;
+  },
+
+  getSecondName(): SecondName | null {
+    const data = window.sessionStorage.getItem("user");
+    return data ? JSON.parse(data).secondName : null;
+  },
 };
 
 const session = { user };
 
 export default session;
+ 
