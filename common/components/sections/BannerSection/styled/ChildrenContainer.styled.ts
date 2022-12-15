@@ -1,21 +1,40 @@
 import styled from "styled-components";
 
-import { h1, p } from "@styles/Tags.styled";
+import { h1, p, li } from "@styles/Tags.styled";
 
 import { COLORS } from "@constants";
 
-import { getMedia, getResizeTransition } from "@utils";
+import { getMedia } from "@utils";
 
-const ChildrenContainer = styled.div`
+interface ChildrenContainer {
+  stretched: boolean;
+  text?: "light" | "dark";
+}
+
+const ChildrenContainer = styled.div<ChildrenContainer>`
   display: grid;
   gap: 1rem;
+  color: ${props =>
+    props.text === "dark" ? COLORS.FONT_GRAY_MEDIUM : COLORS.WHITE};
 
   h1 {
     ${h1}
+    color: ${props =>
+      props.text === "dark" ? COLORS.FONT_GRAY_MEDIUM : COLORS.WHITE};
+
+    margin-bottom: ${props => (props.stretched ? "10rem" : "0")};
+
+    ${getMedia("md")} {
+      margin-bottom: 0;
+    }
   }
 
   p {
     ${p}
+    color: ${props =>
+      props.text === "dark" ? COLORS.FONT_GRAY_MEDIUM : COLORS.WHITE};
+    text-shadow: 0 0 ${props => props.text === "light" && "3px"}
+      rgba(0, 0, 0, 1);
   }
 
   ul {
@@ -24,25 +43,17 @@ const ChildrenContainer = styled.div`
     margin-left: 30px;
 
     li {
+      ${li}
+
       font-weight: 600;
       line-height: 1.5em;
-
-      &::before {
-        vertical-align: sub;
-        content: "";
-        background-image: url("/static/shared/check.png");
-        display: inline-block;
-        background-repeat: no-repeat;
-        background-size: 20px 20px;
-        width: 20px;
-        height: 20px;
-        margin: auto 10px auto -30px;
-      }
     }
   }
 
   small {
-    color: ${COLORS.FONT_GRAY_LIGHT};
+    color: ${props => props.text === "dark" && COLORS.FONT_GRAY_LIGHT};
+    text-shadow: 0 0 ${props => props.text === "light" && "3px"}
+      rgba(0, 0, 0, 1);
   }
 
   ${getMedia("md")} {
