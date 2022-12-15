@@ -1,7 +1,7 @@
 import * as Styled from "./styled";
 
 import type { FC } from "react";
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -25,7 +25,7 @@ const Header: FC = () => {
     setIsSubmenuVisible(true);
   }, [isMenuHover]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleResize = () => setIsSubmenuVisible(false);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

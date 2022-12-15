@@ -24,7 +24,7 @@ export interface NavigationItem {
  * Contains props for creating Next Image
  */
 export interface NextImageProps {
-  readonly src: `https://www.chime.com/${string}` | `/static/${string}`;
+  readonly src: `/static/${string}`;
   readonly alt: string;
   readonly originalSize: [number, number];
   readonly width?: {
