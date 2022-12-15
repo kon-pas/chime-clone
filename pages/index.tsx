@@ -10,8 +10,9 @@ import { COLORS } from "@constants";
 
 import MainLayout from "@components/composition/MainLayout";
 import DualSection from "@components/sections/DualSection";
-import PlaceholderSection from "@components/sections/PlaceholderSection";
 import BrandsLogoLine from "@components/elements/BrandsLogoLine";
+import BannerSection from "@components/sections/BannerSection";
+import EnrollForm from "@components/elements/EnrollForm";
 
 const HomePage: NextPageWithLayout = () => {
   return (
@@ -23,7 +24,30 @@ const HomePage: NextPageWithLayout = () => {
         <meta name="description" content="Chime Clone Home Page" />
       </Head>
 
-      <PlaceholderSection />
+      <BannerSection
+        img={{
+          align: "cover",
+          src: "/static/pages/home/web-01-app-desktop.png",
+          alt: "App",
+          originalSize: [1072, 307],
+          coverBreakpoint: 70,
+        }}
+      >
+        <h1>#1 most loved banking app</h1>
+
+        <EnrollForm />
+
+        <small>Already have an account?</small>
+        <small>
+          Learn how we collect and use your information by visiting our Privacy
+          Policy
+        </small>
+        <small>
+          Chime is a financial technology company, not a bank. Banking services
+          provided by The Bancorp Bank, N.A. or Stride Bank, N.A.; Members FDIC
+        </small>
+      </BannerSection>
+
       <BrandsLogoLine />
 
       {/* 1 */}
