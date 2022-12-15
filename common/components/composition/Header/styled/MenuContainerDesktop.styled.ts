@@ -36,7 +36,11 @@ const disappear = keyframes`
   }
 `;
 
-const MenuContainerDesktop = styled.nav`
+interface MenuContainerDesktopProps {
+  visible: boolean;
+}
+
+const MenuContainerDesktop = styled.nav<MenuContainerDesktopProps>`
   margin-right: auto;
   margin-left: 2rem;
   display: none;
@@ -74,7 +78,8 @@ const MenuContainerDesktop = styled.nav`
       > div {
         position: absolute;
         visibility: hidden;
-        animation: ${disappear} 0.2s ease-out;
+        animation: ${disappear} ${props => (props.visible ? "0.2s" : "0s")}
+          ease-out;
       }
 
       &:hover > div {

@@ -1,11 +1,12 @@
 import * as Styled from "./styled";
 
 import type { FC } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useHover } from "usehooks-ts";
 
 import { NAVIGATION_ITEMS } from "@constants";
 import { useUser } from "@hooks";
@@ -14,10 +15,21 @@ import InactiveSpan from "@components/elements/InactiveSpan";
 
 const Header: FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);
-
+  const [isSubmenuVisible, setIsSubmenuVisible] = useState<boolean>(false);
   const { events, push: navigate } = useRouter();
-
   const { user, setUser } = useUser();
+  const menuRef = useRef(null);
+  const isMenuHover = useHover(menuRef);
+
+  useEffect(() => {
+    setIsSubmenuVisible(true);
+  }, [isMenuHover]);
+
+  useLayoutEffect(() => {
+    const handleResize = () => setIsSubmenuVisible(false);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const closeModal = () => setIsSpliderOpened(false);
@@ -39,7 +51,7 @@ const Header: FC = () => {
           </h1>
         </Link>
 
-        <Styled.MenuContainerDesktop>
+        <Styled.MenuContainerDesktop ref={menuRef} visible={isSubmenuVisible}>
           <menu>
             {NAVIGATION_ITEMS.map((item, idx) => (
               <li key={idx}>
