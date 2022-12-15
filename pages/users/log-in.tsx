@@ -2,6 +2,7 @@ import * as LogInComponents from "@components/pages/log-in";
 
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
+import type { SafeUser } from "@interfaces";
 
 import { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
@@ -30,7 +31,7 @@ const LogInPage: NextPageWithLayout = () => {
 
   const { push: navigate } = useRouter();
 
-  const [user, setUser] = useUser();
+  const { user, setUser } = useUser();
 
   const onSubmit = (loginData: FormValues) => {
     loginUser(
