@@ -3,6 +3,7 @@ import * as SignUpComponents from "@components/pages/sing-up";
 import type { NextPageWithLayout } from "@pages/_app";
 import type { FirstName, SecondName, Email, Password } from "@types";
 
+import { GetServerSideProps } from "next";
 import { ReactElement, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -21,7 +22,11 @@ interface FormValues {
   passwordRepeated: Password;
 }
 
-const SignUpPage: NextPageWithLayout = () => {
+interface PageData {
+  email?: Email;
+}
+
+const SignUpPage: NextPageWithLayout<PageData> = props => {
   const {
     register,
     handleSubmit,
@@ -104,6 +109,7 @@ const SignUpPage: NextPageWithLayout = () => {
           />
         </SignUpComponents.Form.Splitter>
 
+        {/* First & second name errors */}
         {(errors.firstName || errors.secondName) && (
           <SignUpComponents.Form.Splitter>
             {errors.firstName && (
@@ -125,6 +131,7 @@ const SignUpPage: NextPageWithLayout = () => {
           placeholder="Email address"
           {...register("email", {
             required: "required",
+            ...(props.email && { value: props.email }),
             pattern: {
               value: /\S+@\S+\.\S+/,
               message: "Please correct your email address",
@@ -223,6 +230,18 @@ const SignUpPage: NextPageWithLayout = () => {
       </SignUpComponents.Disclaimer.Container>
     </SignUpComponents.Container>
   );
+};
+
+export const getServerSideProps: GetServerSideProps<
+  PageData
+> = async context => {
+  const { email } = context.query as PageData;
+
+  return {
+    props: {
+      email,
+    },
+  };
 };
 
 SignUpPage.getLayout = (page: ReactElement) => (
