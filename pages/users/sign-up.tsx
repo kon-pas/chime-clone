@@ -18,6 +18,7 @@ interface FormValues {
   secondName: SecondName;
   email: Email;
   password: Password;
+  passwordRepeated: Password;
 }
 
 const SignUpPage: NextPageWithLayout = () => {
@@ -25,6 +26,7 @@ const SignUpPage: NextPageWithLayout = () => {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    watch,
   } = useForm<FormValues>();
 
   const [registrationErrorMsg, setRegistrationErrorMsg] = useState<string>("");
@@ -36,7 +38,6 @@ const SignUpPage: NextPageWithLayout = () => {
       registerData,
       () => {
         setRegistrationErrorMsg("");
-
         console.info("User created:", registerData);
         navigate("/users/log-in");
       },
@@ -84,7 +85,7 @@ const SignUpPage: NextPageWithLayout = () => {
               required: "required",
               minLength: {
                 value: 2,
-                message: "Minimum length is 2",
+                message: "Please correct your first name",
               },
             })}
           />
@@ -97,7 +98,7 @@ const SignUpPage: NextPageWithLayout = () => {
               required: "required",
               minLength: {
                 value: 2,
-                message: "Minimum length is 2",
+                message: "Please correct your second name",
               },
             })}
           />
@@ -107,12 +108,12 @@ const SignUpPage: NextPageWithLayout = () => {
           <SignUpComponents.Form.Splitter>
             {errors.firstName && (
               <SignUpComponents.Form.Error>
-                Please correct your first name
+                {errors.firstName.message}
               </SignUpComponents.Form.Error>
             )}
             {errors.secondName && (
               <SignUpComponents.Form.Error>
-                Please correct your second name
+                {errors.secondName.message}
               </SignUpComponents.Form.Error>
             )}
           </SignUpComponents.Form.Splitter>
@@ -126,13 +127,13 @@ const SignUpPage: NextPageWithLayout = () => {
             required: "required",
             pattern: {
               value: /\S+@\S+\.\S+/,
-              message: "Entered value does not match email format",
+              message: "Please correct your email address",
             },
           })}
         />
         {errors.email && (
           <SignUpComponents.Form.Error>
-            Please correct your email address
+            {errors.email.message}
           </SignUpComponents.Form.Error>
         )}
 
@@ -144,13 +145,29 @@ const SignUpPage: NextPageWithLayout = () => {
             required: "required",
             minLength: {
               value: 5,
-              message: "Minimum length is 5",
+              message: "Please correct your password",
             },
           })}
         />
         {errors.password && (
           <SignUpComponents.Form.Error>
-            Please correct your password
+            {errors.password.message}
+          </SignUpComponents.Form.Error>
+        )}
+
+        {/* Password repeated*/}
+        <SignUpComponents.Form.Input
+          type="password"
+          placeholder="Repeat your password"
+          {...register("passwordRepeated", {
+            required: "required",
+            validate: (val: string) =>
+              watch("password") === val || "Passwords dont match",
+          })}
+        />
+        {errors.passwordRepeated && (
+          <SignUpComponents.Form.Error>
+            {errors.passwordRepeated.message}
           </SignUpComponents.Form.Error>
         )}
 
