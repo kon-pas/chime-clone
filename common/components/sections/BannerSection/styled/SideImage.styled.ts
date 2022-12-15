@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 
-interface ImageWrapper {
+interface SideImageProps {
   align?: "center" | "bottom";
   sm?: number;
   md?: number;
   lg?: number;
 }
 
-const ImageWrapper = styled.div<ImageWrapper>`
+const SideImage = styled.div<SideImageProps>`
   margin-top: 3rem;
   margin-left: auto;
   margin-right: auto;
@@ -31,4 +31,4 @@ const ImageWrapper = styled.div<ImageWrapper>`
   }
 `;
 
-export default ImageWrapper;
+export default SideImage;
