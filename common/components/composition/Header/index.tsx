@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { NAVIGATION_ITEMS } from "@constants";
-
+import { useUser } from "@hooks";
 import IconSVG from "@components/elements/IconSVG";
 import InactiveSpan from "@components/elements/InactiveSpan";
 
@@ -17,9 +17,10 @@ const Header: FC = () => {
 
   const { events, push: navigate } = useRouter();
 
+  const { user, setUser } = useUser();
+
   useEffect(() => {
     const closeModal = () => setIsSpliderOpened(false);
-
     events.on("routeChangeComplete", closeModal);
     return () => events.off("routeChangeComplete", closeModal);
   }, [events]);
@@ -71,13 +72,25 @@ const Header: FC = () => {
         </Styled.MenuContainerDesktop>
 
         <nav>
-          <Link href="/users/log-in">
-            <Styled.Span>Log In</Styled.Span>
-          </Link>
+          {user ? (
+            <Styled.Span>{`${user.firstName} ${user.secondName}`}</Styled.Span>
+          ) : (
+            <Link href="/users/log-in">
+              <Styled.Span>Log In</Styled.Span>
+            </Link>
+          )}
 
-          <Link href="/users/sign-up">
-            <Styled.Button>Sign Up</Styled.Button>
-          </Link>
+          {user ? (
+            <div>
+              <Styled.Button onClick={() => setUser(null)}>
+                Log Out
+              </Styled.Button>
+            </div>
+          ) : (
+            <Link href="/users/sign-up">
+              <Styled.Button>Sign Up</Styled.Button>
+            </Link>
+          )}
 
           <IconSVG
             onClick={() =>
@@ -149,10 +162,12 @@ const Header: FC = () => {
           </menu>
         </Styled.MenuContainer>
 
-        <Styled.AccountActions>
-          <div onClick={() => navigate("/users/log-in")}>Log In</div>
-          <div onClick={() => navigate("/users/sign-up")}>Sign Up</div>
-        </Styled.AccountActions>
+        {!user && (
+          <Styled.AccountActions>
+            <div onClick={() => navigate("/users/log-in")}>Log In</div>
+            <div onClick={() => navigate("/users/sign-up")}>Sign Up</div>
+          </Styled.AccountActions>
+        )}
       </Styled.ModalContainer>
     </>
   );
