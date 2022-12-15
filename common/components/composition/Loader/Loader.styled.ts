@@ -13,7 +13,7 @@ const spin = keyframes`
 `;
 
 export const LoaderWrapper = styled.div`
-  position: sticky;
+  position: absolute;
   top: 0;
   left: 0;
   display: flex;
@@ -22,7 +22,6 @@ export const LoaderWrapper = styled.div`
   height: 100vh;
   width: 100%;
   background-color: ${COLORS.WHITE};
-
   z-index: ${Z_INDEX.LOADER};
 `;
 

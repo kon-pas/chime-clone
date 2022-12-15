@@ -12,7 +12,10 @@ const Loader: FC = () => {
   const { events } = useRouter();
 
   useEffect(() => {
-    const hidePageContent = () => setIsLoading(true);
+    const hidePageContent = () => {
+      window.scrollTo(0, 0)
+      setIsLoading(true);
+    }
     const showPageContent = () => setIsLoading(false);
 
     events.on("routeChangeStart", hidePageContent);
