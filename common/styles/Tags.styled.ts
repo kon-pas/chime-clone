@@ -41,3 +41,17 @@ export const h3 = css`
 export const p = css`
   line-height: 1.75rem;
 `;
+
+export const li = css<{ src?: `/static/${string}` }>`
+  &::before {
+    vertical-align: sub;
+    content: "";
+    background-image: url(${props => props.src ?? "/static/shared/check.png"});
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px;
+    margin: auto 10px auto -30px;
+  }
+`;
