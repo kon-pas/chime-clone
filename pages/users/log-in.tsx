@@ -2,7 +2,6 @@ import * as LogInComponents from "@components/pages/log-in";
 
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
-import type { SafeUser } from "@interfaces";
 
 import { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
@@ -80,13 +79,13 @@ const LogInPage: NextPageWithLayout = () => {
             required: "required",
             pattern: {
               value: /\S+@\S+\.\S+/,
-              message: "Entered value does not match email format",
+              message: "Please correct your email address",
             },
           })}
         />
         {errors.email && (
           <LogInComponents.Form.Error>
-            Please correct your email address
+            {errors.email.message}
           </LogInComponents.Form.Error>
         )}
 
@@ -98,13 +97,13 @@ const LogInPage: NextPageWithLayout = () => {
             required: "required",
             minLength: {
               value: 5,
-              message: "Minimum length is 5",
+              message: "Please correct your password",
             },
           })}
         />
         {errors.password && (
           <LogInComponents.Form.Error>
-            Please correct your password
+            {errors.password.message}
           </LogInComponents.Form.Error>
         )}
 
