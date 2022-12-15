@@ -34,12 +34,18 @@ export interface NextImageProps {
   };
 }
 
+/**
+ * Client-side user-related data.
+ */
 export interface SafeUser {
   email: Email;
   firstName: FirstName;
   secondName: SecondName;
 }
 
+/**
+ * Server-side user-related data.
+ */
 export interface FullUser extends SafeUser {
   password: Password;
   id: Id;
