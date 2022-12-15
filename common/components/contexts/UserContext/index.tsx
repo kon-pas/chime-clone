@@ -17,7 +17,10 @@ interface UserContextProviderProps {
   children: ReactNode;
 }
 
-// @@@ NOTE: Use session instead at `@services/session`.
+/**
+ * @deprecated Context is not provided. Use `useUser` hook instead.
+ * @see `@hooks/use-user`
+ */
 export const UserContextProvider: FC<UserContextProviderProps> = props => {
   const [user, setUser] = useState<SafeUser | null>(null);
 
