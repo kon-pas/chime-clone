@@ -8,6 +8,9 @@ const Error = styled.div`
   color: ${COLORS.FONT_WARN};
   font-size: 0.9rem;
   padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Error;
