@@ -23,6 +23,7 @@ const DebitCardPage: NextPageWithLayout = () => {
 
       {/* 1 */}
       <BannerSection
+        key="/static/pages/debit-card/debit-card-front-2.png"
         img={{
           align: "center",
           src: "/static/pages/debit-card/debit-card-front-2.png",

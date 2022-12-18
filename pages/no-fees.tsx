@@ -23,6 +23,7 @@ const NoFeesPage: NextPageWithLayout = () => {
 
       {/* 1 */}
       <BannerSection
+        key="/static/pages/no-fees/landingpage-control.png"
         img={{
           src: "/static/pages/no-fees/landingpage-control.png",
           alt: "Landing page control",

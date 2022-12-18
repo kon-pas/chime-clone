@@ -24,6 +24,7 @@ const FaqPage: NextPageWithLayout = () => {
 
       {/* 1 */}
       <BannerSection
+        key="/static/pages/faq/control.png"
         img={{
           align: "center",
           src: "/static/pages/faq/control.png",
