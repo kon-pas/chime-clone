@@ -28,6 +28,7 @@ const Container = styled.div<ContainerProps>`
   ${getResizeTransition("all")}
 
   ${getMedia("md")} {
+    text-align: start;
     display: flex;
     gap: 2rem;
     justify-content: space-between;

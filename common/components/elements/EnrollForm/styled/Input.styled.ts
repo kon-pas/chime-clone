@@ -12,6 +12,7 @@ const Input = styled.input`
   cursor: pointer;
   background-color: ${COLORS.WHITE};
   color: ${COLORS.BLACK};
+  flex-grow: 1;
 `;
 
 export default Input;
