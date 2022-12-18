@@ -4,7 +4,7 @@ import { getMedia } from "@utils";
 
 import { getResizeTransition } from "@utils";
 
-import ContentContainer from "@components/elements/ContentContainer";
+import { ContentContainer } from "@components/elements";
 
 interface ContainerProps {
   imageFloat: "left" | "right";

@@ -3,7 +3,7 @@ import * as Styled from "./styled";
 import type { FC, ReactNode } from "react";
 import { useState } from "react";
 
-import IconSVG from "@components/elements/IconSVG";
+import { IconSVG } from "@components/elements";
 
 interface ToggleBoxProps {
   text: string;

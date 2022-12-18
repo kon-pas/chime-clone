@@ -1,10 +1,9 @@
-import type { FC } from "react"
+import type { FC } from "react";
 
-import Button from "@components/elements/Button";
-import IconSVG from "@components/elements/IconSVG";
+import { Button, IconSVG } from "@components/elements";
 
 const LearnMoreButton: FC = () => (
-  <Button style={{cursor: "not-allowed"}}>
+  <Button style={{ cursor: "not-allowed" }}>
     Learn more
     <IconSVG strokeWidth={3}>
       <path

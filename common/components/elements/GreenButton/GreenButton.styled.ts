@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { COLORS } from "@constants";
 
-import Button from "@components/elements/Button";
+import { Button } from "@components/elements";
 
 const GreenButton = styled(Button)`
   background-color: ${COLORS.LIME_MEDIUM};

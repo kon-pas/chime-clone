@@ -1,10 +1,10 @@
 import * as Styled from "./styled";
 
-import type { FC, ReactNode } from "react"
+import type { FC, ReactNode } from "react";
 
 import type { HexColor } from "@types";
 
-import ContentContainer from "@components/elements/ContentContainer";
+import { ContentContainer } from "@components/elements";
 
 interface MonoSectionProps {
   children: ReactNode;

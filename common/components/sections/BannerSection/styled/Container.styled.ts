@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { getMedia, getResizeTransition } from "@utils";
 
-import ContentContainer from "@components/elements/ContentContainer";
+import { ContentContainer } from "@components/elements";
 
 const Container = styled(ContentContainer)`
   position: relative;
