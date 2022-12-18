@@ -15,7 +15,7 @@ const Wrapper = styled.div<WrapperProps>`
   width: 100%;
   height: 100%;
   padding: 2rem 0;
-  background: url("/static/pages/home/web-01-app-desktop.png") no-repeat
+  background: url(${props => props.src ?? ""}) no-repeat
     ${props => (props.coverBreakpoint ? `${props.coverBreakpoint}%` : "center")}
     center;
   background-size: cover;

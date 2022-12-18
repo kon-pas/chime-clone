@@ -25,7 +25,7 @@ const BannerSection: FC<BannerSectionProps> = props => {
       <Styled.Container>
         <Styled.ChildrenContainer
           stretched={props.img.align === "cover"}
-          {...(props.img.align === "cover" && { text: "light" })}
+          text={props.img.align === "cover" ? "light" : "dark"}
         >
           {props.children}
         </Styled.ChildrenContainer>
@@ -33,10 +33,8 @@ const BannerSection: FC<BannerSectionProps> = props => {
         {props.img.align !== "cover" && (
           <Styled.SideImage align={props.img.align} {...props.img.width}>
             <Image
-              // @@@ TODO: Choose better key.
-              key={props.img.src}
               src={props.img.src}
-              alt={props.img.alt}
+              alt={props.img?.alt ?? ""}
               layout="responsive"
               width={props.img.originalSize[0]}
               height={props.img.originalSize[1]}
