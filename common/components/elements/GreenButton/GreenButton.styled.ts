@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import { COLORS } from "@constants";
-
 import { Button } from "@components/elements";
 
 const GreenButton = styled(Button)`

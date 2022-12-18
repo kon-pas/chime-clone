@@ -1,8 +1,8 @@
 import * as Styled from "./styled";
 
 import type { FC } from "react";
-import { useState, useEffect, useRef } from "react";
 
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";

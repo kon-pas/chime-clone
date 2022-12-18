@@ -1,9 +1,9 @@
 import * as Styled from "./Loader.styled";
 
 import type { FC } from "react";
+
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-
 import { IconSVG } from "@components/elements";
 
 const Loader: FC = () => {
