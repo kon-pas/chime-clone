@@ -1,3 +1,5 @@
+// @@@ NOTE: This is a mess.
+
 import * as Styled from "./styled";
 
 import type { FC, ReactNode } from "react";
@@ -13,6 +15,7 @@ interface BannerSectionProps {
     align?: "center" | "bottom" | "cover";
     coverBreakpoint?: number;
   };
+  minHeight?: number;
 }
 
 const BannerSection: FC<BannerSectionProps> = props => {
@@ -21,8 +24,12 @@ const BannerSection: FC<BannerSectionProps> = props => {
       backgroundColor={props.backgroundColor}
       coverBreakpoint={props.img.coverBreakpoint}
       {...(props.img.align === "cover" && { src: props.img.src })}
+      minHeight={props.minHeight}
     >
-      <Styled.Container>
+      <Styled.Container
+        stretched={props.img.align === "cover"}
+        minHeight={props.minHeight}
+      >
         <Styled.ChildrenContainer
           stretched={props.img.align === "cover"}
           text={props.img.align === "cover" ? "light" : "dark"}
