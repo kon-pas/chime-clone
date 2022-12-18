@@ -16,7 +16,6 @@ const GetPaidEarlyPage: NextPageWithLayout = () => {
 
       {/* 1 */}
       <BannerSection
-        key="/static/pages/get-paid-early/calendar-2.png"
         img={{
           align: "center",
           src: "/static/pages/get-paid-early/calendar-2.png",

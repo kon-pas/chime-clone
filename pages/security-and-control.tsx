@@ -21,7 +21,6 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
 
       {/* 1 */}
       <BannerSection
-        key="/static/pages/security-and-control/asset-shield.png"
         img={{
           align: "center",
           src: "/static/pages/security-and-control/asset-shield.png",
