@@ -5,10 +5,8 @@ import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
 
-import MainLayout from "@components/composition/MainLayout";
-import MonoSection from "@components/sections/MonoSection";
-import DualSection from "@components/sections/DualSection";
-import BannerSection from "@components/sections/BannerSection";
+import { MainLayout } from "@components/composition";
+import { MonoSection, DualSection, BannerSection } from "@components/sections";
 
 const GetPaidEarlyPage: NextPageWithLayout = () => {
   return (

@@ -1,4 +1,4 @@
-import * as FaqComponents from "@components/pages/faq";
+import { FaqPageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
 import Head from "next/head";
@@ -7,11 +7,9 @@ import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
 
-import MainLayout from "@components/composition/MainLayout";
-import BannerSection from "@components/sections/BannerSection";
-import ToggleBox from "@components/elements/ToggleBox";
-import ContentContainer from "@components/elements/ContentContainer";
-import MonoSection from "@components/sections/MonoSection";
+import { MainLayout } from "@components/composition";
+import { BannerSection, MonoSection } from "@components/sections";
+import { ToggleBox, ContentContainer } from "@components/elements";
 
 const FaqPage: NextPageWithLayout = () => {
   return (
@@ -52,11 +50,11 @@ const FaqPage: NextPageWithLayout = () => {
       </BannerSection>
 
       {/* 2 */}
-      <FaqComponents.Section>
+      <FaqPageComponents.Section>
         <ContentContainer>
-          <FaqComponents.Heading>
+          <FaqPageComponents.Heading>
             Frequently Asked Questions
-          </FaqComponents.Heading>
+          </FaqPageComponents.Heading>
 
           <ToggleBox text="What is Chime?">
             <p>
@@ -210,7 +208,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
         </ContentContainer>
-      </FaqComponents.Section>
+      </FaqPageComponents.Section>
 
       {/* 3 */}
       <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>

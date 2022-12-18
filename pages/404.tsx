@@ -1,4 +1,4 @@
-import * as Styled from "@components/pages/404";
+import { Page404Components } from "@components/pages";
 
 import type { ReactElement } from "react";
 import Image from "next/image";
@@ -6,25 +6,25 @@ import { useRouter } from "next/router";
 
 import type { NextPageWithLayout } from "@pages/_app";
 
-import MainLayout from "@components/composition/MainLayout";
+import { MainLayout } from "@components/composition";
 
 const Page404: NextPageWithLayout = () => {
   const { push: navigate } = useRouter();
 
   return (
-    <Styled.Wrapper>
-      <Styled.Container>
-        <Styled.TextContainer>
-          <Styled.Heading>
+    <Page404Components.Wrapper>
+      <Page404Components.Container>
+        <Page404Components.TextContainer>
+          <Page404Components.Heading>
             Uh-oh. The page you&apos;re looking for isn&apos;t here!
-          </Styled.Heading>
+          </Page404Components.Heading>
 
-          <Styled.Button onClick={() => navigate("/")}>
+          <Page404Components.Button onClick={() => navigate("/")}>
             Back to Homepage
-          </Styled.Button>
-        </Styled.TextContainer>
+          </Page404Components.Button>
+        </Page404Components.TextContainer>
 
-        <Styled.ImageWrapper>
+        <Page404Components.ImageWrapper>
           <Image
             src="/static/pages/404/404.png"
             alt="404 Robot"
@@ -32,9 +32,9 @@ const Page404: NextPageWithLayout = () => {
             width={654}
             height={564}
           />
-        </Styled.ImageWrapper>
-      </Styled.Container>
-    </Styled.Wrapper>
+        </Page404Components.ImageWrapper>
+      </Page404Components.Container>
+    </Page404Components.Wrapper>
   );
 };
 
