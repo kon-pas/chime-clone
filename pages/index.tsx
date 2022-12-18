@@ -1,4 +1,4 @@
-import * as HomeComponents from "@components/pages/home";
+import { HomePageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
 import Head from "next/head";
@@ -8,11 +8,9 @@ import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
 
-import MainLayout from "@components/composition/MainLayout";
-import DualSection from "@components/sections/DualSection";
-import BrandsLogoLine from "@components/elements/BrandsLogoLine";
-import BannerSection from "@components/sections/BannerSection";
-import EnrollForm from "@components/elements/EnrollForm";
+import { MainLayout } from "@components/composition";
+import { DualSection, BannerSection } from "@components/sections";
+import { BrandsLogoLine, EnrollForm } from "@components/elements";
 
 const HomePage: NextPageWithLayout = () => {
   return (
@@ -70,7 +68,7 @@ const HomePage: NextPageWithLayout = () => {
           overdraft fees. Eligibility requirements apply.<sup>1</sup>
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
 
       {/* 2 */}
@@ -94,7 +92,7 @@ const HomePage: NextPageWithLayout = () => {
           some of your co-workers!<sup>2</sup>
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
 
       {/* 3 */}
@@ -118,7 +116,7 @@ const HomePage: NextPageWithLayout = () => {
           <sup>®</sup>, and Circle K. Out-of-network fees apply.
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
 
       {/* 4 */}
@@ -144,7 +142,7 @@ const HomePage: NextPageWithLayout = () => {
           <sup>5</sup>
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
 
         <p>
           <small>
@@ -175,7 +173,7 @@ const HomePage: NextPageWithLayout = () => {
           needed.
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
 
       {/* 6 */}
@@ -200,7 +198,7 @@ const HomePage: NextPageWithLayout = () => {
           Account.
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
 
       {/* 7 */}
@@ -222,17 +220,17 @@ const HomePage: NextPageWithLayout = () => {
           transaction alerts
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
 
       {/* 8 */}
-      <HomeComponents.Section.Wrapper>
-        <HomeComponents.Section.Title>
+      <HomePageComponents.Section.Wrapper>
+        <HomePageComponents.Section.Title>
           Security & support you can trust
-        </HomeComponents.Section.Title>
+        </HomePageComponents.Section.Title>
 
-        <HomeComponents.Section.Container>
-          <HomeComponents.Section.ImageWrapper>
+        <HomePageComponents.Section.Container>
+          <HomePageComponents.Section.ImageWrapper>
             <Image
               src="/static/pages/home/lock.png"
               alt="Lock"
@@ -240,9 +238,9 @@ const HomePage: NextPageWithLayout = () => {
               width={174}
               height={220}
             />
-          </HomeComponents.Section.ImageWrapper>
+          </HomePageComponents.Section.ImageWrapper>
 
-          <HomeComponents.Section.TextContainer>
+          <HomePageComponents.Section.TextContainer>
             <h3>Serious security</h3>
 
             <p>
@@ -264,9 +262,9 @@ const HomePage: NextPageWithLayout = () => {
               24/7. Reach our friendly team by phone, email, in the app, or
               check out the Help Center.
             </p>
-          </HomeComponents.Section.TextContainer>
-        </HomeComponents.Section.Container>
-      </HomeComponents.Section.Wrapper>
+          </HomePageComponents.Section.TextContainer>
+        </HomePageComponents.Section.Container>
+      </HomePageComponents.Section.Wrapper>
 
       {/* 9 */}
       <DualSection
@@ -289,7 +287,7 @@ const HomePage: NextPageWithLayout = () => {
           won&apos;t affect your credit score!
         </p>
 
-        <HomeComponents.LearnMoreButton />
+        <HomePageComponents.LearnMoreButton />
       </DualSection>
     </>
   );

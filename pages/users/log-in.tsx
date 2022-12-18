@@ -1,4 +1,4 @@
-import * as LogInComponents from "@components/pages/log-in";
+import { LogInComponents } from "@components/pages";
 
 import type { NextPageWithLayout } from "@pages/_app";
 import type { Email, Password } from "@types";
@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form";
 
 import { loginUser } from "@services";
 import { useUser } from "@hooks";
-import ModalLayout from "@components/composition/ModalLayout";
+import { ModalLayout } from "@components/composition";
 
 interface FormValues {
   email: Email;
