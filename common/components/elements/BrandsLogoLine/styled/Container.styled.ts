@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { getMedia, getResizeTransition } from "@utils";
-import { ContentContainer } from "@components/elements";
+import ContentContainer from "@components/elements/ContentContainer/ContentContainer.styled";
 
 const Container = styled(ContentContainer)`
   display: flex;
