@@ -21,9 +21,9 @@ const SideImage = styled.div<SideImageProps>`
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+    max-width: ${props => `${props.md}px` ?? "50%"};
     align-content: ${props =>
       props.align === "bottom" ? "flex-end" : "center"};
-    max-width: ${props => `${props.md}px` ?? "50%"};
   }
 
   ${getMedia("lg")} {
