@@ -1,13 +1,12 @@
 import { HomePageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
+import type { NextPageWithLayout } from "@pages/_app";
+
 import Head from "next/head";
 import Image from "next/image";
 
-import type { NextPageWithLayout } from "@pages/_app";
-
 import { COLORS } from "@constants";
-
 import { MainLayout } from "@components/composition";
 import { DualSection, BannerSection } from "@components/sections";
 import { BrandsLogoLine, EnrollForm } from "@components/elements";

@@ -1,11 +1,10 @@
-import type { ReactElement } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
+import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "@pages/_app";
 
 import { COLORS } from "@constants";
-
 import { MainLayout } from "@components/composition";
 import {
   MonoSection,

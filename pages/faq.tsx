@@ -1,12 +1,10 @@
 import { FaqPageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
-import Head from "next/head";
-
 import type { NextPageWithLayout } from "@pages/_app";
 
+import Head from "next/head";
 import { COLORS } from "@constants";
-
 import { MainLayout } from "@components/composition";
 import { BannerSection, MonoSection } from "@components/sections";
 import { ToggleBox, ContentContainer } from "@components/elements";

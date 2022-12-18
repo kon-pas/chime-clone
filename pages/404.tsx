@@ -1,11 +1,10 @@
 import { Page404Components } from "@components/pages";
 
 import type { ReactElement } from "react";
-import Image from "next/image";
-import { useRouter } from "next/router";
-
 import type { NextPageWithLayout } from "@pages/_app";
 
+import Image from "next/image";
+import { useRouter } from "next/router";
 import { MainLayout } from "@components/composition";
 
 const Page404: NextPageWithLayout = () => {
