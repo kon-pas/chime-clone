@@ -1,5 +1,6 @@
 import * as Styled from "./styled";
 
+import type { FC } from "react";
 import type { Email } from "@types";
 
 import { useForm } from "react-hook-form";
@@ -9,7 +10,11 @@ interface FormValues {
   email: Email;
 }
 
-const EnrollForm = () => {
+interface EntrollFormProps {
+  direction: "rows" | "cols";
+}
+
+const EnrollForm: FC<EntrollFormProps> = props => {
   const {
     register,
     handleSubmit,
@@ -35,9 +40,11 @@ const EnrollForm = () => {
           },
         })}
       />
-      <Styled.Submit disabled={isSubmitting} type="submit">
-        Sign Up
-      </Styled.Submit>
+      <Styled.SubmitWrapper shrink={props.direction === "cols"}>
+        <Styled.Submit disabled={isSubmitting} type="submit">
+          Sign Up
+        </Styled.Submit>
+      </Styled.SubmitWrapper>
     </Styled.Form>
   );
 };
