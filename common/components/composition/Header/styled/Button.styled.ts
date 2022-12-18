@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { getResizeTransition, getMedia } from "@utils";
 
-import GreenButton from "@components/elements/GreenButton";
+import { GreenButton } from "@components/elements";
 
 const Button = styled(GreenButton)`
   padding: 0.5rem 1.05rem;

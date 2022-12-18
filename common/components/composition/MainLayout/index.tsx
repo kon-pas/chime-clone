@@ -2,8 +2,7 @@ import * as Styled from "./styled";
 
 import type { FC, ReactNode } from "react";
 
-import Header from "@components/composition/Header";
-import Footer from "@components/composition/Footer";
+import { Header, Footer } from "@components/composition";
 
 interface LayoutProps {
   children: ReactNode;

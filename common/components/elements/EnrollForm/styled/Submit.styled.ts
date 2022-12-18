@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import GreenButton from "@components/elements/GreenButton"
+import { GreenButton } from "@components/elements";
 
 const Submit = styled(GreenButton)``;
 

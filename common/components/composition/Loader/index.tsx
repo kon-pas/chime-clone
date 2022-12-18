@@ -4,7 +4,7 @@ import type { FC } from "react";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
-import IconSVG from "@components/elements/IconSVG";
+import { IconSVG } from "@components/elements";
 
 const Loader: FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -13,9 +13,9 @@ const Loader: FC = () => {
 
   useEffect(() => {
     const hidePageContent = () => {
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
       setIsLoading(true);
-    }
+    };
     const showPageContent = () => setIsLoading(false);
 
     events.on("routeChangeStart", hidePageContent);

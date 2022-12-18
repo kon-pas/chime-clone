@@ -10,8 +10,7 @@ import { useHover } from "usehooks-ts";
 
 import { NAVIGATION_ITEMS } from "@constants";
 import { useUser } from "@hooks";
-import IconSVG from "@components/elements/IconSVG";
-import InactiveSpan from "@components/elements/InactiveSpan";
+import { IconSVG, InactiveSpan } from "@components/elements";
 
 const Header: FC = () => {
   const [isSpliderOpened, setIsSpliderOpened] = useState<boolean>(false);

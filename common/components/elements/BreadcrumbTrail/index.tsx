@@ -3,8 +3,7 @@
 // import type { FC } from "react"
 // import { useRouter } from "next/router";
 
-// import ContentContainer from "@components/elements/ContentContainer";
-// import IconSVG from "@components/elements/IconSVG";
+// import {ContentContainer, IconSVG} from "@components/elements";
 
 // const BreadcrumbTrail: FC = () => {
 //   const { pathname } = useRouter();

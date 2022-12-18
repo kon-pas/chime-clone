@@ -6,8 +6,7 @@ import Link from "next/link";
 
 import { NAVIGATION_ITEMS, BREAKPOINTS } from "@constants";
 
-import ContentContainer from "@components/elements/ContentContainer";
-import InactiveSpan from "@components/elements/InactiveSpan";
+import { ContentContainer, InactiveSpan } from "@components/elements";
 
 const Footer: FC = () => {
   return (
