@@ -25,8 +25,8 @@ export interface NavigationItem {
  */
 export interface NextImageProps {
   readonly src: `/static/${string}`;
-  readonly alt: string;
   readonly originalSize: [number, number];
+  readonly alt?: string;
   readonly width?: {
     readonly sm?: number;
     readonly md?: number;
