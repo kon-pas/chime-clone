@@ -31,6 +31,7 @@ const HomePage: NextPageWithLayout = () => {
           // 1.1
           <BannerSection
             key="/static/pages/home/web-01-app-desktop.png"
+            minHeight={550}
             img={{
               align: "cover",
               src: "/static/pages/home/web-01-app-desktop.png",
@@ -57,6 +58,7 @@ const HomePage: NextPageWithLayout = () => {
           // 1.2
           <BannerSection
             key="/static/pages/home/web-02-cb-desktop.png"
+            minHeight={550}
             img={{
               align: "cover",
               src: "/static/pages/home/web-02-cb-desktop.png",
@@ -83,6 +85,7 @@ const HomePage: NextPageWithLayout = () => {
           // 1.3
           <BannerSection
             key="/static/pages/home/web-03-gpe-desktop.jpg"
+            minHeight={550}
             img={{
               align: "cover",
               src: "/static/pages/home/web-03-gpe-desktop.jpg",
@@ -111,6 +114,7 @@ const HomePage: NextPageWithLayout = () => {
           // 1.4
           <BannerSection
             key="/static/pages/home/web-04-overdraft-desktop.png"
+            minHeight={550}
             img={{
               align: "cover",
               src: "/static/pages/home/web-04-overdraft-desktop.png",
@@ -139,6 +143,7 @@ const HomePage: NextPageWithLayout = () => {
           // 1.5
           <BannerSection
             key="/static/pages/home/web-05-no-fees-desktop.png"
+            minHeight={550}
             img={{
               align: "cover",
               src: "/static/pages/home/web-05-no-fees-desktop.png",

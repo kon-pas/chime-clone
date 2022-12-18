@@ -8,12 +8,18 @@ interface WrapperProps {
   backgroundColor?: HexColor;
   src?: `/static/${string}`;
   coverBreakpoint?: number;
+  minHeight?: number;
 }
 
 const Wrapper = styled.div<WrapperProps>`
   background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   width: 100%;
   height: 100%;
+  ${props =>
+    props.minHeight &&
+    `
+    min-height: ${props.minHeight}px;
+  `}
   padding: 2rem 0;
   background: url(${props => props.src ?? ""}) no-repeat
     ${props => (props.coverBreakpoint ? `${props.coverBreakpoint}%` : "center")}
