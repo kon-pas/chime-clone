@@ -9,7 +9,11 @@ import Image from "next/image";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
 import { DualSection, BannerSection } from "@components/sections";
-import { BrandsLogoLine, EnrollForm } from "@components/elements";
+import {
+  BrandsLogoLine,
+  EnrollForm,
+  ToggleSectionWrapper,
+} from "@components/elements";
 
 const HomePage: NextPageWithLayout = () => {
   return (
@@ -21,33 +25,65 @@ const HomePage: NextPageWithLayout = () => {
         <meta name="description" content="Chime Clone Home Page" />
       </Head>
 
-      <BannerSection
-        img={{
-          align: "cover",
-          src: "/static/pages/home/web-01-app-desktop.png",
-          alt: "App",
-          originalSize: [1072, 307],
-          coverBreakpoint: 70,
-        }}
-      >
-        <h1>#1 most loved banking app</h1>
+      {/* 1 */}
+      <ToggleSectionWrapper
+        views={[
+          // 1.1
+          <BannerSection
+            key="/static/pages/home/web-01-app-desktop.png"
+            img={{
+              align: "cover",
+              src: "/static/pages/home/web-01-app-desktop.png",
+              originalSize: [1072, 307],
+              coverBreakpoint: 70,
+            }}
+          >
+            <h1>#1 most loved banking app</h1>
 
-        <EnrollForm />
+            <EnrollForm />
 
-        <small>Already have an account?</small>
-        <small>
-          Learn how we collect and use your information by visiting our Privacy
-          Policy
-        </small>
-        <small>
-          Chime is a financial technology company, not a bank. Banking services
-          provided by The Bancorp Bank, N.A. or Stride Bank, N.A.; Members FDIC
-        </small>
-      </BannerSection>
+            <small>Already have an account?</small>
+            <small>
+              Learn how we collect and use your information by visiting our
+              Privacy Policy
+            </small>
+            <small>
+              Chime is a financial technology company, not a bank. Banking
+              services provided by The Bancorp Bank, N.A. or Stride Bank, N.A.;
+              Members FDIC
+            </small>
+          </BannerSection>,
+          // 1.2
+          <BannerSection
+            key="/static/pages/home/web-02-cb-desktop.png"
+            img={{
+              align: "cover",
+              src: "/static/pages/home/web-02-cb-desktop.png",
+              originalSize: [1072, 307],
+              coverBreakpoint: 70,
+            }}
+          >
+            <h1>#2 most loved banking app</h1>
+
+            <EnrollForm />
+
+            <small>Already have an account?</small>
+            <small>
+              Learn how we collect and use your information by visiting our
+              Privacy Policy
+            </small>
+            <small>
+              Chime is a financial technology company, not a bank. Banking
+              services provided by The Bancorp Bank, N.A. or Stride Bank, N.A.;
+              Members FDIC
+            </small>
+          </BannerSection>,
+        ]}
+      />
 
       <BrandsLogoLine />
 
-      {/* 1 */}
+      {/* 2 */}
       <DualSection
         img={{
           float: "right",
@@ -70,7 +106,7 @@ const HomePage: NextPageWithLayout = () => {
         <HomePageComponents.LearnMoreButton />
       </DualSection>
 
-      {/* 2 */}
+      {/* 3 */}
       <DualSection
         img={{
           float: "left",
@@ -94,7 +130,7 @@ const HomePage: NextPageWithLayout = () => {
         <HomePageComponents.LearnMoreButton />
       </DualSection>
 
-      {/* 3 */}
+      {/* 4 */}
       <DualSection
         img={{
           float: "right",
@@ -118,7 +154,7 @@ const HomePage: NextPageWithLayout = () => {
         <HomePageComponents.LearnMoreButton />
       </DualSection>
 
-      {/* 4 */}
+      {/* 5 */}
       <DualSection
         img={{
           float: "left",
@@ -151,7 +187,7 @@ const HomePage: NextPageWithLayout = () => {
         </p>
       </DualSection>
 
-      {/* 5 */}
+      {/* 6 */}
       <DualSection
         img={{
           float: "right",
@@ -175,7 +211,7 @@ const HomePage: NextPageWithLayout = () => {
         <HomePageComponents.LearnMoreButton />
       </DualSection>
 
-      {/* 6 */}
+      {/* 7 */}
       <DualSection
         img={{
           float: "left",
@@ -200,7 +236,7 @@ const HomePage: NextPageWithLayout = () => {
         <HomePageComponents.LearnMoreButton />
       </DualSection>
 
-      {/* 7 */}
+      {/* 8 */}
       <DualSection
         img={{
           float: "right",
@@ -222,7 +258,7 @@ const HomePage: NextPageWithLayout = () => {
         <HomePageComponents.LearnMoreButton />
       </DualSection>
 
-      {/* 8 */}
+      {/* 9 */}
       <HomePageComponents.Section.Wrapper>
         <HomePageComponents.Section.Title>
           Security & support you can trust
@@ -265,7 +301,7 @@ const HomePage: NextPageWithLayout = () => {
         </HomePageComponents.Section.Container>
       </HomePageComponents.Section.Wrapper>
 
-      {/* 9 */}
+      {/* 10 */}
       <DualSection
         img={{
           float: "right",
