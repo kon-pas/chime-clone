@@ -53,6 +53,7 @@ const HomePage: NextPageWithLayout = () => {
               Members FDIC
             </small>
           </BannerSection>,
+
           // 1.2
           <BannerSection
             key="/static/pages/home/web-02-cb-desktop.png"
@@ -63,7 +64,89 @@ const HomePage: NextPageWithLayout = () => {
               coverBreakpoint: 70,
             }}
           >
-            <h1>#2 most loved banking app</h1>
+            <h1>Build credit history with no annual fees or interest</h1>
+
+            <EnrollForm />
+
+            <small>Already have an account?</small>
+            <small>
+              Learn how we collect and use your information by visiting our
+              Privacy Policy
+            </small>
+            <small>
+              Chime is a financial technology company, not a bank. Banking
+              services provided by The Bancorp Bank, N.A. or Stride Bank, N.A.;
+              Members FDIC
+            </small>
+          </BannerSection>,
+
+          // 1.3
+          <BannerSection
+            key="/static/pages/home/web-03-gpe-desktop.jpg"
+            img={{
+              align: "cover",
+              src: "/static/pages/home/web-03-gpe-desktop.jpg",
+              originalSize: [1072, 307],
+              coverBreakpoint: 70,
+            }}
+          >
+            <h1>
+              Fee-free overdraft up to $200<sup>1</sup>
+            </h1>
+
+            <EnrollForm />
+
+            <small>Already have an account?</small>
+            <small>
+              Learn how we collect and use your information by visiting our
+              Privacy Policy
+            </small>
+            <small>
+              Chime is a financial technology company, not a bank. Banking
+              services provided by The Bancorp Bank, N.A. or Stride Bank, N.A.;
+              Members FDIC
+            </small>
+          </BannerSection>,
+
+          // 1.4
+          <BannerSection
+            key="/static/pages/home/web-04-overdraft-desktop.png"
+            img={{
+              align: "cover",
+              src: "/static/pages/home/web-04-overdraft-desktop.png",
+              originalSize: [1072, 307],
+              coverBreakpoint: 70,
+            }}
+          >
+            <h1>
+              Get paid up to 2 days early with direct deposit<sup>2</sup>
+            </h1>
+
+            <EnrollForm />
+
+            <small>Already have an account?</small>
+            <small>
+              Learn how we collect and use your information by visiting our
+              Privacy Policy
+            </small>
+            <small>
+              Chime is a financial technology company, not a bank. Banking
+              services provided by The Bancorp Bank, N.A. or Stride Bank, N.A.;
+              Members FDIC
+            </small>
+          </BannerSection>,
+
+          // 1.5
+          <BannerSection
+            key="/static/pages/home/web-05-no-fees-desktop.png"
+            img={{
+              align: "cover",
+              src: "/static/pages/home/web-05-no-fees-desktop.png",
+              originalSize: [1072, 307],
+              coverBreakpoint: 70,
+            }}
+          >
+            <h1>No monthly fees</h1>
 
             <EnrollForm />
 
