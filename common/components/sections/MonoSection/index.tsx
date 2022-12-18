@@ -1,7 +1,6 @@
 import * as Styled from "./styled";
 
 import type { FC, ReactNode } from "react";
-
 import type { HexColor } from "@types";
 
 import { ContentContainer } from "@components/elements";

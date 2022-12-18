@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import { getMedia, getResizeTransition } from "@utils";
-
 import { GreenButton } from "@components/elements";
 
 const Button = styled(GreenButton)`

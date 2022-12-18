@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import { ContentContainer } from "@components/elements";
-
 import { getMedia, getResizeTransition } from "@utils";
 
 const Container = styled(ContentContainer)`
