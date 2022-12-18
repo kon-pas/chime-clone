@@ -6,7 +6,7 @@
 // import ContentContainer from "@components/elements/ContentContainer";
 // import IconSVG from "@components/elements/IconSVG";
 
-// const BreadcrumbTrial: FC = () => {
+// const BreadcrumbTrail: FC = () => {
 //   const { pathname } = useRouter();
 
 //   return (
@@ -35,7 +35,7 @@
 //   );
 // };
 
-// export default BreadcrumbTrial;
+// export default BreadcrumbTrail;
 
 // @@@ TODO: Remove null export.
 export {};
