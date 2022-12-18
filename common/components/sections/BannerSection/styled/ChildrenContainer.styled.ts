@@ -12,20 +12,26 @@ interface ChildrenContainer {
 }
 
 const ChildrenContainer = styled.div<ChildrenContainer>`
-  display: grid;
+  display: flex;
   gap: 1rem;
   color: ${props =>
     props.text === "dark" ? COLORS.FONT_GRAY_MEDIUM : COLORS.WHITE};
   text-shadow: 0 0 ${props => props.text === "light" && "3px"} rgba(0, 0, 0, 1);
 
+  flex-direction: column;
+  min-height: 100%;
+
   h1 {
     ${h1}
     color: ${props => (props.text === "dark" ? COLORS.BLACK : COLORS.WHITE)};
 
-    margin-bottom: ${props => (props.stretched ? "10rem" : "0")};
+    ${props =>
+      props.stretched &&
+      `flex-grow: 1;
+    `}
 
     ${getMedia("md")} {
-      margin-bottom: 0;
+      flex-grow: 0;
     }
   }
 
@@ -51,6 +57,8 @@ const ChildrenContainer = styled.div<ChildrenContainer>`
 
   small {
     color: ${props => props.text === "dark" && COLORS.FONT_GRAY_LIGHT};
+    display: table-cell;
+    vertical-align: bottom;
   }
 
   ${getMedia("md")} {
