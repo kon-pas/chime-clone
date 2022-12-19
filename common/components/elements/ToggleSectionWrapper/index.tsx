@@ -28,7 +28,7 @@ const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
       ))}
 
       <Styled.Arrow side="left">
-        <IconSVG>
+        <IconSVG strokeWidth={1.25}>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -38,7 +38,7 @@ const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
       </Styled.Arrow>
 
       <Styled.Arrow side="right">
-        <IconSVG>
+        <IconSVG strokeWidth={1.25}>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

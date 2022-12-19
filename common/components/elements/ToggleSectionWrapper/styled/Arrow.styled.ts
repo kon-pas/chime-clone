@@ -16,9 +16,9 @@ const Arrow = styled.div<ArrowProps>`
   transform: translateY(-50%);
   width: 40px;
   color: ${COLORS.GRAY_MEDIUM};
-
   transition-property: color;
   transition-duration: 0.2s;
+  padding: 25px 0;
 
   &:hover {
     cursor: pointer;
