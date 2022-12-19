@@ -12,7 +12,6 @@ interface WrapperProps {
 }
 
 const Wrapper = styled.div<WrapperProps>`
-  background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
   width: 100%;
   height: 100%;
   padding: 2rem 0;
@@ -23,9 +22,13 @@ const Wrapper = styled.div<WrapperProps>`
     `
     min-height: ${props.minHeight}px;
   `}
-  background: url(${props => props.src ?? ""}) no-repeat
-    ${props => (props.coverBreakpoint ? `${props.coverBreakpoint}%` : "center")}
-    center;
+
+  background-color: ${props => props.backgroundColor ?? COLORS.WHITE};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(${props => props.src ?? ""});
+  background-position: ${props =>
+    props.coverBreakpoint ? `${props.coverBreakpoint}%` : "center"};
 `;
 
 export default Wrapper;
