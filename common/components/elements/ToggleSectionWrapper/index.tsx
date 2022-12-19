@@ -3,6 +3,7 @@ import * as Styled from "./styled";
 import type { FC, ReactNode } from "react";
 
 import { useEffect, useState } from "react";
+import { IconSVG } from "@components/elements";
 
 interface ToggleSectionWrapperProps {
   views: ReactNode[];
@@ -25,6 +26,26 @@ const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
           {view}
         </Styled.View>
       ))}
+
+      <Styled.Arrow side="left">
+        <IconSVG>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </IconSVG>
+      </Styled.Arrow>
+
+      <Styled.Arrow side="right">
+        <IconSVG>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </IconSVG>
+      </Styled.Arrow>
     </Styled.Container>
   );
 };
