@@ -62,6 +62,7 @@ const ChildrenContainer = styled.div<ChildrenContainer>`
 
   ${getMedia("md")} {
     width: 365px;
+    align-self: center;
   }
 
   ${getMedia("lg")} {

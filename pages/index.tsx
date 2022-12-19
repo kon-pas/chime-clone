@@ -63,7 +63,7 @@ const HomePage: NextPageWithLayout = () => {
               align: "cover",
               src: "/static/pages/home/web-02-cb-desktop.png",
               originalSize: [1072, 307],
-              coverBreakpoint: 70,
+              coverBreakpoint: 60,
             }}
           >
             <h1>Build credit history with no annual fees or interest</h1>
@@ -119,7 +119,7 @@ const HomePage: NextPageWithLayout = () => {
               align: "cover",
               src: "/static/pages/home/web-04-overdraft-desktop.png",
               originalSize: [1072, 307],
-              coverBreakpoint: 70,
+              coverBreakpoint: 80,
             }}
           >
             <h1>
@@ -148,7 +148,7 @@ const HomePage: NextPageWithLayout = () => {
               align: "cover",
               src: "/static/pages/home/web-05-no-fees-desktop.png",
               originalSize: [1072, 307],
-              coverBreakpoint: 70,
+              coverBreakpoint: 58,
             }}
           >
             <h1>No monthly fees</h1>
