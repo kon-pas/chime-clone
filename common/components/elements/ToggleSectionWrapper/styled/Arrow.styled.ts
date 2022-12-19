@@ -14,16 +14,15 @@ const Arrow = styled.div<ArrowProps>`
   ${props => (props.side === "left" ? `left: 10px;` : `right: 10px;`)}
   top: 50%;
   transform: translateY(-50%);
-  width: 35px;
+  width: 40px;
   color: ${COLORS.GRAY_MEDIUM};
 
-  opacity: 0.8;
-  transition-property: opacity;
-  transition-duration: 0.1s;
+  transition-property: color;
+  transition-duration: 0.2s;
 
   &:hover {
     cursor: pointer;
-    opacity: 1;
+    color: ${COLORS.GRAY_LIGHT};
   }
 
   @media (min-width: ${Breakpoints.md + 50}px) {
