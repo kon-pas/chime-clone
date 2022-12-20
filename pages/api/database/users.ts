@@ -1,14 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-
 import type { FullUser } from "@interfaces";
 
-import { HttpResponse } from "@utils/api";
-
+import { HttpResponse } from "@api";
 import { USERS } from "@database";
 
-const { DB_AUTH_TOKEN } = process.env;
+const { DB_AUTH_TOKEN_FAKE } = process.env;
 
 /**
+ * @deprecated Moved to MongoDB.
  * Imitating database.
  */
 const handler = async (
@@ -20,7 +19,7 @@ const handler = async (
   const authTokenTrimmed: string | undefined =
     authToken && req.headers.authorization?.slice(7);
 
-  if (authTokenTrimmed === DB_AUTH_TOKEN) {
+  if (authTokenTrimmed === DB_AUTH_TOKEN_FAKE) {
     switch (req.method) {
       case "GET": {
         res.status(200).send(new HttpResponse(200, [...USERS]));
@@ -32,13 +31,11 @@ const handler = async (
           req.body as FullUser;
 
         if (USERS.some(user => user.email === email)) {
-          res
-            .status(409)
-            .send(
-              new HttpResponse(409, {
-                msg: "Email Address Has Already Been Taken",
-              })
-            );
+          res.status(409).send(
+            new HttpResponse(409, {
+              msg: "Email Address Has Already Been Taken",
+            })
+          );
         } else {
           USERS.push({ firstName, secondName, email, password, id });
           res.status(201).send(new HttpResponse(201));
