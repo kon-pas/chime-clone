@@ -1,12 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-
-import { compare } from "bcrypt";
-
 import type { FullUser } from "@interfaces";
 
-import { HttpResponse, fetchWrapper } from "@utils/api";
+import { compare } from "bcrypt";
+import { HttpResponse, fetchWrapper } from "common/api";
 
-const { DB_HOST, DB_AUTH_TOKEN, HASH_SALT_ROUNDS } = process.env;
+const { DB_HOST_FAKE, DB_AUTH_TOKEN_FAKE } = process.env;
 
 const handler = async (
   req: NextApiRequest,
@@ -15,8 +13,8 @@ const handler = async (
   try {
     const response: HttpResponse = await fetchWrapper
       .get({
-        url: `${DB_HOST}/users`,
-        auth: DB_AUTH_TOKEN,
+        url: `${DB_HOST_FAKE}/users`,
+        auth: DB_AUTH_TOKEN_FAKE,
       })
       .then(res => res.json());
 

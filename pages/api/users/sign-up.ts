@@ -1,11 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 import { hash, genSalt } from "bcrypt";
-
 import { generateId } from "@utils";
-import { HttpResponse, fetchWrapper } from "@utils/api";
+import { HttpResponse, fetchWrapper } from "common/api";
 
-const { DB_HOST, DB_AUTH_TOKEN, HASH_SALT_ROUNDS } = process.env;
+const { DB_HOST_FAKE, DB_AUTH_TOKEN_FAKE, HASH_SALT_ROUNDS } = process.env;
 
 const handler = async (
   req: NextApiRequest,
@@ -17,9 +16,9 @@ const handler = async (
 
     const response: HttpResponse = await fetchWrapper
       .put({
-        url: `${DB_HOST}/users`,
+        url: `${DB_HOST_FAKE}/users`,
         body: JSON.stringify({ id: generateId(), ...req.body, password }),
-        auth: DB_AUTH_TOKEN,
+        auth: DB_AUTH_TOKEN_FAKE,
       })
       .then(res => res.json());
 
