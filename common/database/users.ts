@@ -8,6 +8,22 @@ import { generateId } from "@utils";
 const users: FullUser[] = [
   {
     id: generateId(),
+    firstName: "John",
+    secondName: "Doe",
+    email: "john@doe.com",
+    // @@@ Hashed "doe123"
+    password: "$2b$10$IkP2AUvw8GY6Wu6yl1PlSOU/9DrUraYRFN/FlkpAJTmofqZLVU.US",
+  },
+  {
+    id: generateId(),
+    firstName: "Jane",
+    secondName: "Doe",
+    email: "jane@doe.com",
+    // @@@ Hashed "doe123"
+    password: "$2b$10$HexkU7UDaHlqOV6LB/Oek.Ipt4vCrhTJbVQasmo2BxvhwedVHPyT6",
+  },
+  {
+    id: generateId(),
     firstName: "Jan",
     secondName: "Kowalski",
     email: "jan@kowalski.com",
