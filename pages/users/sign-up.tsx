@@ -237,10 +237,14 @@ export const getServerSideProps: GetServerSideProps<
 > = async context => {
   const { email } = context.query as PageData;
 
+  if (email)
+    return {
+      props: {
+        email,
+      },
+    };
   return {
-    props: {
-      email,
-    },
+    props: {},
   };
 };
 
