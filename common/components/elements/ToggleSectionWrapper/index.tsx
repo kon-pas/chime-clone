@@ -2,7 +2,7 @@ import * as Styled from "./styled";
 
 import type { FC, ReactNode } from "react";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { IconSVG } from "@components/elements";
 
 interface ToggleSectionWrapperProps {
@@ -12,22 +12,32 @@ interface ToggleSectionWrapperProps {
 const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
   const [viewIdx, setViewIdx] = useState<number>(0);
 
+  const decrementIdx = useCallback(
+    () => setViewIdx(current => (current - 1) % props.views.length),
+    [props.views.length]
+  );
+
+  const incrementIdx = useCallback(
+    () => setViewIdx(current => (current + 1) % props.views.length),
+    [props.views.length]
+  );
+
   useEffect(() => {
     const intervalDescriptor: NodeJS.Timer = setInterval(() => {
-      setViewIdx(current => (current + 1) % props.views.length);
+      incrementIdx();
     }, 3000);
     return () => clearInterval(intervalDescriptor);
-  }, [props.views.length]);
+  }, [incrementIdx, viewIdx]);
 
   return (
     <Styled.Container>
       {props.views.map((view, idx) => (
-        <Styled.View key={idx} visible={idx === viewIdx}>
+        <Styled.View key={idx} visible={idx === Math.abs(viewIdx)}>
           {view}
         </Styled.View>
       ))}
 
-      <Styled.Arrow side="left">
+      <Styled.Arrow side="left" onClick={decrementIdx}>
         <IconSVG strokeWidth={1.25}>
           <path
             strokeLinecap="round"
@@ -37,7 +47,7 @@ const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
         </IconSVG>
       </Styled.Arrow>
 
-      <Styled.Arrow side="right">
+      <Styled.Arrow side="right" onClick={incrementIdx}>
         <IconSVG strokeWidth={1.25}>
           <path
             strokeLinecap="round"
