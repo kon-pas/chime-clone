@@ -1,16 +1,18 @@
-// import { ErrorResponse, LoadedResponse } from "@utils/api";
+import type { User } from "@prisma/client";
+
+// import { ErrorResponse, LoadedResponse } from "@api";
 
 export type HexColor = `#${string}`;
 
 export type Email = `${string}@${string}.${string}`;
 
-export type FirstName = string;
+export type FirstName = User["firstName"];
 
-export type SecondName = string;
+export type SecondName = User["secondName"];
 
-export type Password = string;
+export type Password = User["password"];
 
-export type Id = string;
+export type Id = User["id"];
 
 export type HttpResponseStatusCode = 200 | 201 | 404 | 409 | 500;
 
