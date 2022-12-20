@@ -2,7 +2,7 @@ import type { Email, Password } from "@types";
 
 import type { SafeUser } from "@interfaces";
 
-import { fetchWrapper, HttpResponse } from "@utils/api";
+import { fetchWrapper, HttpResponse } from "@api";
 
 interface LoginValues {
   email: Email;

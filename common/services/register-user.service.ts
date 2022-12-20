@@ -1,6 +1,6 @@
 import type { FirstName, SecondName, Email, Password } from "@types";
 
-import { fetchWrapper, HttpResponse } from "@utils/api";
+import { fetchWrapper, HttpResponse } from "@api";
 
 interface RegisterValues {
   firstName: FirstName;

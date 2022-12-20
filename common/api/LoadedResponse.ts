@@ -1,4 +1,4 @@
-import { ErrorResponse } from "common/api";
+import { ErrorResponse } from "@api";
 
 import { HttpResponseStatusCode } from "@types";
 

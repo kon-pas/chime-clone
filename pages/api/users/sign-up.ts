@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 import { hash, genSalt } from "bcrypt";
 import { generateId } from "@utils";
-import { HttpResponse, fetchWrapper } from "common/api";
+import { HttpResponse, fetchWrapper } from "@api";
 
 const { DB_HOST_FAKE, DB_AUTH_TOKEN_FAKE, HASH_SALT_ROUNDS } = process.env;
 

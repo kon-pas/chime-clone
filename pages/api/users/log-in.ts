@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import type { FullUser } from "@interfaces";
 
 import { compare } from "bcrypt";
-import { HttpResponse, fetchWrapper } from "common/api";
+import { HttpResponse, fetchWrapper } from "@api";
 
 const { DB_HOST_FAKE, DB_AUTH_TOKEN_FAKE } = process.env;
 
