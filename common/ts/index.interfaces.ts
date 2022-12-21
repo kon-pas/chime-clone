@@ -46,6 +46,16 @@ export interface SafeUser {
 }
 
 /**
+ * Data needed to register an user.
+ */
+export interface RegisterValues {
+  firstName: FirstName;
+  secondName: SecondName;
+  email: Email;
+  password: Password;
+}
+
+/**
  * Server-side user-related data.
  */
 // export interface FullUser extends SafeUser {
