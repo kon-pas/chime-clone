@@ -1,7 +1,6 @@
-import { SignUpComponents } from "@components/pages";
-
 import type { NextPageWithLayout } from "@pages/_app";
 import type { FirstName, SecondName, Email, Password } from "@types";
+import type { RegisterValues } from "@interfaces";
 
 import { GetServerSideProps } from "next";
 import { ReactElement, useState } from "react";
@@ -12,6 +11,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
 import { registerUser } from "@services";
+import { SignUpComponents } from "@components/pages";
 import { ModalLayout } from "@components/composition";
 
 interface FormValues {
@@ -40,7 +40,11 @@ const SignUpPage: NextPageWithLayout<PageData> = props => {
 
   const onSubmit = (registerData: FormValues) => {
     registerUser(
-      registerData,
+      Object.fromEntries(
+        Object.entries(registerData).filter(
+          ([key, _]) => key !== "passwordRepeated"
+        )
+      ) as RegisterValues,
       () => {
         setRegistrationErrorMsg("");
         console.info("User created:", registerData);
