@@ -13,13 +13,14 @@ const Submit = styled.button<SubmitProps>`
 
   font-weight: 600;
   border: none;
-  
-  background-color: ${props => props.theme === "light" ? COLORS.LIME_MEDIUM : COLORS.FONT_GRAY_DARK};
-  color: ${props => props.theme === "light" ? COLORS.BLACK : COLORS.WHITE};
+
+  background-color: ${props =>
+    props.theme === "light" ? COLORS.LIME_MEDIUM : COLORS.FONT_GRAY_DARK};
+  color: ${props => (props.theme === "light" ? COLORS.BLACK : COLORS.WHITE)};
 
   &:hover {
-    color: ${COLORS.BLACK};
-    background-color: ${COLORS.LIME_DARK};
+    background-color: ${props =>
+      props.theme === "light" ? COLORS.LIME_DARK : COLORS.FONT_GRAY_MEDIUM};
   }
 
   width: 100%;
