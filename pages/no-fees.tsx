@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
+import { EnrollForm } from "@components/elements";
 import {
   MonoSection,
   DualSection,
@@ -51,6 +52,18 @@ const NoFeesPage: NextPageWithLayout = () => {
             K & more
           </li>
         </ul>
+
+        <EnrollForm direction="rows" />
+
+        <small>Already have an account?</small>
+        <small>
+          Learn how we collect and use your information by visiting our Privacy
+          Policy
+        </small>
+        <small>
+          Chime is a financial technology company, not a bank. Banking services
+          provided by The Bancorp Bank, N.A. or Stride Bank, N.A.; Members FDIC
+        </small>
       </BannerSection>
 
       {/* 2 */}
@@ -165,13 +178,15 @@ const NoFeesPage: NextPageWithLayout = () => {
       <PlaceholderSection />
 
       {/* 7 */}
-      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+      <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
           impact to your credit score.
         </p>
+
+        <EnrollForm direction="rows" theme="dark" />
       </MonoSection>
     </>
   );
