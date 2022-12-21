@@ -25,7 +25,7 @@ const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
   useEffect(() => {
     const intervalDescriptor: NodeJS.Timer = setInterval(() => {
       incrementIdx();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(intervalDescriptor);
   }, [incrementIdx, viewIdx]);
 

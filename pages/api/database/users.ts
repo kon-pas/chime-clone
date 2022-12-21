@@ -7,7 +7,7 @@ import { USERS } from "@database";
 const { DB_AUTH_TOKEN_FAKE } = process.env;
 
 /**
- * @deprecated Moved to MongoDB.
+ * @deprecated Moved to MongoDB. Do not use this API route.
  * Imitating database.
  */
 const handler = async (

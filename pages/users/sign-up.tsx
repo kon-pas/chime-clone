@@ -1,3 +1,5 @@
+import { SignUpComponents } from "@components/pages";
+
 import type { NextPageWithLayout } from "@pages/_app";
 import type { FirstName, SecondName, Email, Password } from "@types";
 import type { RegisterValues } from "@interfaces";
@@ -11,7 +13,6 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 
 import { registerUser } from "@services";
-import { SignUpComponents } from "@components/pages";
 import { ModalLayout } from "@components/composition";
 
 interface FormValues {
