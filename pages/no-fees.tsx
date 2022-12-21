@@ -56,6 +56,7 @@ const NoFeesPage: NextPageWithLayout = () => {
       {/* 2 */}
       <DualSection
         centered
+        backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
           src: "/static/pages/no-fees/no-fees.png",
@@ -103,6 +104,7 @@ const NoFeesPage: NextPageWithLayout = () => {
       {/* 4 */}
       <DualSection
         centered
+        backgroundColor={COLORS.GRAY_LIGHT}
         img={{
           float: "left",
           src: "/static/pages/no-fees/approved.png",
