@@ -5,7 +5,7 @@ import { generateId } from "@utils";
 import { HttpResponse } from "@api";
 import { prisma } from "@lib";
 
-const { DB_HOST_FAKE, DB_AUTH_TOKEN_FAKE, HASH_SALT_ROUNDS } = process.env;
+const { HASH_SALT_ROUNDS } = process.env;
 
 const handler = async (
   req: NextApiRequest,
@@ -14,19 +14,6 @@ const handler = async (
   try {
     const salt = await genSalt(Number(HASH_SALT_ROUNDS));
     const password = await hash(req.body.password, salt);
-
-    // const response: HttpResponse = await fetchWrapper
-    //   .put({
-    //     url: `${DB_HOST_FAKE}/users`,
-    //     body: JSON.stringify({ id: generateId(), ...req.body, password }),
-    //     auth: DB_AUTH_TOKEN_FAKE,
-    //   })
-    //   .then(res => res.json());
-
-    // res
-    //   .status(response.statusCode)
-    //   .send(new HttpResponse(response.statusCode, response.body));
-
     const foundUser = await prisma.user.findUnique({
       where: {
         email: req.body.email,
