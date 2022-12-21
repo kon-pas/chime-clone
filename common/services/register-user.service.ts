@@ -1,13 +1,6 @@
-import type { FirstName, SecondName, Email, Password } from "@types";
+import type { RegisterValues } from "@interfaces";
 
 import { fetchWrapper, HttpResponse } from "@api";
-
-interface RegisterValues {
-  firstName: FirstName;
-  secondName: SecondName;
-  email: Email;
-  password: Password;
-}
 
 const { NEXT_PUBLIC_API_HOST } = process.env;
 
