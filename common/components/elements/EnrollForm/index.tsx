@@ -13,6 +13,7 @@ interface FormValues {
 interface EntrollFormProps {
   direction: "rows" | "cols";
   theme?: "light" | "dark";
+  label?: string;
 }
 
 const EnrollForm: FC<EntrollFormProps> = props => {
@@ -31,6 +32,7 @@ const EnrollForm: FC<EntrollFormProps> = props => {
   return (
     <Styled.Form onSubmit={handleSubmit(onSubmit)}>
       <Styled.Input
+        theme={props.theme ?? "light"}
         type="email"
         placeholder="Enter your email"
         {...register("email", {
@@ -47,7 +49,7 @@ const EnrollForm: FC<EntrollFormProps> = props => {
           type="submit"
           theme={props.theme ?? "light"}
         >
-          Sign Up
+          {props.label ?? "Sign Up"}
         </Styled.Submit>
       </Styled.SubmitWrapper>
     </Styled.Form>
