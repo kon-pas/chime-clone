@@ -19,6 +19,7 @@ const Submit = styled.button<SubmitProps>`
   color: ${props => (props.theme === "light" ? COLORS.BLACK : COLORS.WHITE)};
 
   &:hover {
+    color: ${props => (props.theme === "light" ? COLORS.BLACK : COLORS.WHITE)};
     background-color: ${props =>
       props.theme === "light" ? COLORS.LIME_DARK : COLORS.FONT_GRAY_MEDIUM};
   }
