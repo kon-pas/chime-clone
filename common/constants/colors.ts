@@ -10,12 +10,13 @@ const COLORS: { [key: string]: HexColor } = {
 
   GRAY_LIGHT: "#FAFAFA",
   GRAY_MEDIUM: "#D5D5D5",
+  GRAY_DARK: "#4A4A4A",
 
   LIME_LIGHT: "#F0FBF5",
   LIME_MEDIUM: "#2DE28D",
   LIME_DARK: "#1EC677",
 
-  CYAN_LIGTH: "#EBFFFB",
+  CYAN_LIGHT: "#EBFFFB",
 
   WHITE: "#FFFFFF",
   BLACK: "#000000",
