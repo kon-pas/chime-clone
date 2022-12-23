@@ -28,6 +28,14 @@ const ChildrenWrapper = styled.div<ChildrenWrapper>`
     }
   }
 
+  > ul {
+    > li {
+      list-style-type: disc;
+      list-style-position: inside;
+      margin: 0.5rem 0;
+    }
+  }
+
   ${getMedia("md")} {
     width: 365px;
     margin: auto 0;
