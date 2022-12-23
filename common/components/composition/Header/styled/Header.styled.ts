@@ -1,10 +1,6 @@
 import styled from "styled-components";
-
 import { COLORS, BREAKPOINTS } from "@constants";
-
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const Header = styled.header`
   width: 100%;
