@@ -17,3 +17,5 @@ export { default as InactiveSpan } from "./InactiveSpan";
 export { default as ToggleBox } from "./ToggleBox";
 
 export { default as ToggleSectionWrapper } from "./ToggleSectionWrapper";
+
+export { default as ResponsiveList } from "./ResponsiveList";
