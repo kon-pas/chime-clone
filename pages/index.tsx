@@ -410,7 +410,7 @@ const HomePage: NextPageWithLayout = () => {
           won&apos;t affect your credit score!
         </p>
 
-        <HomePageComponents.LearnMoreButton />
+        <EnrollForm />
       </DualSection>
     </>
   );

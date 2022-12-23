@@ -7,7 +7,7 @@ import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
 import { BannerSection, MonoSection } from "@components/sections";
-import { ToggleBox, ContentContainer } from "@components/elements";
+import { ToggleBox, ContentContainer, EnrollForm } from "@components/elements";
 
 const FaqPage: NextPageWithLayout = () => {
   return (
@@ -45,6 +45,14 @@ const FaqPage: NextPageWithLayout = () => {
           goodbye to hidden bank fees<sup>2</sup>. Grow your savings,
           automatically.
         </p>
+
+        <EnrollForm label="Apply Now" />
+
+        <small>Already have an account?</small>
+        <small>
+          Learn how we collect and use your information by visiting our Privacy
+          Policy
+        </small>
       </BannerSection>
 
       {/* 2 */}
@@ -209,13 +217,15 @@ const FaqPage: NextPageWithLayout = () => {
       </FaqPageComponents.Section>
 
       {/* 3 */}
-      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+      <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
           impact to your credit score.
         </p>
+
+        <EnrollForm label="Apply Now" theme="dark" />
       </MonoSection>
     </>
   );

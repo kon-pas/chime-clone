@@ -5,6 +5,7 @@ import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
 import { MonoSection, DualSection, BannerSection } from "@components/sections";
+import { EnrollForm, ResponsiveList } from "@components/elements";
 
 const SecondChangeBankingPage: NextPageWithLayout = () => {
   return (
@@ -36,13 +37,23 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
           An award-winning mobile banking app and debit card. Applying takes
           less than 2 minutes! No credit check. No ChexSystems.
         </p>
+
+        <EnrollForm label="Apply Now" />
+
+        <small>Already have an account?</small>
+        <small>
+          Learn how we collect and use your information by visiting our Privacy
+          Policy
+        </small>
       </BannerSection>
 
       {/* 2 */}
       <MonoSection backgroundColor={COLORS.GRAY_LIGHT}>
         <h2>An award-winning mobile banking app and debit card.</h2>
 
-        {/* List Here */}
+        <ResponsiveList>
+          <li>dsa</li>
+        </ResponsiveList>
       </MonoSection>
 
       {/* 3 */}
@@ -74,13 +85,15 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
       </MonoSection>
 
       {/* 4 */}
-      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+      <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
           impact to your credit score.
         </p>
+
+        <EnrollForm label="Apply Now" theme="dark" />
       </MonoSection>
 
       {/* 5 */}
@@ -180,6 +193,10 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
 
           <li>No minimum balance fees – ever</li>
         </ul>
+
+        <br />
+
+        <EnrollForm direction="cols" />
       </DualSection>
 
       {/* 8 */}
@@ -339,13 +356,15 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
       </MonoSection>
 
       {/* 12 */}
-      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+      <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
           impact to your credit score.
         </p>
+
+        <EnrollForm label="Apply Now" theme="dark" />
       </MonoSection>
     </>
   );
