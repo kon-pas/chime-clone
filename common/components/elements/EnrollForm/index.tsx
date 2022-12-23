@@ -11,7 +11,7 @@ interface FormValues {
 }
 
 interface EntrollFormProps {
-  direction: "rows" | "cols";
+  direction?: "rows" | "cols";
   theme?: "light" | "dark";
   label?: string;
 }
