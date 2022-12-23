@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { COLORS } from "@constants";
 
 const SubmenuContainerDesktop = styled.div`
@@ -10,7 +9,7 @@ const SubmenuContainerDesktop = styled.div`
     border-radius: 0.3rem;
     border-color: ${COLORS.FONT_GRAY_LIGHT};
     background-color: ${COLORS.WHITE};
-    box-shadow: 1px 1px 7px #ccc;
+    box-shadow: 1px 1px 5px #aaa;
     display: grid;
     gap: 1.1rem;
     user-select: none;
