@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 import type { HexColor } from "@types";
 
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 interface WrapperProps {
   backgroundColor?: HexColor;

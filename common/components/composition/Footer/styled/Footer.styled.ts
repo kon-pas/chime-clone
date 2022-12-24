@@ -1,10 +1,6 @@
 import styled from "styled-components";
-
 import { COLORS } from "@constants";
-
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const Footer = styled.footer`
   background-color: ${COLORS.WHITE};

@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 interface ImageWrapperProps {
   sm?: number;

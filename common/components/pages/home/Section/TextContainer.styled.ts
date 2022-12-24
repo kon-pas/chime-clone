@@ -1,10 +1,6 @@
 import styled from "styled-components";
-
 import { h3 } from "@styles/Tags.styled";
-
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const TextWrapper = styled.div`
 
@@ -31,7 +27,7 @@ const TextWrapper = styled.div`
 
   ${getMedia('md')} {
     display: inline-block;
-    vertical-align:top;
+    vertical-align: top;
   }
 `;
 

@@ -1,8 +1,5 @@
 import styled from "styled-components";
-
-import { getMedia } from "@utils";
-
-import { getResizeTransition } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const ImageWrapper = styled.div`
   margin-bottom: 1.5rem;
