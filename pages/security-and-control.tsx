@@ -4,6 +4,7 @@ import type { NextPageWithLayout } from "@pages/_app";
 import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
+import { EnrollForm } from "@components/elements";
 import {
   MonoSection,
   DualSection,
@@ -98,13 +99,15 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
       <PlaceholderSection />
 
       {/* 5 */}
-      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+      <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
           impact to your credit score.
         </p>
+
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed"/>
       </MonoSection>
     </>
   );

@@ -11,7 +11,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
   return (
     <>
       <Head>
-        z<title>Second Change Banking: Open an Account Today | Chime</title>
+        <title>Second Change Banking: Open an Account Today | Chime</title>
         <meta name="description" content="Chime Clone Second Change Banking" />
       </Head>
 
@@ -38,7 +38,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
           less than 2 minutes! No credit check. No ChexSystems.
         </p>
 
-        <EnrollForm label="Apply Now" />
+        <EnrollForm label="Apply Now" direction="cols" />
 
         <small>Already have an account?</small>
         <small>
@@ -52,7 +52,12 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
         <h2>An award-winning mobile banking app and debit card.</h2>
 
         <ResponsiveList>
-          <li>dsa</li>
+          <li>No credit check. No ChexSystems.</li>
+          <li>No monthly fees.</li>
+          <li>
+            Get paid up to 2 days early with direct deposit.<sup>1</sup>
+          </li>
+          <li>Grow your savings, automatically.</li>
         </ResponsiveList>
       </MonoSection>
 
@@ -93,7 +98,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" />
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
       </MonoSection>
 
       {/* 5 */}
@@ -191,7 +196,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
 
           <li>No foreign transaction fees</li>
 
-          <li>No minimum balance fees – ever</li>
+          <li>No minimum balance fees &ndash; ever</li>
         </ul>
 
         <br />
@@ -327,7 +332,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
         <h2>Ready for Your Second Chance?</h2>
 
         <p>
-          AChime is a great second chance banking option to help you take back
+          Chime is a great second chance banking option to help you take back
           control of your finances. Apply today if you are ready to:
         </p>
 
@@ -364,7 +369,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" />
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
       </MonoSection>
     </>
   );

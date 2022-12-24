@@ -4,6 +4,7 @@ import type { NextPageWithLayout } from "@pages/_app";
 import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
+import { EnrollForm } from "@components/elements";
 import {
   MonoSection,
   DualSection,
@@ -38,10 +39,23 @@ const SavingsAccountPage: NextPageWithLayout = () => {
 
         <h1>Make your money grow faster</h1>
 
-        <p>
-          1.50% Annual Percentage Yield (APY).<sup>1</sup> Set money aside with
-          Automatic Savings features. And never pay a fee<sup>2</sup>
-        </p>
+        <ul>
+          <li>
+            Get 2.00% APY<sup>1</sup> on all your cash
+          </li>
+          <li>Boost your earnings with Automatic Savings features</li>
+          <li>
+            No monthly fees<sup>2</sup>
+          </li>
+        </ul>
+
+        <EnrollForm direction="cols" label="Get Started" />
+
+        <small>Already have an account?</small>
+        <small>
+          Learn how we collect and use your information by visiting our Privacy
+          Policy
+        </small>
       </BannerSection>
 
       {/* 2 */}
@@ -151,17 +165,16 @@ const SavingsAccountPage: NextPageWithLayout = () => {
       </DualSection>
 
       {/* 7 */}
-      <MonoSection backgroundColor={COLORS.LIME_MEDIUM}>
+      <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
         <p>
           Applying for an account is free and takes less than 2 minutes with no
           impact to your credit score.
         </p>
-      </MonoSection>
 
-      {/* 8 */}
-      <PlaceholderSection />
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
+      </MonoSection>
     </>
   );
 };
