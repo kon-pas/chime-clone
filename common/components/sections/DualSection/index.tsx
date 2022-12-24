@@ -1,11 +1,10 @@
 import * as Styled from "./styled";
 
 import type { FC, ReactNode } from "react";
-import Image from "next/image";
-
 import type { HexColor } from "@types";
 import type { NextImageProps } from "@interfaces";
 
+import Image from "next/image";
 import { COLORS } from "@constants";
 
 interface DualSectionProps {
