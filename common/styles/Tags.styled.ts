@@ -42,16 +42,31 @@ export const p = css`
   line-height: 1.75rem;
 `;
 
-export const li = css<{ src?: `/static/${string}` }>`
+export const ul = css`
+  margin-left: 1.45rem;
+
+  > li {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin: 0.5rem 0;
+    line-height: 1.75rem;
+  }
+`;
+
+export const li = css<{
+  bulletSrc?: `/static/${string}`;
+  bulletPosition?: "inside" | "outside";
+}>`
   &::before {
     vertical-align: sub;
     content: "";
-    background-image: url(${props => props.src ?? "/static/shared/check.png"});
     display: inline-block;
+    background-image: url(${props => props.bulletSrc ?? "/static/shared/check.png"});
     background-repeat: no-repeat;
     background-size: 20px 20px;
     width: 20px;
     height: 20px;
-    margin: auto 10px auto -30px;
+    margin: auto 10px auto
+      ${props => (props.bulletPosition === "inside" ? `0` : `-30px`)};
   }
 `;
