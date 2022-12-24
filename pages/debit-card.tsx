@@ -41,10 +41,19 @@ const DebitCardPage: NextPageWithLayout = () => {
           Chime Checking Account and Visa<sup>®</sup> Debit Card
         </h1>
 
-        <p>
-          Your Chime Checking Account comes with a debit card, no monthly fees
-          or maintenance fees.
-        </p>
+        <ul>
+          <li>No overdraft fees or monthly service fees</li>
+          <li>Over 60,000 fee-free ATMs</li>
+          <li>Real-time transaction alerts</li>
+        </ul>
+
+        <EnrollForm direction="cols" label="Get Started" />
+
+        <small>Already have an account?</small>
+        <small>
+          Learn how we collect and use your information by visiting our Privacy
+          Policy
+        </small>
       </BannerSection>
 
       {/* 2 */}
@@ -159,33 +168,6 @@ const DebitCardPage: NextPageWithLayout = () => {
       </DualSection>
 
       {/* 6 */}
-      <DualSection
-        backgroundColor={COLORS.GRAY_LIGHT}
-        img={{
-          float: "left",
-          src: "/static/pages/debit-card/pays.png",
-          alt: "Pays",
-          originalSize: [500, 250],
-          width: {
-            sm: 500,
-            md: 365,
-            lg: 500,
-          },
-        }}
-      >
-        <h2>We love mobile payments</h2>
-
-        <p>
-          We support mobile payment platforms including Apple Pay<sup>TM</sup>{" "}
-          and Google Pay<sup>TM</sup>. Combining your Chime debit card with
-          mobile pay means you can leave your wallet at home.
-        </p>
-      </DualSection>
-
-      {/* 7 */}
-      <PlaceholderSection />
-
-      {/* 8 */}
       <MonoSection backgroundColor={COLORS.LIME_DARK}>
         <h2>Get Started Today</h2>
 
@@ -196,9 +178,6 @@ const DebitCardPage: NextPageWithLayout = () => {
 
         <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
       </MonoSection>
-
-      {/* 9 */}
-      <PlaceholderSection />
     </>
   );
 };

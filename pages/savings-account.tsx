@@ -26,9 +26,9 @@ const SavingsAccountPage: NextPageWithLayout = () => {
       <BannerSection
         img={{
           align: "center",
-          src: "/static/pages/savings-account/apy-phone.png",
+          src: "/static/pages/savings-account/savings-hero.png",
           alt: "APY Phone",
-          originalSize: [1225, 682],
+          originalSize: [728, 1100],
           width: {
             sm: 629,
             md: 485,
