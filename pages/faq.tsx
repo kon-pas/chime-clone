@@ -225,7 +225,7 @@ const FaqPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" />
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed"/>
       </MonoSection>
     </>
   );
