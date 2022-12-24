@@ -1,22 +1,11 @@
 import styled from "styled-components";
 
-import { getMedia } from "@utils";
+import { h2 } from "@styles/Tags.styled";
 
-import { getResizeTransition } from "@utils";
-
-const Heading = styled.h2`
+const Title = styled.h2`
+  ${h2}
   width: 100%;
   text-align: center;
-
-  ${getResizeTransition('font-size')}
-
-  ${getMedia('md')} {
-    font-size: 1.9rem;
-  }
-
-  ${getMedia('lg')} {
-    font-size: 2.2rem;
-  }
 `;
 
-export default Heading;
+export default Title;
