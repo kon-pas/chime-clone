@@ -10,9 +10,10 @@ const Container = styled(ContentContainer)`
   padding-bottom: 3rem;
 
   ${getMedia("md")} {
-    display: grid;
+    display: flex;
     gap: 1rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 

@@ -1,13 +1,19 @@
 import styled from "styled-components";
 import { p, h3 } from "@styles/Tags.styled";
-import { getMedia } from "@utils";
+import { getMedia, getResizeTransition } from "@utils";
 
 const Item = styled.div`
   text-align: center;
   margin: 2rem 0;
 
+  ${getResizeTransition("max-width")}
+
   ${getMedia("md")} {
-    max-width: 400px;
+    max-width: 250px;
+  }
+
+  ${getMedia("lg")} {
+    max-width: 325px;
   }
 
   > h3 {
