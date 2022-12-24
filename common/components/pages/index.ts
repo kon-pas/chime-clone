@@ -7,3 +7,5 @@ export * as HomePageComponents from "./home";
 export * as LogInComponents from "./log-in";
 
 export * as SignUpComponents from "./sign-up";
+
+export * as SecurityAndControlComponents from "./security-and-control";
