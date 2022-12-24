@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import { COLORS } from "@constants";
-
 import { getMedia, getResizeTransition } from "@utils";
 
 const MenuSection = styled.menu`

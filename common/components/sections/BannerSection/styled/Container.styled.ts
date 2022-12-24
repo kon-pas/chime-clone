@@ -1,7 +1,5 @@
 import styled from "styled-components";
-
 import { container } from "@styles/Mixins.styled";
-
 import { getMedia, getResizeTransition } from "@utils";
 
 interface ContainerProps {

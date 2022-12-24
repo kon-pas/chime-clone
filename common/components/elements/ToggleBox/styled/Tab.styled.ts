@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { getMedia, getResizeTransition } from "@utils";
 
 const Tab = styled.div`

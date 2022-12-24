@@ -3,7 +3,6 @@ import styled from "styled-components";
 import type { HexColor } from "@types";
 
 import { COLORS } from "@constants";
-
 import { getMedia, getResizeTransition } from "@utils";
 
 interface WrapperProps {

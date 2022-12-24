@@ -1,5 +1,4 @@
 import { css } from "styled-components";
-
 import { COLORS, BREAKPOINTS } from "@constants";
 import { getMedia, getResizeTransition } from "@utils";
 
