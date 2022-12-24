@@ -1,3 +1,5 @@
+import { SecurityAndControlComponents } from "@components/pages";
+
 import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "@pages/_app";
 
@@ -96,7 +98,39 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
       </DualSection>
 
       {/* 4 */}
-      <PlaceholderSection />
+      <SecurityAndControlComponents.Section.Container>
+        <SecurityAndControlComponents.Section.Title>
+          Keeping your money secure
+        </SecurityAndControlComponents.Section.Title>
+
+        <SecurityAndControlComponents.Section.Item>
+          <h3>FDIC Insured</h3>
+
+          <p>
+            Deposits are FDIC insured up to $250,000 through The Bancorp Bank,
+            N.A. or Stride Bank N.A.; Members FDIC.
+          </p>
+        </SecurityAndControlComponents.Section.Item>
+
+        <SecurityAndControlComponents.Section.Item>
+          <h3>Visa Zero Liability</h3>
+
+          <p>
+            Shop worry-free at millions of merchants. Chime debit cards are
+            protected by the Visa Zero Liability** Policy to ensure that
+            cardholders will not be responsible for unauthorized charges.
+          </p>
+        </SecurityAndControlComponents.Section.Item>
+
+        <SecurityAndControlComponents.Section.Item>
+          <h3>FPrivacy and Security.</h3>
+
+          <p>
+            We support two-factor authentication and support fingerprint
+            authentication.
+          </p>
+        </SecurityAndControlComponents.Section.Item>
+      </SecurityAndControlComponents.Section.Container>
 
       {/* 5 */}
       <MonoSection backgroundColor={COLORS.LIME_DARK}>
@@ -107,7 +141,7 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" direction="mixed"/>
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
       </MonoSection>
     </>
   );
