@@ -11,7 +11,7 @@ interface FormValues {
 }
 
 interface EntrollFormProps {
-  direction?: "rows" | "cols";
+  direction?: "rows" | "cols" | "mixed";
   theme?: "light" | "dark";
   label?: string;
 }
@@ -43,7 +43,7 @@ const EnrollForm: FC<EntrollFormProps> = props => {
           },
         })}
       />
-      <Styled.SubmitWrapper shrink={props.direction === "cols"}>
+      <Styled.SubmitWrapper direction={props.direction ?? "rows"}>
         <Styled.Submit
           disabled={isSubmitting}
           type="submit"
