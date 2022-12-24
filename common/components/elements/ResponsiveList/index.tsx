@@ -7,13 +7,13 @@ interface ResponsiveListProps {
 }
 
 const ResponsiveList: FC<ResponsiveListProps> = props => {
-
-  
-
   return (
-    <Styled.UnorderedList>
-      {props.children}
-    </Styled.UnorderedList>
+    // @@@ NOTE: Used `div` to break default children styling
+    <div>
+      <Styled.List bulletPosition="inside">
+        {props.children}
+      </Styled.List>
+    </div>
   )
 };
 
