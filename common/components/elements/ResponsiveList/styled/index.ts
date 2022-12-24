@@ -1,1 +1,1 @@
-export { default as UnorderedList } from "./UnorderedList.styled";
+export { default as List } from "./List.styled";
