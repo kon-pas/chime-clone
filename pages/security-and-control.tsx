@@ -3,6 +3,7 @@ import { SecurityAndControlComponents } from "@components/pages";
 import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "@pages/_app";
 
+import Image from "next/image";
 import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
@@ -104,6 +105,13 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
         </SecurityAndControlComponents.Section.Title>
 
         <SecurityAndControlComponents.Section.Item>
+          <Image
+            src="/static/pages/security-and-control/coin.png"
+            alt="coin"
+            width="64"
+            height="64"
+          />
+
           <h3>FDIC Insured</h3>
 
           <p>
@@ -113,6 +121,13 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
         </SecurityAndControlComponents.Section.Item>
 
         <SecurityAndControlComponents.Section.Item>
+        <Image
+            src="/static/pages/security-and-control/shield.png"
+            alt="shield"
+            width="64"
+            height="64"
+          />
+
           <h3>Visa Zero Liability</h3>
 
           <p>
@@ -123,6 +138,13 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
         </SecurityAndControlComponents.Section.Item>
 
         <SecurityAndControlComponents.Section.Item>
+        <Image
+            src="/static/pages/security-and-control/lock.png"
+            alt="lock"
+            width="64"
+            height="64"
+          />
+
           <h3>FPrivacy and Security.</h3>
 
           <p>
