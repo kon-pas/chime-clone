@@ -313,7 +313,7 @@ const SecondChangeBankingPage: NextPageWithLayout = () => {
 
           <li>
             Americans households pay an average of $329 in bank fees every year
-            – Bank Fee Finder 2017
+            &ndash; Bank Fee Finder 2017
           </li>
 
           <li>$250 dollars of those fees consist of overdraft fees</li>
