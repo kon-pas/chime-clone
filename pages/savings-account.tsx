@@ -8,8 +8,7 @@ import { EnrollForm } from "@components/elements";
 import {
   MonoSection,
   DualSection,
-  BannerSection,
-  PlaceholderSection,
+  BannerSection
 } from "@components/sections";
 
 const SavingsAccountPage: NextPageWithLayout = () => {
