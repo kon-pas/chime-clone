@@ -6,17 +6,18 @@ import { useState } from "react";
 import { IconSVG } from "@components/elements";
 
 interface ToggleBoxProps {
-  text: string;
+  label: string;
   children: ReactNode;
+  opened?: boolean;
 }
 
 const ToggleBox: FC<ToggleBoxProps> = props => {
-  const [isOpened, setIsOpened] = useState<boolean>(false);
+  const [isOpened, setIsOpened] = useState<boolean>(props.opened ?? false);
 
   return (
     <Styled.Container>
       <Styled.Tab onClick={() => setIsOpened(isOpened => !isOpened)}>
-        <Styled.TextWrapper>{props.text}</Styled.TextWrapper>
+        <Styled.TextWrapper>{props.label}</Styled.TextWrapper>
 
         <Styled.ImageWrapper isOpened={isOpened}>
           <IconSVG>
