@@ -62,7 +62,7 @@ const FaqPage: NextPageWithLayout = () => {
             Frequently Asked Questions
           </FaqPageComponents.Heading>
 
-          <ToggleBox text="What is Chime?">
+          <ToggleBox label="What is Chime?">
             <p>
               At Chime, we&apos;ve created a new approach to online banking that
               doesn&apos;t rely on fees<sup>2</sup> , gets you your paycheck up
@@ -82,7 +82,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="What is Chime's mission?">
+          <ToggleBox label="What is Chime's mission?">
             <p>
               Our mission is to make financial peace of mind a reality for
               everyone. We&apos;re doing that by changing the way people feel
@@ -94,7 +94,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="How does Chime make money?">
+          <ToggleBox label="How does Chime make money?">
             <p>
               Chime makes money from the interchange fee charged on card
               transactions. Every time you use your Chime Visa® Debit Card or
@@ -106,7 +106,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="Who can use Chime? ">
+          <ToggleBox label="Who can use Chime? ">
             <p>
               U.S. Citizens 18 years and older are welcome to apply! While Chime
               cards work all over the world, currently we can only offer
@@ -115,7 +115,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="Does Chime charge any fees? ">
+          <ToggleBox label="Does Chime charge any fees? ">
             <p>
               We don&apos;t believe in unnecessary fees or profiting from our
               members&apos; misfortune. We have no fees to sign up, no
@@ -136,7 +136,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="Does Chime have Fee-Free Overdrafts? ">
+          <ToggleBox label="Does Chime have Fee-Free Overdrafts? ">
             <p>
               Yes! Chime&apos;s SpotMe feature lets you make debit card
               purchases and cash withdrawals that overdraw your account with no
@@ -146,7 +146,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="What type of cards does Chime offer? ">
+          <ToggleBox label="What type of cards does Chime offer? ">
             <p>
               When you open a Chime Checking Account you get a Chime Debit Card
               that can be used at any merchant that accepts Visa. Your Chime
@@ -173,7 +173,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="When do I receive my Chime Visa Debit Card after I open a Chime Checking Account?">
+          <ToggleBox label="When do I receive my Chime Visa Debit Card after I open a Chime Checking Account?">
             <p>
               After you open a Checking Account, we get started on personalizing
               your new Chime Visa Debit Card. Your Chime Visa Debit Card is
@@ -189,7 +189,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="Is Chime a real bank?">
+          <ToggleBox label="Is Chime a real bank?">
             <p>
               Chime is not a bank. Chime is a financial technology company that
               offers banking services provided by The Bancorp Bank or Stride
@@ -202,7 +202,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox text="Is Chime a real bank or prepaid card?">
+          <ToggleBox label="Is Chime a real bank or prepaid card?">
             <p>
               Chime is a financial technology company, not a bank. Banking
               services are provided by The Bancorp Bank or Stride Bank, N.A.;
