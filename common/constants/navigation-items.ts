@@ -57,7 +57,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
   },
   {
     label: "Who we are",
-    // path: '/about-us',
+    path: "/chime-financial",
     subitems: [
       {
         label: "About Us",
@@ -68,6 +68,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: "Chime Financial, Inc.",
+        path: "/chime-financial"
       },
       {
         label: "In The Community",
