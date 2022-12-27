@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
-const TItle = styled.h1`
-  
+import { h1 } from "@styles/Tags.styled";
+
+const Title = styled.h1`
+  ${h1}
+
+  position: relative;
+  text-align: center;
+  padding: 2rem 0 1rem 0; 
 `;
 
-export default TItle;
+export default Title;
