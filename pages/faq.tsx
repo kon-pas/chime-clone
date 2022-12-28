@@ -65,8 +65,8 @@ const FaqPage: NextPageWithLayout = () => {
           <ToggleBox label="What is Chime?">
             <p>
               At Chime, we&apos;ve created a new approach to online banking that
-              doesn&apos;t rely on fees<sup>2</sup> , gets you your paycheck up
-              to 2 days early with direct deposit<sup>1</sup> , and helps you
+              doesn&apos;t rely on fees<sup>2</sup>, gets you your paycheck up
+              to 2 days early with direct deposit<sup>1</sup>, and helps you
               grow your savings automatically. When you open a bank account
               through Chime, you get a Visa Debit Card<sup>®</sup> and a
               Checking Account that can be managed entirely from your
@@ -106,7 +106,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox label="Who can use Chime? ">
+          <ToggleBox label="Who can use Chime?">
             <p>
               U.S. Citizens 18 years and older are welcome to apply! While Chime
               cards work all over the world, currently we can only offer
@@ -115,7 +115,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox label="Does Chime charge any fees? ">
+          <ToggleBox label="Does Chime charge any fees?">
             <p>
               We don&apos;t believe in unnecessary fees or profiting from our
               members&apos; misfortune. We have no fees to sign up, no
@@ -136,7 +136,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox label="Does Chime have Fee-Free Overdrafts? ">
+          <ToggleBox label="Does Chime have Fee-Free Overdrafts?">
             <p>
               Yes! Chime&apos;s SpotMe feature lets you make debit card
               purchases and cash withdrawals that overdraw your account with no
@@ -146,7 +146,7 @@ const FaqPage: NextPageWithLayout = () => {
             </p>
           </ToggleBox>
 
-          <ToggleBox label="What type of cards does Chime offer? ">
+          <ToggleBox label="What type of cards does Chime offer?">
             <p>
               When you open a Chime Checking Account you get a Chime Debit Card
               that can be used at any merchant that accepts Visa. Your Chime
@@ -196,7 +196,7 @@ const FaqPage: NextPageWithLayout = () => {
               Bank, N.A.; Members FDIC. Chime members can have a Checking
               Account with an optional Savings Account, and can grow their
               credit history by applying for a secured Chime Credit Builder Visa
-              <sup>®</sup> Credit Card – all while enjoying the benefits of
+              <sup>®</sup> Credit Card &ndash; all while enjoying the benefits of
               online banking and mobile banking. Eligibility requirements apply
               for Credit Builder card.
             </p>
