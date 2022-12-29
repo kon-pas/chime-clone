@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { container } from "@styles/Mixins.styled";
+import { container } from "@styles/tags";
 
 const ContentContainer = styled.div`
   ${container};

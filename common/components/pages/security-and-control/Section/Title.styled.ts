@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { h2 } from "@styles/Tags.styled";
-import { getMedia } from "@utils";
+import { h2 } from "@styles/tags";
 
 const Title = styled.h2`
   ${h2}

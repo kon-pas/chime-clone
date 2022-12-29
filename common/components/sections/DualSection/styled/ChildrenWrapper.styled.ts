@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { h2, p } from "@styles/Tags.styled";
+import { h2, p } from "@styles/tags";
 import { getMedia, getResizeTransition } from "@utils";
 
 interface ChildrenWrapper {

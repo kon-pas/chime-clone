@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { p, h3 } from "@styles/Tags.styled";
+import { p, h3 } from "@styles/tags";
 import { getMedia, getResizeTransition } from "@utils";
 
 const Item = styled.div`

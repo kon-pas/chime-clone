@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { h1, p, li } from "@styles/Tags.styled";
+import { h1, p, li } from "@styles/tags";
 
 import { COLORS } from "@constants";
 
