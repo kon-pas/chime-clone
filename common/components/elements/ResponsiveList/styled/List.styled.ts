@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import { li } from "@styles/Tags.styled";
-
-import { getMedia } from "@utils";
+import { li } from "@styles/tags";
 
 interface ListProps {
   readonly bulletPosition?: "inside" | "outside";

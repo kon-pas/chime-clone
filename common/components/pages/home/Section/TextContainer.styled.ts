@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { h3 } from "@styles/Tags.styled";
+import { h3 } from "@styles/tags";
 import { getMedia, getResizeTransition } from "@utils";
 
 const TextWrapper = styled.div`

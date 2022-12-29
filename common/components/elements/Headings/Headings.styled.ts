@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { h1, h2, h3 } from "@styles/Tags.styled";
+import { h1, h2, h3 } from "@styles/tags";
 
 export const H1 = styled.h1`
   ${h1}

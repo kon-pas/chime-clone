@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { getMedia } from "@utils";
 import { COLORS } from "@constants";
-import { button } from "@styles/Mixins.styled";
+import { button } from "@styles/tags";
 
 interface SubmitProps {
   theme: "light" | "dark";

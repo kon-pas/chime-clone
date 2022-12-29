@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import { p } from "@styles/Tags.styled";
+import { p } from "@styles/tags";
 
 const show = keyframes`
   from {
