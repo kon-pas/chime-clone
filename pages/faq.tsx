@@ -1,13 +1,13 @@
 import { FaqPageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
+import type { NextPageWithLayout } from "@types";
 
 import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
 import { BannerSection, MonoSection } from "@components/sections";
-import { ToggleBox, ContentContainer, EnrollForm } from "@components/elements";
+import { Disclosure, ContentContainer, EnrollForm } from "@components/elements";
 
 const FaqPage: NextPageWithLayout = () => {
   return (
@@ -62,7 +62,7 @@ const FaqPage: NextPageWithLayout = () => {
             Frequently Asked Questions
           </FaqPageComponents.Heading>
 
-          <ToggleBox label="What is Chime?">
+          <Disclosure label="What is Chime?">
             <p>
               At Chime, we&apos;ve created a new approach to online banking that
               doesn&apos;t rely on fees<sup>2</sup>, gets you your paycheck up
@@ -80,9 +80,9 @@ const FaqPage: NextPageWithLayout = () => {
               services provided by The Bancorp Bank or Stride Bank, N.A.;
               Members FDIC.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="What is Chime's mission?">
+          <Disclosure label="What is Chime's mission?">
             <p>
               Our mission is to make financial peace of mind a reality for
               everyone. We&apos;re doing that by changing the way people feel
@@ -92,9 +92,9 @@ const FaqPage: NextPageWithLayout = () => {
               everything we build is focused on improving our member&apos;s
               lives.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="How does Chime make money?">
+          <Disclosure label="How does Chime make money?">
             <p>
               Chime makes money from the interchange fee charged on card
               transactions. Every time you use your Chime Visa® Debit Card or
@@ -104,18 +104,18 @@ const FaqPage: NextPageWithLayout = () => {
               This is how Chime can continue building new and better products
               that help members get the most from their money.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Who can use Chime?">
+          <Disclosure label="Who can use Chime?">
             <p>
               U.S. Citizens 18 years and older are welcome to apply! While Chime
               cards work all over the world, currently we can only offer
               accounts to members with a valid SSN, living in the United States
               and District of Columbia.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Does Chime charge any fees?">
+          <Disclosure label="Does Chime charge any fees?">
             <p>
               We don&apos;t believe in unnecessary fees or profiting from our
               members&apos; misfortune. We have no fees to sign up, no
@@ -134,9 +134,9 @@ const FaqPage: NextPageWithLayout = () => {
                 own fees per transaction.
               </i>
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Does Chime have Fee-Free Overdrafts?">
+          <Disclosure label="Does Chime have Fee-Free Overdrafts?">
             <p>
               Yes! Chime&apos;s SpotMe feature lets you make debit card
               purchases and cash withdrawals that overdraw your account with no
@@ -144,9 +144,9 @@ const FaqPage: NextPageWithLayout = () => {
               increased up to $200. We&apos;ll spot you when you need that
               little extra cushion to cover an expense. Learn more here!
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="What type of cards does Chime offer?">
+          <Disclosure label="What type of cards does Chime offer?">
             <p>
               When you open a Chime Checking Account you get a Chime Debit Card
               that can be used at any merchant that accepts Visa. Your Chime
@@ -171,9 +171,9 @@ const FaqPage: NextPageWithLayout = () => {
               won&apos;t contribute to a high-utilization record on your credit
               history. Learn more about how Credit Builder works.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="When do I receive my Chime Visa Debit Card after I open a Chime Checking Account?">
+          <Disclosure label="When do I receive my Chime Visa Debit Card after I open a Chime Checking Account?">
             <p>
               After you open a Checking Account, we get started on personalizing
               your new Chime Visa Debit Card. Your Chime Visa Debit Card is
@@ -187,9 +187,9 @@ const FaqPage: NextPageWithLayout = () => {
               business days after opening your Checking Account, please contact
               our Member Services team at: support@chime.com
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Is Chime a real bank?">
+          <Disclosure label="Is Chime a real bank?">
             <p>
               Chime is not a bank. Chime is a financial technology company that
               offers banking services provided by The Bancorp Bank or Stride
@@ -200,9 +200,9 @@ const FaqPage: NextPageWithLayout = () => {
               online banking and mobile banking. Eligibility requirements apply
               for Credit Builder card.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Is Chime a real bank or prepaid card?">
+          <Disclosure label="Is Chime a real bank or prepaid card?">
             <p>
               Chime is a financial technology company, not a bank. Banking
               services are provided by The Bancorp Bank or Stride Bank, N.A.;
@@ -212,7 +212,7 @@ const FaqPage: NextPageWithLayout = () => {
               60,000+ fee-free in-network ATMs. Out of Network ATM fees apply.
               See Chime.com for more details.
             </p>
-          </ToggleBox>
+          </Disclosure>
         </ContentContainer>
       </FaqPageComponents.Section>
 

@@ -1,12 +1,12 @@
 import { ChimeFinancialComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
+import type { NextPageWithLayout } from "@types";
 
 import Image from "next/image";
 import Head from "next/head";
 
-import { ToggleBox } from "@components/elements";
+import { Disclosure } from "@components/elements";
 import { MainLayout } from "@components/composition";
 
 const FaqPage: NextPageWithLayout = () => {
@@ -42,7 +42,7 @@ const FaqPage: NextPageWithLayout = () => {
         </ChimeFinancialComponents.Section.Title>
 
         <ChimeFinancialComponents.Section.Content>
-          <ToggleBox label="Helpful, easy, free" opened>
+          <Disclosure label="Helpful, easy, free" opened>
             <p>
               Chime is a financial technology company founded on a simple idea:
               everyday banking and payment services should be helpful, easy, and
@@ -66,9 +66,9 @@ const FaqPage: NextPageWithLayout = () => {
               Chime members never have to look far to access cash. Millions of
               people trust Chime every day.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Aligned interests">
+          <Disclosure label="Aligned interests">
             <p>
               A decade ago, in the wake of the global financial crisis, Chime
               founders Chris Britt and Ryan King saw a traditional banking
@@ -86,7 +86,7 @@ const FaqPage: NextPageWithLayout = () => {
               amount we earn from Visa when a member uses their Chime card. In
               other words, we aim to profit with our members, not from them.
             </p>
-          </ToggleBox>
+          </Disclosure>
         </ChimeFinancialComponents.Section.Content>
       </ChimeFinancialComponents.Section.Container>
 
@@ -97,7 +97,7 @@ const FaqPage: NextPageWithLayout = () => {
         </ChimeFinancialComponents.Section.Title>
 
         <ChimeFinancialComponents.Section.Content>
-          <ToggleBox label="A new, customer-focused approach" opened>
+          <Disclosure label="A new, customer-focused approach" opened>
             <p>
               Chime is different from other financial services companies. We
               obsess over the needs of our members and live by a set of Core
@@ -117,9 +117,9 @@ const FaqPage: NextPageWithLayout = () => {
               job market, women, people of color, and those most affected by
               economic downturns.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Chime Values">
+          <Disclosure label="Chime Values">
             <p>
               💚 <b>Be member-obsessed</b>
               <br />
@@ -216,9 +216,9 @@ const FaqPage: NextPageWithLayout = () => {
               amount we earn from Visa when a member uses their Chime card. In
               other words, we aim to profit with our members, not from them.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Showing up">
+          <Disclosure label="Showing up">
             <p>
               As the COVID-19 pandemic hit, Chime saw the opportunity to make a
               difference and got right to work. We were able to give people
@@ -229,7 +229,7 @@ const FaqPage: NextPageWithLayout = () => {
               delivered early access to more than $6.5 billion of
               pandemic-related benefits to our members.
             </p>
-          </ToggleBox>
+          </Disclosure>
         </ChimeFinancialComponents.Section.Content>
       </ChimeFinancialComponents.Section.Container>
 
@@ -240,7 +240,7 @@ const FaqPage: NextPageWithLayout = () => {
         </ChimeFinancialComponents.Section.Title>
 
         <ChimeFinancialComponents.Section.Content>
-          <ToggleBox label="More choice, more innovation" opened>
+          <Disclosure label="More choice, more innovation" opened>
             <p>
               Chime is not a bank. Instead, we partner with regional banks to
               design and deliver easy-to-use financial products for consumers.
@@ -267,9 +267,9 @@ const FaqPage: NextPageWithLayout = () => {
               increasing industry consolidation, with the top few banks getting
               larger everyday at their expense.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Transparent, trusted">
+          <Disclosure label="Transparent, trusted">
             <p>
               Nothing is more important at Chime than safeguarding members&apos;
               money and personal information, and we fully comply with the rules
@@ -290,9 +290,9 @@ const FaqPage: NextPageWithLayout = () => {
               partners audit our work and we work closely with them to review
               and respond to all consumer complaints.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Regulated">
+          <Disclosure label="Regulated">
             <p>
               Chime&apos;s work is supervised by our partner banks,{" "}
               <b>Bancorp Bank</b> and <b>Stride Bank</b>, as well as their
@@ -311,7 +311,7 @@ const FaqPage: NextPageWithLayout = () => {
               Chime’s financial products are always designed in coordination
               with our bank partners.
             </p>
-          </ToggleBox>
+          </Disclosure>
         </ChimeFinancialComponents.Section.Content>
       </ChimeFinancialComponents.Section.Container>
 
@@ -322,16 +322,16 @@ const FaqPage: NextPageWithLayout = () => {
         </ChimeFinancialComponents.Section.Title>
 
         <ChimeFinancialComponents.Section.Content>
-          <ToggleBox label="Building a foundation" opened>
+          <Disclosure label="Building a foundation" opened>
             <p>
               Chime has members in all 50 states, each experiencing their own
               financial triumphs and challenges. We strive to be a resource for
               families, help them stay on top of their finances, avoid
               unnecessary fees and create a solid financial foundation.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Creating impact">
+          <Disclosure label="Creating impact">
             <p>
               Chime distributed more than $600,000 in grants in 2020 to support
               partner organizations, social causes, and COVID-19 and disaster
@@ -361,9 +361,9 @@ const FaqPage: NextPageWithLayout = () => {
               volunteer activities and or choose from existing opportunities
               through VolunteerMatch.
             </p>
-          </ToggleBox>
+          </Disclosure>
 
-          <ToggleBox label="Passionate people">
+          <Disclosure label="Passionate people">
             <p>
               Chime is headquartered in San Francisco, with offices in Chicago
               and Vancouver. Although Chimers come from many different
@@ -391,7 +391,7 @@ const FaqPage: NextPageWithLayout = () => {
               Millennials, Best Workplaces in Financial Services and People
               Magazine&apos;s Top 100 Companies that Care list.
             </p>
-          </ToggleBox>
+          </Disclosure>
         </ChimeFinancialComponents.Section.Content>
       </ChimeFinancialComponents.Section.Container>
     </>
