@@ -1,4 +1,6 @@
 import type { User } from "@prisma/client";
+import type { ReactElement, ReactNode } from "react";
+import type { NextPage } from "next";
 
 // import { ErrorResponse, LoadedResponse } from "@api";
 
@@ -22,6 +24,10 @@ export type HttpResponseStatusMessage =
   | "Not Found"
   | "Conflict"
   | "Internal Server Error";
+
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
 
 // @@@ Deprecated.
 // export type Response = ErrorResponse | LoadedResponse;
