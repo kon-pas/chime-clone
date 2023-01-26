@@ -14,7 +14,7 @@ export { default as IconSVG } from "./IconSVG";
 
 export { default as InactiveSpan } from "./InactiveSpan";
 
-export { default as ToggleBox } from "./ToggleBox";
+export { default as Disclosure } from "./Disclosure";
 
 export { default as ToggleSectionWrapper } from "./ToggleSectionWrapper";
 
