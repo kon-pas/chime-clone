@@ -1,19 +1,14 @@
 import { SecurityAndControlComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
+import type { NextPageWithLayout } from "@types";
 
 import Image from "next/image";
 import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
 import { EnrollForm } from "@components/elements";
-import {
-  MonoSection,
-  DualSection,
-  BannerSection,
-  PlaceholderSection,
-} from "@components/sections";
+import { MonoSection, DualSection, BannerSection } from "@components/sections";
 
 const SecurityAndControlPage: NextPageWithLayout = () => {
   return (
@@ -121,7 +116,7 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
         </SecurityAndControlComponents.Section.Item>
 
         <SecurityAndControlComponents.Section.Item>
-        <Image
+          <Image
             src="/static/pages/security-and-control/shield.png"
             alt="shield"
             width="64"
@@ -138,7 +133,7 @@ const SecurityAndControlPage: NextPageWithLayout = () => {
         </SecurityAndControlComponents.Section.Item>
 
         <SecurityAndControlComponents.Section.Item>
-        <Image
+          <Image
             src="/static/pages/security-and-control/lock.png"
             alt="lock"
             width="64"

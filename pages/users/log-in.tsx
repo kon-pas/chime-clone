@@ -1,7 +1,6 @@
 import { LogInComponents } from "@components/pages";
 
-import type { NextPageWithLayout } from "@pages/_app";
-import type { Email, Password } from "@types";
+import type { Email, Password, NextPageWithLayout } from "@types";
 
 import { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";

@@ -1,7 +1,7 @@
 import { HomePageComponents } from "@components/pages";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
+import type { NextPageWithLayout } from "@types";
 
 import Head from "next/head";
 import Image from "next/image";

@@ -1,8 +1,13 @@
 import { SignUpComponents } from "@components/pages";
 
-import type { NextPageWithLayout } from "@pages/_app";
-import type { FirstName, SecondName, Email, Password } from "@types";
 import type { RegisterValues } from "@interfaces";
+import type {
+  FirstName,
+  SecondName,
+  Email,
+  Password,
+  NextPageWithLayout,
+} from "@types";
 
 import { GetServerSideProps } from "next";
 import { ReactElement, useState } from "react";

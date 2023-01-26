@@ -1,7 +1,7 @@
 import { Page404Components } from "@components/pages";
 
 import type { ReactElement } from "react";
-import type { NextPageWithLayout } from "@pages/_app";
+import type { NextPageWithLayout } from "@types";
 
 import Image from "next/image";
 import { useRouter } from "next/router";
