@@ -8,7 +8,7 @@
       style="max-width: 100%;"
     />
   </a>
-  <br />
+  <br /><br />
   <b align="center">
     Clone of the <a href="https://www.chime.com/">Chime</a> website;
   </b>
@@ -28,6 +28,10 @@
 - [License 📝](#license-)
 
 ## Introduction 🔎
+
+Chime Clone is a clone of the [Chime](https://www.chime.com/) website developed
+solely by [kon-pas](https://github.com/kon-pas) with the purpose of
+**self-learning web development**.
 
 ## Usage 🚀
 
@@ -50,7 +54,6 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 - **Scripting**
 
   - `TypeScript`@`4.8.0` &ndash; static typing with pleasure
-  - `SassScript`@`1.54.5` &ndash; CSS preprocessing
 
 - **Backend**
 
