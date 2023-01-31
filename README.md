@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://kolor-dev.vercel.app/" target="_blank">
+  <a href="https://chime-clone.vercel.app/" target="_blank">
     <img
       alt="Chime Clone"
       title="Chime Clone"
@@ -8,6 +8,7 @@
       style="max-width: 100%;"
     />
   </a>
+  <br />
   <b align="center">
     Clone of the <a href="https://www.chime.com/">Chime</a> website;
   </b>
