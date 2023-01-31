@@ -4,7 +4,7 @@
       alt="Chime Clone"
       title="Chime Clone"
       src="/showcase/assets/chime-logo.svg"
-      width="200"
+      width="300"
       style="max-width: 100%;"
     />
   </a>
@@ -33,7 +33,7 @@
 
 **Head to [showcase.md](/showcase/showcase.md) for a quick showcase**.
 
-Alternatively, visit [Kolor-Dev](https://kolor-dev.vercel.app/) directly or
+Alternatively, visit [Chime Clone](https://chime-clone.vercel.app/) directly or
 clone the repository and run the following:
 
 ```bash
@@ -94,7 +94,7 @@ dsa
 
 ## Acknowledgments 👥
 
-dsa
+All credits go to the original [Chime](https://www.chime.com/) website.
 
 ## License 📝
 
