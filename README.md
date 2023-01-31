@@ -19,12 +19,9 @@
     </picture>
   </a>
   <br />
-
-  <b align="center">
-    Colors-related toolkit<sup>1</sup> for Artists, Designers & Developers.
-  </b>
+  <b>Clone of the <a href="https://www.chime.com/">Chime</a> website;</b>
   <br />
-  <span><sup>1</sup>As of now, not really a toolkit.</span>
+  <span>as the name might suggest.</span>
 </p>
 
 ---
