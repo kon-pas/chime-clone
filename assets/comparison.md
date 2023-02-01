@@ -56,6 +56,4 @@ Those, that are not archived due to being unfetchable.
 
 ---
 
-<span align="center">
-  Thanks for going that far!
-</span>
+<p align="center"><small>Thanks for going that far!<small></p>
