@@ -4,7 +4,7 @@
     <img
       alt="Chime Clone"
       title="Chime Clone"
-      src="/showcase/assets/chime-clone-logo.svg"
+      src="/assets/chime-clone-logo.svg"
       width="300"
       style="max-width: 100%;"
     />
@@ -21,14 +21,14 @@
 
 ## Table of Contents 📖 <!-- omit in toc -->
 
-- [Introduction 🔎](#introduction-)
-- [Usage 🚀](#usage-)
+- [Introduction 👀](#introduction-)
+- [Comparison 🔎](#comparison-)
 - [Tech Stack 💻](#tech-stack-)
 - [Thoughts 💭](#thoughts-)
 - [Credits 👥](#credits-)
 - [License 📝](#license-)
 
-## Introduction 🔎
+## Introduction 👀
 
 Chime Clone is a clone of the [Chime](https://www.chime.com/) website developed
 solely by [kon-pas](https://github.com/kon-pas) with the purpose of
@@ -38,24 +38,21 @@ Chime&apos;s original website is generally well done, but I had to make few
 minor adjustments, mostly spacing-related. Nothing's perfect, certainly not a
 _WordPress_ website.
 
-## Usage 🚀
+## Comparison 🔎
 
-**Head to [showcase.md](/showcase/showcase.md) for a quick showcase**.
+**Head to [comparison.md](/assets/comparison.md) for the comparison index**,
+including archived Chime website.
 
 Alternatively, visit:
 
 - [Chime Clone](https://chime-clone.vercel.app/)
 - [Chime Originial](https://www.chime.com/)
-- [Chime Archived](https://chime-clone.vercel.app/) @@@
-
-The website can now be accessed via `http://localhost:3000` on your machine or
-via `<TARGET_MACHINE_IP>:3000` on your local network.
 
 ## Tech Stack 💻
 
 - **Scripting**
 
-  - `TypeScript`@`4.8.0` &ndash; static typing with E
+  - `TypeScript`@`4.8.0` &ndash; static typing with pleasure
 
 - **Backend**
 
@@ -81,7 +78,7 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 - **Code Quality**
 
   - `ESLint`@`8.22.0` &ndash; static code analysis
-  - `Prettier`@`2.8.3` &ndash; formatting
+  - `Prettier`@`2.8.3` &ndash; code formatting
   - `Lighthouse` &ndash; performance, quality & correctness
 
 - **Utils**
