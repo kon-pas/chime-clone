@@ -5,11 +5,7 @@ import Head from "next/head";
 import { COLORS } from "@constants";
 import { MainLayout } from "@components/composition";
 import { EnrollForm } from "@components/elements";
-import {
-  MonoSection,
-  DualSection,
-  BannerSection
-} from "@components/sections";
+import { MonoSection, DualSection, BannerSection } from "@components/sections";
 
 const SavingsAccountPage: NextPageWithLayout = () => {
   return (

@@ -53,7 +53,7 @@ const NoFeesPage: NextPageWithLayout = () => {
           </li>
         </ul>
 
-        <EnrollForm direction="cols" label="Apply Now"/>
+        <EnrollForm direction="cols" label="Apply Now" />
 
         <small>Already have an account?</small>
         <small>
@@ -186,7 +186,7 @@ const NoFeesPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm direction="mixed" theme="dark" label="Apply Now"/>
+        <EnrollForm direction="mixed" theme="dark" label="Apply Now" />
       </MonoSection>
     </>
   );

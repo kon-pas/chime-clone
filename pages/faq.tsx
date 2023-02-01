@@ -196,9 +196,9 @@ const FaqPage: NextPageWithLayout = () => {
               Bank, N.A.; Members FDIC. Chime members can have a Checking
               Account with an optional Savings Account, and can grow their
               credit history by applying for a secured Chime Credit Builder Visa
-              <sup>®</sup> Credit Card &ndash; all while enjoying the benefits of
-              online banking and mobile banking. Eligibility requirements apply
-              for Credit Builder card.
+              <sup>®</sup> Credit Card &ndash; all while enjoying the benefits
+              of online banking and mobile banking. Eligibility requirements
+              apply for Credit Builder card.
             </p>
           </Disclosure>
 
@@ -225,7 +225,7 @@ const FaqPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" direction="mixed"/>
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
       </MonoSection>
     </>
   );

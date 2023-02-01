@@ -110,7 +110,7 @@ const GetPaidEarlyPage: NextPageWithLayout = () => {
           impact to your credit score.
         </p>
 
-        <EnrollForm label="Apply Now" theme="dark" direction="mixed"/>
+        <EnrollForm label="Apply Now" theme="dark" direction="mixed" />
       </MonoSection>
     </>
   );
