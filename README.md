@@ -1,9 +1,10 @@
 <p align="center">
+  <br />
   <a href="https://chime-clone.vercel.app/" target="_blank">
     <img
       alt="Chime Clone"
       title="Chime Clone"
-      src="/showcase/assets/chime-logo.svg"
+      src="/showcase/assets/chime-clone-logo.svg"
       width="300"
       style="max-width: 100%;"
     />
@@ -24,7 +25,7 @@
 - [Usage 🚀](#usage-)
 - [Tech Stack 💻](#tech-stack-)
 - [Thoughts 💭](#thoughts-)
-- [Acknowledgments 👥](#acknowledgments-)
+- [Credits 👥](#credits-)
 - [License 📝](#license-)
 
 ## Introduction 🔎
@@ -53,19 +54,18 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 
 - **Scripting**
 
-  - `TypeScript`@`4.8.0` &ndash; static typing with pleasure
+  - `TypeScript`@`4.8.0` &ndash; static typing with E
 
 - **Backend**
 
-  - `Next.js`@`12.2.5` &ndash; data fetching, routing & plenty of features
+  - `Next.js`@`12.3.1` &ndash; data fetching, routing & plenty of features
     Next.js has to offer
-  - `Prisma`@`4.8.1` &ndash; data mapping, modeling & typing, database client
+  - `Prisma`@`4.8.0` &ndash; data mapping, modeling & typing, database client
 
 - **Frontend**
 
   - `React`@`18.2.0` &ndash; on which Next.js is built
-  - `TailwindCSS`@`3.1.8` &ndash; utility CSS classes
-  - `TailwindCSS Debug Screens`@`2.2.1` &ndash; manual layout testing
+  - `styled-components`@`5.3.6` &ndash; @@@
 
 - **Deployment**
 
@@ -74,28 +74,26 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 
 - **Design**
 
-  - `Adobe Illustrator` &ndash; vector graphics
   - `Adobe Photoshop` &ndash; sketches, raster illustrations
 
 - **Code Quality**
 
   - `ESLint`@`8.22.0` &ndash; static code analysis
   - `Prettier`@`2.8.3` &ndash; formatting
-  - `BEM` &ndash; CSS methodolody
   - `Lighthouse` &ndash; performance, quality & correctness
 
 - **Utils**
 
-  - `clsx`@`1.2.1` &ndash; constructing class strings
-  - `colvertize`@`0.1.0` &ndash; converting colors
+  - `bcrypt`@`5.1.0` &ndash; @@@
   - `nanoid`@`4.0.0` &ndash; generating IDs
-  - `react-toastify`@`9.1.1` &ndash; toast notifications
+  - `usehooks-ts`@`2.9.1` &ndash; @@@
+  - `react-hook-form`@`7.38.0` &ndash; @@@
 
 ## Thoughts 💭
 
 dsa
 
-## Acknowledgments 👥
+## Credits 👥
 
 All credits go to the original [Chime](https://www.chime.com/) website.
 
