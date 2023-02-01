@@ -40,22 +40,22 @@ original versions of Chime.
 | `/second-chance-banking` | [🔗](https://chime-clone.vercel.app/second-chance-banking) | [🔗](https://web.archive.org/web/20230201055452/https://www.chime.com/second-chance-banking/) | [🔗](https://www.chime.com/second-chance-banking/) |
 |          `404`           |          [🔗](https://chime-clone.vercel.app/err)          |          [🔗](https://web.archive.org/web/20230201060605/https://www.chime.com/err)           |          [🔗](https://www.chime.com/err)           |
 
+### Non-archived
+
+Those, that are not archived due to being unfetchable.
+
+|                  |                       Cloned                       |                     Orignal                     |
+| :--------------: | :------------------------------------------------: | :---------------------------------------------: |
+| `/users/log-in`  | [🔗](https://chime-clone.vercel.app/users/log-in)  |  [🔗](https://member.chime.com/users/sign_in)   |
+| `/users/sign-up` | [🔗](https://chime-clone.vercel.app/users/sign-up) | [🔗](https://member.chime.com/enroll/#/account) |
+
 <span>
   <sup>1</sup> Sadly, some of the pages I did not manage to archive on time,
   but the differences are marginal.
 </span>
 
-### Non-archived
-
-Those, that are not archived due to being unfetchable.
-
-|                 |                       Cloned                       |                     Orignal                     |
-| :-------------: | :------------------------------------------------: | :---------------------------------------------: |
-| `/users/log-in` | [🔗](https://chime-clone.vercel.app/users/log-in)  |  [🔗](https://member.chime.com/users/sign_in)   |
-|  `/users/@@@`   | [🔗](https://chime-clone.vercel.app/users/sign-up) | [🔗](https://member.chime.com/enroll/#/account) |
-
 ---
 
-<small align="center">
+<span align="center">
   Thanks for going that far!
-</small>
+</span>
