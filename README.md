@@ -34,18 +34,19 @@ Chime Clone is a clone of the [Chime](https://www.chime.com/) website developed
 solely by [kon-pas](https://github.com/kon-pas) with the purpose of
 **self-learning web development**.
 
+Chime&apos;s original website is generally well done, but I had to make few
+minor adjustments, mostly spacing-related. Nothing's perfect, certainly not a
+_WordPress_ website.
+
 ## Usage 🚀
 
 **Head to [showcase.md](/showcase/showcase.md) for a quick showcase**.
 
-Alternatively, visit [Chime Clone](https://chime-clone.vercel.app/) directly or
-clone the repository and run the following:
+Alternatively, visit:
 
-```bash
-npm install
-npm run build
-npm run start
-```
+- [Chime Clone](https://chime-clone.vercel.app/)
+- [Chime Originial](https://www.chime.com/)
+- [Chime Archived](https://chime-clone.vercel.app/) @@@
 
 The website can now be accessed via `http://localhost:3000` on your machine or
 via `<TARGET_MACHINE_IP>:3000` on your local network.
@@ -65,7 +66,7 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 - **Frontend**
 
   - `React`@`18.2.0` &ndash; on which Next.js is built
-  - `styled-components`@`5.3.6` &ndash; @@@
+  - `styled-components`@`5.3.6` &ndash; writing styles
 
 - **Deployment**
 
@@ -74,7 +75,8 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 
 - **Design**
 
-  - `Adobe Photoshop` &ndash; sketches, raster illustrations
+  - `Adobe Photoshop` &ndash; fixing scrapped raster graphics
+  - `Adobe Illustrator` &ndash; minor adjustments to SVGs
 
 - **Code Quality**
 
@@ -84,14 +86,26 @@ via `<TARGET_MACHINE_IP>:3000` on your local network.
 
 - **Utils**
 
-  - `bcrypt`@`5.1.0` &ndash; @@@
+  - `bcrypt`@`5.1.0` &ndash; hashing passwords
   - `nanoid`@`4.0.0` &ndash; generating IDs
-  - `usehooks-ts`@`2.9.1` &ndash; @@@
-  - `react-hook-form`@`7.38.0` &ndash; @@@
+  - `usehooks-ts`@`2.9.1` &ndash; handling session & hover event
+  - `react-hook-form`@`7.38.0` &ndash; login & registration form
 
 ## Thoughts 💭
 
-dsa
+Tech stack is pretty much similar to the
+[Kolor-Dev](https://github.com/kon-pas/kolor-dev)&apos;s one.
+
+_Next.js_ with _TypeScript_ is great.
+
+I definitely prefer _CSS-in-JSS_ over other approaches, including _Sass_, but I
+do regret not using _TailwindCSS_.
+
+I should write boilerplate code less often and use third party libraries
+instead. `usehooks-ts` & `react-hook-form` was a good choice. Maybe I should
+have used `axios`, too.
+
+Even though, writing all components by myself was a great exercise.
 
 ## Credits 👥
 
