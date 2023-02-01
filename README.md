@@ -36,7 +36,7 @@
 ## Introduction 👀
 
 Chime Clone is a clone of the [Chime](https://www.chime.com/) website developed
-solely by [kon-pas](https://github.com/kon-pas) with the purpose of
+solely by [@kon-pas](https://github.com/kon-pas) with the purpose of
 **self-learning web development**.
 
 Chime&apos;s original website is generally well done, but I had to make few
