@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { getMedia, getResizeTransition } from "@utils";
 import { h2, p, ul } from "@styles/tags";
+import { getMedia, getResizeTransition } from "@utils";
+import { COLORS } from "@constants";
 
 interface ChildrenWrapperProps {
   textAlign: "start" | "center" | "end";
@@ -14,6 +15,7 @@ const ChildrenWrapper = styled.div<ChildrenWrapperProps>`
   > p {
     ${p}
     width: 100%;
+    color: ${COLORS.FONT_GRAY_DARK};
   }
 
   > h2 {
