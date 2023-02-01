@@ -68,7 +68,7 @@ const NAVIGATION_ITEMS: NavigationItem[] = [
       },
       {
         label: "Chime Financial, Inc.",
-        path: "/chime-financial"
+        path: "/chime-financial",
       },
       {
         label: "In The Community",

@@ -8,7 +8,8 @@ const li = css<{
     vertical-align: sub;
     content: "";
     display: inline-block;
-    background-image: url(${props => props.bulletSrc ?? "/static/shared/check.png"});
+    background-image: url(${props =>
+      props.bulletSrc ?? "/static/shared/check.png"});
     background-repeat: no-repeat;
     background-size: 20px 20px;
     width: 20px;

@@ -4,7 +4,7 @@ const { HASH_SALT_ROUNDS } = process.env;
 
 /**
  * @deprecated Does not work client-side. Use `bcrypt` directly.
- * 
+ *
  * Returns hashed value.
  * Use only server-side.
  *
