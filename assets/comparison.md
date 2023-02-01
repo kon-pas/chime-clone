@@ -22,7 +22,7 @@
 
 ## Comparison 🔎
 
-Table contains most cloned pages with corresponding archived<sup>1<sup> &
+Table contains most cloned pages with corresponding archived<sup>1</sup> &
 original versions of Chime.
 
 |                          |                           Cloned                           |                                           Archived                                            |                      Orignal                       |
@@ -38,6 +38,6 @@ original versions of Chime.
 | `/second-chance-banking` | [🔗](https://chime-clone.vercel.app/second-chance-banking) | [🔗](https://web.archive.org/web/20230201055452/https://www.chime.com/second-chance-banking/) | [🔗](https://www.chime.com/second-chance-banking/) |
 
 <span>
-  <sup>1<sup> Sadly, some of the pages I did not manage to archive on time,
+  <sup>1</sup> Sadly, some of the pages I did not manage to archive on time,
   but the differences are marginal.
 </span>
