@@ -1,3 +1,4 @@
 module.exports = {
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "endOfLine": "crlf",
 };
