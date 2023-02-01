@@ -1,3 +1,6 @@
+> **Note**
+> Because nothing lasts foreved, there is the [archived Chime page](/assets/comparison).
+
 <p align="center">
   <br />
   <a href="https://chime-clone.vercel.app/" target="_blank">
@@ -40,13 +43,11 @@ _WordPress_ website.
 
 ## Comparison 🔎
 
-**Head to [comparison.md](/assets/comparison.md) for the comparison index**,
-including archived Chime website.
+**Head to [comparison.md](/assets/comparison.md) for the comparison index,
+including archived Chime website.**
 
-Alternatively, visit:
-
-- [Chime Clone](https://chime-clone.vercel.app/)
-- [Chime Originial](https://www.chime.com/)
+Alternatively, visit, [Chime Clone](https://chime-clone.vercel.app/) &
+[Chime Originial](https://www.chime.com/).
 
 ## Tech Stack 💻
 
