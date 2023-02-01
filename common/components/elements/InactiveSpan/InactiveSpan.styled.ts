@@ -9,7 +9,7 @@ interface InactiveSpanProps {
 const InactiveSpan = styled.span<InactiveSpanProps>`
   text-decoration: line-through ${props => props.width ?? 1}px;
   cursor: not-allowed;
-  color: ${COLORS.FONT_GRAY_MEDIUM} !important;
+  color: ${COLORS.GRAY_MEDIUM} !important;
 `;
 
 export default InactiveSpan;
