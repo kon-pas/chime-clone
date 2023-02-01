@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { getMedia, getResizeTransition } from "@utils";
 
 const TopSection = styled.div`
-  ${getResizeTransition('all')}
+  ${getResizeTransition("all")}
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr auto;

@@ -3,7 +3,6 @@ import { h3 } from "@styles/tags";
 import { getMedia, getResizeTransition } from "@utils";
 
 const TextWrapper = styled.div`
-
   h3 {
     ${h3}
   }
@@ -20,12 +19,12 @@ const TextWrapper = styled.div`
       margin-bottom: 0;
     }
 
-    ${getMedia('lg')} {
+    ${getMedia("lg")} {
       font-size: 1rem;
     }
   }
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     display: inline-block;
     vertical-align: top;
   }

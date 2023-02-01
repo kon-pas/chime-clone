@@ -10,11 +10,9 @@ const ResponsiveList: FC<ResponsiveListProps> = props => {
   return (
     // @@@ NOTE: Used `div` to break default children styling
     <div>
-      <Styled.List bulletPosition="inside">
-        {props.children}
-      </Styled.List>
+      <Styled.List bulletPosition="inside">{props.children}</Styled.List>
     </div>
-  )
+  );
 };
 
 export default ResponsiveList;

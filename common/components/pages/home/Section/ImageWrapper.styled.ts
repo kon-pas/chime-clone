@@ -6,9 +6,9 @@ const ImageWrapper = styled.div`
   display: flex;
   justify-content: center;
 
-  ${getResizeTransition('margin-bottom', 'width')}
+  ${getResizeTransition("margin-bottom", "width")}
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     margin-bottom: 0;
     align-items: center;
 

@@ -16,14 +16,14 @@ const SocialSection = styled.div`
     height: 40px;
   }
 
-  ${getMedia('md')} {
+  ${getMedia("md")} {
     width: auto;
     height: 40px;
     gap: 1rem;
     justify-content: center;
   }
 
-  ${getMedia('lg')} {
+  ${getMedia("lg")} {
     width: 170px;
     height: 150px;
     justify-content: space-between;

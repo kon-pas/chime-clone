@@ -17,7 +17,6 @@ const Item = styled.div<ItemProps>`
   ${getMedia("lg")} {
     width: ${props => `${Math.ceil(props.width / 1.25)}px`};
   }
-
 `;
 
 export default Item;

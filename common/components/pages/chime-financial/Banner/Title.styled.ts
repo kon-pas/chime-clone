@@ -7,7 +7,7 @@ const Title = styled.h1`
 
   position: relative;
   text-align: center;
-  padding: 2rem 0 1rem 0; 
+  padding: 2rem 0 1rem 0;
 `;
 
 export default Title;

@@ -31,8 +31,8 @@ const ModalContainer = styled.div<ModalContainerProps>`
     background-color: ${COLORS.WHITE};
 
     h1 {
-     height: 50%;
-     cursor: pointer;
+      height: 50%;
+      cursor: pointer;
     }
 
     > svg {

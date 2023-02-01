@@ -11,11 +11,10 @@ const List = styled.ul<ListProps>`
   justify-items: start;
   width: 100%;
   gap: 1rem;
-  
+
   > li {
     ${li};
   }
-
 `;
 
 export default List;

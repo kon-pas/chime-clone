@@ -8,9 +8,9 @@ const Footer = styled.footer`
   width: 100%;
   margin: 0 auto;
 
-  ${getResizeTransition('padding')}
-  
-  ${getMedia('md')} {
+  ${getResizeTransition("padding")}
+
+  ${getMedia("md")} {
     padding: 4rem 0 5rem 0;
   }
 `;

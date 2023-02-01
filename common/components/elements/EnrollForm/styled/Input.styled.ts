@@ -8,8 +8,7 @@ interface InputProps {
 
 const Input = styled.input<InputProps>`
   border: 1px solid
-    ${props =>
-      props.theme === "light" ? COLORS.GRAY_DARK : COLORS.GRAY_LIGHT};
+    ${props => (props.theme === "light" ? COLORS.GRAY_DARK : COLORS.GRAY_LIGHT)};
   border-radius: 10rem;
   white-space: nowrap;
   font-size: 1rem;
