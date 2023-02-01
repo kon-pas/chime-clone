@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --check --ignore-path .gitignore common pages",
+    "format:fix": "prettier --write --ignore-path .gitignore common pages"
   },
   "dependencies": {
     "@prisma/client": "^4.8.0",
@@ -29,6 +31,7 @@
     "eslint": "8.24.0",
     "eslint-config-next": "12.3.1",
     "eslint-config-prettier": "^8.5.0",
+    "prettier": "^2.8.3",
     "prisma": "^4.8.0",
     "typescript": "4.8.4"
   }

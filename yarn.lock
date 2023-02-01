@@ -1978,6 +1978,11 @@
   "resolved" "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
   "version" "1.2.1"
 
+"prettier@^2.8.3":
+  "integrity" "sha512-tJ/oJ4amDihPoufT5sM0Z1SKEuKay8LfVAMlbbhnnkvt6BUserZylqo2PN+p9KeljLr0OHa2rXHU1T8reeoTrw=="
+  "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.8.3.tgz"
+  "version" "2.8.3"
+
 "prisma@*", "prisma@^4.8.0":
   "integrity" "sha512-DWIhxvxt8f4h6MDd35mz7BJff+fu7HItW3WPDIEpCR3RzcOWyiHBbLQW5/DOgmf+pRLTjwXQob7kuTZVYUAw5w=="
   "resolved" "https://registry.npmjs.org/prisma/-/prisma-4.8.0.tgz"
