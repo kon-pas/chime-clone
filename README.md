@@ -15,7 +15,8 @@
   </a>
   <br /><br />
   <b align="center">
-    Clone of the <a href="https://www.chime.com/">Chime</a> website;
+    <a href="https://chime-clone.vercel.app/">Clone</a> of the
+    <a href="https://www.chime.com/">Chime</a> website;
   </b>
   <br />
   <span>as the name might suggest.</span>
