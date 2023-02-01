@@ -1,6 +1,6 @@
 > **Note**
 > Because nothing lasts forever, here is the
-> [archived Chime page](/assets/comparison).
+> [archived Chime website](/assets/comparison.md).
 
 <p align="center">
   <br />
