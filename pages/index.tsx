@@ -41,7 +41,7 @@ const HomePage: NextPageWithLayout = () => {
           >
             <h1>#1 most loved banking app</h1>
 
-            <EnrollForm direction="cols" />
+            <EnrollForm direction="mixed" />
 
             <small>Already have an account?</small>
             <small>
@@ -68,7 +68,7 @@ const HomePage: NextPageWithLayout = () => {
           >
             <h1>Build credit history with no annual fees or interest</h1>
 
-            <EnrollForm direction="cols" />
+            <EnrollForm direction="mixed" />
 
             <small>Already have an account?</small>
             <small>
@@ -97,7 +97,7 @@ const HomePage: NextPageWithLayout = () => {
               Fee-free overdraft up to $200<sup>1</sup>
             </h1>
 
-            <EnrollForm direction="cols" />
+            <EnrollForm direction="mixed" />
 
             <small>Already have an account?</small>
             <small>
@@ -126,7 +126,7 @@ const HomePage: NextPageWithLayout = () => {
               Get paid up to 2 days early with direct deposit<sup>2</sup>
             </h1>
 
-            <EnrollForm direction="cols" />
+            <EnrollForm direction="mixed" />
 
             <small>Already have an account?</small>
             <small>
@@ -153,7 +153,7 @@ const HomePage: NextPageWithLayout = () => {
           >
             <h1>No monthly fees</h1>
 
-            <EnrollForm direction="cols" />
+            <EnrollForm direction="mixed" />
 
             <small>Already have an account?</small>
             <small>
