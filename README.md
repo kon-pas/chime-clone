@@ -3,7 +3,6 @@
 > [archived Chime website](/assets/comparison.md).
 
 <p align="center">
-  <br />
   <a href="https://chime-clone.vercel.app/" target="_blank">
     <img
       alt="Chime Clone"
