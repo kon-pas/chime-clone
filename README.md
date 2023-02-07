@@ -65,7 +65,8 @@ Alternatively, visit [Chime Clone](https://chime-clone.vercel.app/) &
 - **Frontend**
 
   - `React`@`18.2.0` &ndash; on which Next.js is built
-  - `styled-components`@`5.3.6` &ndash; writing styles
+  - `styled-components`@`5.3.6` &ndash; for styling components, _duh_
+  - `CSS`@`3.0.2` &ndash; writing styles
 
 - **Deployment**
 
