@@ -2,9 +2,6 @@ import type { FullUser } from "@interfaces";
 
 import { generateId } from "@utils";
 
-/**
- * Available via `/api/database/users` as JSON
- */
 const users: FullUser[] = [
   {
     id: generateId(),

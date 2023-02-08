@@ -1,6 +1,9 @@
 import { prisma } from "@lib";
 import { USERS } from "@database";
 
+/**
+ * Repopulate databse with fake data.
+ */
 const seedDatabase = async () => {
   await prisma.user.deleteMany({});
 
