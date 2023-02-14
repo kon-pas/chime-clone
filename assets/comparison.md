@@ -51,7 +51,7 @@ Those, that are not archived due to being unfetchable.
 |                  |                       Cloned                       |                   Orignal                    |
 | :--------------: | :------------------------------------------------: | :------------------------------------------: |
 | `/users/log-in`  | [🔗](https://chime-clone.vercel.app/users/log-in)  | [🔗](https://member.chime.com/users/sign_in) |
-| `/users/sign-up` | [🔗](https://chime-clone.vercel.app/users/sign-up) |  [🔗](https://member.chime.com/enroll/#/acc  |
+| `/users/sign-up` | [🔗](https://chime-clone.vercel.app/users/sign-up) | [🔗](https://member.chime.com/enroll/#/acc)  |
 
 ---
 
