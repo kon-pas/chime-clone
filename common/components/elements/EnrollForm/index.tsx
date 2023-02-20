@@ -1,8 +1,9 @@
 import * as Styled from "./styled";
 
-import type { FC } from "react";
+import type { ForwardRefRenderFunction, FC, ForwardedRef } from "react";
 import type { Email } from "@types";
 
+import { forwardRef } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 
@@ -16,7 +17,10 @@ interface EntrollFormProps {
   label?: string;
 }
 
-const EnrollForm: FC<EntrollFormProps> = props => {
+const EnrollForm: ForwardRefRenderFunction<
+  HTMLInputElement,
+  EntrollFormProps
+> = (props: EntrollFormProps, ref: ForwardedRef<HTMLInputElement>) => {
   const {
     register,
     handleSubmit,
@@ -42,6 +46,7 @@ const EnrollForm: FC<EntrollFormProps> = props => {
             message: "Please correct your email address",
           },
         })}
+        ref={ref}
       />
       <Styled.SubmitWrapper direction={props.direction ?? "rows"}>
         <Styled.Submit
@@ -56,4 +61,4 @@ const EnrollForm: FC<EntrollFormProps> = props => {
   );
 };
 
-export default EnrollForm;
+export default forwardRef(EnrollForm);
