@@ -1,12 +1,13 @@
 import * as Styled from "./styled";
 
-import type { FC, ReactNode } from "react";
+import type { FC, ReactNode, MutableRefObject } from "react";
 
 import { useEffect, useState, useCallback } from "react";
 import { IconSVG } from "@components/elements";
 
 interface ToggleSectionWrapperProps {
   views: ReactNode[];
+  pauseRef: MutableRefObject<HTMLInputElement[]>;
 }
 
 const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
@@ -24,10 +25,12 @@ const ToggleSectionWrapper: FC<ToggleSectionWrapperProps> = props => {
 
   useEffect(() => {
     const intervalDescriptor: NodeJS.Timer = setInterval(() => {
-      incrementIdx();
+      if (props.pauseRef.current.every(e => e !== document.activeElement))
+        incrementIdx();
+      // if(props.refs.current !== document.activeElement)
     }, 5000);
     return () => clearInterval(intervalDescriptor);
-  }, [incrementIdx, viewIdx]);
+  }, [incrementIdx, viewIdx, props.pauseRef]);
 
   return (
     <Styled.Container>
