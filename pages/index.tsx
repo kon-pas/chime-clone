@@ -3,7 +3,7 @@ import { HomePageComponents } from "@components/pages";
 import type { ReactElement } from "react";
 import type { NextPageWithLayout } from "@types";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 

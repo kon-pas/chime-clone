@@ -1,14 +1,13 @@
 import * as Styled from "./styled";
 
-import type { ForwardRefRenderFunction, FC, ForwardedRef } from "react";
-import type { Email } from "@types";
+import type { ForwardRefRenderFunction, ForwardedRef } from "react";
 
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/router";
 
 interface FormValues {
-  email: Email;
+  email: string;
 }
 
 interface EntrollFormProps {
@@ -25,13 +24,25 @@ const EnrollForm: ForwardRefRenderFunction<
     register,
     handleSubmit,
     formState: { isSubmitting },
+    setValue,
   } = useForm<FormValues>();
 
   const { push: navigateTo } = useRouter();
 
   const onSubmit = (formData: FormValues) => {
+    console.log(formData.email);
     navigateTo(`/users/sign-up?email=${formData.email}`);
   };
+
+  useEffect(() => {
+    register("email", {
+      required: "required",
+      pattern: {
+        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+        message: "Please correct your email address",
+      },
+    });
+  }, [register]);
 
   return (
     <Styled.Form onSubmit={handleSubmit(onSubmit)}>
@@ -39,13 +50,7 @@ const EnrollForm: ForwardRefRenderFunction<
         theme={props.theme ?? "light"}
         type="email"
         placeholder="Enter your email"
-        {...register("email", {
-          required: "required",
-          pattern: {
-            value: /\S+@\S+\.\S+/,
-            message: "Please correct your email address",
-          },
-        })}
+        onChange={e => setValue("email", e.target.value)}
         ref={ref}
       />
       <Styled.SubmitWrapper direction={props.direction ?? "rows"}>
